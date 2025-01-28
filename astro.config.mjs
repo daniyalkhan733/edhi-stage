@@ -15,8 +15,8 @@ export default defineConfig({
   site: config.site.base_url ? config.site.base_url : "http://localhost:4321/",
   base: config.site.base_path ? config.site.base_path : "/",
   trailingSlash: config.site.trailing_slash ? "always" : "never",
-  adapter: cloudflare(),
-  output: 'server',
+  // adapter: cloudflare(),
+  output: 'static',
   integrations: [react(), sitemap(), tailwind({
     config: {
       applyBaseStyles: false
