@@ -1,0 +1,55 @@
+---
+import Base from "@/layouts/Base.astro";
+import { markdownify } from "@/lib/utils/textConverter";
+import { getEntry } from "astro:content";
+import Image from "node_modules/astro/components/Image.astro";
+const organizationalchart = await getEntry(
+  "historical-perspective",
+  "-index",
+);
+const { Content } = await organizationalchart.render();
+const { title, description, meta_title } = organizationalchart.data;
+---
+
+<Base >
+  <section class="section-sm">
+    <div class="vc_row wpb_row vc_inner vc_row-fluid vc_custom_1482486429390">
+    <div class="wpb_column vc_column_container vc_col-sm-4">
+    <div class="vc_column-inner">
+    <div class="wpb_wrapper">
+    <div class="text-center mb30">
+    <div class="icon">
+    <h1 class="big-title">Mrs. Bilquis Edhi</h1>
+    <div class="small-title">Director Head Office</div>
+    </div>
+    </div>
+    </div>
+    </div>
+    </div>
+    <div class="wpb_column vc_column_container vc_col-sm-4">
+    <div class="vc_column-inner">
+    <div class="wpb_wrapper">
+    <div class="text-center mb30">
+    <div class="icon">
+    <h1 class="big-title">Fasial Edhi</h1>
+    <div class="small-title">Director Head Office</div>
+    </div>
+    </div>
+    </div>
+    </div>
+    </div>
+    <div class="wpb_column vc_column_container vc_col-sm-4">
+    <div class="vc_column-inner">
+    <div class="wpb_wrapper">
+    <div class="text-center mb30">
+    <div class="icon">
+    <h1 class="big-title">Kubra Edhi</h1>
+    <div class="small-title">Director Head Office</div>
+    </div>
+    </div>
+    </div>
+    </div>
+    </div>
+    </div> 
+</section>
+</Base>

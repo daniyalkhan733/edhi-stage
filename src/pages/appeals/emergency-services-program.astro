@@ -1,0 +1,521 @@
+---
+import Base from "@/layouts/Base.astro";
+import { markdownify } from "@/lib/utils/textConverter";
+import { getEntry } from "astro:content";
+import Accordion from "@/shortcodes/Accordion";
+import Aboutedhi from "@/components/Aboutedhi.astro";
+import Donationcard from "../../layouts/components/donationcard.astro";
+const emergencyservicesprogram = await getEntry(
+  "emergency-services-program",
+  "-index"
+);
+const { Content } = await emergencyservicesprogram.render();
+const { title, description, meta_title } = emergencyservicesprogram.data;
+import { SEO } from "astro-seo";
+
+
+---
+
+<SEO
+  title="Emergency Services by Edhi Foundation UK - Act Now"
+  description="Be a part of our emergency relief efforts. Support Edhi Foundation UK in providing critical aid during emergencies. Donate now."
+  canonical={Astro.request.url}
+  openGraph={{
+    basic: {
+      title: "Emergency Services by Edhi Foundation UK - Act Now",
+      type: "A type.",
+      image: "https://edhiuk.org/images/logo.jpg",
+
+    }
+  }}
+  twitter={{
+    creator: "@jonasmerlins1"
+  }}
+  extend={{
+    // extending the default link tags
+    link: [{ rel: "icon", href: "/favicon.png" }],
+    // extending the default meta tags
+    meta: [
+      {
+        name: "twitter:image",
+        content: "https://edhiuk.org/images/logo.jpg",
+      },
+      { name: "twitter:title", content: "Emergency Services by Edhi Foundation UK - Act Now" },
+      { name: "twitter:description", content: "Be a part of our emergency relief efforts. Support Edhi Foundation UK in providing critical aid during emergencies. Donate now." },
+      { name: "keywords", content: "" },
+    ],
+  }}
+/>
+
+
+<Base>
+  <!-- heading started here -->
+  <section class="min-h-max bg-white dark:bg-gray-950">
+    <div class="absolute top-0 inset-x-0 h-64 flex items-start">
+      <div
+        class="h-24 w-2/3 bg-gradient-to-br from-green-500 opacity-20 blur-2xl dark:from-green-500 dark:invisible dark:opacity-40"
+      >
+      </div>
+   
+    </div>
+    <div
+      class="absolute top-1/2 left-1/2 -translate-y-1/2 -translate-x-1/2 w-2/5 aspect-[2/0.5] bg-gradient-to-br from-green-500 to-green-500 rounded-full opacity-50 blur-2xl"
+    >
+    </div>
+    <div
+      class="relative mx-auto pt-32 pb-24 lg:max-w-7xl w-full px-5 sm:px-10 md:px-12 lg:px-5 text-center space-y-10"
+    >
+      <h1
+        class="text-[36px] text-gray-900 dark:text-white mx-auto max-w-5xl font-bold text-4xl/tight sm:text-5xl/tight lg:text-6xl/tight xl:text-7xl/tight"
+      >
+        Emergency Services Program
+      </h1>
+      <p
+        class="text-gray-700 dark:text-gray-300 mx-auto max-w-2xl text-[17px] font-roboto"
+      >
+        In times of crisis, Edhi Foundation's Emergency Services Program offers
+        immediate aid and compassionate relief to those in need.
+      </p>
+      <div class="flex justify-center items-center flex-wrap mx-auto gap-4">
+        <a
+          href="https://donate.edhiuk.org/"
+          class="flex font-bold items-center h-12 px-6 rounded bg-green-600 text-white"
+        >
+          Donate Now
+        </a>
+         
+      </div>
+    </div>
+  </section>,
+  <!-- heading ended here -->
+  <Donationcard programId={[12]} />
+
+  <!-- providings start here -->
+  <section class="px-6 md:py-20 py-10 mx-auto max-w-6xl">
+    <div>
+      <div class="grid gap-5 row-gap-8 lg:grid-cols-2">
+        <div class="flex flex-col justify-center">
+          <div class="max-w-xl mb-6">
+            <h2
+              class="max-w-lg font-sans text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl sm:leading-none"
+            >
+            What is Emergency Services  <span class="text-green-600"> Program?</span><br
+                class="hidden md:block"
+              />
+              <span class="relative px-1">
+                <div
+                  class="absolute inset-x-0 bottom-0 h-3 transform -skew-x-12 bg-teal-accent-400"
+                >
+                </div>
+              </span>
+            </h2>
+            <p class="text-base text-gray-700 md:text-[17px] font-roboto">
+              The Emergency Services Program by Edhi Foundation offers swift assistance and relief during times of crisis and urgency. Serving as a steadfast pillar of support, it provides immediate aid to those facing dire situations. With an unwavering commitment to humanity, this program embodies rapid response and compassionate care, ensuring that help reaches those in need when they need it the most. 
+            </p>
+          </div>
+          <div class="grid gap-5 row-gap-8 sm:grid-cols-2">
+            <div
+              class="bg-white border-l-4 border-green-500 shadow-sm border-deep-purple-accent-400"
+            >
+              <div class="h-full p-5 border border-l-0 rounded-r">
+                <p class="text-sm text-gray-900 font-roboto">
+                  Edhi Foundation's Emergency Services Program offers rapid response and immediate aid during emergencies, providing critical assistance to those in urgent need.
+                </p>
+              </div>
+            </div>
+            <div
+              class="bg-white border-l-4 border-green-500 shadow-sm border-deep-purple-accent-400"
+            >
+              <div class="h-full p-5 border border-l-0 rounded-r">
+                <p class="text-sm text-gray-900 font-roboto">
+                  The program embodies compassion and dedication, ensuring timely relief to individuals facing crises, regardless of their circumstances or background.
+                </p>
+              </div>
+            </div>
+          </div>
+          <br />
+          <div class="text-center">
+            <a
+              href="https://donate.edhiuk.org/"
+              class="flex justify-center items-center h-12 px-6 rounded-md bg-green-600 text-white border border-green-500"
+            >
+              Donate Now
+            </a>
+          </div>
+        </div>
+        <div class="md:pt-20 pt-0">
+          <img
+            class="object-cover w-full h-100 rounded shadow-lg sm:h-30rem mt-6"
+            src="/images/appeals/emergency-1.JPG"
+            alt=""
+          />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- providings ended here -->
+  <!-- section-1 area started -->
+  <section class="text-center px-6 max-w-6xl mx-auto">
+    <h2 class="text-green-700 text-4xl font-bold">
+      Providing Immediate Aid in Times of Crisis 
+    </h2>
+    <br />
+    <div class="sm:grid-cols-1">
+      <div class="text-center mb-4">
+        <p class="text-[20px] font-roboto">
+          Edhi Foundation's Emergency Services Program offers rapid response and critical assistance to those facing emergencies, ensuring timely relief. 
+        </p><br />
+        <div class="border-b-8 border-red-600 w-64 mx-auto my-2 rounded-md">
+        </div>
+      </div>
+      <div class="flex flex-col md:flex-row pt-4">
+        <div class="w-full md:w-1/2 border-r-4 border-green-500 pr-4">
+          <p class="text-gray-700 text-justify text-[17px] font-roboto">
+            Edhi Foundation's Emergency Services Program, with the mission of "Providing Immediate Aid in Times of Crisis," is like a helping hand during tough times.  <br /><br />
+            This program ensures quick and essential help for people facing emergencies, whether it's an accident, natural disaster, or unexpected crisis. It's there for everyone, no matter who they are, showing care and understanding for every person <br />
+            <br /> 
+            During difficult situations, the Emergency Services Program acts fast, offering support and comfort to those who urgently need it. It believes in helping people without any bias, emphasizing the importance of every life and the need for speedy assistance during challenging times. 
+          </p>
+        </div>
+        <div class="w-full md:w-1/2 md:pl-4">
+          <h5 class="text-green-700 font-bold text-justify pb-2">
+            The Prophet (saw) said that “The Believers Shade On The Day Of Resurrection Will Be His Sadqa” (Hadith Tirmidhi) 
+          </h5>
+          <p class="text-gray-700 text-justify text-[17px] font-roboto">
+            By supporting this program, you contribute to saving lives and easing suffering in communities affected by disasters or emergencies. The impact of your donation goes beyond immediate relief; it brings positive change to the lives of those going through tough situations. <br
+            /><br />
+            Your support helps Edhi Foundation be ready to respond quickly whenever there's a crisis. This preparedness ensures that resources are available for immediate use, making a significant difference in providing timely help. By being a part of this program, you become an essential link in a network that provides comfort, aid, and hope to individuals facing their most difficult moments. 
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="md:py-20 py-10 mx-auto max-w-6xl">
+    <h2 class="text-3xl font-bold  text-center px-6">
+      Preventing Emergency &nbsp; <span class="text-green-700"> Situations</span>
+    </h2>
+    <br />
+
+    <div class="text-center pb-6 mb-4 px-6">
+      <p class="text-[17px] font-roboto">
+        Support various humanitarian causes such as healthcare, education, shelter, and emergency relief through different Lillah options. 
+        .&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      </p>
+    </div>
+    <div class="border border-gray-300 p-4 pb-4 pt-6">
+      <div class="flex flex-wrap -mx-4">
+        <div class="w-full md:w-1/2 lg:w-1/3 pl-4 pr-4 mb-4">
+          <div
+            class="border border-gray-300 p-4 w-full h-60 shadow-lg transition hover:border-green-500 hover:scale-110"
+          >
+            <h6>
+              <span class="text-green-700">Public Safety</span> Education 
+            </h6><br />
+            <p class="font-roboto">
+              Educate communities on safety measures, such as fire prevention and first aid, to minimize the occurrence of emergencies and empower individuals to respond effectively in critical situations.
+            </p>
+           
+          </div>
+        </div>
+
+        <div class="w-full md:w-1/2 lg:w-1/3 pl-4 pr-4 mb-4">
+          <div
+            class="border border-gray-300 p-4 w-full h-60 shadow-lg transition hover:border-green-500 hover:scale-110"
+          >
+            <h6>
+              <span class="text-green-700">Infrastructure</span>  Maintenance 
+            </h6><br />
+            <p class="font-roboto">
+              Regularly inspect and maintain public infrastructure, such as roads and buildings, to prevent accidents and disasters that may lead to emergency situations, ensuring community safety. 
+            </p>
+          </div>
+        </div>
+
+        <div class="w-full md:w-1/2 lg:w-1/3 pl-4 pr-4 mb-4">
+          <div
+            class="border border-gray-300 p-4 w-full h-60 shadow-lg transition hover:border-green-500 hover:scale-110"
+          >
+            <h6>
+              <span class="text-green-700">Health and Hygiene </span>Practices 
+            </h6><br />
+            <p class="font-roboto">
+              Promote good health and hygiene habits within communities, reducing the risk of diseases and medical emergencies by fostering a culture of cleanliness and preventive healthcare measures. 
+            </p>
+          </div>
+        </div>
+
+        <div class="w-full md:w-1/2 lg:w-1/3 pl-4 pr-4 mb-4">
+          <div
+            class="border border-gray-300 p-4 w-full h-60 shadow-lg transition hover:border-green-500 hover:scale-110"
+          >
+            <h6>
+              <span class="text-green-700">Disaster Preparedness </span> Training 
+            </h6><br />
+            <p class="font-roboto">
+              Provide training to communities on disaster preparedness, including evacuation plans and emergency response drills, equipping them to handle natural disasters and unforeseen emergencies with confidence. 
+            </p>
+          </div>
+        </div>
+
+        <div class="w-full md:w-1/2 lg:w-1/3 pl-4 pr-4 mb-4">
+          <div
+            class="border border-gray-300 p-4 w-full h-60 shadow-lg transition hover:border-green-500 hover:scale-110"
+          >
+            <h6>
+              <span class="text-green-600">Traffic Safety</span>  Measures 
+            </h6><br />
+            <p class="font-roboto">
+            
+Implement and enforce traffic safety measures to reduce accidents and road-related emergencies, ensuring the well-being of individuals and preventing the need for emergency services intervention
+            </p>
+          </div>
+        </div>
+
+        <div class="w-full md:w-1/2 lg:w-1/3 pl-4 pr-4 mb-4">
+          <div
+            class="border border-gray-300 p-4 w-full h-60 shadow-lg transition hover:border-green-500 hover:scale-110"
+          >
+            <h6>
+              <span class="text-green-600">Community </span> Surveillance 
+            </h6><br />
+            <p class="font-roboto">
+              Encourage community watch programs and vigilant neighbors to identify and address potential safety hazards, fostering a sense of collective responsibility and preventing emergencies through early intervention and communication. 
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- content area ended -->
+  </section>
+  <!-- section-1 area ended -->
+
+  <!-- section-3 area started -->
+
+  <Aboutedhi />
+  <!-- section-3 area ended -->
+ <!-- faq section started -->
+ <section class="text-center md:pt-10 px-6">
+  <h2 class="text-[36px] font-bold mb-6 text-center">
+    Frequently Asked Questions
+  </h2>
+  <h6 class="font-roboto text-[17px]">
+    Explore our FAQs for clear insights on giving, eligibility, and the
+    positive impact <br /> your contribution can make in transforming lives.
+  </h6>
+</section>
+
+  <main class="p-5 bg-light-blue">
+    <div class="flex justify-center items-start my-2">
+      <div class="w-full sm:w-10/12 md:w-1/2 my-1">
+        <ul class="flex flex-col">
+       
+          <li class="bg-white my-2 shadow-lg rounded-lg" x-data="accordion(1)">
+            <h5
+              @click="handleClick()"
+              class="flex flex-row justify-between items-center font-semibold p-3 cursor-pointer text-[16px] md:text-[20px]"
+            >
+              <span>How Emergency Services of the Edhi operate during natural disasters?</span>
+              <svg
+                :class="handleRotate()"
+                class="fill-current text-green-700 md:h-6 md:w-6 h-6 w-6 transform transition-transform duration-500"
+                viewBox="0 0 20 20"
+              >
+                <path d="M13.962,8.885l-3.736,3.739c-0.086,0.086-0.201,0.13-0.314,0.13S9.686,12.71,9.6,12.624l-3.562-3.56C5.863,8.892,5.863,8.611,6.036,8.438c0.175-0.173,0.454-0.173,0.626,0l3.25,3.247l3.426-3.424c0.173-0.172,0.451-0.172,0.624,0C14.137,8.434,14.137,8.712,13.962,8.885 M18.406,10c0,4.644-3.763,8.406-8.406,8.406S1.594,14.644,1.594,10S5.356,1.594,10,1.594S18.406,5.356,18.406,10 M17.521,10c0-4.148-3.373-7.521-7.521-7.521c-4.148,0-7.521,3.374-7.521,7.521c0,4.147,3.374,7.521,7.521,7.521C14.148,17.521,17.521,14.147,17.521,10"></path>
+              </svg>
+            </h5>
+            <div
+              x-ref="tab"
+              :style="handleToggle()"
+              class="border-l-4 border-green-700 overflow-hidden max-h-0 duration-500 transition-all"
+            >
+              <p class="p-3 text-gray-900  md:text-[17px] text-[14px] ">
+                During natural disasters, the Edhi Foundation's Emergency Services Program mobilizes teams of trained volunteers and staff along with essential resources such as ambulances, medical supplies, and rescue equipment to provide immediate aid to affected communities.
+
+
+
+              </p>
+            </div>
+          </li>
+          <li class="bg-white my-2 shadow-lg rounded-lg" x-data="accordion(2)">
+            <h5
+              @click="handleClick()"
+              class="flex flex-row justify-between items-center font-semibold p-3 cursor-pointer text-[16px] md:text-[20px]"
+            >
+              <span>How Edhi assist individuals affected by man-made disasters?</span>
+              <svg
+                :class="handleRotate()"
+                class="fill-current text-green-700 md:h-6 md:w-6 h-6 w-6 transform transition-transform duration-500"
+                viewBox="0 0 20 20"
+              >
+                <path d="M13.962,8.885l-3.736,3.739c-0.086,0.086-0.201,0.13-0.314,0.13S9.686,12.71,9.6,12.624l-3.562-3.56C5.863,8.892,5.863,8.611,6.036,8.438c0.175-0.173,0.454-0.173,0.626,0l3.25,3.247l3.426-3.424c0.173-0.172,0.451-0.172,0.624,0C14.137,8.434,14.137,8.712,13.962,8.885 M18.406,10c0,4.644-3.763,8.406-8.406,8.406S1.594,14.644,1.594,10S5.356,1.594,10,1.594S18.406,5.356,18.406,10 M17.521,10c0-4.148-3.373-7.521-7.521-7.521c-4.148,0-7.521,3.374-7.521,7.521c0,4.147,3.374,7.521,7.521,7.521C14.148,17.521,17.521,14.147,17.521,10"></path>
+              </svg>
+            </h5>
+            <div
+              x-ref="tab"
+              :style="handleToggle()"
+              class="border-l-4 border-green-700 overflow-hidden max-h-0 duration-500 transition-all"
+            >
+              <p class="p-3 text-gray-900  md:text-[17px] text-[14px] ">
+                In the event of accidents, fires, or acts of terrorism, the Emergency Services Program swiftly deploys teams to the affected areas to offer rescue operations, medical care, shelter, and other essential support to those impacted by the crisis.
+
+
+
+              </p>
+            </div>
+          </li>  
+          <li class="bg-white my-2 shadow-lg rounded-lg" x-data="accordion(3)">
+            <h5
+              @click="handleClick()"
+              class="flex flex-row justify-between items-center font-semibold p-3 cursor-pointer text-[16px] md:text-[20px]"
+            >
+              <span>What makes the Emergency Services of Edhi unique?</span>
+              <svg
+                :class="handleRotate()"
+                class="fill-current text-green-700  md:h-6 md:w-6 h-6 w-6  transform transition-transform duration-500"
+                viewBox="0 0 20 20"
+              >
+                <path d="M13.962,8.885l-3.736,3.739c-0.086,0.086-0.201,0.13-0.314,0.13S9.686,12.71,9.6,12.624l-3.562-3.56C5.863,8.892,5.863,8.611,6.036,8.438c0.175-0.173,0.454-0.173,0.626,0l3.25,3.247l3.426-3.424c0.173-0.172,0.451-0.172,0.624,0C14.137,8.434,14.137,8.712,13.962,8.885 M18.406,10c0,4.644-3.763,8.406-8.406,8.406S1.594,14.644,1.594,10S5.356,1.594,10,1.594S18.406,5.356,18.406,10 M17.521,10c0-4.148-3.373-7.521-7.521-7.521c-4.148,0-7.521,3.374-7.521,7.521c0,4.147,3.374,7.521,7.521,7.521C14.148,17.521,17.521,14.147,17.521,10"></path>
+              </svg>
+            </h5>
+            <div
+              x-ref="tab"
+              :style="handleToggle()"
+              class="border-l-4 border-green-700 overflow-hidden max-h-0 duration-500 transition-all"
+            >
+              <p class="p-3 text-gray-900  md:text-[17px] text-[14px] ">
+                The Emergency Services Program of the Edhi Foundation stands out for its round-the-clock availability, rapid response times, and commitment to serving all individuals regardless of their background, nationality, or socioeconomic status. 
+
+
+
+              </p>
+            </div>
+          </li> 
+           <li class="bg-white my-2 shadow-lg rounded-lg" x-data="accordion(4)">
+            <h5
+              @click="handleClick()"
+              class="flex flex-row justify-between items-center font-semibold p-3 cursor-pointer text-[16px] md:text-[20px]"
+            >
+              <span>How can individuals contribute to the Emergency Services run by the Edhi?</span>
+              <svg
+                :class="handleRotate()"
+                class="fill-current text-green-700  md:h-6 md:w-6 h-6 w-6  transform transition-transform duration-500"
+                viewBox="0 0 20 20"
+              >
+                <path d="M13.962,8.885l-3.736,3.739c-0.086,0.086-0.201,0.13-0.314,0.13S9.686,12.71,9.6,12.624l-3.562-3.56C5.863,8.892,5.863,8.611,6.036,8.438c0.175-0.173,0.454-0.173,0.626,0l3.25,3.247l3.426-3.424c0.173-0.172,0.451-0.172,0.624,0C14.137,8.434,14.137,8.712,13.962,8.885 M18.406,10c0,4.644-3.763,8.406-8.406,8.406S1.594,14.644,1.594,10S5.356,1.594,10,1.594S18.406,5.356,18.406,10 M17.521,10c0-4.148-3.373-7.521-7.521-7.521c-4.148,0-7.521,3.374-7.521,7.521c0,4.147,3.374,7.521,7.521,7.521C14.148,17.521,17.521,14.147,17.521,10"></path>
+              </svg>
+            </h5>
+            <div
+              x-ref="tab"
+              :style="handleToggle()"
+              class="border-l-4 border-green-700 overflow-hidden max-h-0 duration-500 transition-all"
+            >
+              <p class="p-3 text-gray-900  md:text-[17px] text-[14px] ">
+                Individuals can support the Emergency Services Program through monetary donations, volunteering their time and skills, spreading awareness about the program's initiatives, and advocating for increased resources to enhance its effectiveness in saving lives during emergencies. 
+
+
+              </p>
+            </div>
+          </li>
+
+       
+         
+        </ul>
+      </div>
+    </div>
+  </main>
+  <script is:inline>  
+    document.addEventListener('alpine:init', () => {
+      Alpine.store('accordion', {
+        tab: 0
+      });
+      
+      Alpine.data('accordion', (idx) => ({
+        init() {
+          this.idx = idx;
+        },
+        idx: -1,
+        handleClick() {
+          this.$store.accordion.tab = this.$store.accordion.tab === this.idx ? 0 : this.idx;
+        },
+        handleRotate() {
+          return this.$store.accordion.tab === this.idx ? 'rotate-180' : '';
+        },
+        handleToggle() {
+          return this.$store.accordion.tab === this.idx ? `max-height: ${this.$refs.tab.scrollHeight}px` : '';
+        }
+      }));
+    })
+  </script>
+
+
+
+
+<!-- faq ended -->
+
+
+  <div class="h-[400px] w-full bg-[#fff] p-4">
+    <swiper-container
+      class="mySwiper"
+      pagination="true"
+      pagination-clickable="true"
+      navigation="true"
+      space-between="30"
+      slides-per-view="3"
+      loop="true"
+      breakpoints='{"200": {"slidesPerView": 1, "spaceBetween": 20}, "768": {"slidesPerView": 3, "spaceBetween": 40}}'
+    >
+      <swiper-slide>
+        <img src="/images/appeals/emergency-1.JPG" alt="" />
+      </swiper-slide>
+      <swiper-slide>
+        <img src="/images/appeals/emergency-2.JPG" alt="" />
+      </swiper-slide>
+      <swiper-slide>
+        <img src="/images/appeals/emergency-3.jpg" alt="" />
+      </swiper-slide>
+      <swiper-slide>
+        <img src="/images/appeals/emergency-4.jpg" alt="" />
+      </swiper-slide>
+      <swiper-slide>
+        <img src="/images/appeals/emergency-5.jpg" alt="" />
+      </swiper-slide>
+      <swiper-slide>
+        <img src="/images/appeals/emergency-6.jpeg" alt="" />
+      </swiper-slide>
+    </swiper-container>
+  </div>
+
+  <style>
+    
+
+    swiper-container {
+      width: 100%;
+      height: 100%;
+    }
+
+    swiper-slide {
+      text-align: center;
+      font-size: 18px;
+      background: #fff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    swiper-slide img {
+      display: block;
+      width: 100%;
+      height: 300px;
+      object-fit: cover;
+    }
+    .slider {
+      width: full;
+      height: 350px;
+    }
+  </style>
+  <script is:inline
+    src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-element-bundle.min.js"
+  ></script>
+</Base>

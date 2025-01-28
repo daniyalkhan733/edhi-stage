@@ -1,0 +1,221 @@
+---
+import Base from "@/layouts/Base.astro";
+import { getEntry } from "astro:content";
+
+const successstory = await getEntry("success-story", "-index");
+const { Content } = await successstory.render();
+const { title, description, meta_title } = successstory.data;
+---
+
+<Base >
+  <!-- heading started  -->
+  <section class="relative pt-32 lg:pt-36 pb-20">
+    <div
+      class="mx-auto lg:max-w-7xl w-full px-5 sm:px-10 md:px-12 lg:px-5 flex flex-col lg:flex-row gap-10 lg:gap-12"
+    >
+      <div
+        class="absolute w-full lg:w-1/2 inset-y-0 lg:right-0 hidden lg:block"
+      >
+        <span
+          class="absolute -left-6 md:left-4 top-24 lg:top-28 w-24 h-24 rotate-90 skew-x-12 rounded-3xl bg-green-400 blur-xl opacity-60 lg:opacity-95 lg:block hidden"
+        ></span>
+        <span
+          class="absolute right-4 bottom-12 w-24 h-24 rounded-3xl bg-blue-600 blur-xl opacity-80"
+        ></span>
+      </div>
+      <span
+        class="w-4/12 lg:w-2/12 aspect-square bg-gradient-to-tr from-blue-600 to-green-400 absolute -top-5 lg:left-0 rounded-full skew-y-12 blur-2xl opacity-40 skew-x-12 rotate-90"
+      ></span>
+      <div
+        class="relative flex flex-col items-center text-center lg:text-left lg:py-7 xl:py-8
+            lg:items-start lg:max-w-none max-w-3xl mx-auto lg:mx-0 lg:flex-1 lg:w-1/2"
+      >
+        <h1
+          class="text-3xl/tight sm:text-4xl/tight md:text-5xl/tight xl:text-6xl/tight
+            font-bold text-gray-900 dark:text-white"
+        >
+          Success
+          <span
+            class="text-transparent bg-clip-text bg-gradient-to-br from-indigo-600 from-20% via-blue-600 via-30% to-green-600"
+            >Story</span
+          >
+        </h1>
+        <p class="mt-8 text-gray-700 dark:text-black">
+          Meet our inspiring success stories, individuals who overcame
+          challenges and achieved their dreams.
+        </p>
+        <div class="mt-10 w-full flex max-w-md mx-auto lg:mx-0">
+          <div class="flex sm:flex-row flex-col gap-5 w-full"></div>
+        </div>
+      </div>
+
+      <div
+        class="flex flex-1 lg:w-1/2 lg:h-auto relative lg:max-w-none lg:mx-0 mx-auto max-w-3xl"
+      >
+        <img
+          src="/images/success-story.jpg"
+          alt="Hero image"
+          width="2350"
+          height="2359"
+          class="object-cover w-full rounded shadow-lg sm:h-30rem h-96 mt-[-30px]"
+        />
+      </div>
+    </div>
+  </section>
+
+  <!-- heading ended  -->
+  <!-- main section started -->
+  <section>
+    <div
+      class="pt-0 mx-auto max-w-screen-xl px-4 py-8 sm:px-6 sm:py-12 lg:px-8 lg:py-16"
+    >
+      <div class="mx-auto max-w-lg text-center">
+        <h2 class="text-4xl font-bold sm:text-4xl text-black">
+          Stories To Inspire
+        </h2>
+
+        <p class="mt-4 text-black">
+          Embark on emotional journeys of triumph over life's challenges."
+        </p>
+      </div>
+      <div class="mt-8 grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-2">
+        <a
+          class="text-white block rounded-xl border border-black p-8 shadow-xl transition hover:border-green-500 hover:shadow-green-400"
+          href="#"
+        >
+        <svg width="40px" height="40px" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+          <title>user-profile-circle</title>
+          <g id="Layer_2" data-name="Layer 2">
+            <g id="invisible_box" data-name="invisible box">
+              <rect width="48" height="48" fill="none"/>
+            </g>
+            <g id="icons_Q2" data-name="icons Q2">
+              <g>
+                <path d="M24,10a8,8,0,1,0,8,8A8,8,0,0,0,24,10Zm0,12a4,4,0,1,1,4-4A4,4,0,0,1,24,22Z"/>
+                <path d="M24,2A22,22,0,1,0,46,24,21.9,21.9,0,0,0,24,2ZM11.8,37.2A26.4,26.4,0,0,1,24,34a26.4,26.4,0,0,1,12.2,3.2,17.9,17.9,0,0,1-24.4,0Zm27.1-3.1h0A30.7,30.7,0,0,0,24,30,30.7,30.7,0,0,0,9.1,34.1h0A17.7,17.7,0,0,1,6,24a18,18,0,0,1,36,0,17.7,17.7,0,0,1-3.1,10.1Z"/>
+              </g>
+            </g>
+          </g>
+        </svg>
+
+          <h2 class="mt-4 text-xl font-bold text-black pb-2 z-10">Badar</h2>
+
+          <p class="mt-1 text-sm text-black">
+            I only knew the Edhis as my parents, not knowing who my real parents
+            were since I was introduced to the Edhi Centre when I was just 2
+            years old. My memories are faint, but I recall someone bringing me
+            to the center. I've lived happily at the Edhi Centre ever since.
+            Despite efforts by the Edhi organization to find my biological
+            parents, they were unsuccessful. Now, at 27 years old, my life
+            revolves around the Edhi Foundation. Mr. Abdul Sattar Edhi and Mrs.
+            Bilqees Edhi have been like parents to me. I'm immensely grateful
+            for their care and support during my time at the Edhi Centre. <br
+            /><br /> Thanks to them, I am now married and have a daughter. The Edhi
+            organization never let me feel alone; they provided warmth and affection
+            always. I'm unable to fully express my gratitude for their kindness and
+            assistance.
+          </p>
+        </a>
+        <a
+          class="block rounded-xl border border-black p-8 shadow-xl transition hover:border-green-500 hover:shadow-green-400"
+          href="#"
+        >
+        <svg width="40px" height="40px" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+          <title>user-profile-circle</title>
+          <g id="Layer_2" data-name="Layer 2">
+            <g id="invisible_box" data-name="invisible box">
+              <rect width="48" height="48" fill="none"/>
+            </g>
+            <g id="icons_Q2" data-name="icons Q2">
+              <g>
+                <path d="M24,10a8,8,0,1,0,8,8A8,8,0,0,0,24,10Zm0,12a4,4,0,1,1,4-4A4,4,0,0,1,24,22Z"/>
+                <path d="M24,2A22,22,0,1,0,46,24,21.9,21.9,0,0,0,24,2ZM11.8,37.2A26.4,26.4,0,0,1,24,34a26.4,26.4,0,0,1,12.2,3.2,17.9,17.9,0,0,1-24.4,0Zm27.1-3.1h0A30.7,30.7,0,0,0,24,30,30.7,30.7,0,0,0,9.1,34.1h0A17.7,17.7,0,0,1,6,24a18,18,0,0,1,36,0,17.7,17.7,0,0,1-3.1,10.1Z"/>
+              </g>
+            </g>
+          </g>
+        </svg>
+
+          <h2 class="mt-4 text-xl font-bold text-black pb-2">Khurram Shezad</h2>
+
+          <p class="mt-1 text-sm text-black">
+            Khurram Shezad and Amir, both are part of Edhi foundation, ever
+            since they entered into the Edhi Centre. Both of them are suffering
+            from the disabilities like deaf and dumb. Both children were given
+            education at Edhi Foundation. They initiated their social and
+            practical lives after acquiring technical skills at Edhi
+            organization. <br /><br /> During the process of learning at Edhi Foundation,
+            we found both highly hard working, and their iron works indicated their
+            sense of responsibility. Both have married to the unclaimed girls – living
+            in the Edhi homes. Thus both of them are living with far more happiness
+            and satisfaction with their wives in Edhi Foundation.
+          </p>
+        </a>
+        <a
+          class="block rounded-xl border border-black p-8 shadow-xl transition hover:border-green-500 hover:shadow-green-400"
+          href="#"
+        >
+        <svg width="40px" height="40px" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+          <title>user-profile-circle</title>
+          <g id="Layer_2" data-name="Layer 2">
+            <g id="invisible_box" data-name="invisible box">
+              <rect width="48" height="48" fill="none"/>
+            </g>
+            <g id="icons_Q2" data-name="icons Q2">
+              <g>
+                <path d="M24,10a8,8,0,1,0,8,8A8,8,0,0,0,24,10Zm0,12a4,4,0,1,1,4-4A4,4,0,0,1,24,22Z"/>
+                <path d="M24,2A22,22,0,1,0,46,24,21.9,21.9,0,0,0,24,2ZM11.8,37.2A26.4,26.4,0,0,1,24,34a26.4,26.4,0,0,1,12.2,3.2,17.9,17.9,0,0,1-24.4,0Zm27.1-3.1h0A30.7,30.7,0,0,0,24,30,30.7,30.7,0,0,0,9.1,34.1h0A17.7,17.7,0,0,1,6,24a18,18,0,0,1,36,0,17.7,17.7,0,0,1-3.1,10.1Z"/>
+              </g>
+            </g>
+          </g>
+        </svg>
+
+          <h2 class="mt-4 text-xl font-bold text-black pb-2">Ahmed</h2>
+
+          <p class="mt-1 text-sm text-black">
+            Ahmad physically is a handicapped boy by his deaf and dumb
+            disabilities. He studied at Edhi Foundation that assisted him to get
+            the technical skills. He is extremely a hard working boy, and works
+            with great diligence at Edhi Foundation. <br /><br /> He has married
+            with an unclaimed girl, living in Edhi homes, thus he and his spouse
+            are living a happy life. They are fully committed and dedicated to promote
+            the cause of Edhi Foundation.
+          </p>
+        </a>
+        <a
+          class="block rounded-xl border border-black p-8 shadow-xl transition hover:border-green-500 hover:shadow-green-400"
+          href="#"
+        >
+        <svg width="40px" height="40px" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+          <title>user-profile-circle</title>
+          <g id="Layer_2" data-name="Layer 2">
+            <g id="invisible_box" data-name="invisible box">
+              <rect width="48" height="48" fill="none"/>
+            </g>
+            <g id="icons_Q2" data-name="icons Q2">
+              <g>
+                <path d="M24,10a8,8,0,1,0,8,8A8,8,0,0,0,24,10Zm0,12a4,4,0,1,1,4-4A4,4,0,0,1,24,22Z"/>
+                <path d="M24,2A22,22,0,1,0,46,24,21.9,21.9,0,0,0,24,2ZM11.8,37.2A26.4,26.4,0,0,1,24,34a26.4,26.4,0,0,1,12.2,3.2,17.9,17.9,0,0,1-24.4,0Zm27.1-3.1h0A30.7,30.7,0,0,0,24,30,30.7,30.7,0,0,0,9.1,34.1h0A17.7,17.7,0,0,1,6,24a18,18,0,0,1,36,0,17.7,17.7,0,0,1-3.1,10.1Z"/>
+              </g>
+            </g>
+          </g>
+        </svg>
+
+          <h2 class="mt-4 text-xl font-bold text-black pb-2">Amir</h2>
+
+          <p class="mt-1 text-sm text-black">
+            In 1989, after my father passed away, I felt alone and struggled to
+            cope. Despite my efforts, I couldn't overcome my difficulties, so I
+            decided to seek help from the Edhi Foundation. Since then, my
+            relationship with the foundation has grown, and I am now truly
+            grateful for the support and care provided by Uncle Edhi. <br /><br
+            /> His kindness makes me feel like I'm with family, and I can't thank
+            him enough. May Allah bless Uncle Edhi with even more success and happiness.
+            Amen!
+          </p>
+        </a>
+      </div>
+    </div>
+
+    <!-- main section ended -->
+  </section>
+</Base>

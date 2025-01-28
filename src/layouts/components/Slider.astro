@@ -1,0 +1,142 @@
+<style>
+  /* General styling reset */
+  html, body {
+    position: relative;
+    height: 100%;
+    margin: 0;
+    overflow-x: hidden;
+  }
+
+  /* Swiper container styling */
+  swiper-container {
+    width: 100%;
+    height: 100%; /* Full viewport height */
+  }
+
+
+  /* Swiper slide styling */
+  swiper-slide {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #000; /* Optional background color in case of gaps */
+    
+  }
+
+  /* Image styling for responsive behavior */
+  swiper-slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensure image covers the entire slide area */
+  }
+
+  swiper-button-next svg{
+
+    display: none !important;
+
+  }
+
+    /* Hide navigation buttons on small screens */
+    @media only screen and (max-width: 480px) {
+    .swiper-button-next,
+    .swiper-button-prev {
+      display: none; /* Hide navigation buttons on mobile */
+    }
+  }
+
+  /* Ensure next/prev buttons are positioned on larger screens */
+  @media only screen and (min-width: 481px) {
+    .swiper-button-next {
+      right: 10px; /* Adjust the position for desktop and larger screens */
+    }
+    .swiper-button-prev {
+      left: 10px; /* Adjust the position for desktop and larger screens */
+    }
+  }
+  /* Button styling */
+  button {
+    position: absolute;
+    bottom: 8px;
+    right: 110px;
+    background-color: #009241;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    font-size: 16px;
+    cursor: pointer;
+  }
+
+  /* Hide button on small screens */
+  @media screen and (max-width: 500px) {
+    button {
+      display: none;
+    }
+  }
+  
+
+  @media only screen and (max-height: 450px) {
+  /* CSS rules for devices with a max height of 400px */
+
+  /* Example: Adjust the Swiper container height */
+  swiper-container {
+    height: auto; /* Adjust height to fit within smaller screens */
+  }
+
+  /* Example: Adjust image styling */
+  swiper-slide img {
+    object-fit: fill; /* Ensure the image fits well without cropping */
+  }
+
+  /* Adjust button size and placement if needed */
+  button {
+    padding: 10px 20px;
+    font-size: 6px;
+    bottom: 5px;
+  }
+
+}
+
+</style>
+
+<body>
+  <swiper-container class="mySwiper" navigation="true">
+    <swiper-slide>
+      <picture>
+        <source srcset="/images/main-slider-mobile.png" media="(max-width: 480px)">
+        <img src="/images/main-slider.jpg" alt="Slide 1">
+      </picture>
+    </swiper-slide>
+    <swiper-slide>
+      <picture>
+        <source srcset="/images/ambulance-slider-1-mobile.png" media="(max-width: 480px)">
+        <img src="/images/ambulance-slider-1.png" alt="Slide 1">
+      </picture>
+    </swiper-slide>
+   
+
+    <swiper-slide>
+      <picture>
+        <source srcset="/images/orphan-slider-2-mobile.png" media="(max-width: 480px)">
+        <img src="/images/orphan-slider-2.png" alt="Slide 2">
+      </picture>
+    </swiper-slide>
+
+    <swiper-slide>
+      <picture>
+        <source srcset="/images/sadqa-slider-3-mobile.png" media="(max-width: 480px)">
+        <img src="/images/sadqa-slider-3.png" alt="Slide 3">
+      </picture>
+    </swiper-slide>
+  </swiper-container>
+
+  <script is:inline src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-element-bundle.min.js"></script>
+  <script is:inline>
+    var swiper = new Swiper('.swiper-container', {
+      autoHeight: true, // Adjust height based on image content
+      allowSlideNext: false,
+      allowSlidePrev: false,
+
+     
+    });
+  </script>
+</body>

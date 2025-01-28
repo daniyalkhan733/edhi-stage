@@ -1,0 +1,96 @@
+---
+import config from "@/config/config.json";
+import Logo from "@/components/Logo.astro";
+import ScamAlert from "@/components/ScamAlert.astro";
+// import ThemeSwitcher from "@/components/ThemeSwitcher.astro";
+
+import { IoSearch } from "react-icons/io5/index.js";
+import Navbar from "@/components/Navbar.astro";
+
+const { navigation_button, settings } = config;
+const { pathname } = Astro.url;
+---
+
+
+
+<div
+id="navbar"
+  class="navbar z-[995] sm:px-44 border-solid border-y bg-[#009241] py-1.5  hidden sm:flex"
+>
+  <span class="header-text">
+    <span>
+      Head Office: 803 Romford Road, London, E12 5AN United Kingdom | Donation Hotline: 0207 723 2050 | Daily Timings: 9am - 6pm
+    </span>
+  </span>
+  <a
+    href="https://donate.edhiuk.org/#signup-form"
+    class="btn-sm btn-second rounded-sm mr-2"
+  >
+    <span>Login / Register</span>
+  </a>
+</div>
+<header class= {`header z-30 ${settings.sticky_header && "sticky top-0"}`}>
+</header>
+<div class="navbar z-[999] sm:px-44 md:py-1.5 pb-1.5  md:pt-0 mx-auto flex">
+  <div class="order-0">
+    <Logo />
+  </div>
+  <div class="order-1 ml-auto flex items-center md:order-2 lg:ml-0">
+    {
+      settings.search && (
+        <> </>
+        // <a
+        //   class="mr-5 inline-block border-r border-border pr-5 text-xl text-dark hover:text-primary dark:border-darkmode-border dark:text-white"
+        //   href="/search"
+        //   aria-label="search"
+        // >
+        //   <IoSearch />
+
+        // </a>
+      )
+    }
+    <!-- <ThemeSwitcher className="mr-5" /> -->
+    {
+      navigation_button.enable && (
+        //       <button type="button" class="btn-sm btn-second rounded-sm gap-10 ">
+        //   <span>Charity Number: 1015408</span>
+
+        // </button>
+        <>
+          <a
+            class="btn btn-second btn-sm hidden lg:inline-block rounded-sm md:mr-4"
+            href="/contact-us/united-kingdom"
+          >
+            Bank Deposit
+          </a>
+          <a
+            class="btn btn-second btn-sm hidden lg:inline-block rounded-sm md:mr-4"
+            href="#"
+          >
+            Charity Number: 1015408
+          </a>
+          <a
+            class="btn btn-outline-primary btn-sm hidden lg:inline-block rounded-sm "
+            href={navigation_button.link}
+          >
+            {navigation_button.label}
+          </a>
+        </>
+      )
+    }
+  </div>
+</div>
+
+<nav class="navbar z-[999] sm:px-44 justify-center border-solid border-y">
+  <Navbar />
+  <!-- logo -->
+</nav>
+
+<style>
+  .header-text {
+    color: #ffffff;
+    font-size: 13px;
+    font-style: normal;
+    font-weight: 500;
+  }
+</style>

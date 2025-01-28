@@ -1,0 +1,235 @@
+---
+import Base from "@/layouts/Base.astro";
+import { markdownify } from "@/lib/utils/textConverter";
+import { getEntry } from "astro:content";
+import Image from "node_modules/astro/components/Image.astro";
+const founderprofile = await getEntry("founder-profile", "-index");
+const { Content } = await founderprofile.render();
+const { title, description, meta_title } = founderprofile.data;
+import { SEO } from "astro-seo";
+---
+
+<SEO
+  title="Founder of Edhi Foundation - Abdul Sattar Edhi's Profile"
+  description="Learn about Abdul Sattar Edhi, the founder of Edhi Foundation. Explore his life, mission, and lasting impact."
+  canonical={Astro.request.url}
+  openGraph={{
+    basic: {
+      title: "Founder of Edhi Foundation - Abdul Sattar Edhi's Profile",
+      type: "A type.",
+      image: "https://edhiuk.org/images/logo.jpg",
+    
+    }
+  }}
+  twitter={{
+    creator: "@jonasmerlins1"
+  }}
+  extend={{
+    // extending the default link tags
+    link: [{ rel: "icon", href: "/favicon.png" }],
+    // extending the default meta tags
+    meta: [
+      {
+        name: "twitter:image",
+        content: "https://edhiuk.org/images/logo.jpg",
+      },
+      { name: "twitter:title", content: "Founder of Edhi Foundation - Abdul Sattar Edhi's Profile" },
+      { name: "twitter:description", content: "Learn about Abdul Sattar Edhi, the founder of Edhi Foundation. Explore his life, mission, and lasting impact." },
+      { name: "keywords", content: "" },
+    ],
+  }}
+/>
+
+
+
+
+
+
+
+
+
+
+<Base >  
+ <!-- heading started  -->
+
+ <section
+ class="bg-gray-100 dark:bg-gray-900 py-32 sm:py-36 lg:py-40 overflow-hidden h-[80dvh] min-h-max flex items-center relative"
+>
+ <div
+   class="absolute top-0 left-0 -translate-x-[54%] -translate-y-[70%] w-2/5 rounded-full aspect-square bg-green-600/70
+     backdrop-filter blur-3xl opacity-50"
+ >
+ </div>
+ <div
+   class="absolute bottom-0 right-0 translate-x-[54%] translate-y-[70%] w-2/5 rounded-full aspect-square bg-green-600/70
+     backdrop-filter blur-3xl opacity-50"
+ >
+ </div>
+ <div
+   class="absolute min-w-[300px] w-[48%] md:w-2/5 aspect-square rounded-full bg-gradient-to-r from-emerald-400/5 right-0
+     -translate-y-[40%] translate-x-[40%] top-0"
+ >
+   <div class="inset-[10%] rounded-full bg-gradient-to-l from-green-400/20">
+     <div
+       class="absolute inset-[20%] rounded-full bg-gradient-to-l from-green-400/30"
+     >
+     </div>
+   </div>
+ </div>
+ <div
+   class="absolute min-w-[300px] w-[48%] md:w-2/5 aspect-square rounded-full bg-gradient-to-l from-green-400/5 left-0
+     translate-y-[40%] -translate-x-[40%] bottom-0"
+ >
+   <div class="inset-[10%] rounded-full bg-gradient-to-r from-green-400/40">
+     <div
+       class="absolute inset-[20%] rounded-full bg-gradient-to-r from-green-400/50"
+     >
+     </div>
+   </div>
+ </div>
+ <div class="mx-auto lg:max-w-6xl w-full px-5 sm:px-10 md:px-12 lg:px-5">
+   <div class="text-center flex flex-col items-center space-y-10">
+     <h1
+       class="text-4xl md:text-5xl lg:text-6xl/tight xl:text-7xl/tight text-gray-900 dark:text-white font-bold max-w-4xl capitalize"
+     >
+     Founder Profile     </h1>
+     <p class="text-gray-700 dark:text-gray-300 text-center">
+      Abdul Sattar Edhi, the esteemed founder of the Edhi Foundation, dedicated his life to humanitarian causes. Renowned for his selflessness and compassion, he tirelessly worked to aid Pakistan's impoverished and marginalized communities.      </p>
+
+     <div class="flex justify-center">
+       <a
+         href="https://donate.edhiuk.org/"
+         class="px-8 h-12 rounded flex items-center gap-x-3 bg-green-700 text-white hover:bg-opacity-80"
+       >
+         Donate Now
+       </a>
+     </div>
+   </div>
+ </div>
+</section>
+<!-- heading ended -->  
+<section>
+  <div class="mx-auto max-w-6xl px-6 pt-10 sm:px-6 sm:py-16 lg:px-8 justify-center">
+    <div class="max-w-3xl"></div>
+
+    <div class="mt-8 grid grid-cols-1 gap-8 lg:grid-cols-2 lg:gap-16">
+      <div class="relative h-64 overflow-hidden sm:h-80 lg:h-full">
+        <img
+          alt=""
+          src="/images/abdul-sattar-hd.jpg"
+          class="absolute inset-0 h-full w-full object-fit rounded"
+        />
+      </div>
+
+      <article class="space-y-4 text-gray-600 md:py-20 pt-0">
+        <h2 class="text-3xl font-bold sm:text-4xl ">Early Years and <br /> What <span class="text-green-600">Inspired Him</span> </h2>
+
+        <p class="text-[17px] font-roboto">
+          Abdul Sattar Edhi's journey of kindness and compassion began at a very young age. As a child, he was deeply affected when his beloved mother fell seriously ill. Taking on the immense responsibility, Edhi devoted himself to her care, tending to her every need with unwavering dedication. This early experience of witnessing his mother's pain and struggle left an indelible mark on him. It was during this challenging period that Edhi's empathy for the suffering of others began to grow. The sadness he felt seeing his mother in distress ignited a profound desire within him to help those who were also enduring hardships. These formative experiences shaped his character and instilled in him a lifelong commitment to alleviating the suffering of those in need. Driven by the memory of his mother's struggle, Edhi dedicated his life to creating a better world for the less fortunate, founding what would become one of the most extensive and effective charitable organizations in Pakistan.
+        </p>
+      
+        
+      </article>
+    </div>
+  </div>
+</section>
+
+
+  <section class="mx-auto max-w-screen-xl px-6">
+   
+    <div class="flex flex-col md:flex-row pt-10">
+      <div class="md:w-1/2">
+        <h2 class="font-bold text-left">
+          Establishing Edhi Trust:A Vision Becomes Reality
+        </h2>
+      </div>
+      <div class="md:w-1/2 text-justify pt-2">
+        <p>
+          Although Abdul Sattar Edhi had personal difficulties and didn't have
+          enough money, he decided to help those in need. He initially started a
+          small health center, and soon, his idea came into form, and Edhi
+          Foundation came into the picture. By asking the public for help and
+          getting support from the community, he gathered enough money to start
+          different projects, like homes for mothers and urgent ambulance
+          services. This turned his dream into something tangible that helped
+          many other people.
+        </p>
+      </div>
+    </div>
+    <div class="md:text-center text-left pt-10 md:py-36 ">
+      <h1 class="text-black text-3xl font-bold">Family and <span class="text-green-600">Teamwork</span> </h1>
+
+      <div class="sm:grid-cols-1 ">
+        <div class=" mt-4">
+          <p class="">
+            Abdul Sattar Edhi got married to Bilquis, and she also cared about
+            helping people. Their marriage made them even more dedicated to
+            helping others. They worked days and nights together to take care of
+            Edhi Foundation. Bilquis (The wife of Abdul Sattar Edhi) played a
+            big role in running the maternity home and helping with adoptions.
+            Their teamwork shows a strong commitment to helping people, no
+            matter their beliefs or social standings.
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="md:text-center text-left md:pt-0 pb-36 pt-10">
+      <h1 class="text-black text-3xl font-bold">Directly Helping People</h1>
+      <br />
+
+      <div class="sm:grid-cols-1">
+        <div class=" mb-4">
+          <p class="">
+            Edhi was not only a big name in helping people, but he also worked
+            hands-on every day at Edhi Foundation. He collected money, drove
+            ambulances himself, and helped those most needed it. He showed
+            everyone how to be selfless and caring towards our community and
+            beyond. When he spent time with people living in Edhi Homes, you
+            could see how much he cared about them and wanted to help them to
+            have better lives.
+          </p><br />
+        </div>
+      </div>
+      <div class="videos flex justify-center h-">
+        <iframe
+          class="video rounded"
+          src="https://www.youtube.com/embed/SScIFD9Ec_w?si=QdUAbXOjHZnm-j4C"
+          title="YouTube video player"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          allowfullscreen></iframe>
+      </div>
+      <style>
+        .video {
+          width: 80vw;
+          height: 90vh;
+        }
+        @media only screen and (max-width: 800px) {
+          .video {
+            width: 95vw;
+            height: 50vh;
+          }
+        }
+      </style>
+
+      <div class="flex flex-col md:flex-row md:pt-36 pt-10 mx-auto max-w-screen-xl ">
+        <div class="md:w-1/2">
+          <h2 class="font-bold  text-left">
+            Simple Lifestyle and  <span class="text-green-600">Beliefs</span> 
+          </h2>
+         
+        </div>
+        <div class="md:w-1/2 text-justify ">
+          <p>
+            Abdul Sattar Edhi lived a simple life and always believed in being
+            humble. He didn't take any salary and lived in a basic home,
+            choosing to help people instead of chasing after money. He didn't
+            seek fame and stayed focused on his goal, avoiding parties and
+            events to spend more time helping others. Edhi also ensured women
+            had important roles in this Foundation, showing that he believed in
+            fairness and treating everyone equally.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+</Base>

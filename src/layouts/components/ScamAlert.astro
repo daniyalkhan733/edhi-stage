@@ -1,0 +1,68 @@
+<script src="https://cdn.tailwindcss.com"></script>
+<style>
+    @keyframes scroll {
+        0% { transform: translateX(100%); }
+        100% { transform: translateX(-100%); }
+    }
+
+    .animate-scroll {
+        animation: scroll 30s linear infinite;
+    }
+
+    .hidden {
+        display: none;
+    }
+</style>
+<div id="alertBanner" class="z-[999] left-0 w-full bg-red-600 text-white py-3 px-4 flex items-center justify-between overflow-hidden" style="display: none;">
+    <div class="flex-1 overflow-hidden">
+        <div class="whitespace-nowrap animate-scroll">
+            <p class="text-sm md:text-base inline-block mr-4">
+                ⚠️ <span class="font-semibold">Scam Alert:</span> Please avoid donating on these fraudulent websites: 
+                <span class="underline">www.edhiusa.com</span>, 
+                <span class="underline">www.edhiusa.net</span>, 
+                <span class="underline">www.edhiusa.org</span>.
+                Donations made here will not reach those in need and may be misused.
+            </p>
+        </div>
+    </div>
+    
+    <button 
+        id="dismissAlertButton"
+        class="z-50 ml-4 bg-white text-red-600 p-1 rounded-md flex items-center justify-center hover:bg-gray-200 transition-colors duration-200 h-6 w-6 md:h-8 md:w-8"
+    >
+        <svg 
+            class="h-4 w-4 md:h-5 md:w-5" 
+            viewBox="0 0 24 24" 
+            fill="none" 
+            stroke="currentColor" 
+            stroke-width="2" 
+            stroke-linecap="round" 
+            stroke-linejoin="round"
+        >
+            <line x1="18" y1="6" x2="6" y2="18"></line>
+            <line x1="6" y1="6" x2="18" y2="18"></line>
+        </svg>
+    </button>
+</div>
+
+<script is:inline src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script is:inline src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.min.js"></script>
+<script is:inline>
+    $(document).ready(function () {
+        if (!$.cookie('AlertDismissed')) {
+            $('#alertBanner').show();
+        }
+        $('#dismissAlertButton').click(function () {
+            $('#alertBanner').hide();
+            $.cookie('AlertDismissed', 'true', { expires: 1 });
+        });
+    });
+    document.onload = function() {
+        if ($.cookie('AlertDismissed')) {
+            $('#alertBanner').hide();
+            document.getElementById("alertBanner").classList.add("hidden");
+
+        }
+    }
+</script>
+

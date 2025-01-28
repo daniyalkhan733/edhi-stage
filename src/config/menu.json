@@ -1,0 +1,278 @@
+{
+  "main": [
+    {
+      "name": "HOME",
+      "url": "/"
+    },
+    {
+      "name": "ABOUT US",
+      "url": "/about-us",
+
+      "hasChildren": true,
+      "children": [
+        {
+          "name": "About Edhi Foundation",
+          "url": "/about-edhi-foundation"
+        },
+        {
+          "name": "Bilquis Bano Edhi",
+          "url": "/bilquis-bano"
+        },
+        {
+            "name":"Faisal Edhi",
+            "url":"/faisal-edhi"
+          },
+        
+        {
+          "name": "Our History",
+          "url": "/our-history"
+        },
+        {
+          "name": "Founder Profile - Abdul Sattar Edhi",
+          "url": "/founder-profile"
+        }
+      ]
+    },
+    {
+      "name": "RAMADAN 2025",
+      "url": "",
+
+      "hasChildren": true,
+      "children": [
+        {
+          "name": "Ramadan Appeal 2025",
+          "url": "/ramadan"
+        },
+        {
+          "name": "Iftar Food Pack",
+          "url": "/ramadan/iftar-food-pack"
+        },
+        {
+            "name":"Fidya And Kaffara",
+            "url":"/ramadan/fidya-and-kaffara"
+          },
+        
+        {
+          "name": "Fitrana And Eid Gifts",
+          "url": "/ramadan/fitrana-and-eid-gifts"
+        },
+        {
+          "name": "Zakat Appeal",
+          "url": "/appeals/zakat"
+        },
+        {
+          "name": "Zakat Calculator",
+          "url": "/appeals/zakat-calculator"
+        }
+      ]
+    },
+    
+
+    {
+      "name": "APPEALS",
+      "url": "/appeals",
+      "hasChildren": true,
+      "children": [
+        {
+          "name": "Sadqa",
+          "url": "/sadqa"
+        },
+        {
+          "name": "Zakat",
+          "url": "/zakat"
+        },
+        {
+          "name": "Fidya",
+          "url": "/fidya-and-fitrana"
+        },
+        {
+          "name": "Aqeeqa",
+          "url": "/aqeeqa"
+        },
+        {
+          "name": "Food Bank",
+          "url": "/food-bank"
+        },
+       
+        {
+          "name": "Lillah (In The Name of Allah)",
+          "url": "/lillah-program"
+        },
+
+        {
+          "name": "Emergency Services",
+          "url": "/emergency-services-program"
+        }
+      
+        
+        
+       
+      ]
+    },
+
+    {
+      "name": "SERVICES",
+      "url": "/services",
+      "hasChildren": true,
+      "children": [
+        
+        {
+          "name": "Ambulance",
+          "url": "/ambulance-service"
+        },
+        {
+          "name": "Hospital",
+          "url": "/hospital"
+        },
+        {
+          "name": "Children",
+          "url": "/children-services"
+        },
+        {
+          "name": "Edhi Homes orphanage",
+          "url": "/homes-orphanage"
+        },
+        {
+          "name": "Educational",
+          "url": "/educational-services"
+        },
+        {
+          "name": "Graveyard",
+          "url": "/graveyard"
+        },
+        {
+          "name": "Missing Person",
+          "url": "/missing-person-services"
+        },
+        {
+          "name": "Refugees Assistance",
+          "url": "/refugees-assistance"
+        },
+        {
+          "name": "Honorary & Voulantry",
+          "url": "/honorary-volantry-service"
+        },
+        {
+          "name": "Marriage Bureau",
+          "url": "/marriage-bureau-service"
+        },
+        {
+          "name": "Covid 19 Assistance",
+          "url": "/covid-19-assistance"
+        }
+      ]
+    },
+
+
+
+    {
+      "name": "ACTIVITIES",
+      "url": "/activities",
+      "hasChildren": true,
+      "children": [
+        {
+          "name": "Destitue Homes",
+          "url": "/destitue-homes"
+        },
+        {
+          "name": "High Ways Project",
+          "url": "/high-ways-project"
+        },
+        {
+          "name": "International Communtiy Centers",
+          "url": "/international-community-centers"
+        },
+        {
+          "name": "Collaboration with other Organizations",
+          "url": "/collaboration-with-other-organizations"
+        },
+        {
+          "name": "International Activities",
+          "url": "/international-activities"
+        }
+        
+      ]
+    },
+
+    {
+      "name": "MEDIA",
+      "url": "/media",
+      "hasChildren": true,
+      "children": [
+        {
+          "name": "Image Galleries",
+          "url": "/image-galleries"
+        },
+        {
+          "name": "Videos",
+          "url": "/videos"
+        },
+        {
+          "name": "Downloads",
+          "url": "/downloads"
+        }
+      ]
+    },
+
+   
+    {
+      "name": "CONTACT US",
+      "url": "/contact-us",
+      "hasChildren": true,
+      "children": [
+        {
+          "name": "United Kingdom",
+          "url": "/united-kingdom"
+        },
+        {
+          "name": "Networks",
+          "url": "/networks"
+        },
+        {
+          "name": "All Pakistani Edhi Centers",
+          "url": "/all-pakistani-edhi-centers"
+        },
+        {
+          "name": "International Offices",
+          "url": "/international-offices"
+        }
+      ]
+    }
+  ],
+
+  "footer": [
+    
+    {
+      "name": "Networks",
+      "url": "/contact-us/networks"
+    },
+    {
+      "name": "United Kingdom",
+      "url": "/contact-us/united-kingdom"
+    },
+    {
+      "name": "All Pakistani Edhi Centers",
+      "url": "/contact-us/all-pakistani-edhi-centers"
+    },
+    {
+      "name": "International Offices",
+      "url": "/contact-us/international-offices"
+    }
+  ],
+  
+  "footerAbout": [
+    {
+      "name": "About Edhi Foundation",
+      "url": "about-us/about-edhi-foundation"
+    },
+    {
+      "name": "Bilquis Bano Edhi",
+      "url": "about-us/bilquis-bano"
+    },
+
+    {
+      "name": "Founder Profile",
+      "url": "about-us/founder-profile"
+    }
+  ]
+}

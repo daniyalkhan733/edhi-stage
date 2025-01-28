@@ -1,0 +1,78 @@
+---
+type Program = {
+  program_id: number;
+  program_name: string;
+  image: string;
+  program_image_flag: string;
+  program_rate_id: number | null;
+  program_rate: number | null;
+  pr_start_date: string | null;
+  pr_end_date: string | null;
+  country_id: number | null;
+  country_name: string | null;
+  any_amount: string;
+  program_is_animal: string;
+  other_amount: string;
+  donation_url: string;
+  direct_debit_url: string;
+};
+
+const icharmsUrl = import.meta.env.ICHARMS_URL;
+const apiKey = import.meta.env.ICHARMS_API_KEY;
+
+const response = await fetch(`${icharmsUrl}/program-list`, {
+  headers: {
+    Authorization: `Bearer ${apiKey}`,
+  },
+});
+
+const data = await response.json();
+const responseData = data;
+
+
+
+---
+
+  <h1 class="text-center text-3xl mb-4 uppercase bg-white text-gray-700 mx-auto px-2">
+    Donation Slider
+  </h1>
+  <div class="mx-auto w-full md:w-4/5 px-4">
+    <div class="container my-8">
+      <div class="flex justify-between items-center mb-4">
+        <div>
+          <button class="cursor-pointer text-xl mx-1 text-indigo-600 font-bold"></button>
+          <button class="cursor-pointer text-xl mx-1 text-indigo-600 font-bold"></button>
+        </div>
+      </div>
+      <div id="scrollContainer" class="flex flex-no-wrap overflow-x-scroll scrolling-touch items-start mb-8">
+        {responseData.map((program: any, index: any) => (
+          <div class="flex-none w-2/3 md:w-1/3 md:pb-4 border mr-4">
+            <a href={program.donation_url} class="space-y-4">
+              <div class="aspect-w-16 aspect-h-9">
+                <img
+                  class="object-cover shadow-md hover:shadow-xl "
+                  src={program.image}
+                  alt=""
+                />
+              </div>
+              <div class="px-4 py-2">
+                <div class="text-lg leading-6 font-medium space-y-1">
+                  <h3 class="font-bold text-gray-800 mb-2 text-base">
+                    {program.program_name}
+                  </h3>
+                </div>
+                <div class="text-lg">
+                  <p class="">
+                    {program.program_rate}
+                  </p>
+                  <a href={program.donation_url} class="flex items-center justify-center  p-2 sm:p-3 font-semibold tracking-tight bg-green-600 text-gray-50 w-2/4">Donate Now</a>
+      
+                </div>
+              </div>
+            </a>
+          </div>
+        ))}
+      </div>
+    </div>
+  </div>
+

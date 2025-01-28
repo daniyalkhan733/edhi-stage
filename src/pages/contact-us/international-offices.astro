@@ -1,0 +1,367 @@
+---
+import Base from "@/layouts/Base.astro";
+
+import { getEntry } from "astro:content";
+import Accordion from "@/shortcodes/Accordion";
+
+const internationaloffices = await getEntry("international-offices", "-index");
+const { Content } = await internationaloffices.render();
+const { title, description, meta_title  } = internationaloffices.data;
+import { SEO } from "astro-seo";
+
+---
+<SEO
+  title="Edhi Foundation International Offices - Global Contact"
+  description="Get contact information for Edhi Foundation's international offices. Connect with us globally for support and collaboration."
+  canonical={Astro.request.url}
+  openGraph={{
+    basic: {
+      title: "Edhi Foundation International Offices - Global Contact",
+      type: "A type.",
+      image: "https://edhiuk.org/images/logo.jpg",
+  
+    }
+  }}
+  twitter={{
+    creator: "@jonasmerlins1"
+  }}
+  extend={{
+    // extending the default link tags
+    link: [{ rel: "icon", href: "/favicon.png" }],
+    // extending the default meta tags
+    meta: [
+      {
+        name: "twitter:image",
+        content: "https://edhiuk.org/images/logo.jpg",
+      },
+      { name: "twitter:title", content: "Edhi Foundation International Offices - Global Contact" },
+      { name: "twitter:description", content: "Get contact information for Edhi Foundation's international offices. Connect with us globally for support and collaboration." },
+      { name: "keywords", content: "" },
+    ],
+  }}
+/>
+
+<Base
+  title={title}
+  meta_title={meta_title}
+  description={description}
+
+>
+<section class="section-sm container max-w-2xl">
+<!-- ### Accordion -->
+
+<Accordion client:load title="USA">
+
+       <div class="px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20">
+
+          <h2 class="mb-4 font-sans text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl sm:leading-none" style="text-align:left">
+            USA
+          </h2>
+
+		<p class="mb-2 text-xs font-semibold tracking-wide text-gray-800 uppercase">
+            United States
+          </p>
+          <p class="text-base text-gray-700" style="text-align:left">
+				ADDRESS: 45-11 National Street Corona, NY 11368    
+				<br><br/>
+                Office Timeing: 9 to 5 (Mon to Sat)
+          </p>
+
+		<p class="text-base text-gray-700" style="text-align:left">
+				Office Phone: 718-639-0633, 718-639-5120 & 718-779-5720, 718-335-1978
+				Funeral Service & Charitable Shop Phone: 718-779-5720
+				Fax: 718-505-8001
+				Toll Free: 1-888-899-EDHI (3344)
+				Email Us: edhiusa@outlook.com		
+		</p>  
+		
+		<iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3022.7559196651405!2d-73.864068!3d40.745396!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c25fc9ca5f164d%3A0x15f9e8af0edd7ec2!2s45-11+National+St%2C+Flushing%2C+NY+11368%2C+USA!5e0!3m2!1sen!2s!4v1416401722444" width="500" height="200" frameborder="0" style="border:0"></iframe>
+
+			<!-- </div> -->
+			<!-- </div> -->
+        </div>
+	
+</Accordion>
+
+<Accordion client:load title="Australia">
+
+       <div class="px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20">
+
+          <h2 class="mb-4 font-sans text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl sm:leading-none" style="text-align:left">
+            Australia
+          </h2>
+
+		<p class="mb-2 text-xs font-semibold tracking-wide text-gray-800 uppercase">
+            Australia
+          </p>
+          <p class="text-base text-gray-700" style="text-align:left">
+				<b>Registered office Address:</b>
+				C/O Newington Technology Park Unit 17,
+				8 Avenue of the Americas,Newington, NSW 2127, Australia.
+				<b>Mailing Address:</b> PO BOX 6938 Silverwater, NSW 2128.
+				General Inquiries: edhi@edhiuk.org.au
+          </p>
+		    <br><br/>
+
+
+		<p class="text-base text-gray-700" style="text-align:left">
+				<b>Key Contacts:</b>
+				Hamid Khan: 0408 574 266
+				Riaz Malik: 0408 603 430
+				Ejaz Ahmad: 0403 290 337
+				Zulfiqar Ali Khan: 0412 557 342
+				Javed Butt (ACT): 0402 141 771
+		</p>  
+		
+		<br><br/>
+		<!-- <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3022.7559196651405!2d-73.864068!3d40.745396!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c25fc9ca5f164d%3A0x15f9e8af0edd7ec2!2s45-11+National+St%2C+Flushing%2C+NY+11368%2C+USA!5e0!3m2!1sen!2s!4v1416401722444" width="500" height="200" frameborder="0" style="border:0"></iframe> -->
+		<iframe width="500" height="200" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?f=q&amp;source=s_q&amp;hl=en&amp;geocode=&amp;q=Level+20,+Picadly+tower,+133,+Castle+Reagh+Street,+Sydney+2000,+Austrailia.+&amp;aq=&amp;sll=40.758375,-73.985238&amp;sspn=0.01011,0.021136&amp;ie=UTF8&amp;hq=&amp;hnear=Piccadilly+Tower+133-145+Castlereagh+St,+Sydney+New+South+Wales+2000,+Australia&amp;ll=-33.871526,151.20906&amp;spn=0.01101,0.021136&amp;t=m&amp;z=14&amp;iwloc=A&amp;output=embed"></iframe>
+
+</div>
+
+</Accordion>
+
+<Accordion client:load title="North America">
+
+<h3 style="text-align: left;">North America</h3>
+<!-- <div class="wpb_text_column wpb_content_element  vc_custom_1503487555109">
+	<div class="wpb_wrapper">
+		<table border="1" width="50%">
+			<tbody>
+				<tr bgcolor="#2c2c2c">
+					<td><span style="color: #ffffff;">City</span></td>
+					<td><span style="color: #ffffff;">&nbsp;City Code</span></td>
+					<td><span style="color: #ffffff;">&nbsp;Phone #</span></td>
+				</tr>
+				<tr>
+					<td><strong>Abbottabad</strong></td>
+					<td>0992</td>
+					<td>33518</td>
+				</tr>
+				<tr bgcolor="#d9d9d9">
+					<td><strong>Bannu<br /> </strong></td>
+					<td>0928</td>
+					<td>610444</td>
+				</tr>
+				<tr>
+					<td><strong>Chitral</strong></td>
+					<td>0933</td>
+					<td>2122</td>
+				</tr>
+				<tr bgcolor="#d9d9d9">
+					<td><strong>D.I. Khan</strong></td>
+					<td>0961</td>
+					<td>710637</td>
+				</tr>
+				<tr>
+					<td><strong>Gilgit</strong></td>
+					<td>0572</td>
+					<td>3060</td>
+				</tr>
+				<tr bgcolor="#d9d9d9">
+					<td><strong>Kohat</strong></td>
+					<td>0922</td>
+					<td>2878</td>
+				</tr>
+				<tr>
+					<td><strong>Mardan</strong></td>
+					<td>0931</td>
+					<td>64432</td>
+				</tr>
+				<tr bgcolor="#d9d9d9">
+					<td><strong>Najmal Chowk </strong></td>
+					<td>0838</td>
+					<td>710563</td>
+				</tr>
+				<tr>
+					<td><strong>Sui</strong></td>
+					<td>0835</td>
+					<td>420115</td>
+				</tr>
+				<tr bgcolor="#d9d9d9">
+					<td><strong>Pabbi</strong></td>
+					<td>&ndash;</td>
+					<td>Wireless</td>
+				</tr>
+				<tr>
+					<td colspan="3">
+						<h2>&nbsp;</h2>
+						<h2>Peshawar</h2>
+					</td>
+				</tr>
+				<tr bgcolor="#2c2c2c">
+					<td><span style="color: #ffffff;">City</span></td>
+					<td><span style="color: #ffffff;">City Code</span></td>
+					<td><span style="color: #ffffff;">Phone #</span></td>
+				</tr>
+				<tr>
+					<td><strong>* Ambulance Control</strong></td>
+					<td>091</td>
+					<td>214575</td>
+				</tr>
+				<tr bgcolor="#d9d9d9">
+					<td><strong>* Edhi Home<br /> </strong></td>
+					<td>&ndash;</td>
+					<td>Wireless</td>
+				</tr>
+				<tr>
+					<td><strong>Shaidu</strong></td>
+					<td>05249</td>
+					<td>510515</td>
+				</tr>
+				<tr bgcolor="#d9d9d9">
+					<td><strong>Skardu<br /> </strong></td>
+					<td>0575</td>
+					<td>3143</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+</div> -->
+
+</Accordion>
+
+<!-- <Accordion client:load title="Baluchistan">
+<h2 style="text-align: left;">Baluchistan</h2>
+<div class="wpb_text_column wpb_content_element  vc_custom_1503487842951">
+	<div class="wpb_wrapper">
+		<table border="1" width="50%">
+			<tbody>
+				<tr bgcolor="#2c2c2c">
+					<td><span style="color: #ffffff;">City</span></td>
+					<td>&nbsp;<span style="color: #ffffff;">City Code</span></td>
+					<td><span style="color: #ffffff;">&nbsp;Phone #</span></td>
+				</tr>
+				<tr>
+					<td><strong>Bella</strong></td>
+					<td>08288</td>
+					<td>115</td>
+				</tr>
+				<tr bgcolor="#d9d9d9">
+					<td><strong>DadHub Chowki<br /> </strong></td>
+					<td>085</td>
+					<td>3363126</td>
+				</tr>
+				<tr>
+					<td><strong>Khuzdar</strong></td>
+					<td>084</td>
+					<td>8412996</td>
+				</tr>
+				<tr bgcolor="#d9d9d9">
+					<td><strong>Loralai</strong></td>
+					<td>081</td>
+					<td>24662090</td>
+				</tr>
+				<tr>
+					<td><strong>Mastong</strong></td>
+					<td>&ndash;</td>
+					<td>115</td>
+				</tr>
+				<tr bgcolor="#d9d9d9">
+					<td><strong>Petal Bagh </strong></td>
+					<td>081</td>
+					<td>2836903</td>
+				</tr>
+				<tr>
+					<td><strong>Sui</strong></td>
+					<td>083</td>
+					<td>5420115</td>
+				</tr>
+				<tr bgcolor="#d9d9d9">
+					<td><strong>Daira Murad Jamali </strong></td>
+					<td>083</td>
+					<td>8710563</td>
+				</tr>
+				<tr>
+					<td><strong>Qallat</strong></td>
+					<td>081</td>
+					<td>44210115</td>
+				</tr>
+				<tr>
+					<td colspan="3">
+						<h2>Quetta</h2>
+					</td>
+				</tr>
+				<tr bgcolor="#2c2c2c">
+					<td><span style="color: #ffffff;">City</span></td>
+					<td><span style="color: #ffffff;">City Code</span></td>
+					<td><span style="color: #ffffff;">Phone #</span></td>
+				</tr>
+				<tr>
+					<td><strong>* Ambulance Control</strong></td>
+					<td>081</td>
+					<td>830861-830832</td>
+				</tr>
+				<tr bgcolor="#d9d9d9">
+					<td><strong>* Edhi Welfare Centre (Quetta Circle)<br /> </strong></td>
+					<td>081</td>
+					<td>2672401, 2300889</td>
+				</tr>
+				<tr>
+					<td><strong>Sibbi</strong></td>
+					<td>083</td>
+					<td>3500116</td>
+				</tr>
+				<tr bgcolor="#d9d9d9">
+					<td><strong>Uthal<br /> </strong></td>
+					<td>0321</td>
+					<td>2136518</td>
+				</tr>
+				<tr>
+					<td><strong>Winder</strong></td>
+					<td>0332</td>
+					<td>2306381</td>
+				</tr>
+				<tr bgcolor="#d9d9d9">
+					<td><strong>Pasheen</strong></td>
+					<td>0333</td>
+					<td>7795999</td>
+				</tr>
+				<tr>
+					<td><strong>Lasbella</strong></td>
+					<td>0333</td>
+					<td>6187853</td>
+				</tr>
+				<tr bgcolor="#d9d9d9">
+					<td><strong>Zobe</strong></td>
+					<td>081</td>
+					<td>22412984</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+</div>
+</Accordion> -->
+
+<!-- <Accordion client:load title="Azad Jammu Kashmir">
+
+<h2 style="text-align: left;">Azad Jammu Kashmir</h2>
+<div class="wpb_text_column wpb_content_element  vc_custom_1503487992023">
+	<div class="wpb_wrapper">
+		<table border="1" width="50%">
+			<tbody>
+				<tr bgcolor="#2c2c2c">
+					<td><span style="color: #ffffff;">City</span></td>
+					<td>&nbsp;<span style="color: #ffffff;">City Code</span></td>
+					<td><span style="color: #ffffff;">&nbsp;Phone #</span></td>
+				</tr>
+				<tr>
+					<td><strong>Mirpur</strong></td>
+					<td>047</td>
+					<td>4700</td>
+				</tr>
+				<tr bgcolor="#d9d9d9">
+					<td><strong>Muzaffarabad<br /> </strong></td>
+					<td>058</td>
+					<td>3006</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+</div>
+
+</Accordion> -->
+
+
+</section>
+</Base>

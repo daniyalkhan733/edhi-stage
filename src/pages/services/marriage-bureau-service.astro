@@ -1,0 +1,480 @@
+---
+import Base from "@/layouts/Base.astro";
+import ServiceSlider from "@/components/ServiceSlider.astro";
+import { SEO } from "astro-seo";
+import Donationcard from "../../layouts/components/donationcard.astro";
+
+
+---
+<SEO
+  title="Edhi Foundation Marriage Bureau - Find Your Match"
+  description="Explore Edhi Foundation's Marriage Bureau Service. Helping individuals find suitable matches and build strong families."
+  canonical={Astro.request.url}
+  openGraph={{
+    basic: {
+      title: "Edhi Foundation Marriage Bureau - Find Your Match",
+      type: "A type.",
+      image: "https://edhiuk.org/images/logo.jpg",
+
+    }
+  }}
+  twitter={{
+    creator: "@jonasmerlins1"
+  }}
+  extend={{
+    // extending the default link tags
+    link: [{ rel: "icon", href: "/favicon.png" }],
+    // extending the default meta tags
+    meta: [
+      {
+        name: "twitter:image",
+        content: "https://edhiuk.org/images/logo.jpg",
+      },
+      { name: "twitter:title", content: "Edhi Foundation Marriage Bureau - Find Your Match" },
+      { name: "twitter:description", content: "Explore Edhi Foundation's Marriage Bureau Service. Helping individuals find suitable matches and build strong families." },
+      { name: "keywords", content: "" },
+    ],
+  }}
+/>
+<Base>
+    <!-- <--heading started here -->
+  <section
+    class="  relative bg-[url(/images/marriage/marriage-bg.jpg)] bg-cover bg-center bg-no-repeat pb-12 h-[400px]"
+  >
+    <div
+      class="bg-gradient-to-r from-white to-transparent absolute inset-0 sm:bg-transparent ltr:sm:bg-gradient-to-r rtl:sm:bg-gradient-to-l"
+    >
+    </div>
+
+    <div
+      class="absolute inset-0 bg-gradient-to-r from-white to-transparent ltr:sm:bg-gradient-to-r rtl:sm:bg-gradient-to-l"
+    >
+    </div>
+
+    <div
+      class="relative mx-auto max-w-screen-xl px-4 sm:px-6 lg:flex lg:h-screen lg:items-baseline pt-12 lg:px-8"
+    >
+      <div class="max-w-xl text-center ltr:sm:text-left rtl:sm:text-right">
+        <h1 class="text-3xl font-extrabold sm:text-5xl text-left font-primary">
+          Marriage Bureau
+
+          <strong class="block font-extrabold text-green-600"> Services</strong>
+        </h1>
+
+        <p class="text-lg mt-4  sm:text-xl/relaxed text-left font-roboto ">
+          Edhi Foundation operates thanks to dedicated volunteers who serve selflessly for the betterment of society.
+
+
+
+        </p>
+
+        <div class="flex md:text-center text-left pt-8 ">
+          <a
+            href="https://donate.edhiuk.org/"
+            class="px-8 h-12 rounded flex items-center gap-x-3 bg-green-700 md:text-[20px] text-[16px] text-white hover:bg-[#D92319] md:px-10 md:py-2"
+          >
+            Donate Now
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+  <div class="bg-green-600 border-black p-4 ">
+    <h1 class="text-center text-[20px] text-white pb-2 font-roboto">
+
+      Prophet(PBUH) Said-When a man marries, he has fulfilled half of his religion, so let him fear Allah regarding the remaining half.
+    </h1>
+    <p class="text-center text-white">(Al-Bukhari)</p>
+  </div>
+  <!-- <--heading ended here -->
+
+  <Donationcard programId={[20,21,63]} />
+
+
+
+
+  <!-- section 1 started here -->
+  <section>
+    <div class="mx-auto max-w-6xl px-6">
+      <div class="max-w-3xl"></div>
+
+      <div class="mt-8 grid grid-cols-1 gap-8 lg:grid-cols-2 lg:gap-16">
+        <div class="h-64 overflow-hidden sm:h-80 lg:h-full">
+          <img
+            alt=""
+            src="/images/marriage/marriage-01.png"
+            class=" h-full w-full object-fit rounded"
+          />
+        </div>
+
+        <div class="space-y-4 text-gray-600 md:py-auto pt-0 align-middle flex flex-col justify-center ">          <h2 class="text-3xl font-bold sm:text-4xl pb-2">Matchmaking Assistance
+
+          </h2>
+
+          <p class="text-[17px] font-roboto">
+            Edhi Foundation operates a Marriage Bureau service, offering assistance to individuals seeking life partners. Whether it's finding a compatible match based on preferences and values or providing guidance throughout the matchmaking process, the Foundation aims to help individuals build meaningful and lasting relationships.
+
+
+
+          </p>
+         
+          
+        </div>
+      </div>
+    </div>
+  </section>
+ 
+
+  <!-- section 1 ended here -->
+  <!-- section 2 started here -->
+  <section>
+      
+    <div class="mx-auto max-w-6xl px-6">
+      <div class="max-w-3xl"></div>
+
+      <div class="mt-8 grid grid-cols-1 gap-8 lg:grid-cols-2 lg:gap-16">
+        <div class="space-y-4 text-gray-600 md:py-auto pt-0 align-middle flex flex-col justify-center">         
+           <h2 class="text-3xl font-bold sm:text-4xl pb-2">
+          Personalized Support
+        </h2>
+
+          <p class="text-[17px] font-roboto">
+            The Marriage Bureau service at Edhi Foundation provides personalized support to clients, understanding their unique needs and preferences. Trained staff members offer guidance and advice, helping individuals navigate the complexities of finding a suitable partner and ensuring a smooth and successful matchmaking experience.
+
+
+
+
+          </p>
+        </div>
+        <div class="h-64 overflow-hidden sm:h-80 lg:h-full">
+          <img
+            alt=""
+            src="/images/marriage/marriage-02.png"
+            class=" h-full w-full object-fit rounded"
+          />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- section 2 ended here -->
+  <!-- section 3 started here -->
+  <section>
+    <div class="mx-auto max-w-6xl px-6">
+      <div class="max-w-3xl"></div>
+
+      <div class="mt-8 grid grid-cols-1 gap-8 lg:grid-cols-2 lg:gap-16">
+        <div class="h-64 overflow-hidden sm:h-80 lg:h-full">
+          <img
+            alt=""
+            src="/images/marriage/marriage-03.png"
+            class=" h-full w-full object-fit rounded"
+          />
+        </div>
+
+        <div class="space-y-4 text-gray-600 md:py-auto pt-0 align-middle flex flex-col justify-center ">          <h2 class="text-3xl font-bold sm:text-4xl pb-2">Celebrating Love and Unity
+
+          </h2>
+
+          <p class="text-[17px] font-roboto">
+            At Edhi Foundation's Marriage Bureau, the focus is on celebrating love and unity, helping individuals find their life partners and embark on a journey of companionship and support. By promoting the institution of marriage and fostering healthy relationships, the Foundation contributes to the well-being and happiness of individuals and families in the community.
+
+
+
+
+          </p>
+         
+          
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="md:py-20 py-10 max-screen-w-2xl mx-auto  px-6">
+    <div>
+      <div
+        class="align-middle bg-gradient-to-br from-green-200 to-gray-50 dark:from-gray-900 dark:bg-gray-800 rounded-lg p-2 md:p-10 py-6 lg:p-14 flex flex-col md:flex-row items-center justify-center text-center md:text-left md:justify-start md:items-start gap-8" style="align-items: center;"
+
+      >
+        <div class="md:w-2/5 align-middle">
+          <h5
+            class=" text-center md:text-6xl text-3xl text-black dark:text-white font-display font-bold leading-tight" 
+          >
+            Get Involved
+          </h5>
+        </div>
+        <div class="flex flex-col md:flex-1 space-y-8">
+          <p class="text-gray-700 dark:text-gray-300 md:text-2xl text-[20px] font-roboto">
+            Take the next step to making a difference - support Edhi
+
+            Foundation's humanitarian efforts!
+          </p>
+          <div class="text-[20px] flex justify-center md:justify-start">
+            <a
+              href="https://donate.edhiuk.org/"
+              class="h-12 px-5 rounded-md flex items-center bg-green-700 text-white"
+            >
+              Donate Now
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- section 3 ended here -->
+
+  <!-- section 5 started here -->
+ 
+  <!-- <section class="mx-auto max-w-6xl px-6 sm:px-6 pb-10 md:pb-20 lg:px-8 ">
+
+
+    <h1 class="text-green-700 text-[28px] font-bold text-center">
+      Nursing Training Centre
+    </h1>
+    <br />
+      <div class="text-center mb-4">
+        <p class="md:text-[36px] text-[17px] font-bold">
+          Centre offers a supportive learning environment where students can thrive and develop their talents.     </p><br/>
+        <div class="text-left">
+        <p class="text-[17px] font-roboto w-full ">
+          At Edhi Foundation, we are committed to building a skilled healthcare workforce for the future. Our Nursing Training Centre provides comprehensive education and practical training to aspiring nurses, equipping them with the necessary skills and knowledge to excel in their careers.
+          <br /><br />With experienced instructors and state-of-the-art facilities, our centre offers a supportive learning environment where students can thrive and develop their talents.
+          <br><br>
+          Through our Nursing Training Centre, we aim to address the shortage of qualified nursing professionals while empowering individuals to pursue fulfilling careers in healthcare. Our curriculum covers a wide range of topics, including patient care, medical procedures, and ethical practices, ensuring that our graduates are well-prepared to meet the challenges of the healthcare industry.
+
+          <br /><br /> We believe that investing in nursing education is essential for improving healthcare outcomes and strengthening communities. By providing quality training opportunities, we not only enhance the employability of our graduates but also contribute to the overall quality of care available to patients. At Edhi Foundation, we are proud to play a role in shaping the future of healthcare through our Nursing Training Centre, where dedication, compassion, and excellence are nurtured every day. <br><br>Join us in our mission to empower aspiring nurses and elevate the standard of healthcare delivery. Together, we can make a difference in the lives of individuals and communities, one nurse at a time.
+
+
+
+
+
+        </p></div>
+      </div>
+  </section> -->
+  <!-- section 5 ended here -->
+  <!-- slider section started -->
+  <section class="md:pb-28 pb-[230px] pt-4">
+    <ServiceSlider
+        heading="Marriage Bureau Services"
+
+        description="Facilitating respectful and dignified matrimonial alliances through Edhi Foundation's comprehensive matchmaking services."
+        img1="/images/marriage/marriage-7.jpg"
+        img2="/images/marriage/marriage-6.jpg"
+        img3="/images/marriage/marriage-5.jpg"
+        img4="/images/marriage/marriage-4.jpg"
+        img5="/images/marriage/marriage-3.jpg"
+        img6="/images/marriage/marriage-2.jpg"
+      />
+  </section>
+  <!-- slider section ended -->
+  <!-- last section started -->
+
+  <style>
+    @media screen and (max-width: 480px) {
+ #vid{
+   border-radius: 20px;
+ 
+ }
+       
+ }
+ </style>
+   <section class="mx-auto  w-full max-w-6xl flex flex-wrap justify-items-start md:py-20 py-10 px-4 rounded-xl ">
+       <!-- First Div with iframe -->
+       <div class=" w-full md:w-3/5 bg-white  md:p-0 p-2 flex items-start justify-center md:h-96 h-48 rounded-xl">
+ 
+           <iframe class="w-full md:h-[400px] h-[220px] rounded-2xl" src="https://www.youtube.com/embed/n0nKpOYpw-o?si=kRJRJUn0y42yROyK" frameborder="0" allowfullscreen></iframe>
+       </div>
+       
+       <!-- Second Div with Heading and Paragraph -->
+       <div id="vid"class= "md:rounded-r-xl	w-full md:w-2/5 bg-green-600  p-2  md:p-8 flex flex-col md:text-left text-center md:h-[320px] h-[320px] md:my-[40px] md:items-start	 items-center">
+ 
+           <h2 class="text-white text-[32px] font-bold mb-[8px] mt-[13px] md:pt-5 pt-10" >Community Engagement
+
+          </h2>
+           <p class="text-lg pb-[22px] text-white">Through the promotion of traditional values the Edhi  to the preservation of familial bonds.</p>
+           <a
+           href="https://donate.edhiuk.org/"
+           class="font-bold block w-88 rounded-sm bg-white px-8 py-2 text-[18px] text-green-600 shadow hover:bg-[#D92319] hover:text-white focus:outline-none focus:ring active:bg-green-600 sm:w-auto "
+         >
+           DONATE NOW
+         </a>
+       </div>
+       
+     
+   </section>
+  
+  <!-- last section ended --> 
+
+  <!-- faq section started -->
+  <section class="text-center md:pt-10 px-6">
+    <h2 class="text-[36px] font-bold mb-6 text-center">
+      Frequently Asked Questions
+    </h2>
+    <h6 class="font-roboto text-[17px]">
+      Explore our FAQs for clear insights on giving, eligibility, and the
+      positive impact <br /> your contribution can make in transforming lives.
+    </h6>
+  </section>
+
+    <!-- faq section started -->
+    <main class="p-5 bg-light-blue">
+      <div class="flex justify-center items-start my-2">
+        <div class="w-full sm:w-10/12 md:w-1/2 my-1">
+          <ul class="flex flex-col">
+         
+            <li class="bg-white my-2 shadow-lg rounded-lg" x-data="accordion(1)">
+              <h5
+                @click="handleClick()"
+                class="flex flex-row justify-between items-center font-semibold p-3 cursor-pointer text-[16px] md:text-[20px]"
+              >
+                <span>What services does the Edhi Marriage Bureau offer?</span>
+                <svg
+                  :class="handleRotate()"
+                  class="fill-current text-green-700 md:h-6 md:w-6 h-6 w-6 transform transition-transform duration-500"
+                  viewBox="0 0 20 20"
+                >
+                  <path d="M13.962,8.885l-3.736,3.739c-0.086,0.086-0.201,0.13-0.314,0.13S9.686,12.71,9.6,12.624l-3.562-3.56C5.863,8.892,5.863,8.611,6.036,8.438c0.175-0.173,0.454-0.173,0.626,0l3.25,3.247l3.426-3.424c0.173-0.172,0.451-0.172,0.624,0C14.137,8.434,14.137,8.712,13.962,8.885 M18.406,10c0,4.644-3.763,8.406-8.406,8.406S1.594,14.644,1.594,10S5.356,1.594,10,1.594S18.406,5.356,18.406,10 M17.521,10c0-4.148-3.373-7.521-7.521-7.521c-4.148,0-7.521,3.374-7.521,7.521c0,4.147,3.374,7.521,7.521,7.521C14.148,17.521,17.521,14.147,17.521,10"></path>
+                </svg>
+              </h5>
+              <div
+                x-ref="tab"
+                :style="handleToggle()"
+                class="border-l-4 border-green-700 overflow-hidden max-h-0 duration-500 transition-all"
+              >
+                <p class="p-3 text-gray-900  md:text-[17px] text-[14px] ">
+                  The Edhi Foundation operates a fleet of thousands of ambulances, ensuring prompt emergency response nationwide.
+
+
+
+
+
+
+                </p>
+              </div>
+            </li>
+            <li class="bg-white my-2 shadow-lg rounded-lg" x-data="accordion(2)">
+              <h5
+                @click="handleClick()"
+                class="flex flex-row justify-between items-center font-semibold p-3 cursor-pointer text-[16px] md:text-[20px]"
+              >
+                <span>How does the Edhi Marriage Bureau match individuals?</span>
+                <svg
+                  :class="handleRotate()"
+                  class="fill-current text-green-700 md:h-6 md:w-6 h-6 w-6 transform transition-transform duration-500"
+                  viewBox="0 0 20 20"
+                >
+                  <path d="M13.962,8.885l-3.736,3.739c-0.086,0.086-0.201,0.13-0.314,0.13S9.686,12.71,9.6,12.624l-3.562-3.56C5.863,8.892,5.863,8.611,6.036,8.438c0.175-0.173,0.454-0.173,0.626,0l3.25,3.247l3.426-3.424c0.173-0.172,0.451-0.172,0.624,0C14.137,8.434,14.137,8.712,13.962,8.885 M18.406,10c0,4.644-3.763,8.406-8.406,8.406S1.594,14.644,1.594,10S5.356,1.594,10,1.594S18.406,5.356,18.406,10 M17.521,10c0-4.148-3.373-7.521-7.521-7.521c-4.148,0-7.521,3.374-7.521,7.521c0,4.147,3.374,7.521,7.521,7.521C14.148,17.521,17.521,14.147,17.521,10"></path>
+                </svg>
+              </h5>
+              <div
+                x-ref="tab"
+                :style="handleToggle()"
+                class="border-l-4 border-green-700 overflow-hidden max-h-0 duration-500 transition-all"
+              >
+                <p class="p-3 text-gray-900  md:text-[17px] text-[14px] ">
+                  Edhi Marriage Bureau employs a comprehensive matching process that takes into account factors such as compatibility, preferences, and family backgrounds to ensure suitable matches.
+
+
+
+
+
+                </p>
+              </div>
+            </li>  
+
+
+
+
+
+
+
+
+            <li class="bg-white my-2 shadow-lg rounded-lg" x-data="accordion(3)">
+              <h5
+                @click="handleClick()"
+                class="flex flex-row justify-between items-center font-semibold p-3 cursor-pointer text-[16px] md:text-[20px]"
+              >
+                <span>Is the Edhi Marriage Bureau restricted to specific communities or religions?</span>
+                <svg
+                  :class="handleRotate()"
+                  class="fill-current text-green-700  md:h-6 md:w-6 h-6 w-6  transform transition-transform duration-500"
+                  viewBox="0 0 20 20"
+                >
+                  <path d="M13.962,8.885l-3.736,3.739c-0.086,0.086-0.201,0.13-0.314,0.13S9.686,12.71,9.6,12.624l-3.562-3.56C5.863,8.892,5.863,8.611,6.036,8.438c0.175-0.173,0.454-0.173,0.626,0l3.25,3.247l3.426-3.424c0.173-0.172,0.451-0.172,0.624,0C14.137,8.434,14.137,8.712,13.962,8.885 M18.406,10c0,4.644-3.763,8.406-8.406,8.406S1.594,14.644,1.594,10S5.356,1.594,10,1.594S18.406,5.356,18.406,10 M17.521,10c0-4.148-3.373-7.521-7.521-7.521c-4.148,0-7.521,3.374-7.521,7.521c0,4.147,3.374,7.521,7.521,7.521C14.148,17.521,17.521,14.147,17.521,10"></path>
+                </svg>
+              </h5>
+              <div
+                x-ref="tab"
+                :style="handleToggle()"
+                class="border-l-4 border-green-700 overflow-hidden max-h-0 duration-500 transition-all"
+              >
+                <p class="p-3 text-gray-900  md:text-[17px] text-[14px] ">
+                  No, the Edhi Marriage Bureau is open to individuals from all communities, religions, and backgrounds. It strives to promote inclusivity and diversity in matrimonial matches.
+
+
+
+
+
+
+                </p>
+              </div>
+            </li> 
+             <li class="bg-white my-2 shadow-lg rounded-lg" x-data="accordion(4)">
+              <h5
+                @click="handleClick()"
+                class="flex flex-row justify-between items-center font-semibold p-3 cursor-pointer text-[16px] md:text-[20px]"
+              >
+                <span>Are counselling services available for couples post-marriage?</span>
+                <svg
+                  :class="handleRotate()"
+                  class="fill-current text-green-700  md:h-6 md:w-6 h-6 w-6  transform transition-transform duration-500"
+                  viewBox="0 0 20 20"
+                >
+                  <path d="M13.962,8.885l-3.736,3.739c-0.086,0.086-0.201,0.13-0.314,0.13S9.686,12.71,9.6,12.624l-3.562-3.56C5.863,8.892,5.863,8.611,6.036,8.438c0.175-0.173,0.454-0.173,0.626,0l3.25,3.247l3.426-3.424c0.173-0.172,0.451-0.172,0.624,0C14.137,8.434,14.137,8.712,13.962,8.885 M18.406,10c0,4.644-3.763,8.406-8.406,8.406S1.594,14.644,1.594,10S5.356,1.594,10,1.594S18.406,5.356,18.406,10 M17.521,10c0-4.148-3.373-7.521-7.521-7.521c-4.148,0-7.521,3.374-7.521,7.521c0,4.147,3.374,7.521,7.521,7.521C14.148,17.521,17.521,14.147,17.521,10"></path>
+                </svg>
+              </h5>
+              <div
+                x-ref="tab"
+                :style="handleToggle()"
+                class="border-l-4 border-green-700 overflow-hidden max-h-0 duration-500 transition-all"
+              >
+                <p class="p-3 text-gray-900  md:text-[17px] text-[14px] ">
+                  Yes, Edhi Marriage Bureau offers counseling services for couples post-marriage to provide guidance and support in navigating marital challenges and fostering healthy relationships.
+                </p>
+              </div>
+            </li>
+
+         
+           
+          </ul>
+        </div>
+      </div>
+    </main>
+
+
+
+
+    <script is:inline>  
+      document.addEventListener('alpine:init', () => {
+        Alpine.store('accordion', {
+          tab: 0
+        });
+        
+        Alpine.data('accordion', (idx) => ({
+          init() {
+            this.idx = idx;
+          },
+          idx: -1,
+          handleClick() {
+            this.$store.accordion.tab = this.$store.accordion.tab === this.idx ? 0 : this.idx;
+          },
+          handleRotate() {
+            return this.$store.accordion.tab === this.idx ? 'rotate-180' : '';
+          },
+          handleToggle() {
+            return this.$store.accordion.tab === this.idx ? `max-height: ${this.$refs.tab.scrollHeight}px` : '';
+          }
+        }));
+      })
+    </script>
+
+</Base>

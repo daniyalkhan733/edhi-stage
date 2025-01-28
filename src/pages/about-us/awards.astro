@@ -1,0 +1,1397 @@
+---
+import Base from "@/layouts/Base.astro";
+import { markdownify } from "@/lib/utils/textConverter";
+import { getEntry } from "astro:content";
+import Accordion from "@/shortcodes/Accordion";
+
+const awards = await getEntry("awards", "-index");
+const { Content } = await awards.render();
+const { title, description, meta_title } = awards.data;
+import { SEO } from "astro-seo";
+---
+
+
+<SEO
+  title="Edhi Foundation UK Awards - Recognizing Excellence"
+  description="Explore the awards and recognitions received by Edhi Foundation UK. Celebrate our achievements in humanitarian work."
+  canonical={Astro.request.url}
+  openGraph={{
+    basic: {
+      title: "Edhi Foundation UK Awards - Recognizing Excellence",
+      type: "A type.",
+      image: "https://edhiuk.org/images/logo.jpg",
+
+    }
+  }}
+  twitter={{
+    creator: "@jonasmerlins1"
+  }}
+  extend={{
+    // extending the default link tags
+    link: [{ rel: "icon", href: "/favicon.png" }],
+    // extending the default meta tags
+    meta: [
+      {
+        name: "twitter:image",
+        content: "https://edhiuk.org/images/logo.jpg",
+      },
+      { name: "twitter:title", content: "Edhi Foundation UK Awards - Recognizing Excellence" },
+      { name: "twitter:description", content: "Explore the awards and recognitions received by Edhi Foundation UK. Celebrate our achievements in humanitarian work." },
+      { name: "keywords", content: "" },
+    ],
+  }}
+/>
+
+
+<Base >
+  <!-- heading started  -->
+  <section class="relative pt-32 lg:pt-36 pb-32">
+    <div
+      class="mx-auto lg:max-w-7xl w-full px-5 sm:px-10 md:px-12 lg:px-5 flex flex-col lg:flex-row gap-10 lg:gap-12"
+    >
+      <div
+        class="absolute w-full lg:w-1/2 inset-y-0 lg:right-0 hidden lg:block"
+      >
+        <span
+          class="absolute -left-6 md:left-4 top-24 lg:top-28 w-24 h-24 rotate-90 skew-x-12 rounded-3xl bg-green-400 blur-xl opacity-60 lg:opacity-95 lg:block hidden"
+        ></span>
+        <span
+          class="absolute right-4 bottom-12 w-24 h-24 rounded-3xl bg-blue-600 blur-xl opacity-80"
+        ></span>
+      </div>
+      <span
+        class="w-4/12 lg:w-2/12 aspect-square bg-gradient-to-tr from-blue-600 to-green-400 absolute -top-5 lg:left-0 rounded-full skew-y-12 blur-2xl opacity-40 skew-x-12 rotate-90"
+      ></span>
+      <div
+        class="relative flex flex-col items-center text-center lg:text-left lg:py-7 xl:py-8
+            lg:items-start lg:max-w-none max-w-3xl mx-auto lg:mx-0 lg:flex-1 lg:w-1/2"
+      >
+        <h1
+          class="text-3xl/tight sm:text-4xl/tight md:text-5xl/tight xl:text-6xl/tight
+            font-bold text-gray-900 dark:text-white"
+        >
+          Awards
+          <span
+            class="text-transparent bg-clip-text bg-gradient-to-br from-indigo-600 from-20% via-blue-600 via-30% to-green-600"
+            >Gallery</span
+          >
+        </h1>
+        <p class="mt-8 text-gray-700 dark:text-black">
+          Discover the awards and honors Edhi Foundation has received for its
+          commitment to helping others. Explore our Awards Gallery and see how
+          compassion makes a difference.
+        </p>
+        <div class="mt-10 w-full flex max-w-md mx-auto lg:mx-0">
+          <div class="flex sm:flex-row flex-col gap-5 w-full"></div>
+        </div>
+      </div>
+
+      <div
+        class="flex flex-1 lg:w-1/2 lg:h-auto relative lg:max-w-none lg:mx-0 mx-auto max-w-3xl"
+      >
+        <img
+          src="/images/awards-main.jpg"
+          alt="Hero image"
+          width="2350"
+          height="2359"
+          class="object-cover w-full rounded shadow-lg sm:h-30rem h-96 mt-[-30px]"
+        />
+      </div>
+    </div>
+  </section>
+
+  <!-- heading ended  -->
+  <!-- awards started -->
+  <section class="text-black">
+    <!-- International Awards -->
+    <div
+      class="mx-auto max-w-screen-xl px-4 py-8 sm:px-6 sm:py-12 lg:px-8 lg:py-16"
+    >
+      <div class="mx-auto max-w-lg text-center">
+        <h2 class="text-3xl font-bold sm:text-4xl text-black">
+          INTERNATIONAL AWARDS
+        </h2>
+
+        <p class="mt-4 text-black">
+          Recognized globally with numerous prestigious international awards.        </p>
+      </div>
+
+      <div class="mt-8 grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
+        <a
+          class="text-white block rounded-xl border border-black p-8 shadow-xl transition hover:border-green-500 hover:shadow-green-400"
+          href="#"
+        >
+          <svg
+            width="40px"
+            height="40px"
+            viewBox="0 -1 32 32"
+            version="1.1"
+            xmlns="http://www.w3.org/2000/svg"
+            xmlns:xlink="http://www.w3.org/1999/xlink"
+            xmlns:sketch="http://www.bohemiancoding.com/sketch/ns"
+          >
+            <title>award</title>
+            <desc>Created with Sketch Beta.</desc>
+            <defs> </defs>
+            <g
+              id="Page-1"
+              stroke="none"
+              stroke-width="1"
+              fill="none"
+              fill-rule="evenodd"
+              sketch:type="MSPage"
+            >
+              <g
+                id="Icon-Set"
+                sketch:type="MSLayerGroup"
+                transform="translate(-256.000000, -412.000000)"
+                fill="#000000"
+              >
+                <path
+                  d="M281.98,424 L281.98,418 C285.932,418 285.973,417.791 285.973,420 C285.973,422.209 284.186,424 281.98,424 L281.98,424 Z M279.984,422 C279.984,426.418 276.41,432 272,432 C267.59,432 264.016,426.418 264.016,422 L264.016,416 C264.016,415.011 265.055,414 266.012,414 L277.988,414 C278.945,414 279.984,414.979 279.984,416 L279.984,422 L279.984,422 Z M262.02,424 C259.815,424 258.027,422.209 258.027,420 C258.027,417.791 258.068,418 262.02,418 L262.02,424 L262.02,424 Z M281.98,416 C281.98,413.791 280.193,412 277.988,412 L266.012,412 C263.807,412 262.02,413.791 262.02,416 C255.183,416 256.031,415.999 256.031,420 C256.031,423.313 258.712,426 262.02,426 C262.258,426 262.486,425.962 262.716,425.93 C264.056,429.854 267.213,433.389 271.002,433.928 L271.002,440 L268.008,440 C267.457,440 267.01,440.447 267.01,441 C267.01,441.553 267.457,442 268.008,442 L275.992,442 C276.543,442 276.99,441.553 276.99,441 C276.99,440.447 276.543,440 275.992,440 L272.998,440 L272.998,433.928 C276.787,433.389 279.944,429.854 281.285,425.93 C281.514,425.962 281.742,426 281.98,426 C285.288,426 287.969,423.313 287.969,420 C287.969,415.999 288.817,416 281.98,416 L281.98,416 Z"
+                  id="award"
+                  sketch:type="MSShapeGroup"
+                >
+                </path>
+              </g>
+            </g>
+          </svg>
+
+          <h2 class="mt-4 text-xl font-bold text-black pb-2 z-10">
+            Ramon Magsaysay Award
+          </h2>
+
+          <p class="mt-1 text-sm text-black">
+            Conferred upon by Ramon Magsaysay Award Foundation <br /> For Promoting
+            – Public Service <br /> in 1986 in Manila Philippines
+          </p>
+        </a>
+        <a
+          class="block rounded-xl border border-black p-8 shadow-xl transition hover:border-green-500 hover:shadow-green-400"
+          href="#"
+        >
+          <svg
+            width="40px"
+            height="40px"
+            viewBox="0 -1 32 32"
+            version="1.1"
+            xmlns="http://www.w3.org/2000/svg"
+            xmlns:xlink="http://www.w3.org/1999/xlink"
+            xmlns:sketch="http://www.bohemiancoding.com/sketch/ns"
+          >
+            <title>award</title>
+            <desc>Created with Sketch Beta.</desc>
+            <defs> </defs>
+            <g
+              id="Page-1"
+              stroke="none"
+              stroke-width="1"
+              fill="none"
+              fill-rule="evenodd"
+              sketch:type="MSPage"
+            >
+              <g
+                id="Icon-Set"
+                sketch:type="MSLayerGroup"
+                transform="translate(-256.000000, -412.000000)"
+                fill="#000000"
+              >
+                <path
+                  d="M281.98,424 L281.98,418 C285.932,418 285.973,417.791 285.973,420 C285.973,422.209 284.186,424 281.98,424 L281.98,424 Z M279.984,422 C279.984,426.418 276.41,432 272,432 C267.59,432 264.016,426.418 264.016,422 L264.016,416 C264.016,415.011 265.055,414 266.012,414 L277.988,414 C278.945,414 279.984,414.979 279.984,416 L279.984,422 L279.984,422 Z M262.02,424 C259.815,424 258.027,422.209 258.027,420 C258.027,417.791 258.068,418 262.02,418 L262.02,424 L262.02,424 Z M281.98,416 C281.98,413.791 280.193,412 277.988,412 L266.012,412 C263.807,412 262.02,413.791 262.02,416 C255.183,416 256.031,415.999 256.031,420 C256.031,423.313 258.712,426 262.02,426 C262.258,426 262.486,425.962 262.716,425.93 C264.056,429.854 267.213,433.389 271.002,433.928 L271.002,440 L268.008,440 C267.457,440 267.01,440.447 267.01,441 C267.01,441.553 267.457,442 268.008,442 L275.992,442 C276.543,442 276.99,441.553 276.99,441 C276.99,440.447 276.543,440 275.992,440 L272.998,440 L272.998,433.928 C276.787,433.389 279.944,429.854 281.285,425.93 C281.514,425.962 281.742,426 281.98,426 C285.288,426 287.969,423.313 287.969,420 C287.969,415.999 288.817,416 281.98,416 L281.98,416 Z"
+                  id="award"
+                  sketch:type="MSShapeGroup"
+                >
+                </path>
+              </g>
+            </g>
+          </svg>
+
+          <h2 class="mt-4 text-xl font-bold text-black pb-2">
+            Guinness Book Of World Record
+          </h2>
+
+          <p class="mt-1 text-sm text-black">
+            For running – Largest Voluntary Ambulance Organization of the World <br
+            />
+            For promoting the cause of Social Welfare Services <br />
+            In 2000
+          </p>
+        </a>
+        <a
+          class="block rounded-xl border border-black p-8 shadow-xl transition hover:border-green-500 hover:shadow-green-400"
+          href="#"
+        >
+          <svg
+            width="40px"
+            height="40px"
+            viewBox="0 -1 32 32"
+            version="1.1"
+            xmlns="http://www.w3.org/2000/svg"
+            xmlns:xlink="http://www.w3.org/1999/xlink"
+            xmlns:sketch="http://www.bohemiancoding.com/sketch/ns"
+          >
+            <title>award</title>
+            <desc>Created with Sketch Beta.</desc>
+            <defs> </defs>
+            <g
+              id="Page-1"
+              stroke="none"
+              stroke-width="1"
+              fill="none"
+              fill-rule="evenodd"
+              sketch:type="MSPage"
+            >
+              <g
+                id="Icon-Set"
+                sketch:type="MSLayerGroup"
+                transform="translate(-256.000000, -412.000000)"
+                fill="#000000"
+              >
+                <path
+                  d="M281.98,424 L281.98,418 C285.932,418 285.973,417.791 285.973,420 C285.973,422.209 284.186,424 281.98,424 L281.98,424 Z M279.984,422 C279.984,426.418 276.41,432 272,432 C267.59,432 264.016,426.418 264.016,422 L264.016,416 C264.016,415.011 265.055,414 266.012,414 L277.988,414 C278.945,414 279.984,414.979 279.984,416 L279.984,422 L279.984,422 Z M262.02,424 C259.815,424 258.027,422.209 258.027,420 C258.027,417.791 258.068,418 262.02,418 L262.02,424 L262.02,424 Z M281.98,416 C281.98,413.791 280.193,412 277.988,412 L266.012,412 C263.807,412 262.02,413.791 262.02,416 C255.183,416 256.031,415.999 256.031,420 C256.031,423.313 258.712,426 262.02,426 C262.258,426 262.486,425.962 262.716,425.93 C264.056,429.854 267.213,433.389 271.002,433.928 L271.002,440 L268.008,440 C267.457,440 267.01,440.447 267.01,441 C267.01,441.553 267.457,442 268.008,442 L275.992,442 C276.543,442 276.99,441.553 276.99,441 C276.99,440.447 276.543,440 275.992,440 L272.998,440 L272.998,433.928 C276.787,433.389 279.944,429.854 281.285,425.93 C281.514,425.962 281.742,426 281.98,426 C285.288,426 287.969,423.313 287.969,420 C287.969,415.999 288.817,416 281.98,416 L281.98,416 Z"
+                  id="award"
+                  sketch:type="MSShapeGroup"
+                >
+                </path>
+              </g>
+            </g>
+          </svg>
+
+          <h2 class="mt-4 text-xl font-bold text-black pb-2">
+            Paul Harris Fellow
+          </h2>
+
+          <p class="mt-1 text-sm text-black">
+            Awarded by Rotary International <br />
+            For Promoting the cause of Social Welfare Services <br />
+            In 1993 at Karachi
+          </p>
+        </a>
+        <a
+          class="block rounded-xl border border-black p-8 shadow-xl transition hover:border-green-500 hover:shadow-green-400"
+          href="#"
+        >
+          <svg
+            width="40px"
+            height="40px"
+            viewBox="0 -1 32 32"
+            version="1.1"
+            xmlns="http://www.w3.org/2000/svg"
+            xmlns:xlink="http://www.w3.org/1999/xlink"
+            xmlns:sketch="http://www.bohemiancoding.com/sketch/ns"
+          >
+            <title>award</title>
+            <desc>Created with Sketch Beta.</desc>
+            <defs> </defs>
+            <g
+              id="Page-1"
+              stroke="none"
+              stroke-width="1"
+              fill="none"
+              fill-rule="evenodd"
+              sketch:type="MSPage"
+            >
+              <g
+                id="Icon-Set"
+                sketch:type="MSLayerGroup"
+                transform="translate(-256.000000, -412.000000)"
+                fill="#000000"
+              >
+                <path
+                  d="M281.98,424 L281.98,418 C285.932,418 285.973,417.791 285.973,420 C285.973,422.209 284.186,424 281.98,424 L281.98,424 Z M279.984,422 C279.984,426.418 276.41,432 272,432 C267.59,432 264.016,426.418 264.016,422 L264.016,416 C264.016,415.011 265.055,414 266.012,414 L277.988,414 C278.945,414 279.984,414.979 279.984,416 L279.984,422 L279.984,422 Z M262.02,424 C259.815,424 258.027,422.209 258.027,420 C258.027,417.791 258.068,418 262.02,418 L262.02,424 L262.02,424 Z M281.98,416 C281.98,413.791 280.193,412 277.988,412 L266.012,412 C263.807,412 262.02,413.791 262.02,416 C255.183,416 256.031,415.999 256.031,420 C256.031,423.313 258.712,426 262.02,426 C262.258,426 262.486,425.962 262.716,425.93 C264.056,429.854 267.213,433.389 271.002,433.928 L271.002,440 L268.008,440 C267.457,440 267.01,440.447 267.01,441 C267.01,441.553 267.457,442 268.008,442 L275.992,442 C276.543,442 276.99,441.553 276.99,441 C276.99,440.447 276.543,440 275.992,440 L272.998,440 L272.998,433.928 C276.787,433.389 279.944,429.854 281.285,425.93 C281.514,425.962 281.742,426 281.98,426 C285.288,426 287.969,423.313 287.969,420 C287.969,415.999 288.817,416 281.98,416 L281.98,416 Z"
+                  id="award"
+                  sketch:type="MSShapeGroup"
+                >
+                </path>
+              </g>
+            </g>
+          </svg>
+
+          <h2 class="mt-4 text-xl font-bold text-black pb-2">
+            Peace Prize Award
+          </h2>
+
+          <p class="mt-1 text-sm text-black">
+            From USSR (former) for services in the Armenian earthquake disaster <br
+            />
+            For Promoting – Peace <br />
+            In 1998 at Islamabad (Embassy of USSR)
+          </p>
+        </a>
+        <a
+          class="block rounded-xl border border-black p-8 shadow-xl transition hover:border-green-500 hover:shadow-green-400"
+          href="#"
+        >
+          <svg
+            width="40px"
+            height="40px"
+            viewBox="0 -1 32 32"
+            version="1.1"
+            xmlns="http://www.w3.org/2000/svg"
+            xmlns:xlink="http://www.w3.org/1999/xlink"
+            xmlns:sketch="http://www.bohemiancoding.com/sketch/ns"
+          >
+            <title>award</title>
+            <desc>Created with Sketch Beta.</desc>
+            <defs> </defs>
+            <g
+              id="Page-1"
+              stroke="none"
+              stroke-width="1"
+              fill="none"
+              fill-rule="evenodd"
+              sketch:type="MSPage"
+            >
+              <g
+                id="Icon-Set"
+                sketch:type="MSLayerGroup"
+                transform="translate(-256.000000, -412.000000)"
+                fill="#000000"
+              >
+                <path
+                  d="M281.98,424 L281.98,418 C285.932,418 285.973,417.791 285.973,420 C285.973,422.209 284.186,424 281.98,424 L281.98,424 Z M279.984,422 C279.984,426.418 276.41,432 272,432 C267.59,432 264.016,426.418 264.016,422 L264.016,416 C264.016,415.011 265.055,414 266.012,414 L277.988,414 C278.945,414 279.984,414.979 279.984,416 L279.984,422 L279.984,422 Z M262.02,424 C259.815,424 258.027,422.209 258.027,420 C258.027,417.791 258.068,418 262.02,418 L262.02,424 L262.02,424 Z M281.98,416 C281.98,413.791 280.193,412 277.988,412 L266.012,412 C263.807,412 262.02,413.791 262.02,416 C255.183,416 256.031,415.999 256.031,420 C256.031,423.313 258.712,426 262.02,426 C262.258,426 262.486,425.962 262.716,425.93 C264.056,429.854 267.213,433.389 271.002,433.928 L271.002,440 L268.008,440 C267.457,440 267.01,440.447 267.01,441 C267.01,441.553 267.457,442 268.008,442 L275.992,442 C276.543,442 276.99,441.553 276.99,441 C276.99,440.447 276.543,440 275.992,440 L272.998,440 L272.998,433.928 C276.787,433.389 279.944,429.854 281.285,425.93 C281.514,425.962 281.742,426 281.98,426 C285.288,426 287.969,423.313 287.969,420 C287.969,415.999 288.817,416 281.98,416 L281.98,416 Z"
+                  id="award"
+                  sketch:type="MSShapeGroup"
+                >
+                </path>
+              </g>
+            </g>
+          </svg>
+
+          <h2 class="mt-4 text-xl font-bold text-black pb-2">
+            Hamdan Award For Volunteers in Humanitarian Medical Service
+          </h2>
+
+          <p class="mt-1 text-sm text-black">
+            Conferred upon by Pakistan Civic Society <br />
+            For promoting the cause of Social Welfare Services <br />
+            In 2000 at Dubai UAE
+          </p>
+        </a>
+        <a
+          class="block rounded-xl border border-black p-8 shadow-xl transition hover:border-green-500 hover:shadow-green-400"
+          href="#"
+        >
+          <svg
+            width="40px"
+            height="40px"
+            viewBox="0 -1 32 32"
+            version="1.1"
+            xmlns="http://www.w3.org/2000/svg"
+            xmlns:xlink="http://www.w3.org/1999/xlink"
+            xmlns:sketch="http://www.bohemiancoding.com/sketch/ns"
+          >
+            <title>award</title>
+            <desc>Created with Sketch Beta.</desc>
+            <defs> </defs>
+            <g
+              id="Page-1"
+              stroke="none"
+              stroke-width="1"
+              fill="none"
+              fill-rule="evenodd"
+              sketch:type="MSPage"
+            >
+              <g
+                id="Icon-Set"
+                sketch:type="MSLayerGroup"
+                transform="translate(-256.000000, -412.000000)"
+                fill="#000000"
+              >
+                <path
+                  d="M281.98,424 L281.98,418 C285.932,418 285.973,417.791 285.973,420 C285.973,422.209 284.186,424 281.98,424 L281.98,424 Z M279.984,422 C279.984,426.418 276.41,432 272,432 C267.59,432 264.016,426.418 264.016,422 L264.016,416 C264.016,415.011 265.055,414 266.012,414 L277.988,414 C278.945,414 279.984,414.979 279.984,416 L279.984,422 L279.984,422 Z M262.02,424 C259.815,424 258.027,422.209 258.027,420 C258.027,417.791 258.068,418 262.02,418 L262.02,424 L262.02,424 Z M281.98,416 C281.98,413.791 280.193,412 277.988,412 L266.012,412 C263.807,412 262.02,413.791 262.02,416 C255.183,416 256.031,415.999 256.031,420 C256.031,423.313 258.712,426 262.02,426 C262.258,426 262.486,425.962 262.716,425.93 C264.056,429.854 267.213,433.389 271.002,433.928 L271.002,440 L268.008,440 C267.457,440 267.01,440.447 267.01,441 C267.01,441.553 267.457,442 268.008,442 L275.992,442 C276.543,442 276.99,441.553 276.99,441 C276.99,440.447 276.543,440 275.992,440 L272.998,440 L272.998,433.928 C276.787,433.389 279.944,429.854 281.285,425.93 C281.514,425.962 281.742,426 281.98,426 C285.288,426 287.969,423.313 287.969,420 C287.969,415.999 288.817,416 281.98,416 L281.98,416 Z"
+                  id="award"
+                  sketch:type="MSShapeGroup"
+                >
+                </path>
+              </g>
+            </g>
+          </svg>
+
+          <h2 class="mt-4 text-xl font-bold text-black pb-2">
+            International Balzan Prize
+          </h2>
+
+          <p class="mt-1 text-sm text-black">
+            Given By Pakistan Civic Society <br />
+            For promoting the cause of Social Welfare Services <br />
+            In 2000 at Rome,Italy
+          </p>
+        </a>
+        <a
+          class="block rounded-xl border border-black p-8 shadow-xl transition hover:border-green-500 hover:shadow-green-400"
+          href="#"
+        >
+          <svg
+            width="40px"
+            height="40px"
+            viewBox="0 -1 32 32"
+            version="1.1"
+            xmlns="http://www.w3.org/2000/svg"
+            xmlns:xlink="http://www.w3.org/1999/xlink"
+            xmlns:sketch="http://www.bohemiancoding.com/sketch/ns"
+          >
+            <title>award</title>
+            <desc>Created with Sketch Beta.</desc>
+            <defs> </defs>
+            <g
+              id="Page-1"
+              stroke="none"
+              stroke-width="1"
+              fill="none"
+              fill-rule="evenodd"
+              sketch:type="MSPage"
+            >
+              <g
+                id="Icon-Set"
+                sketch:type="MSLayerGroup"
+                transform="translate(-256.000000, -412.000000)"
+                fill="#000000"
+              >
+                <path
+                  d="M281.98,424 L281.98,418 C285.932,418 285.973,417.791 285.973,420 C285.973,422.209 284.186,424 281.98,424 L281.98,424 Z M279.984,422 C279.984,426.418 276.41,432 272,432 C267.59,432 264.016,426.418 264.016,422 L264.016,416 C264.016,415.011 265.055,414 266.012,414 L277.988,414 C278.945,414 279.984,414.979 279.984,416 L279.984,422 L279.984,422 Z M262.02,424 C259.815,424 258.027,422.209 258.027,420 C258.027,417.791 258.068,418 262.02,418 L262.02,424 L262.02,424 Z M281.98,416 C281.98,413.791 280.193,412 277.988,412 L266.012,412 C263.807,412 262.02,413.791 262.02,416 C255.183,416 256.031,415.999 256.031,420 C256.031,423.313 258.712,426 262.02,426 C262.258,426 262.486,425.962 262.716,425.93 C264.056,429.854 267.213,433.389 271.002,433.928 L271.002,440 L268.008,440 C267.457,440 267.01,440.447 267.01,441 C267.01,441.553 267.457,442 268.008,442 L275.992,442 C276.543,442 276.99,441.553 276.99,441 C276.99,440.447 276.543,440 275.992,440 L272.998,440 L272.998,433.928 C276.787,433.389 279.944,429.854 281.285,425.93 C281.514,425.962 281.742,426 281.98,426 C285.288,426 287.969,423.313 287.969,420 C287.969,415.999 288.817,416 281.98,416 L281.98,416 Z"
+                  id="award"
+                  sketch:type="MSShapeGroup"
+                >
+                </path>
+              </g>
+            </g>
+          </svg>
+
+          <h2 class="mt-4 text-xl font-bold text-black pb-2">
+            Peace & Harmony Award
+          </h2>
+
+          <p class="mt-1 text-sm text-black">
+            Conferred upon by Sanjay Dalmia and given by Dalia Lama <br />
+            For Promoting – Peace and Harmony <br />
+            In 2001 in Delhi India
+          </p>
+        </a>
+        <a
+          class="block rounded-xl border border-black p-8 shadow-xl transition hover:border-green-500 hover:shadow-green-400"
+          href="#"
+        >
+          <svg
+            width="40px"
+            height="40px"
+            viewBox="0 -1 32 32"
+            version="1.1"
+            xmlns="http://www.w3.org/2000/svg"
+            xmlns:xlink="http://www.w3.org/1999/xlink"
+            xmlns:sketch="http://www.bohemiancoding.com/sketch/ns"
+          >
+            <title>award</title>
+            <desc>Created with Sketch Beta.</desc>
+            <defs> </defs>
+            <g
+              id="Page-1"
+              stroke="none"
+              stroke-width="1"
+              fill="none"
+              fill-rule="evenodd"
+              sketch:type="MSPage"
+            >
+              <g
+                id="Icon-Set"
+                sketch:type="MSLayerGroup"
+                transform="translate(-256.000000, -412.000000)"
+                fill="#000000"
+              >
+                <path
+                  d="M281.98,424 L281.98,418 C285.932,418 285.973,417.791 285.973,420 C285.973,422.209 284.186,424 281.98,424 L281.98,424 Z M279.984,422 C279.984,426.418 276.41,432 272,432 C267.59,432 264.016,426.418 264.016,422 L264.016,416 C264.016,415.011 265.055,414 266.012,414 L277.988,414 C278.945,414 279.984,414.979 279.984,416 L279.984,422 L279.984,422 Z M262.02,424 C259.815,424 258.027,422.209 258.027,420 C258.027,417.791 258.068,418 262.02,418 L262.02,424 L262.02,424 Z M281.98,416 C281.98,413.791 280.193,412 277.988,412 L266.012,412 C263.807,412 262.02,413.791 262.02,416 C255.183,416 256.031,415.999 256.031,420 C256.031,423.313 258.712,426 262.02,426 C262.258,426 262.486,425.962 262.716,425.93 C264.056,429.854 267.213,433.389 271.002,433.928 L271.002,440 L268.008,440 C267.457,440 267.01,440.447 267.01,441 C267.01,441.553 267.457,442 268.008,442 L275.992,442 C276.543,442 276.99,441.553 276.99,441 C276.99,440.447 276.543,440 275.992,440 L272.998,440 L272.998,433.928 C276.787,433.389 279.944,429.854 281.285,425.93 C281.514,425.962 281.742,426 281.98,426 C285.288,426 287.969,423.313 287.969,420 C287.969,415.999 288.817,416 281.98,416 L281.98,416 Z"
+                  id="award"
+                  sketch:type="MSShapeGroup"
+                >
+                </path>
+              </g>
+            </g>
+          </svg>
+
+          <h2 class="mt-4 text-xl font-bold text-black pb-2">Peace Award</h2>
+
+          <p class="mt-1 text-sm text-black">
+            Conferred upon by Trans Asia Bio Medical Company <br />
+            For Promoting – Peace <br />
+            In 2004 in Mumbai India
+          </p>
+        </a>
+        <a
+          class="block rounded-xl border border-black p-8 shadow-xl transition hover:border-green-500 hover:shadow-green-400"
+          href="#"
+        >
+          <svg
+            width="40px"
+            height="40px"
+            viewBox="0 -1 32 32"
+            version="1.1"
+            xmlns="http://www.w3.org/2000/svg"
+            xmlns:xlink="http://www.w3.org/1999/xlink"
+            xmlns:sketch="http://www.bohemiancoding.com/sketch/ns"
+          >
+            <title>award</title>
+            <desc>Created with Sketch Beta.</desc>
+            <defs> </defs>
+            <g
+              id="Page-1"
+              stroke="none"
+              stroke-width="1"
+              fill="none"
+              fill-rule="evenodd"
+              sketch:type="MSPage"
+            >
+              <g
+                id="Icon-Set"
+                sketch:type="MSLayerGroup"
+                transform="translate(-256.000000, -412.000000)"
+                fill="#000000"
+              >
+                <path
+                  d="M281.98,424 L281.98,418 C285.932,418 285.973,417.791 285.973,420 C285.973,422.209 284.186,424 281.98,424 L281.98,424 Z M279.984,422 C279.984,426.418 276.41,432 272,432 C267.59,432 264.016,426.418 264.016,422 L264.016,416 C264.016,415.011 265.055,414 266.012,414 L277.988,414 C278.945,414 279.984,414.979 279.984,416 L279.984,422 L279.984,422 Z M262.02,424 C259.815,424 258.027,422.209 258.027,420 C258.027,417.791 258.068,418 262.02,418 L262.02,424 L262.02,424 Z M281.98,416 C281.98,413.791 280.193,412 277.988,412 L266.012,412 C263.807,412 262.02,413.791 262.02,416 C255.183,416 256.031,415.999 256.031,420 C256.031,423.313 258.712,426 262.02,426 C262.258,426 262.486,425.962 262.716,425.93 C264.056,429.854 267.213,433.389 271.002,433.928 L271.002,440 L268.008,440 C267.457,440 267.01,440.447 267.01,441 C267.01,441.553 267.457,442 268.008,442 L275.992,442 C276.543,442 276.99,441.553 276.99,441 C276.99,440.447 276.543,440 275.992,440 L272.998,440 L272.998,433.928 C276.787,433.389 279.944,429.854 281.285,425.93 C281.514,425.962 281.742,426 281.98,426 C285.288,426 287.969,423.313 287.969,420 C287.969,415.999 288.817,416 281.98,416 L281.98,416 Z"
+                  id="award"
+                  sketch:type="MSShapeGroup"
+                >
+                </path>
+              </g>
+            </g>
+          </svg>
+
+          <h2 class="mt-4 text-xl font-bold text-black pb-2">Peace Award</h2>
+
+          <p class="mt-1 text-sm text-black">
+            Conferred upon by Emergency Management and Research Institute (EMRI) <br
+            />
+            For Promoting – Peacev <br />
+            In 2005 in Hyderabad Deccan, India
+          </p>
+        </a>
+        <a
+          class="block rounded-xl border border-black p-8 shadow-xl transition hover:border-green-500 hover:shadow-green-400"
+          href="#"
+        >
+          <svg
+            width="40px"
+            height="40px"
+            viewBox="0 -1 32 32"
+            version="1.1"
+            xmlns="http://www.w3.org/2000/svg"
+            xmlns:xlink="http://www.w3.org/1999/xlink"
+            xmlns:sketch="http://www.bohemiancoding.com/sketch/ns"
+          >
+            <title>award</title>
+            <desc>Created with Sketch Beta.</desc>
+            <defs> </defs>
+            <g
+              id="Page-1"
+              stroke="none"
+              stroke-width="1"
+              fill="none"
+              fill-rule="evenodd"
+              sketch:type="MSPage"
+            >
+              <g
+                id="Icon-Set"
+                sketch:type="MSLayerGroup"
+                transform="translate(-256.000000, -412.000000)"
+                fill="#000000"
+              >
+                <path
+                  d="M281.98,424 L281.98,418 C285.932,418 285.973,417.791 285.973,420 C285.973,422.209 284.186,424 281.98,424 L281.98,424 Z M279.984,422 C279.984,426.418 276.41,432 272,432 C267.59,432 264.016,426.418 264.016,422 L264.016,416 C264.016,415.011 265.055,414 266.012,414 L277.988,414 C278.945,414 279.984,414.979 279.984,416 L279.984,422 L279.984,422 Z M262.02,424 C259.815,424 258.027,422.209 258.027,420 C258.027,417.791 258.068,418 262.02,418 L262.02,424 L262.02,424 Z M281.98,416 C281.98,413.791 280.193,412 277.988,412 L266.012,412 C263.807,412 262.02,413.791 262.02,416 C255.183,416 256.031,415.999 256.031,420 C256.031,423.313 258.712,426 262.02,426 C262.258,426 262.486,425.962 262.716,425.93 C264.056,429.854 267.213,433.389 271.002,433.928 L271.002,440 L268.008,440 C267.457,440 267.01,440.447 267.01,441 C267.01,441.553 267.457,442 268.008,442 L275.992,442 C276.543,442 276.99,441.553 276.99,441 C276.99,440.447 276.543,440 275.992,440 L272.998,440 L272.998,433.928 C276.787,433.389 279.944,429.854 281.285,425.93 C281.514,425.962 281.742,426 281.98,426 C285.288,426 287.969,423.313 287.969,420 C287.969,415.999 288.817,416 281.98,416 L281.98,416 Z"
+                  id="award"
+                  sketch:type="MSShapeGroup"
+                >
+                </path>
+              </g>
+            </g>
+          </svg>
+
+          <h2 class="mt-4 text-xl font-bold text-black pb-2">
+            Wolf of Bhogio Peace Award
+          </h2>
+
+          <p class="mt-1 text-sm text-black">
+            Conferred upon by World Church Service <br />
+            For Promoting – Peace <br />
+            In 2005 at BhogioItaly
+          </p>
+        </a>
+        <a
+          class="block rounded-xl border border-black p-8 shadow-xl transition hover:border-green-500 hover:shadow-green-400"
+          href="#"
+        >
+          <svg
+            width="40px"
+            height="40px"
+            viewBox="0 -1 32 32"
+            version="1.1"
+            xmlns="http://www.w3.org/2000/svg"
+            xmlns:xlink="http://www.w3.org/1999/xlink"
+            xmlns:sketch="http://www.bohemiancoding.com/sketch/ns"
+          >
+            <title>award</title>
+            <desc>Created with Sketch Beta.</desc>
+            <defs> </defs>
+            <g
+              id="Page-1"
+              stroke="none"
+              stroke-width="1"
+              fill="none"
+              fill-rule="evenodd"
+              sketch:type="MSPage"
+            >
+              <g
+                id="Icon-Set"
+                sketch:type="MSLayerGroup"
+                transform="translate(-256.000000, -412.000000)"
+                fill="#000000"
+              >
+                <path
+                  d="M281.98,424 L281.98,418 C285.932,418 285.973,417.791 285.973,420 C285.973,422.209 284.186,424 281.98,424 L281.98,424 Z M279.984,422 C279.984,426.418 276.41,432 272,432 C267.59,432 264.016,426.418 264.016,422 L264.016,416 C264.016,415.011 265.055,414 266.012,414 L277.988,414 C278.945,414 279.984,414.979 279.984,416 L279.984,422 L279.984,422 Z M262.02,424 C259.815,424 258.027,422.209 258.027,420 C258.027,417.791 258.068,418 262.02,418 L262.02,424 L262.02,424 Z M281.98,416 C281.98,413.791 280.193,412 277.988,412 L266.012,412 C263.807,412 262.02,413.791 262.02,416 C255.183,416 256.031,415.999 256.031,420 C256.031,423.313 258.712,426 262.02,426 C262.258,426 262.486,425.962 262.716,425.93 C264.056,429.854 267.213,433.389 271.002,433.928 L271.002,440 L268.008,440 C267.457,440 267.01,440.447 267.01,441 C267.01,441.553 267.457,442 268.008,442 L275.992,442 C276.543,442 276.99,441.553 276.99,441 C276.99,440.447 276.543,440 275.992,440 L272.998,440 L272.998,433.928 C276.787,433.389 279.944,429.854 281.285,425.93 C281.514,425.962 281.742,426 281.98,426 C285.288,426 287.969,423.313 287.969,420 C287.969,415.999 288.817,416 281.98,416 L281.98,416 Z"
+                  id="award"
+                  sketch:type="MSShapeGroup"
+                >
+                </path>
+              </g>
+            </g>
+          </svg>
+
+          <h2 class="mt-4 text-xl font-bold text-black pb-2">
+            Gandhi Peace Award
+          </h2>
+
+          <p class="mt-1 text-sm text-black">
+            Conferred upon by Mahtma Gandhi Trust <br />
+            For Promoting – Peace <br />
+            In 2007 in Delhi India
+          </p>
+        </a>
+        <a
+          class="block rounded-xl border border-black p-8 shadow-xl transition hover:border-green-500 hover:shadow-green-400"
+          href="#"
+        >
+          <svg
+            width="40px"
+            height="40px"
+            viewBox="0 -1 32 32"
+            version="1.1"
+            xmlns="http://www.w3.org/2000/svg"
+            xmlns:xlink="http://www.w3.org/1999/xlink"
+            xmlns:sketch="http://www.bohemiancoding.com/sketch/ns"
+          >
+            <title>award</title>
+            <desc>Created with Sketch Beta.</desc>
+            <defs> </defs>
+            <g
+              id="Page-1"
+              stroke="none"
+              stroke-width="1"
+              fill="none"
+              fill-rule="evenodd"
+              sketch:type="MSPage"
+            >
+              <g
+                id="Icon-Set"
+                sketch:type="MSLayerGroup"
+                transform="translate(-256.000000, -412.000000)"
+                fill="#000000"
+              >
+                <path
+                  d="M281.98,424 L281.98,418 C285.932,418 285.973,417.791 285.973,420 C285.973,422.209 284.186,424 281.98,424 L281.98,424 Z M279.984,422 C279.984,426.418 276.41,432 272,432 C267.59,432 264.016,426.418 264.016,422 L264.016,416 C264.016,415.011 265.055,414 266.012,414 L277.988,414 C278.945,414 279.984,414.979 279.984,416 L279.984,422 L279.984,422 Z M262.02,424 C259.815,424 258.027,422.209 258.027,420 C258.027,417.791 258.068,418 262.02,418 L262.02,424 L262.02,424 Z M281.98,416 C281.98,413.791 280.193,412 277.988,412 L266.012,412 C263.807,412 262.02,413.791 262.02,416 C255.183,416 256.031,415.999 256.031,420 C256.031,423.313 258.712,426 262.02,426 C262.258,426 262.486,425.962 262.716,425.93 C264.056,429.854 267.213,433.389 271.002,433.928 L271.002,440 L268.008,440 C267.457,440 267.01,440.447 267.01,441 C267.01,441.553 267.457,442 268.008,442 L275.992,442 C276.543,442 276.99,441.553 276.99,441 C276.99,440.447 276.543,440 275.992,440 L272.998,440 L272.998,433.928 C276.787,433.389 279.944,429.854 281.285,425.93 C281.514,425.962 281.742,426 281.98,426 C285.288,426 287.969,423.313 287.969,420 C287.969,415.999 288.817,416 281.98,416 L281.98,416 Z"
+                  id="award"
+                  sketch:type="MSShapeGroup"
+                >
+                </path>
+              </g>
+            </g>
+          </svg>
+
+          <h2 class="mt-4 text-xl font-bold text-black pb-2">
+            2007 UNESCO Madanjeet Singh Prize
+          </h2>
+
+          <p class="mt-1 text-sm text-black">
+            Conferred upon by UNESCO Madanjeet Prize Committee <br />
+            For Promoting – Peace <br />
+            In 2009 at Hotel Paris
+          </p>
+        </a>
+        <a
+          class="block rounded-xl border border-black p-8 shadow-xl transition hover:border-green-500 hover:shadow-green-400"
+          href="#"
+        >
+          <svg
+            width="40px"
+            height="40px"
+            viewBox="0 -1 32 32"
+            version="1.1"
+            xmlns="http://www.w3.org/2000/svg"
+            xmlns:xlink="http://www.w3.org/1999/xlink"
+            xmlns:sketch="http://www.bohemiancoding.com/sketch/ns"
+          >
+            <title>award</title>
+            <desc>Created with Sketch Beta.</desc>
+            <defs> </defs>
+            <g
+              id="Page-1"
+              stroke="none"
+              stroke-width="1"
+              fill="none"
+              fill-rule="evenodd"
+              sketch:type="MSPage"
+            >
+              <g
+                id="Icon-Set"
+                sketch:type="MSLayerGroup"
+                transform="translate(-256.000000, -412.000000)"
+                fill="#000000"
+              >
+                <path
+                  d="M281.98,424 L281.98,418 C285.932,418 285.973,417.791 285.973,420 C285.973,422.209 284.186,424 281.98,424 L281.98,424 Z M279.984,422 C279.984,426.418 276.41,432 272,432 C267.59,432 264.016,426.418 264.016,422 L264.016,416 C264.016,415.011 265.055,414 266.012,414 L277.988,414 C278.945,414 279.984,414.979 279.984,416 L279.984,422 L279.984,422 Z M262.02,424 C259.815,424 258.027,422.209 258.027,420 C258.027,417.791 258.068,418 262.02,418 L262.02,424 L262.02,424 Z M281.98,416 C281.98,413.791 280.193,412 277.988,412 L266.012,412 C263.807,412 262.02,413.791 262.02,416 C255.183,416 256.031,415.999 256.031,420 C256.031,423.313 258.712,426 262.02,426 C262.258,426 262.486,425.962 262.716,425.93 C264.056,429.854 267.213,433.389 271.002,433.928 L271.002,440 L268.008,440 C267.457,440 267.01,440.447 267.01,441 C267.01,441.553 267.457,442 268.008,442 L275.992,442 C276.543,442 276.99,441.553 276.99,441 C276.99,440.447 276.543,440 275.992,440 L272.998,440 L272.998,433.928 C276.787,433.389 279.944,429.854 281.285,425.93 C281.514,425.962 281.742,426 281.98,426 C285.288,426 287.969,423.313 287.969,420 C287.969,415.999 288.817,416 281.98,416 L281.98,416 Z"
+                  id="award"
+                  sketch:type="MSShapeGroup"
+                >
+                </path>
+              </g>
+            </g>
+          </svg>
+
+          <h2 class="mt-4 text-xl font-bold text-black pb-2">
+            2011 London Peace Award
+          </h2>
+
+          <p class="mt-1 text-sm text-black">
+            2011 London Peace Award <br />
+            For Promoting – Peace <br />
+            In 2011 at London UK
+          </p>
+        </a>
+        <a
+          class="block rounded-xl border border-black p-8 shadow-xl transition hover:border-green-500 hover:shadow-green-400"
+          href="#"
+        >
+          <svg
+            width="40px"
+            height="40px"
+            viewBox="0 -1 32 32"
+            version="1.1"
+            xmlns="http://www.w3.org/2000/svg"
+            xmlns:xlink="http://www.w3.org/1999/xlink"
+            xmlns:sketch="http://www.bohemiancoding.com/sketch/ns"
+          >
+            <title>award</title>
+            <desc>Created with Sketch Beta.</desc>
+            <defs> </defs>
+            <g
+              id="Page-1"
+              stroke="none"
+              stroke-width="1"
+              fill="none"
+              fill-rule="evenodd"
+              sketch:type="MSPage"
+            >
+              <g
+                id="Icon-Set"
+                sketch:type="MSLayerGroup"
+                transform="translate(-256.000000, -412.000000)"
+                fill="#000000"
+              >
+                <path
+                  d="M281.98,424 L281.98,418 C285.932,418 285.973,417.791 285.973,420 C285.973,422.209 284.186,424 281.98,424 L281.98,424 Z M279.984,422 C279.984,426.418 276.41,432 272,432 C267.59,432 264.016,426.418 264.016,422 L264.016,416 C264.016,415.011 265.055,414 266.012,414 L277.988,414 C278.945,414 279.984,414.979 279.984,416 L279.984,422 L279.984,422 Z M262.02,424 C259.815,424 258.027,422.209 258.027,420 C258.027,417.791 258.068,418 262.02,418 L262.02,424 L262.02,424 Z M281.98,416 C281.98,413.791 280.193,412 277.988,412 L266.012,412 C263.807,412 262.02,413.791 262.02,416 C255.183,416 256.031,415.999 256.031,420 C256.031,423.313 258.712,426 262.02,426 C262.258,426 262.486,425.962 262.716,425.93 C264.056,429.854 267.213,433.389 271.002,433.928 L271.002,440 L268.008,440 C267.457,440 267.01,440.447 267.01,441 C267.01,441.553 267.457,442 268.008,442 L275.992,442 C276.543,442 276.99,441.553 276.99,441 C276.99,440.447 276.543,440 275.992,440 L272.998,440 L272.998,433.928 C276.787,433.389 279.944,429.854 281.285,425.93 C281.514,425.962 281.742,426 281.98,426 C285.288,426 287.969,423.313 287.969,420 C287.969,415.999 288.817,416 281.98,416 L281.98,416 Z"
+                  id="award"
+                  sketch:type="MSShapeGroup"
+                >
+                </path>
+              </g>
+            </g>
+          </svg>
+
+          <h2 class="mt-4 text-xl font-bold text-black pb-2">
+            2008 Peace Award Seoul
+          </h2>
+
+          <p class="mt-1 text-sm text-black">
+            Conferred upon by POSCO TJ Park Foundation Award 2008 <br />
+            For Promoting – Peace <br />
+            In 2009 at Seoul, South Korea
+          </p>
+        </a>
+      </div>
+    </div>
+    <!-- National Awards -->
+    <div
+      class="mx-auto max-w-screen-xl px-4 py-8 sm:px-6 sm:py-12 lg:px-8 lg:py-16"
+    >
+      <div class="mx-auto max-w-lg text-center">
+        <h2 class="text-3xl font-bold sm:text-4xl text-black">
+          NATIONAL AWARDS
+        </h2>
+
+        <p class="mt-4 text-black">
+          Honored nationally with esteemed recognition and awards.
+        </p>
+      </div>
+
+      <div class="mt-8 grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
+        <a
+          class="block rounded-xl border border-black p-8 shadow-xl transition hover:border-green-500 hover:shadow-green-400"
+          href="#"
+        >
+          <svg
+            width="40px"
+            height="40px"
+            viewBox="0 -1 32 32"
+            version="1.1"
+            xmlns="http://www.w3.org/2000/svg"
+            xmlns:xlink="http://www.w3.org/1999/xlink"
+            xmlns:sketch="http://www.bohemiancoding.com/sketch/ns"
+          >
+            <title>award</title>
+            <desc>Created with Sketch Beta.</desc>
+            <defs> </defs>
+            <g
+              id="Page-1"
+              stroke="none"
+              stroke-width="1"
+              fill="none"
+              fill-rule="evenodd"
+              sketch:type="MSPage"
+            >
+              <g
+                id="Icon-Set"
+                sketch:type="MSLayerGroup"
+                transform="translate(-256.000000, -412.000000)"
+                fill="#000000"
+              >
+                <path
+                  d="M281.98,424 L281.98,418 C285.932,418 285.973,417.791 285.973,420 C285.973,422.209 284.186,424 281.98,424 L281.98,424 Z M279.984,422 C279.984,426.418 276.41,432 272,432 C267.59,432 264.016,426.418 264.016,422 L264.016,416 C264.016,415.011 265.055,414 266.012,414 L277.988,414 C278.945,414 279.984,414.979 279.984,416 L279.984,422 L279.984,422 Z M262.02,424 C259.815,424 258.027,422.209 258.027,420 C258.027,417.791 258.068,418 262.02,418 L262.02,424 L262.02,424 Z M281.98,416 C281.98,413.791 280.193,412 277.988,412 L266.012,412 C263.807,412 262.02,413.791 262.02,416 C255.183,416 256.031,415.999 256.031,420 C256.031,423.313 258.712,426 262.02,426 C262.258,426 262.486,425.962 262.716,425.93 C264.056,429.854 267.213,433.389 271.002,433.928 L271.002,440 L268.008,440 C267.457,440 267.01,440.447 267.01,441 C267.01,441.553 267.457,442 268.008,442 L275.992,442 C276.543,442 276.99,441.553 276.99,441 C276.99,440.447 276.543,440 275.992,440 L272.998,440 L272.998,433.928 C276.787,433.389 279.944,429.854 281.285,425.93 C281.514,425.962 281.742,426 281.98,426 C285.288,426 287.969,423.313 287.969,420 C287.969,415.999 288.817,416 281.98,416 L281.98,416 Z"
+                  id="award"
+                  sketch:type="MSShapeGroup"
+                >
+                </path>
+              </g>
+            </g>
+          </svg>
+
+          <h2 class="mt-4 text-xl font-bold text-black pb-2">
+            2011 Engro Peace Award
+          </h2>
+
+          <p class="mt-1 text-sm text-black">
+            Conferred upon by Engro Pakistan Ltd <br />
+            For Promoting – Peace <br />
+            In 2011 at Karachi Pakistan
+          </p>
+        </a>
+        <a
+          class="block rounded-xl border border-black p-8 shadow-xl transition hover:border-green-500 hover:shadow-green-400"
+          href="#"
+        >
+          <svg
+            width="40px"
+            height="40px"
+            viewBox="0 -1 32 32"
+            version="1.1"
+            xmlns="http://www.w3.org/2000/svg"
+            xmlns:xlink="http://www.w3.org/1999/xlink"
+            xmlns:sketch="http://www.bohemiancoding.com/sketch/ns"
+          >
+            <title>award</title>
+            <desc>Created with Sketch Beta.</desc>
+            <defs> </defs>
+            <g
+              id="Page-1"
+              stroke="none"
+              stroke-width="1"
+              fill="none"
+              fill-rule="evenodd"
+              sketch:type="MSPage"
+            >
+              <g
+                id="Icon-Set"
+                sketch:type="MSLayerGroup"
+                transform="translate(-256.000000, -412.000000)"
+                fill="#000000"
+              >
+                <path
+                  d="M281.98,424 L281.98,418 C285.932,418 285.973,417.791 285.973,420 C285.973,422.209 284.186,424 281.98,424 L281.98,424 Z M279.984,422 C279.984,426.418 276.41,432 272,432 C267.59,432 264.016,426.418 264.016,422 L264.016,416 C264.016,415.011 265.055,414 266.012,414 L277.988,414 C278.945,414 279.984,414.979 279.984,416 L279.984,422 L279.984,422 Z M262.02,424 C259.815,424 258.027,422.209 258.027,420 C258.027,417.791 258.068,418 262.02,418 L262.02,424 L262.02,424 Z M281.98,416 C281.98,413.791 280.193,412 277.988,412 L266.012,412 C263.807,412 262.02,413.791 262.02,416 C255.183,416 256.031,415.999 256.031,420 C256.031,423.313 258.712,426 262.02,426 C262.258,426 262.486,425.962 262.716,425.93 C264.056,429.854 267.213,433.389 271.002,433.928 L271.002,440 L268.008,440 C267.457,440 267.01,440.447 267.01,441 C267.01,441.553 267.457,442 268.008,442 L275.992,442 C276.543,442 276.99,441.553 276.99,441 C276.99,440.447 276.543,440 275.992,440 L272.998,440 L272.998,433.928 C276.787,433.389 279.944,429.854 281.285,425.93 C281.514,425.962 281.742,426 281.98,426 C285.288,426 287.969,423.313 287.969,420 C287.969,415.999 288.817,416 281.98,416 L281.98,416 Z"
+                  id="award"
+                  sketch:type="MSShapeGroup"
+                >
+                </path>
+              </g>
+            </g>
+          </svg>
+
+          <h2 class="mt-4 text-xl font-bold text-black pb-2">
+            Shield Of Honor
+          </h2>
+
+          <p class="mt-1 text-sm text-black">
+            Conferred upon by Pakistan Army (E & C) <br />
+            For Promoting the cause of social Welfare Service <br />
+            In Rawalpindi
+          </p>
+        </a>
+        <a
+          class="block rounded-xl border border-black p-8 shadow-xl transition hover:border-green-500 hover:shadow-green-400"
+          href="#"
+        >
+          <svg
+            width="40px"
+            height="40px"
+            viewBox="0 -1 32 32"
+            version="1.1"
+            xmlns="http://www.w3.org/2000/svg"
+            xmlns:xlink="http://www.w3.org/1999/xlink"
+            xmlns:sketch="http://www.bohemiancoding.com/sketch/ns"
+          >
+            <title>award</title>
+            <desc>Created with Sketch Beta.</desc>
+            <defs> </defs>
+            <g
+              id="Page-1"
+              stroke="none"
+              stroke-width="1"
+              fill="none"
+              fill-rule="evenodd"
+              sketch:type="MSPage"
+            >
+              <g
+                id="Icon-Set"
+                sketch:type="MSLayerGroup"
+                transform="translate(-256.000000, -412.000000)"
+                fill="#000000"
+              >
+                <path
+                  d="M281.98,424 L281.98,418 C285.932,418 285.973,417.791 285.973,420 C285.973,422.209 284.186,424 281.98,424 L281.98,424 Z M279.984,422 C279.984,426.418 276.41,432 272,432 C267.59,432 264.016,426.418 264.016,422 L264.016,416 C264.016,415.011 265.055,414 266.012,414 L277.988,414 C278.945,414 279.984,414.979 279.984,416 L279.984,422 L279.984,422 Z M262.02,424 C259.815,424 258.027,422.209 258.027,420 C258.027,417.791 258.068,418 262.02,418 L262.02,424 L262.02,424 Z M281.98,416 C281.98,413.791 280.193,412 277.988,412 L266.012,412 C263.807,412 262.02,413.791 262.02,416 C255.183,416 256.031,415.999 256.031,420 C256.031,423.313 258.712,426 262.02,426 C262.258,426 262.486,425.962 262.716,425.93 C264.056,429.854 267.213,433.389 271.002,433.928 L271.002,440 L268.008,440 C267.457,440 267.01,440.447 267.01,441 C267.01,441.553 267.457,442 268.008,442 L275.992,442 C276.543,442 276.99,441.553 276.99,441 C276.99,440.447 276.543,440 275.992,440 L272.998,440 L272.998,433.928 C276.787,433.389 279.944,429.854 281.285,425.93 C281.514,425.962 281.742,426 281.98,426 C285.288,426 287.969,423.313 287.969,420 C287.969,415.999 288.817,416 281.98,416 L281.98,416 Z"
+                  id="award"
+                  sketch:type="MSShapeGroup"
+                >
+                </path>
+              </g>
+            </g>
+          </svg>
+
+          <h2 class="mt-4 text-xl font-bold text-black pb-2">
+            Recognition Of Maritorious
+          </h2>
+
+          <p class="mt-1 text-sm text-black">
+            Conferred upon by Ministry of Health and Social Welfare, Government
+            of Pakistan <br />
+            For Promoting the cause of Social Welfare Services <br />
+            In 1989
+          </p>
+        </a>
+        <a
+          class="block rounded-xl border border-black p-8 shadow-xl transition hover:border-green-500 hover:shadow-green-400"
+          href="#"
+        >
+          <svg
+            width="40px"
+            height="40px"
+            viewBox="0 -1 32 32"
+            version="1.1"
+            xmlns="http://www.w3.org/2000/svg"
+            xmlns:xlink="http://www.w3.org/1999/xlink"
+            xmlns:sketch="http://www.bohemiancoding.com/sketch/ns"
+          >
+            <title>award</title>
+            <desc>Created with Sketch Beta.</desc>
+            <defs> </defs>
+            <g
+              id="Page-1"
+              stroke="none"
+              stroke-width="1"
+              fill="none"
+              fill-rule="evenodd"
+              sketch:type="MSPage"
+            >
+              <g
+                id="Icon-Set"
+                sketch:type="MSLayerGroup"
+                transform="translate(-256.000000, -412.000000)"
+                fill="#000000"
+              >
+                <path
+                  d="M281.98,424 L281.98,418 C285.932,418 285.973,417.791 285.973,420 C285.973,422.209 284.186,424 281.98,424 L281.98,424 Z M279.984,422 C279.984,426.418 276.41,432 272,432 C267.59,432 264.016,426.418 264.016,422 L264.016,416 C264.016,415.011 265.055,414 266.012,414 L277.988,414 C278.945,414 279.984,414.979 279.984,416 L279.984,422 L279.984,422 Z M262.02,424 C259.815,424 258.027,422.209 258.027,420 C258.027,417.791 258.068,418 262.02,418 L262.02,424 L262.02,424 Z M281.98,416 C281.98,413.791 280.193,412 277.988,412 L266.012,412 C263.807,412 262.02,413.791 262.02,416 C255.183,416 256.031,415.999 256.031,420 C256.031,423.313 258.712,426 262.02,426 C262.258,426 262.486,425.962 262.716,425.93 C264.056,429.854 267.213,433.389 271.002,433.928 L271.002,440 L268.008,440 C267.457,440 267.01,440.447 267.01,441 C267.01,441.553 267.457,442 268.008,442 L275.992,442 C276.543,442 276.99,441.553 276.99,441 C276.99,440.447 276.543,440 275.992,440 L272.998,440 L272.998,433.928 C276.787,433.389 279.944,429.854 281.285,425.93 C281.514,425.962 281.742,426 281.98,426 C285.288,426 287.969,423.313 287.969,420 C287.969,415.999 288.817,416 281.98,416 L281.98,416 Z"
+                  id="award"
+                  sketch:type="MSShapeGroup"
+                >
+                </path>
+              </g>
+            </g>
+          </svg>
+
+          <h2 class="mt-4 text-xl font-bold text-black pb-2">
+            Nishan-E-Imtiaz
+          </h2>
+
+          <p class="mt-1 text-sm text-black">
+            Awarded by Government of Pakistan <br />
+            For Promoting the cause of Social Welfare Services <br />
+            In 1989 at Islamabad
+          </p>
+        </a>
+        <a
+          class="block rounded-xl border border-black p-8 shadow-xl transition hover:border-green-500 hover:shadow-green-400"
+          href="#"
+        >
+          <svg
+            width="40px"
+            height="40px"
+            viewBox="0 -1 32 32"
+            version="1.1"
+            xmlns="http://www.w3.org/2000/svg"
+            xmlns:xlink="http://www.w3.org/1999/xlink"
+            xmlns:sketch="http://www.bohemiancoding.com/sketch/ns"
+          >
+            <title>award</title>
+            <desc>Created with Sketch Beta.</desc>
+            <defs> </defs>
+            <g
+              id="Page-1"
+              stroke="none"
+              stroke-width="1"
+              fill="none"
+              fill-rule="evenodd"
+              sketch:type="MSPage"
+            >
+              <g
+                id="Icon-Set"
+                sketch:type="MSLayerGroup"
+                transform="translate(-256.000000, -412.000000)"
+                fill="#000000"
+              >
+                <path
+                  d="M281.98,424 L281.98,418 C285.932,418 285.973,417.791 285.973,420 C285.973,422.209 284.186,424 281.98,424 L281.98,424 Z M279.984,422 C279.984,426.418 276.41,432 272,432 C267.59,432 264.016,426.418 264.016,422 L264.016,416 C264.016,415.011 265.055,414 266.012,414 L277.988,414 C278.945,414 279.984,414.979 279.984,416 L279.984,422 L279.984,422 Z M262.02,424 C259.815,424 258.027,422.209 258.027,420 C258.027,417.791 258.068,418 262.02,418 L262.02,424 L262.02,424 Z M281.98,416 C281.98,413.791 280.193,412 277.988,412 L266.012,412 C263.807,412 262.02,413.791 262.02,416 C255.183,416 256.031,415.999 256.031,420 C256.031,423.313 258.712,426 262.02,426 C262.258,426 262.486,425.962 262.716,425.93 C264.056,429.854 267.213,433.389 271.002,433.928 L271.002,440 L268.008,440 C267.457,440 267.01,440.447 267.01,441 C267.01,441.553 267.457,442 268.008,442 L275.992,442 C276.543,442 276.99,441.553 276.99,441 C276.99,440.447 276.543,440 275.992,440 L272.998,440 L272.998,433.928 C276.787,433.389 279.944,429.854 281.285,425.93 C281.514,425.962 281.742,426 281.98,426 C285.288,426 287.969,423.313 287.969,420 C287.969,415.999 288.817,416 281.98,416 L281.98,416 Z"
+                  id="award"
+                  sketch:type="MSShapeGroup"
+                >
+                </path>
+              </g>
+            </g>
+          </svg>
+
+          <h2 class="mt-4 text-xl font-bold text-black pb-2">
+            human Rights Award
+          </h2>
+
+          <p class="mt-1 text-sm text-black">
+            Given by Pakistan Human Rights Society (PHRS) <br />
+            For promoting and protecting the Human Rights
+          </p>
+        </a>
+        <a
+          class="block rounded-xl border border-black p-8 shadow-xl transition hover:border-green-500 hover:shadow-green-400"
+          href="#"
+        >
+          <svg
+            width="40px"
+            height="40px"
+            viewBox="0 -1 32 32"
+            version="1.1"
+            xmlns="http://www.w3.org/2000/svg"
+            xmlns:xlink="http://www.w3.org/1999/xlink"
+            xmlns:sketch="http://www.bohemiancoding.com/sketch/ns"
+          >
+            <title>award</title>
+            <desc>Created with Sketch Beta.</desc>
+            <defs> </defs>
+            <g
+              id="Page-1"
+              stroke="none"
+              stroke-width="1"
+              fill="none"
+              fill-rule="evenodd"
+              sketch:type="MSPage"
+            >
+              <g
+                id="Icon-Set"
+                sketch:type="MSLayerGroup"
+                transform="translate(-256.000000, -412.000000)"
+                fill="#000000"
+              >
+                <path
+                  d="M281.98,424 L281.98,418 C285.932,418 285.973,417.791 285.973,420 C285.973,422.209 284.186,424 281.98,424 L281.98,424 Z M279.984,422 C279.984,426.418 276.41,432 272,432 C267.59,432 264.016,426.418 264.016,422 L264.016,416 C264.016,415.011 265.055,414 266.012,414 L277.988,414 C278.945,414 279.984,414.979 279.984,416 L279.984,422 L279.984,422 Z M262.02,424 C259.815,424 258.027,422.209 258.027,420 C258.027,417.791 258.068,418 262.02,418 L262.02,424 L262.02,424 Z M281.98,416 C281.98,413.791 280.193,412 277.988,412 L266.012,412 C263.807,412 262.02,413.791 262.02,416 C255.183,416 256.031,415.999 256.031,420 C256.031,423.313 258.712,426 262.02,426 C262.258,426 262.486,425.962 262.716,425.93 C264.056,429.854 267.213,433.389 271.002,433.928 L271.002,440 L268.008,440 C267.457,440 267.01,440.447 267.01,441 C267.01,441.553 267.457,442 268.008,442 L275.992,442 C276.543,442 276.99,441.553 276.99,441 C276.99,440.447 276.543,440 275.992,440 L272.998,440 L272.998,433.928 C276.787,433.389 279.944,429.854 281.285,425.93 C281.514,425.962 281.742,426 281.98,426 C285.288,426 287.969,423.313 287.969,420 C287.969,415.999 288.817,416 281.98,416 L281.98,416 Z"
+                  id="award"
+                  sketch:type="MSShapeGroup"
+                >
+                </path>
+              </g>
+            </g>
+          </svg>
+
+          <h2 class="mt-4 text-xl font-bold text-black pb-2">Khidmat Award</h2>
+
+          <p class="mt-1 text-sm text-black">
+            Awarded by Pakistan Academy of Medical Sciences (PAMS)<br />
+            For promoting the cause of Social Welfare Services
+          </p>
+        </a>
+        <a
+          class="block rounded-xl border border-black p-8 shadow-xl transition hover:border-green-500 hover:shadow-green-400"
+          href="#"
+        >
+          <svg
+            width="40px"
+            height="40px"
+            viewBox="0 -1 32 32"
+            version="1.1"
+            xmlns="http://www.w3.org/2000/svg"
+            xmlns:xlink="http://www.w3.org/1999/xlink"
+            xmlns:sketch="http://www.bohemiancoding.com/sketch/ns"
+          >
+            <title>award</title>
+            <desc>Created with Sketch Beta.</desc>
+            <defs> </defs>
+            <g
+              id="Page-1"
+              stroke="none"
+              stroke-width="1"
+              fill="none"
+              fill-rule="evenodd"
+              sketch:type="MSPage"
+            >
+              <g
+                id="Icon-Set"
+                sketch:type="MSLayerGroup"
+                transform="translate(-256.000000, -412.000000)"
+                fill="#000000"
+              >
+                <path
+                  d="M281.98,424 L281.98,418 C285.932,418 285.973,417.791 285.973,420 C285.973,422.209 284.186,424 281.98,424 L281.98,424 Z M279.984,422 C279.984,426.418 276.41,432 272,432 C267.59,432 264.016,426.418 264.016,422 L264.016,416 C264.016,415.011 265.055,414 266.012,414 L277.988,414 C278.945,414 279.984,414.979 279.984,416 L279.984,422 L279.984,422 Z M262.02,424 C259.815,424 258.027,422.209 258.027,420 C258.027,417.791 258.068,418 262.02,418 L262.02,424 L262.02,424 Z M281.98,416 C281.98,413.791 280.193,412 277.988,412 L266.012,412 C263.807,412 262.02,413.791 262.02,416 C255.183,416 256.031,415.999 256.031,420 C256.031,423.313 258.712,426 262.02,426 C262.258,426 262.486,425.962 262.716,425.93 C264.056,429.854 267.213,433.389 271.002,433.928 L271.002,440 L268.008,440 C267.457,440 267.01,440.447 267.01,441 C267.01,441.553 267.457,442 268.008,442 L275.992,442 C276.543,442 276.99,441.553 276.99,441 C276.99,440.447 276.543,440 275.992,440 L272.998,440 L272.998,433.928 C276.787,433.389 279.944,429.854 281.285,425.93 C281.514,425.962 281.742,426 281.98,426 C285.288,426 287.969,423.313 287.969,420 C287.969,415.999 288.817,416 281.98,416 L281.98,416 Z"
+                  id="award"
+                  sketch:type="MSShapeGroup"
+                >
+                </path>
+              </g>
+            </g>
+          </svg>
+
+          <h2 class="mt-4 text-xl font-bold text-black pb-2">
+            Silver Jubilee Shield
+          </h2>
+
+          <p class="mt-1 text-sm text-black">
+            Conferred upon by College of Physicians and Surgeons Pakistan (1962
+            to 1987)<br />
+            For promoting the cause of Social Welfare Services
+          </p>
+        </a>
+        <a
+          class="block rounded-xl border border-black p-8 shadow-xl transition hover:border-green-500 hover:shadow-green-400"
+          href="#"
+        >
+          <svg
+            width="40px"
+            height="40px"
+            viewBox="0 -1 32 32"
+            version="1.1"
+            xmlns="http://www.w3.org/2000/svg"
+            xmlns:xlink="http://www.w3.org/1999/xlink"
+            xmlns:sketch="http://www.bohemiancoding.com/sketch/ns"
+          >
+            <title>award</title>
+            <desc>Created with Sketch Beta.</desc>
+            <defs> </defs>
+            <g
+              id="Page-1"
+              stroke="none"
+              stroke-width="1"
+              fill="none"
+              fill-rule="evenodd"
+              sketch:type="MSPage"
+            >
+              <g
+                id="Icon-Set"
+                sketch:type="MSLayerGroup"
+                transform="translate(-256.000000, -412.000000)"
+                fill="#000000"
+              >
+                <path
+                  d="M281.98,424 L281.98,418 C285.932,418 285.973,417.791 285.973,420 C285.973,422.209 284.186,424 281.98,424 L281.98,424 Z M279.984,422 C279.984,426.418 276.41,432 272,432 C267.59,432 264.016,426.418 264.016,422 L264.016,416 C264.016,415.011 265.055,414 266.012,414 L277.988,414 C278.945,414 279.984,414.979 279.984,416 L279.984,422 L279.984,422 Z M262.02,424 C259.815,424 258.027,422.209 258.027,420 C258.027,417.791 258.068,418 262.02,418 L262.02,424 L262.02,424 Z M281.98,416 C281.98,413.791 280.193,412 277.988,412 L266.012,412 C263.807,412 262.02,413.791 262.02,416 C255.183,416 256.031,415.999 256.031,420 C256.031,423.313 258.712,426 262.02,426 C262.258,426 262.486,425.962 262.716,425.93 C264.056,429.854 267.213,433.389 271.002,433.928 L271.002,440 L268.008,440 C267.457,440 267.01,440.447 267.01,441 C267.01,441.553 267.457,442 268.008,442 L275.992,442 C276.543,442 276.99,441.553 276.99,441 C276.99,440.447 276.543,440 275.992,440 L272.998,440 L272.998,433.928 C276.787,433.389 279.944,429.854 281.285,425.93 C281.514,425.962 281.742,426 281.98,426 C285.288,426 287.969,423.313 287.969,420 C287.969,415.999 288.817,416 281.98,416 L281.98,416 Z"
+                  id="award"
+                  sketch:type="MSShapeGroup"
+                >
+                </path>
+              </g>
+            </g>
+          </svg>
+
+          <h2 class="mt-4 text-xl font-bold text-black pb-2">
+            The Social Worker of Sub-Continent
+          </h2>
+
+          <p class="mt-1 text-sm text-black">
+            Given by Government of Sindh<br />
+            For promoting the cause of Social Welfare Services<br />
+            In 1989 at Karachi
+          </p>
+        </a>
+        <a
+          class="block rounded-xl border border-black p-8 shadow-xl transition hover:border-green-500 hover:shadow-green-400"
+          href="#"
+        >
+          <svg
+            width="40px"
+            height="40px"
+            viewBox="0 -1 32 32"
+            version="1.1"
+            xmlns="http://www.w3.org/2000/svg"
+            xmlns:xlink="http://www.w3.org/1999/xlink"
+            xmlns:sketch="http://www.bohemiancoding.com/sketch/ns"
+          >
+            <title>award</title>
+            <desc>Created with Sketch Beta.</desc>
+            <defs> </defs>
+            <g
+              id="Page-1"
+              stroke="none"
+              stroke-width="1"
+              fill="none"
+              fill-rule="evenodd"
+              sketch:type="MSPage"
+            >
+              <g
+                id="Icon-Set"
+                sketch:type="MSLayerGroup"
+                transform="translate(-256.000000, -412.000000)"
+                fill="#000000"
+              >
+                <path
+                  d="M281.98,424 L281.98,418 C285.932,418 285.973,417.791 285.973,420 C285.973,422.209 284.186,424 281.98,424 L281.98,424 Z M279.984,422 C279.984,426.418 276.41,432 272,432 C267.59,432 264.016,426.418 264.016,422 L264.016,416 C264.016,415.011 265.055,414 266.012,414 L277.988,414 C278.945,414 279.984,414.979 279.984,416 L279.984,422 L279.984,422 Z M262.02,424 C259.815,424 258.027,422.209 258.027,420 C258.027,417.791 258.068,418 262.02,418 L262.02,424 L262.02,424 Z M281.98,416 C281.98,413.791 280.193,412 277.988,412 L266.012,412 C263.807,412 262.02,413.791 262.02,416 C255.183,416 256.031,415.999 256.031,420 C256.031,423.313 258.712,426 262.02,426 C262.258,426 262.486,425.962 262.716,425.93 C264.056,429.854 267.213,433.389 271.002,433.928 L271.002,440 L268.008,440 C267.457,440 267.01,440.447 267.01,441 C267.01,441.553 267.457,442 268.008,442 L275.992,442 C276.543,442 276.99,441.553 276.99,441 C276.99,440.447 276.543,440 275.992,440 L272.998,440 L272.998,433.928 C276.787,433.389 279.944,429.854 281.285,425.93 C281.514,425.962 281.742,426 281.98,426 C285.288,426 287.969,423.313 287.969,420 C287.969,415.999 288.817,416 281.98,416 L281.98,416 Z"
+                  id="award"
+                  sketch:type="MSShapeGroup"
+                >
+                </path>
+              </g>
+            </g>
+          </svg>
+
+          <h2 class="mt-4 text-xl font-bold text-black pb-2">
+            Pakistan Civic Award
+          </h2>
+
+          <p class="mt-1 text-sm text-black">
+            Given By Pakistan Civic Society<br />
+            For promoting the cause of Social Welfare Services<br />
+            In 1992 at Karachi
+          </p>
+        </a>
+        <a
+          class="block rounded-xl border border-black p-8 shadow-xl transition hover:border-green-500 hover:shadow-green-400"
+          href="#"
+        >
+          <svg
+            width="40px"
+            height="40px"
+            viewBox="0 -1 32 32"
+            version="1.1"
+            xmlns="http://www.w3.org/2000/svg"
+            xmlns:xlink="http://www.w3.org/1999/xlink"
+            xmlns:sketch="http://www.bohemiancoding.com/sketch/ns"
+          >
+            <title>award</title>
+            <desc>Created with Sketch Beta.</desc>
+            <defs> </defs>
+            <g
+              id="Page-1"
+              stroke="none"
+              stroke-width="1"
+              fill="none"
+              fill-rule="evenodd"
+              sketch:type="MSPage"
+            >
+              <g
+                id="Icon-Set"
+                sketch:type="MSLayerGroup"
+                transform="translate(-256.000000, -412.000000)"
+                fill="#000000"
+              >
+                <path
+                  d="M281.98,424 L281.98,418 C285.932,418 285.973,417.791 285.973,420 C285.973,422.209 284.186,424 281.98,424 L281.98,424 Z M279.984,422 C279.984,426.418 276.41,432 272,432 C267.59,432 264.016,426.418 264.016,422 L264.016,416 C264.016,415.011 265.055,414 266.012,414 L277.988,414 C278.945,414 279.984,414.979 279.984,416 L279.984,422 L279.984,422 Z M262.02,424 C259.815,424 258.027,422.209 258.027,420 C258.027,417.791 258.068,418 262.02,418 L262.02,424 L262.02,424 Z M281.98,416 C281.98,413.791 280.193,412 277.988,412 L266.012,412 C263.807,412 262.02,413.791 262.02,416 C255.183,416 256.031,415.999 256.031,420 C256.031,423.313 258.712,426 262.02,426 C262.258,426 262.486,425.962 262.716,425.93 C264.056,429.854 267.213,433.389 271.002,433.928 L271.002,440 L268.008,440 C267.457,440 267.01,440.447 267.01,441 C267.01,441.553 267.457,442 268.008,442 L275.992,442 C276.543,442 276.99,441.553 276.99,441 C276.99,440.447 276.543,440 275.992,440 L272.998,440 L272.998,433.928 C276.787,433.389 279.944,429.854 281.285,425.93 C281.514,425.962 281.742,426 281.98,426 C285.288,426 287.969,423.313 287.969,420 C287.969,415.999 288.817,416 281.98,416 L281.98,416 Z"
+                  id="award"
+                  sketch:type="MSShapeGroup"
+                >
+                </path>
+              </g>
+            </g>
+          </svg>
+
+          <h2 class="mt-4 text-xl font-bold text-black pb-2">
+            Honorary Doctrate Degree (Honoris Causa Degree) by IBA
+          </h2>
+
+          <p class="mt-1 text-sm text-black">
+            On behalf of Institute of Business Administration (IBA), the Degree
+            was conferred upon Dr.<br />
+            Abdul Sattar Edhi by Dr. Eshrat ul Ebad Khan, Governor of Sindh, Karachi<br
+            />
+            → In recognition of his “Dedicated and Indiscriminate Long Work towards
+            the Betterment and <br />
+            Welfare of Humanity across the Globe”, and<br />
+            → Considered him “Great National Hero” and “All Time Legend” for his
+            unparalleled services for<br />
+            the mankind.<br />
+            In November 2006 Karachi Pakistan
+          </p>
+        </a>
+        <a
+          class="block rounded-xl border border-black p-8 shadow-xl transition hover:border-green-500 hover:shadow-green-400"
+          href="#"
+        >
+          <svg
+            width="40px"
+            height="40px"
+            viewBox="0 -1 32 32"
+            version="1.1"
+            xmlns="http://www.w3.org/2000/svg"
+            xmlns:xlink="http://www.w3.org/1999/xlink"
+            xmlns:sketch="http://www.bohemiancoding.com/sketch/ns"
+          >
+            <title>award</title>
+            <desc>Created with Sketch Beta.</desc>
+            <defs> </defs>
+            <g
+              id="Page-1"
+              stroke="none"
+              stroke-width="1"
+              fill="none"
+              fill-rule="evenodd"
+              sketch:type="MSPage"
+            >
+              <g
+                id="Icon-Set"
+                sketch:type="MSLayerGroup"
+                transform="translate(-256.000000, -412.000000)"
+                fill="#000000"
+              >
+                <path
+                  d="M281.98,424 L281.98,418 C285.932,418 285.973,417.791 285.973,420 C285.973,422.209 284.186,424 281.98,424 L281.98,424 Z M279.984,422 C279.984,426.418 276.41,432 272,432 C267.59,432 264.016,426.418 264.016,422 L264.016,416 C264.016,415.011 265.055,414 266.012,414 L277.988,414 C278.945,414 279.984,414.979 279.984,416 L279.984,422 L279.984,422 Z M262.02,424 C259.815,424 258.027,422.209 258.027,420 C258.027,417.791 258.068,418 262.02,418 L262.02,424 L262.02,424 Z M281.98,416 C281.98,413.791 280.193,412 277.988,412 L266.012,412 C263.807,412 262.02,413.791 262.02,416 C255.183,416 256.031,415.999 256.031,420 C256.031,423.313 258.712,426 262.02,426 C262.258,426 262.486,425.962 262.716,425.93 C264.056,429.854 267.213,433.389 271.002,433.928 L271.002,440 L268.008,440 C267.457,440 267.01,440.447 267.01,441 C267.01,441.553 267.457,442 268.008,442 L275.992,442 C276.543,442 276.99,441.553 276.99,441 C276.99,440.447 276.543,440 275.992,440 L272.998,440 L272.998,433.928 C276.787,433.389 279.944,429.854 281.285,425.93 C281.514,425.962 281.742,426 281.98,426 C285.288,426 287.969,423.313 287.969,420 C287.969,415.999 288.817,416 281.98,416 L281.98,416 Z"
+                  id="award"
+                  sketch:type="MSShapeGroup"
+                >
+                </path>
+              </g>
+            </g>
+          </svg>
+
+          <h2 class="mt-4 text-xl font-bold text-black pb-2">
+            Honorary Degree-Doctor of Social Sciences
+          </h2>
+
+          <p class="mt-1 text-sm text-black">
+            By Hamdard Foundation during the 6th Convocation of Hamdard
+            University, at Islamabad <br />
+            Campus<br />
+            In May 2014 Islamabad Pakistan
+          </p>
+        </a>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- awards ended -->
+</Base>

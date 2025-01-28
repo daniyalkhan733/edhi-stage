@@ -1,0 +1,183 @@
+---
+import Base from "@/layouts/Base.astro";
+import { getEntry } from "astro:content";
+const bilquisbano = await getEntry("bilquis-bano", "-index");
+const { Content } = await bilquisbano.render();
+const { title, description, meta_title } = bilquisbano.data;
+import { SEO } from "astro-seo";
+---
+
+<SEO
+  title="Faisal Edhi - Continuing the Edhi Legacy"
+  description="Discover Faisal Edhi's role in continuing the Edhi Foundation's mission. Learn about his contributions and vision."
+  canonical={Astro.request.url}
+  openGraph={{
+    basic: {
+      title: "Faisal Edhi - Continuing the Edhi Legacy",
+      type: "A type.",
+      image: "https://edhiuk.org/images/logo.jpg",
+   
+    }
+  }}
+  twitter={{
+    creator: "@jonasmerlins1"
+  }}
+  extend={{
+    // extending the default link tags
+    link: [{ rel: "icon", href: "/favicon.png" }],
+    // extending the default meta tags
+    meta: [
+      {
+        name: "twitter:image",
+        content: "https://edhiuk.org/images/logo.jpg",
+      },
+      { name: "twitter:title", content: "Faisal Edhi - Continuing the Edhi Legacy" },
+      { name: "twitter:description", content: "Discover Faisal Edhi's role in continuing the Edhi Foundation's mission. Learn about his contributions and vision." },
+      { name: "keywords", content: "" },
+    ],
+  }}
+/>
+
+
+
+
+
+
+
+
+<Base >
+ <!-- heading started  -->
+
+ <section
+ class="bg-gray-100 dark:bg-gray-900 py-32 sm:py-36 lg:py-40 overflow-hidden h-[80dvh] min-h-max flex items-center relative"
+>
+ <div
+   class="absolute top-0 left-0 -translate-x-[54%] -translate-y-[70%] w-2/5 rounded-full aspect-square bg-green-600/70
+     backdrop-filter blur-3xl opacity-50"
+ >
+ </div>
+ <div
+   class="absolute bottom-0 right-0 translate-x-[54%] translate-y-[70%] w-2/5 rounded-full aspect-square bg-green-600/70
+     backdrop-filter blur-3xl opacity-50"
+ >
+ </div>
+ <div
+   class="absolute min-w-[300px] w-[48%] md:w-2/5 aspect-square rounded-full bg-gradient-to-r from-emerald-400/5 right-0
+     -translate-y-[40%] translate-x-[40%] top-0"
+ >
+   <div class="inset-[10%] rounded-full bg-gradient-to-l from-green-400/20">
+     <div
+       class="absolute inset-[20%] rounded-full bg-gradient-to-l from-green-400/30"
+     >
+     </div>
+   </div>
+ </div>
+ <div
+   class="absolute min-w-[300px] w-[48%] md:w-2/5 aspect-square rounded-full bg-gradient-to-l from-green-400/5 left-0
+     translate-y-[40%] -translate-x-[40%] bottom-0"
+ >
+   <div class="inset-[10%] rounded-full bg-gradient-to-r from-green-400/40">
+     <div
+       class="absolute inset-[20%] rounded-full bg-gradient-to-r from-green-400/50"
+     >
+     </div>
+   </div>
+ </div>
+ <div class="mx-auto lg:max-w-6xl w-full px-5 sm:px-10 md:px-12 lg:px-5">
+   <div class="text-center flex flex-col items-center space-y-10">
+     <h1
+       class="text-4xl md:text-5xl lg:text-6xl/tight xl:text-7xl/tight text-gray-900 dark:text-white font-bold max-w-4xl capitalize"
+     >
+    Faisal Edhi     </h1>
+     <p class="text-gray-700 dark:text-gray-300 text-center">
+        Dedicated to humanity, Faisal Edhi upholds his father's legacy through unwavering commitment to humanitarian aid, ensuring every donation serves those in need.
+     </p>
+     <div class="flex justify-center">
+       <a
+         href="https://donate.edhiuk.org/"
+         class="px-8 h-12 rounded flex items-center gap-x-3 bg-green-700 text-white hover:bg-opacity-80"
+       >
+         Donate Now
+       </a>
+     </div>
+   </div>
+ </div>
+</section>
+<!-- heading ended -->  
+<section>
+  <div class="mx-auto max-w-6xl px-6 pt-10 sm:px-6 sm:py-16 lg:px-8 justify-center">
+    <div class="max-w-3xl"></div>
+    <div class="mt-8 grid grid-cols-1 gap-8 lg:grid-cols-2 lg:gap-16">
+      <div class="relative h-64 overflow-hidden sm:h-80 lg:h-full">
+        <img
+          alt=""
+          src="/images/about-us/faisal-edhi.png"
+          class="absolute inset-0 h-full w-full object-fit rounded"
+        />
+      </div>
+      <article class="space-y-4 text-gray-600 md:py-20 pt-0">
+        <h2 class="text-3xl font-bold sm:text-4xl pb-2">Continuing a Legacy of 
+            <span class="text-green-600">Compassion</span> </h2>
+        <p class="text-[17px] font-roboto">
+     
+Faisal Edhi, son of the legendary humanitarian Abdul Sattar Edhi, is dedicated to upholding his father's legacy. Working tirelessly from his office in Karachi, Faisal leads the Edhi Foundation with unwavering commitment. He aims to foster trust and integrity, ensuring that donations serve those in need, just as his father envisioned.
+        </p>
+      </article>
+    </div>
+  </div>
+</section>
+
+
+  
+  
+  <section class="mx-auto max-w-6xl">
+      
+    <div class="flex flex-col md:flex-row md:py-20 pb-0 pt-10">
+
+      <div class="md:w-1/2">
+        <h2 class="font-bold px-6 text-left">
+            Vision and Ambition
+        </h2>
+      </div>
+      <div class="md:w-1/2 text-justify px-6">
+
+        <p class="text-[17px] font-roboto pt-4">
+            Faisal Edhi is driven by a profound ambition to expand his father's work. He believes in building a reputation through action, mirroring Abdul Sattar Edhi's approach. Faisal emphasizes sincerity in donations, rejecting contributions made for publicity. His goal is to create sustainable, impactful projects that resonate with the public, ensuring the Edhi Foundation continues to thrive and support those in need.
+        </p>
+      </div>
+    </div>
+    <div class="md:text-center text-left px-6 md:pt-[36px] pt-10">
+
+      <h1 class="text-black text-3xl font-bold">
+        Upholding True 
+        <span class="text-green-600">Humanity</span> 
+      </h1>
+      <br />
+
+      <div class="sm:grid-cols-1 ">
+        <div class="md:text-center text-left px-0 mb-4">
+          <p class=" text-[17px] font-roboto">
+            Faisal Edhi's mission is rooted in the philosophy of serving humanity without seeking government aid. Inspired by his father's cradle-to-grave care model, Faisal ensures that the foundation provides essential services, from maternity wards to dignified burials. Despite challenges, he remains dedicated to fostering a culture of giving, with 50% of donations coming from expatriates, emphasizing the global trust in the Edhi Foundation's work.
+          </p><br />
+        </div>
+      </div>
+    </div>
+    
+
+      <div class="flex flex-col md:flex-row md:py-20 py-10">
+        <div class="md:w-1/2">
+          <h2 class="font-bold px-6 text-left text-[36px]">
+            Carrying Forward 
+            <span class="text-green-600">a Legacy</span>
+          </h2>
+        </div>
+        <div class="md:w-1/2 text-justify px-6">
+
+          <p class="text-[17px] font-roboto pt-4">
+            Faisal Edhi works from the same office where his father once sat, continuing Abdul Sattar Edhi's mission with unwavering dedication. Soon, the International Human Rights Commission will honor both father and son, acknowledging their immense contributions to humanity with prestigious awards for their selfless service.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+</Base>

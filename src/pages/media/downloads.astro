@@ -1,0 +1,84 @@
+---
+import Base from "@/layouts/Base.astro";
+
+import { SEO } from "astro-seo";
+
+
+
+
+---
+<SEO
+  title="Edhi Foundation Downloads - Resources and Information"
+  description="Access downloadable resources and information from Edhi Foundation. Get reports, brochures, and more."
+  canonical={Astro.request.url}
+  openGraph={{
+    basic: {
+      title: "Edhi Foundation Downloads - Resources and Information",
+      type: "A type.",
+      image: "https://edhiuk.org/images/logo.jpg",
+
+    }
+  }}
+  twitter={{
+    creator: "@jonasmerlins1"
+  }}
+  extend={{
+    // extending the default link tags
+    link: [{ rel: "icon", href: "/favicon.png" }],
+    // extending the default meta tags
+    meta: [
+      {
+        name: "twitter:image",
+        content: "https://edhiuk.org/images/logo.jpg",
+      },
+      { name: "twitter:title", content: "Edhi Foundation Downloads - Resources and Information" },
+      { name: "twitter:description", content: "Access downloadable resources and information from Edhi Foundation. Get reports, brochures, and more." },
+      { name: "keywords", content: "" },
+    ],
+  }}
+/>
+
+<Base >
+  <section class="section-sm px-6">
+    <div
+      class=" py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20"
+    >
+      <h2
+        class="mb-4 font-sans text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl sm:leading-none text-center"
+        style="margin-top: -60px;margin-bottom:30px;"
+      >
+        Downloads
+      </h2>
+
+      <p class="mb-2 text-xs font-bold tracking-wide text-gray-800 uppercase">
+        Child Adoption Center and Child-care services
+      </p>
+      <p class="text-base text-gray-700">
+        Established in 1949, and headed by Abdul Sattar Edhi's wife Bilquis
+        Edhi, the Foundation has installed baby cradles at most of Edhi centers.
+        This cradle service ensures refuge for unwanted infants and abandoned
+        babies. These babies are then taken care of at the Edhi homes under the
+        supervision of Bilquis Edhi.<a
+          target="_blank"
+          href="https://edhiuk.org/">read more »»</a>
+        <br/>
+        <br/>
+        <p class="text-base text-gray-700" style="text-align:left">
+          <!-- To see the complete list <a target="_blank" href="https://edhiuk.org/">CLICK HERE</a>
+                    <br /> -->
+
+          Click Here to Download Child Adoption Form in Urdu <a
+            target="_blank"
+            href="/images/Child_Adoption_Form_in_urdu.pdf" 
+            class="text-red-500">CLICK HERE</a>
+          <br/>
+           Click Here to Download Child Adoption Form in English <a
+            target="_blank"
+            href="/images/Child_Adoption_From_in_English.pdf"
+            class="text-red-500">CLICK HERE</a>
+          <br />
+        </p>
+      </p>
+    </div>
+  </section>
+</Base>

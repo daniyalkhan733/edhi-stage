@@ -1,0 +1,920 @@
+---
+import Base from "@/layouts/Base.astro";
+
+import { getEntry } from "astro:content";
+import Accordion from "@/shortcodes/Accordion";
+
+const allpakistaniedhicenters = await getEntry("all-pakistani-edhi-centers", "-index");
+const { Content } = await allpakistaniedhicenters.render();
+const { title, description, meta_title  } = allpakistaniedhicenters.data;
+
+import { SEO } from "astro-seo";
+---
+
+<SEO
+  title="All Pakistan Edhi Centers - Contact Information"
+  description="Find contact information for All Pakistan Edhi Centers. Reach out for support, information, and assistance."
+  canonical={Astro.request.url}
+  openGraph={{
+    basic: {
+      title: "All Pakistan Edhi Centers - Contact Information",
+      type: "A type.",
+      image: "https://edhiuk.org/images/logo.jpg",
+    }
+  }}
+  twitter={{
+    creator: "@jonasmerlins1"
+  }}
+  extend={{
+    // extending the default link tags
+    link: [{ rel: "icon", href: "/favicon.png" }],
+    // extending the default meta tags
+    meta: [
+      {
+        name: "twitter:image",
+        content: "https://edhiuk.org/images/logo.jpg",
+      },
+      { name: "twitter:title", content: "All Pakistan Edhi Centers - Contact Information" },
+      { name: "twitter:description", content: "Find contact information for All Pakistan Edhi Centers. Reach out for support, information, and assistance." },
+      { name: "keywords", content: "" },
+    ],
+  }}
+/>
+
+<Base
+  title={title}
+  meta_title={meta_title}
+  description={description}
+
+>
+<section class="section-sm container max-w-2xl">
+<!-- ### Accordion -->
+
+<Accordion client:load title="Sind">
+	<div class="code-block" style="max-height: 400px; overflow-y: auto;">
+		<section class="wpb_row vc_row-fluid vc_custom_1482486406591 ">
+		  <div class="container">
+			<div class="row">
+			  <div class="wpb_column vc_column_container vc_col-sm-8">
+				<div class="vc_column-inner">
+				  <div class="wpb_wrapper">
+					<div class="vc_row wpb_row vc_inner vc_row-fluid vc_custom_1482486413093">
+					  <div class="wpb_column vc_column_container vc_col-sm-8">
+						<div class="vc_column-inner vc_custom_1482117949347">
+						  <div class="wpb_wrapper">
+							<h4 style="text-align: left;">Sind</h4>
+							<div class="wpb_text_column wpb_content_element vc_custom_1503486649362">
+							  <div class="wpb_wrapper">
+								<table border="1" width="50%">
+								  <thead>
+									<tr bgcolor="#2c2c2c">
+									  <th style="color: #ffffff;">City</th>
+									  <th style="color: #ffffff;">City Code</th>
+									  <th style="color: #ffffff;">Phone #</th>
+									</tr>
+								  </thead>
+								  <tbody>
+									<tr>
+									  <td><strong>Badin</strong></td>
+									  <td>0227</td>
+									  <td>62215</td>
+									</tr>
+									<tr bgcolor="#d9d9d9">
+									  <td><strong>Dadu</strong></td>
+									  <td>0029</td>
+									  <td>3891</td>
+									</tr>
+									<tr>
+									  <td><strong>Digri</strong></td>
+									  <td>023221</td>
+									  <td>366</td>
+									</tr>
+									<tr bgcolor="#d9d9d9">
+									  <td><strong>Diplo</strong></td>
+									  <td>–</td>
+									  <td>Wireless</td>
+									</tr>
+									<tr>
+									  <td><strong>Dhabeji</strong></td>
+									  <td>–</td>
+									  <td>Wireless</td>
+									</tr>
+									<tr bgcolor="#d9d9d9">
+									  <td><strong>Hala</strong></td>
+									  <td>0228</td>
+									  <td>2213</td>
+									</tr>
+									<tr>
+									  <td colspan="3">
+										<h4>Hyderabad</h4>
+									  </td>
+									</tr>
+									<tr bgcolor="#2c2c2c">
+									  <td style="color: #ffffff;">City</td>
+									  <td style="color: #ffffff;">Code</td>
+									  <td style="color: #ffffff;">Phone #</td>
+									</tr>
+									<tr>
+									  <td><strong>Ambulance Control</strong></td>
+									  <td>0221</td>
+									  <td>20090</td>
+									</tr>
+									<tr bgcolor="#d9d9d9">
+									  <td><strong>Islamkot</strong></td>
+									  <td>–</td>
+									  <td>Wireless</td>
+									</tr>
+									<tr>
+									  <td><strong>Jacobabad</strong></td>
+									  <td>0722</td>
+									  <td>7650586</td>
+									</tr>
+									<tr bgcolor="#d9d9d9">
+									  <td><strong>Jamshoro</strong></td>
+									  <td>–</td>
+									  <td>Wireless</td>
+									</tr>
+									<tr>
+									  <td><strong>Jhuddo</strong></td>
+									  <td>023231</td>
+									  <td>368</td>
+									</tr>
+									<tr bgcolor="#d9d9d9">
+									  <td><strong>Kandhiaro</strong></td>
+									  <td>0242</td>
+									  <td>449630</td>
+									</tr>
+									<tr>
+									  <td colspan="3">
+										<h4>Karachi</h4>
+									  </td>
+									</tr>
+									<tr bgcolor="#2c2c2c">
+									  <td style="color: #ffffff;">City</td>
+									  <td style="color: #ffffff;">Code</td>
+									  <td style="color: #ffffff;">Phone #</td>
+									</tr>
+									<tr>
+									  <td><strong>Ambulance Control</strong></td>
+									  <td>021</td>
+									  <td>204800-205656</td>
+									</tr>
+									<tr bgcolor="#d9d9d9">
+									  <td><strong>Edhi Village</strong></td>
+									  <td>021</td>
+									  <td>Wireless</td>
+									</tr>
+									<tr>
+									  <td><strong>Khair Pur Mirs</strong></td>
+									  <td>0243</td>
+									  <td>552932</td>
+									</tr>
+									<tr bgcolor="#d9d9d9">
+									  <td><strong>Kotri</strong></td>
+									  <td>0221</td>
+									  <td>870855</td>
+									</tr>
+									<tr>
+									  <td><strong>Larkana</strong></td>
+									  <td>074</td>
+									  <td>4048906, 4041921</td>
+									</tr>
+									<tr bgcolor="#d9d9d9">
+									  <td><strong>Matli</strong></td>
+									  <td>02238</td>
+									  <td>753</td>
+									</tr>
+									<tr>
+									  <td><strong>Mirpur Khas</strong></td>
+									  <td>0231</td>
+									  <td>61344</td>
+									</tr>
+									<tr bgcolor="#d9d9d9">
+									  <td><strong>Mithi</strong></td>
+									  <td>02342</td>
+									  <td>424</td>
+									</tr>
+									<tr>
+									  <td><strong>Moro</strong></td>
+									  <td>0242</td>
+									  <td>411206</td>
+									</tr>
+									<tr bgcolor="#d9d9d9">
+									  <td><strong>Nangar Parker</strong></td>
+									  <td>–</td>
+									  <td>Wireless</td>
+									</tr>
+									<tr>
+									  <td><strong>Nawabshah</strong></td>
+									  <td>0244</td>
+									  <td>364299</td>
+									</tr>
+									<tr bgcolor="#d9d9d9">
+									  <td><strong>Noriabad</strong></td>
+									  <td>–</td>
+									  <td>Wireless</td>
+									</tr>
+									<tr>
+									  <td><strong>Nowsheroferoz</strong></td>
+									  <td>0242</td>
+									  <td>448227</td>
+									</tr>
+									<tr bgcolor="#d9d9d9">
+									  <td><strong>Pano Aqil</strong></td>
+									  <td>071</td>
+									  <td>5690496</td>
+									</tr>
+									<tr>
+									  <td><strong>Qazi Ahmed</strong></td>
+									  <td>0244</td>
+									  <td>321757</td>
+									</tr>
+									<tr bgcolor="#d9d9d9">
+									  <td><strong>Rani Pur</strong></td>
+									  <td>0243</td>
+									  <td>630705</td>
+									</tr>
+									<tr>
+									  <td><strong>Saeed Abad</strong></td>
+									  <td>02298</td>
+									  <td>308</td>
+									</tr>
+									<tr bgcolor="#d9d9d9">
+									  <td><strong>Sanghar</strong></td>
+									  <td>0235</td>
+									  <td>541220</td>
+									</tr>
+									<tr>
+									  <td><strong>Sehven Sharif</strong></td>
+									  <td>02292</td>
+									  <td>385</td>
+									</tr>
+									<tr bgcolor="#d9d9d9">
+									  <td><strong>Shahdad Pur</strong></td>
+									  <td>02232</td>
+									  <td>42444</td>
+									</tr>
+									<tr>
+									  <td><strong>Shahpur Chakar</strong></td>
+									  <td>–</td>
+									  <td>Wireless</td>
+									</tr>
+									<tr bgcolor="#d9d9d9">
+									  <td><strong>Shahkot</strong></td>
+									  <td>056</td>
+									  <td>3710115</td>
+									</tr>
+									<tr>
+									  <td><strong>Sukkur</strong></td>
+									  <td>071</td>
+									  <td>5626050, 5804191</td>
+									</tr>
+									<tr bgcolor="#d9d9d9">
+									  <td><strong>Tando Adam</strong></td>
+									  <td>02221</td>
+									  <td>3444</td>
+									</tr>
+									<tr>
+									  <td><strong>Tando Allah Yar</strong></td>
+									  <td>–</td>
+									  <td>Wireless</td>
+									</tr>
+									<tr bgcolor="#d9d9d9">
+									  <td><strong>Tando Jam</strong></td>
+									  <td>–</td>
+									  <td>Wireless</td>
+									</tr>
+									<tr>
+									  <td><strong>Tando M.Khan</strong></td>
+									  <td>0224</td>
+									  <td>41327</td>
+									</tr>
+									<tr bgcolor="#d9d9d9">
+									  <td><strong>Thatta</strong></td>
+									  <td>029</td>
+									  <td>310</td>
+									</tr>
+									<tr>
+									  <td><strong>Shikarpur</strong></td>
+									  <td>072</td>
+									  <td>6913867</td>
+									</tr>
+									<tr>
+									  <td><strong>Kandh Koi</strong></td>
+									  <td>072</td>
+									  <td>2570077</td>
+									</tr>
+									<tr bgcolor="#d9d9d9">
+									  <td><strong>Umar Kot</strong></td>
+									  <td>–</td>
+									  <td>Wireless</td>
+									</tr>
+								  </tbody>
+								</table>
+							  </div>
+							</div>
+						  </div>
+						</div>
+					  </div>
+					  <div class="wpb_column vc_column_container vc_col-sm-4">
+						<div class="vc_column-inner">
+						  <div class="wpb_wrapper">
+							<div class="vc_wp_custommenu wpb_content_element">
+							  <div class="widget widget_nav_menu">
+								<h2 class="widgettitle">Pakistan Edhi Centers</h2>
+								<div class="menu-all-pakistan-edhi-centers-container">
+								  <ul id="menu-all-pakistan-edhi-centers" class="menu">
+									<li class="menu-item"><a href="https://edhiuk.org/sind/">Sind</a></li>
+									<li class="menu-item"><a href="https://edhiuk.org/punjab/">Punjab</a></li>
+									<li class="menu-item"><a href="https://edhiuk.org/kpk/">KPK</a></li>
+									<li class="menu-item"><a href="https://edhiuk.org/baluchistan/">Baluchistan</a></li>
+									<li class="menu-item"><a href="https://edhiuk.org/azad-jammu-kashmir/">Azad Jammu Kashmir</a></li>
+								  </ul>
+								</div>
+							  </div>
+							</div>
+							<div class="vc_wp_custommenu wpb_content_element">
+							  <div class="widget widget_nav_menu">
+								<h2 class="widgettitle">International Offices</h2>
+								<div class="menu-international-offices-container">
+								  <ul id="menu-international-offices" class="menu">
+									<li class="menu-item"><a href="https://edhiuk.org/usa/">USA Office</a></li>
+									<li class="menu-item"><a href="https://edhiuk.org/australia/">Australia Office</a></li>
+									<li class="menu-item"><a href="https://edhiuk.org/networks/">Networks</a></li>
+									<li class="menu-item"><a href="https://edhina.org/">North America</a></li>
+								  </ul>
+								</div>
+							  </div>
+							</div>
+						  </div>
+						</div>
+					  </div>
+					</div> <!-- End of inner row -->
+				  </div> <!-- End of wpb_wrapper -->
+				</div> <!-- End of vc_column-inner -->
+			  </div> <!-- End of wpb_column -->
+			</div> <!-- End of row -->
+		  </div> <!-- End of container -->
+		</section>
+		<div class="footer section-space80">
+		  <div class="container">
+			<div class="row">
+			  <div class="col-md-4 col-sm-4 col-xs-12">
+				<div class="footer-logo">
+				  <img src="/images/logo.jpg" alt="Edhi Foundation Logo" />
+				</div>
+			  </div>
+			</div>
+		  </div>
+		</div>
+		</div>
+  </Accordion>
+  
+  
+
+<Accordion client:load title="Punjab">
+	<div class="code-block" style="max-height: 400px; overflow-y: auto;">
+
+<div class="wpb_column vc_column_container vc_col-sm-12">
+	<div class="vc_column-inner vc_custom_1482117949347">
+		<div class="wpb_wrapper">
+			<h4 style="text-align: left;">Punjab</h4>
+			<div class="wpb_text_column wpb_content_element  vc_custom_1523256048128">
+				<div class="wpb_wrapper">
+					<h4>051-2624388</h4>
+					<table border="1">
+						<tbody>
+							<tr bgcolor="#2c2c2c">
+								<td><span style="color: #ffffff;">City</span></td>
+								<td>&nbsp;<span style="color: #ffffff;">City Code</span></td>
+								<td><span style="color: #ffffff;">&nbsp;Phone #</span></td>
+							</tr>
+							<tr>
+								<td>Ahmedpur</td>
+								<td>0698</td>
+								<td>72014</td>
+							</tr>
+							<tr bgcolor="#d9d9d9">
+								<td><strong>Attoch<br /> </strong></td>
+								<td>0597</td>
+								<td>4876</td>
+							</tr>
+							<tr>
+								<td>Bahawal Nagar</td>
+								<td>063</td>
+								<td>2273224</td>
+							</tr>
+							<tr bgcolor="#d9d9d9">
+								<td>Bahawal Pur</td>
+								<td>062</td>
+								<td>881204</td>
+							</tr>
+							<tr>
+								<td>Basti Malook</td>
+								<td>&ndash;</td>
+								<td>Wireless</td>
+							</tr>
+							<tr bgcolor="#d9d9d9">
+								<td>Bhai Phero</td>
+								<td>04943</td>
+								<td>115</td>
+							</tr>
+							<tr>
+								<td>Burhan</td>
+								<td>&ndash;</td>
+								<td>Wireless</td>
+							</tr>
+							<tr bgcolor="#d9d9d9">
+								<td>Chicha Watni</td>
+								<td>040</td>
+								<td>5486225</td>
+							</tr>
+							<tr>
+								<td>Chiniot</td>
+								<td>047</td>
+								<td>6331599</td>
+							</tr>
+							<tr bgcolor="#d9d9d9">
+								<td>Daska</td>
+								<td>04341</td>
+								<td>2227</td>
+							</tr>
+							<tr>
+								<td>D.G. Khan</td>
+								<td>064</td>
+								<td>2464159</td>
+							</tr>
+							<tr bgcolor="#d9d9d9">
+								<td>Dina</td>
+								<td>0541630</td>
+								<td>878</td>
+							</tr>
+							<tr>
+								<td>Faisalabad</td>
+								<td>041</td>
+								<td>2647111, 2610111</td>
+							</tr>
+							<tr bgcolor="#d9d9d9">
+								<td>Gujranwala</td>
+								<td>041</td>
+								<td>055-3251422</td>
+							</tr>
+							<tr>
+								<td>Gujrat</td>
+								<td>04331</td>
+								<td>0533-532161</td>
+							</tr>
+							<tr>
+								<td colspan="3">
+									<h2>&nbsp;</h2>
+									<h4>Islamabad&nbsp;051-4939265-7</h4>
+								</td>
+							</tr>
+							<tr bgcolor="#2c2c2c">
+								<td><span style="color: #ffffff;">City</span></td>
+								<td><span style="color: #ffffff;">City Code</span></td>
+								<td><span style="color: #ffffff;">Phone #</span></td>
+							</tr>
+							<tr>
+								<td><strong>* Ambulance Control</strong></td>
+								<td>051</td>
+								<td>051-2879778, 051-2879994</td>
+							</tr>
+							<tr bgcolor="#d9d9d9">
+								<td><strong>* Edhi Home<br /> </strong></td>
+								<td>051</td>
+								<td>251047</td>
+							</tr>
+							<tr>
+								<td><strong>Jhang</strong></td>
+								<td>047</td>
+								<td>7622305</td>
+							</tr>
+							<tr bgcolor="#d9d9d9">
+								<td><strong>Jhelum<br /> </strong></td>
+								<td>0541</td>
+								<td>2289</td>
+							</tr>
+							<tr>
+								<td><strong>Kamalia</strong></td>
+								<td>046</td>
+								<td>3412341</td>
+							</tr>
+							<tr bgcolor="#d9d9d9">
+								<td><strong>Kamoke</strong></td>
+								<td>&nbsp;0435</td>
+								<td>&nbsp;2030</td>
+							</tr>
+							<tr>
+								<td><strong>Kasur</strong></td>
+								<td>&nbsp;&ndash;</td>
+								<td>Wireless</td>
+							</tr>
+							<tr bgcolor="#d9d9d9">
+								<td><strong>Khan Bella</strong></td>
+								<td>&nbsp;(book all)</td>
+								<td>168</td>
+							</tr>
+							<tr>
+								<td><strong>Khanewal</strong></td>
+								<td>065</td>
+								<td>2554164</td>
+							</tr>
+							<tr bgcolor="#d9d9d9">
+								<td><strong>Kharian</strong></td>
+								<td>&nbsp;05771</td>
+								<td>&nbsp;2983</td>
+							</tr>
+							<tr>
+								<td colspan="3">
+									<h2>&nbsp;</h2>
+									<h2>Lahore</h2>
+								</td>
+							</tr>
+							<tr bgcolor="#2c2c2c">
+								<td><span style="color: #ffffff;">City</span></td>
+								<td><span style="color: #ffffff;">City Code</span></td>
+								<td><span style="color: #ffffff;">Phone #</span></td>
+							</tr>
+							<tr>
+								<td><strong>* Ambulance Control</strong></td>
+								<td>&nbsp;042</td>
+								<td>440159-444460</td>
+							</tr>
+							<tr bgcolor="#d9d9d9">
+								<td><strong>* Edhi Home</strong></td>
+								<td>&nbsp;042</td>
+								<td>879193</td>
+							</tr>
+							<tr>
+								<td><strong>Lalamusa</strong></td>
+								<td>&nbsp;04348</td>
+								<td>&nbsp;2499</td>
+							</tr>
+							<tr bgcolor="#d9d9d9">
+								<td><strong>Manga Mandi</strong></td>
+								<td>&ndash;</td>
+								<td>Wireless</td>
+							</tr>
+							<tr>
+								<td><strong>Mandra</strong></td>
+								<td>0571</td>
+								<td>591183</td>
+							</tr>
+							<tr bgcolor="#d9d9d9">
+								<td><strong>Mian Channu</strong></td>
+								<td>065</td>
+								<td>2660414</td>
+							</tr>
+							<tr>
+								<td><strong>Mianwali</strong></td>
+								<td>0459</td>
+								<td>32114</td>
+							</tr>
+							<tr bgcolor="#d9d9d9">
+								<td><strong>Multan</strong></td>
+								<td>061</td>
+								<td>34938-583906</td>
+							</tr>
+							<tr>
+								<td><strong>Okara</strong></td>
+								<td>044</td>
+								<td>2523420</td>
+							</tr>
+							<tr bgcolor="#d9d9d9">
+								<td><strong>Pattoke</strong></td>
+								<td>049</td>
+								<td>4421615</td>
+							</tr>
+							<tr>
+								<td><strong>Perowal</strong></td>
+								<td>&ndash;</td>
+								<td>Wireless</td>
+							</tr>
+							<tr bgcolor="#d9d9d9">
+								<td><strong>Rahim Yar Khan</strong></td>
+								<td>0731</td>
+								<td>70950</td>
+							</tr>
+							<tr>
+								<td colspan="3">
+									<h2>&nbsp;</h2>
+									<h2>Rawalpindi&nbsp;051-2624388</h2>
+								</td>
+							</tr>
+							<tr bgcolor="#2c2c2c">
+								<td><span style="color: #ffffff;">City</span></td>
+								<td><span style="color: #ffffff;">City Code</span></td>
+								<td><span style="color: #ffffff;">Phone #</span></td>
+							</tr>
+							<tr>
+								<td>&nbsp;<strong>* Ambulance Control</strong></td>
+								<td>051</td>
+								<td>051-4410054, 051-4422319</td>
+							</tr>
+							<tr bgcolor="#d9d9d9">
+								<td><strong>Sadiqabad</strong></td>
+								<td>0702</td>
+								<td>75919</td>
+							</tr>
+							<tr>
+								<td><strong>Sahiwal</strong></td>
+								<td>040</td>
+								<td>4223444</td>
+							</tr>
+							<tr bgcolor="#d9d9d9">
+								<td><strong>Sargodha</strong></td>
+								<td>048</td>
+								<td>3214257</td>
+							</tr>
+							<tr>
+								<td><strong>Sialkot</strong></td>
+								<td>0432</td>
+								<td>052-3256180</td>
+							</tr>
+							<tr bgcolor="#d9d9d9">
+								<td><strong>Taxila</strong></td>
+								<td>0596</td>
+								<td>3010</td>
+							</tr>
+							<tr>
+								<td><strong>Toba Take Singh</strong></td>
+								<td>046</td>
+								<td>2510005</td>
+							</tr>
+							<tr bgcolor="#d9d9d9">
+								<td><strong>Wazirabad</strong></td>
+								<td>0437</td>
+								<td>3155</td>
+							</tr>
+							<tr>
+								<td><strong>Zahir Peer</strong></td>
+								<td>0731</td>
+								<td>62565</td>
+							</tr>
+							<tr>
+								<td><strong>EDHI Zonal Office</strong></td>
+								<td>&mdash;</td>
+								<td>051-2502278, <strong>Javaid : 0321-1550083</strong></td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+</div>
+
+</Accordion>
+
+<Accordion client:load title="KPK">
+	<div class="code-block" style="max-height: 400px; overflow-y: auto;">
+
+<h2 style="text-align: left;">KPK</h2>
+<div class="wpb_text_column wpb_content_element  vc_custom_1503487555109">
+	<div class="wpb_wrapper">
+		<table border="1" width="50%">
+			<tbody>
+				<tr bgcolor="#2c2c2c">
+					<td><span style="color: #ffffff;">City</span></td>
+					<td><span style="color: #ffffff;">&nbsp;City Code</span></td>
+					<td><span style="color: #ffffff;">&nbsp;Phone #</span></td>
+				</tr>
+				<tr>
+					<td><strong>Abbottabad</strong></td>
+					<td>0992</td>
+					<td>33518</td>
+				</tr>
+				<tr bgcolor="#d9d9d9">
+					<td><strong>Bannu<br /> </strong></td>
+					<td>0928</td>
+					<td>610444</td>
+				</tr>
+				<tr>
+					<td><strong>Chitral</strong></td>
+					<td>0933</td>
+					<td>2122</td>
+				</tr>
+				<tr bgcolor="#d9d9d9">
+					<td><strong>D.I. Khan</strong></td>
+					<td>0961</td>
+					<td>710637</td>
+				</tr>
+				<tr>
+					<td><strong>Gilgit</strong></td>
+					<td>0572</td>
+					<td>3060</td>
+				</tr>
+				<tr bgcolor="#d9d9d9">
+					<td><strong>Kohat</strong></td>
+					<td>0922</td>
+					<td>2878</td>
+				</tr>
+				<tr>
+					<td><strong>Mardan</strong></td>
+					<td>0931</td>
+					<td>64432</td>
+				</tr>
+				<tr bgcolor="#d9d9d9">
+					<td><strong>Najmal Chowk </strong></td>
+					<td>0838</td>
+					<td>710563</td>
+				</tr>
+				<tr>
+					<td><strong>Sui</strong></td>
+					<td>0835</td>
+					<td>420115</td>
+				</tr>
+				<tr bgcolor="#d9d9d9">
+					<td><strong>Pabbi</strong></td>
+					<td>&ndash;</td>
+					<td>Wireless</td>
+				</tr>
+				<tr>
+					<td colspan="3">
+						<h2>&nbsp;</h2>
+						<h2>Peshawar</h2>
+					</td>
+				</tr>
+				<tr bgcolor="#2c2c2c">
+					<td><span style="color: #ffffff;">City</span></td>
+					<td><span style="color: #ffffff;">City Code</span></td>
+					<td><span style="color: #ffffff;">Phone #</span></td>
+				</tr>
+				<tr>
+					<td><strong>* Ambulance Control</strong></td>
+					<td>091</td>
+					<td>214575</td>
+				</tr>
+				<tr bgcolor="#d9d9d9">
+					<td><strong>* Edhi Home<br /> </strong></td>
+					<td>&ndash;</td>
+					<td>Wireless</td>
+				</tr>
+				<tr>
+					<td><strong>Shaidu</strong></td>
+					<td>05249</td>
+					<td>510515</td>
+				</tr>
+				<tr bgcolor="#d9d9d9">
+					<td><strong>Skardu<br /> </strong></td>
+					<td>0575</td>
+					<td>3143</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+</div>
+</div>
+
+</Accordion>
+
+<Accordion client:load title="Baluchistan">
+	<div class="code-block" style="max-height: 400px; overflow-y: auto;">
+
+<h2 style="text-align: left;">Baluchistan</h2>
+<div class="wpb_text_column wpb_content_element  vc_custom_1503487842951">
+	<div class="wpb_wrapper">
+		<table border="1" width="50%">
+			<tbody>
+				<tr bgcolor="#2c2c2c">
+					<td><span style="color: #ffffff;">City</span></td>
+					<td>&nbsp;<span style="color: #ffffff;">City Code</span></td>
+					<td><span style="color: #ffffff;">&nbsp;Phone #</span></td>
+				</tr>
+				<tr>
+					<td><strong>Bella</strong></td>
+					<td>08288</td>
+					<td>115</td>
+				</tr>
+				<tr bgcolor="#d9d9d9">
+					<td><strong>DadHub Chowki<br /> </strong></td>
+					<td>085</td>
+					<td>3363126</td>
+				</tr>
+				<tr>
+					<td><strong>Khuzdar</strong></td>
+					<td>084</td>
+					<td>8412996</td>
+				</tr>
+				<tr bgcolor="#d9d9d9">
+					<td><strong>Loralai</strong></td>
+					<td>081</td>
+					<td>24662090</td>
+				</tr>
+				<tr>
+					<td><strong>Mastong</strong></td>
+					<td>&ndash;</td>
+					<td>115</td>
+				</tr>
+				<tr bgcolor="#d9d9d9">
+					<td><strong>Petal Bagh </strong></td>
+					<td>081</td>
+					<td>2836903</td>
+				</tr>
+				<tr>
+					<td><strong>Sui</strong></td>
+					<td>083</td>
+					<td>5420115</td>
+				</tr>
+				<tr bgcolor="#d9d9d9">
+					<td><strong>Daira Murad Jamali </strong></td>
+					<td>083</td>
+					<td>8710563</td>
+				</tr>
+				<tr>
+					<td><strong>Qallat</strong></td>
+					<td>081</td>
+					<td>44210115</td>
+				</tr>
+				<tr>
+					<td colspan="3">
+						<h2>Quetta</h2>
+					</td>
+				</tr>
+				<tr bgcolor="#2c2c2c">
+					<td><span style="color: #ffffff;">City</span></td>
+					<td><span style="color: #ffffff;">City Code</span></td>
+					<td><span style="color: #ffffff;">Phone #</span></td>
+				</tr>
+				<tr>
+					<td><strong>* Ambulance Control</strong></td>
+					<td>081</td>
+					<td>830861-830832</td>
+				</tr>
+				<tr bgcolor="#d9d9d9">
+					<td><strong>* Edhi Welfare Centre (Quetta Circle)<br /> </strong></td>
+					<td>081</td>
+					<td>2672401, 2300889</td>
+				</tr>
+				<tr>
+					<td><strong>Sibbi</strong></td>
+					<td>083</td>
+					<td>3500116</td>
+				</tr>
+				<tr bgcolor="#d9d9d9">
+					<td><strong>Uthal<br /> </strong></td>
+					<td>0321</td>
+					<td>2136518</td>
+				</tr>
+				<tr>
+					<td><strong>Winder</strong></td>
+					<td>0332</td>
+					<td>2306381</td>
+				</tr>
+				<tr bgcolor="#d9d9d9">
+					<td><strong>Pasheen</strong></td>
+					<td>0333</td>
+					<td>7795999</td>
+				</tr>
+				<tr>
+					<td><strong>Lasbella</strong></td>
+					<td>0333</td>
+					<td>6187853</td>
+				</tr>
+				<tr bgcolor="#d9d9d9">
+					<td><strong>Zobe</strong></td>
+					<td>081</td>
+					<td>22412984</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+</div>
+</div>
+</Accordion>
+
+<Accordion client:load title="Azad Jammu Kashmir">
+
+<h2 style="text-align: left;">Azad Jammu Kashmir</h2>
+<div class="wpb_text_column wpb_content_element  vc_custom_1503487992023">
+	<div class="wpb_wrapper">
+		<table border="1" width="50%">
+			<tbody>
+				<tr bgcolor="#2c2c2c">
+					<td><span style="color: #ffffff;">City</span></td>
+					<td>&nbsp;<span style="color: #ffffff;">City Code</span></td>
+					<td><span style="color: #ffffff;">&nbsp;Phone #</span></td>
+				</tr>
+				<tr>
+					<td><strong>Mirpur</strong></td>
+					<td>047</td>
+					<td>4700</td>
+				</tr>
+				<tr bgcolor="#d9d9d9">
+					<td><strong>Muzaffarabad<br /> </strong></td>
+					<td>058</td>
+					<td>3006</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+</div>
+
+</Accordion>
+
+
+</section>
+</Base>

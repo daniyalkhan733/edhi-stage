@@ -1,0 +1,135 @@
+
+
+
+<section class="content-center ">
+<h2 class="text-center">Zakat Calculator</h2>
+<section class="mx-auto max-w-screen-8xl px-4 sm:px-6 pt-20">
+  <form class="max-w-6xl mx-auto grid sm:grid-cols-2 xl:grid-cols-2 lg:grid-cols-2 2xl:grid-cols-2 grid-cols-1 gap-x-20">
+    <div>
+      <div class="mb-5 ">
+        <label for="cash" class="block mb-2  text-lg font-medium text-gray-900 dark:text-white">Cash at Home / Bank</label>
+        <input type="number" name="cash" id="cash" class="block w-full p-2 text-gray-900 border border-gray-300   bg-gray-50 text-lg focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+      </div>
+      <div class="mb-5">
+        <label for="goldsilver" class="block mb-2  text-lg font-medium text-gray-900 dark:text-white">Gold & Silver</label>
+        <input type="number" name="goldsilver" id="goldsilver" class="block w-full p-2 text-gray-900 border border-gray-300   bg-gray-50  text-lg focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+      </div>
+      <div class="mb-5">
+        <label for="property" class="block mb-2  text-lg font-medium text-gray-900 dark:text-white">Property (Other Than Home)</label>
+        <input type="number" name="property" id="property" class="block w-full p-2 text-gray-900 border border-gray-300   bg-gray-50  text-lg focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+      </div>
+      <div class="mb-5">
+        <label for="pensions" class="block mb-2  text-lg font-medium text-gray-900 dark:text-white">Pensions</label>
+        <input type="number" name="pensions" id="pensions" class="block w-full p-2 text-gray-900 border border-gray-300   bg-gray-50  text-lg focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+      </div>
+      <div class="mb-5">
+        <label for="shares" class="block mb-2  text-lg font-medium text-gray-900 dark:text-white">Shares</label>
+        <input type="number" name="shares" id="shares" class="block w-full p-2 text-gray-900 border border-gray-300   bg-gray-50  text-lg focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+      </div>
+    </div>
+    <div>
+      <div class="mb-5">
+        <label for="investments" class="block mb-2  text-lg font-medium text-gray-900 dark:text-white">Other Investments</label>
+        <input type="number" name="investments" id="investments" class="block w-full p-2 text-gray-900 border border-gray-300   bg-gray-50  text-lg focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+      </div>
+      <div class="mb-5">
+        <label for="owedmoney" class="block mb-2  text-lg font-medium text-gray-900 dark:text-white">Money Owed To You</label>
+        <input type="number" name="owedmoney" id="owedmoney" class="block w-full p-2 text-gray-900 border border-gray-300   bg-gray-50  text-lg focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+      </div>
+      <div class="mb-5">
+        <label for="businessvalue" class="block mb-2  text-lg font-medium text-gray-900 dark:text-white">Business Value</label>
+        <input type="number" name="businessvalue" id="businessvalue" class="block w-full p-2 text-gray-900 border border-gray-300   bg-gray-50  text-lg focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+      </div>
+      <div class="mb-5">
+        <label for="businessdebts" class="block mb-2  text-lg font-medium text-gray-900 dark:text-white">Business Debts</label>
+        <input type="number" name="businessdebts" id="businessdebts" class="block w-full p-2 text-gray-900 border border-gray-300   bg-gray-50  text-lg focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+      </div >
+      <div class="mb-5">
+        <label for="unpaiddebts" class="block mb-2  text-lg font-medium text-gray-900 dark:text-white">Unpaid Debts</label>
+        <input type="number" name="unpaiddebts" id="unpaiddebts" class="block w-full p-2 text-gray-900 border border-gray-300   bg-gray-50  text-lg focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+      </div>
+    </div>
+    
+    
+  </form>
+</section>
+<section class="justify-center flex flex-col lg:flex-row items-center lg:items-start mx-auto max-w-screen-8xl px-4 sm:px-6 max-w-6xl   ">
+  <div class="bg-green-50  p-4">
+    <button id="alert" type="button" class="rounded text-xl bg-green-600 p-4 text-white justify-start">Calculate Zakat</button>
+  </div>
+  <div class="bg-green-50 p-4 mt-4 lg:mt-0">
+    <div class="align-middle text-center">
+      <div x-show="answer" class=" align-middle  " id="result"> </div>
+    
+      </div>  </div>
+</section>
+
+
+
+
+</section>
+
+<script is:inline>
+  const buttons = document.querySelectorAll('button#alert');
+
+  buttons.forEach((button) => {
+    button.addEventListener('click', () => {
+      const cash = parseFloat(document.getElementById('cash').value);
+      const goldsilver = parseFloat(document.getElementById('goldsilver').value);
+      const property = parseFloat(document.getElementById('property').value);
+      const pensions = parseFloat(document.getElementById('pensions').value);
+      const shares = parseFloat(document.getElementById('shares').value);
+      const investments = parseFloat(document.getElementById('investments').value);
+      const owedmoney = parseFloat(document.getElementById('owedmoney').value);
+      const businessvalue = parseFloat(document.getElementById('businessvalue').value);
+      const businessdebts = parseFloat(document.getElementById('businessdebts').value);
+      const unpaiddebts = parseFloat(document.getElementById('unpaiddebts').value);
+
+      // const profit = cash + goldsilver + property + pensions + shares + investments + owedmoney + businessvalue;
+      // const loss =  businessdebts + unpaiddebts;
+
+      let profit = 0;
+      if (!isNaN(cash)) profit += cash;
+      if (!isNaN(goldsilver)) profit += goldsilver;
+      if (!isNaN(property)) profit += property;
+      if (!isNaN(pensions)) profit += pensions;
+      if (!isNaN(shares)) profit += shares;
+      if (!isNaN(investments)) profit += investments;
+      if (!isNaN(owedmoney)) profit += owedmoney;
+      if (!isNaN(businessvalue)) profit += businessvalue;
+
+      // Calculate loss
+      let loss = 0;
+      if (!isNaN(businessdebts)) loss += businessdebts;
+      if (!isNaN(unpaiddebts)) loss += unpaiddebts;
+      const totalAssets = parseFloat(profit)  - parseFloat(loss);
+  //     const button = document.createElement('button');
+  // button.textContent = 'Donate Now';
+  const zakat = (totalAssets * 0.025).toFixed(2); // 2.5% Zakat rate
+      document.getElementById('result').innerHTML = `<div class="flex items-center">
+  <div class="mr-4">
+    <p class="text-gray-800 text-xl">Your Zakat is: $${zakat}</p>
+  </div>
+  <a target="_blank"
+          href="https://donate.edhiuk.org/zakat-donate?zakat_main=0&amount=${zakat}"
+          class="flex items-center h-16 px-6 rounded bg-green-600 text-white border border-green-500"
+        >
+          Donate Now 
+          
+        </a> </div>`;
+        // if(zakat > 0){
+        //   document.getElementById('result').classList.add('bg-green-50');
+        // }else{
+        //   document.getElementById('result').classList.add('bg-red-50');
+        // }
+      // result.appendChild(button);
+      // const value = document.getElementById('result');
+      // value.textContent = `Total: $${zakat}`;
+      // zakat.addEventListener('input');
+
+
+
+    });
+  });
+</script>
+

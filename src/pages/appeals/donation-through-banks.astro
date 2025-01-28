@@ -1,0 +1,181 @@
+---
+import Base from "@/layouts/Base.astro";
+import { markdownify } from "@/lib/utils/textConverter";
+import { getEntry } from "astro:content";
+import Accordion from "@/shortcodes/Accordion";
+
+const donationthroughbank = await getEntry("donation-through-bank", "-index");
+const { Content } = await donationthroughbank.render();
+const { title, description, meta_title  } = donationthroughbank.data;
+---
+
+<Base
+  title={title}
+  meta_title={meta_title}
+  description={description}
+
+>
+<section class="section-sm container max-w-2xl">
+<!-- ### Accordion -->
+<h1>Donation bank</h1>
+<Accordion client:load title="Askari Bank Ltd">
+<p>Sarafa Bazar, Boulton Market, Mithadar, Karachi.
+Phone: +92 (21) 32413232
+Fax: +92 (21) 32418753</p>
+
+
+</Accordion>
+
+<Accordion client:load title="United Bank Ltd">
+
+<p>Near Merewether Tower, Kharadar, Karachi.
+Phone: +92 (21) 32201261-62
+Fax: +92 (21) 32313434</p>
+Email: <email>edhikarachi@hotmail.com</email>
+<!-- Email <a href="edhikarachi@hotmail.com">Send email</a> -->
+</Accordion>
+
+<Accordion client:load title="Habib Bank Ltd (Islamic)">
+
+<p>Patel bagh Quetta
+Phone: +92 (21) 32201261-62
+Phone:+92 (81) 2836903
+Fax: +92 (81) 2836903</p>
+<!-- Email <a href="edhikarachi@hotmail.com">Send email</a> -->
+</Accordion>
+
+<Accordion client:load title="Allied Bank Ltd">
+<p class="text-base text-gray-700" style="text-align:left">Patel bagh Quetta
+<br><br/>
+		Phone: +92 (21) 32201261-62<br>
+		Phone:+92 (81) 2836903<br>
+		Fax: +92 (81) 2836903
+</p>          
+
+</Accordion>
+
+<Accordion client:load title="Faysal Bank Ltd (Islamic)">
+<p>Phone: +92 (41) – 264 7111</p>
+</Accordion>
+
+<Accordion client:load title="Bank Al-Habib Ltd">
+
+<p class="text-base text-gray-700" style="text-align:left">17-A Muslim Block, Allama Iqbal Town, Lahore.
+		<br>
+		Phone: +92 (42) 37806661<br>
+		Phone: +92 (42) 37497399
+</p>
+</Accordion>
+
+<Accordion client:load title="Bank Alfalah Ltd">
+
+<p class="text-base text-gray-700" style="text-align:left">Near Masjide-e-Shohada, Aabpara, Islamabad.
+		<br>
+		Phone: +92 (51) 2827844 <br>
+		fax: +92 (51) 2275713<br>
+</p>          
+
+
+</Accordion>
+
+<Accordion client:load title="Habibmetro Bank Ltd">
+
+<table border="0">
+	<tbody>
+		<tr>
+			<td valign="top">
+				<h4>USA</h4>
+				<p>45-11 National Street <br />
+					Corona NY 11368<br />
+				<strong>Phone:+1 (718) 639-0633<br />
+			    <strong>Fax:+1 (718) 505-8001</p>
+			</td>
+			<td valign="top">
+				<h4>UK</h4>
+				<p>316 Edgware Road London W2 1DY<br /> <strong>Phone:</strong> +44 (207) 723-2050<br /> <strong>Fax:</strong> +1 (718) 505-8001<br /> <strong>Email:</strong> <a href="mailto:edhiuk@yahoo.com">edhiuk@yahoo.com</a></p>
+			</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+		</tr>
+		<tr>
+			<td valign="top">
+				<h4>Canada</h4>
+				<p>Bilquis Edhi Charitable Shop<br /> 1801-1805 Dan fourth Ave<br /> Toronto-M4C-1J2 Canada<br /> <strong>Phone/Fax:</strong> +1 (416) 699-1388</p>
+			</td>
+			<td valign="top">
+				<h4>Australia</h4>
+				<p>Khalil Allahwala<br />
+				C/O P O BOX 6938 , Silverwater,<br />
+				Sydney NSW 2128,Australia <br />
+				<strong>Phone:</strong> 0414 887 354</p>
+			</td>
+		</tr>
+	</tbody>
+</table>
+<p>&nbsp;</p>
+</Accordion>
+
+<Accordion client:load title="Albaraka Bank Pakistan Ltd (Islamic)">
+
+<p class="text-base text-gray-700" style="text-align:left">17-A Muslim Block, Allama Iqbal Town, Lahore.
+	<br>
+		Edhi home Peshawar (for women)
+		Edhi Home Islamabad
+		(for women, orphanage boys and girls) Near Shifa International Hospital.
+		Sector: H – 8, Islamabad
+		Phone: +92 (51) 4435129
+		Edhi home Quetta (for women)
+		Edhi Home Multan (for men and women)
+		Edhi Home (for men) Lahore
+		Gulbarg, Lahore
+		Edhi Home (for women) Lahore Township,
+		Lahore (for mentally retarded females)
+		(Edhi shelter home for women left their house because of domestic voilance)
+</p>
+</Accordion>
+
+<Accordion client:load title="Silk Bank Ltd">
+
+<p class="text-base text-gray-700" style="text-align:left">17-A Muslim Block, Allama Iqbal Town, Lahore.
+	<br>
+		Edhi village (for mentally retarded man)
+		Edhi Child Home – Edhi village Super High Way (for orphan children)
+		Edhi Female Child Home (Clifton)
+		Edhi North Karachi ( for mentally retarded females)
+		Edhi Child Home Korangi Karachi (for missing lost children)
+		Edhi Home Qasba Colony Karachi (Old age home)
+		Edhi Animal Hostle (super high way)
+		Edhi Morgue (biggest morgue in Pakistan)
+</p>
+</Accordion>
+
+<Accordion client:load title="Banks of U.K">
+
+Abdul Sattar Edhi International Foundation London U.K Running two charitable shops.
+Abdul Sattar Edhi Internation Foundation New York –U.S.A. Running two charitable shops
+Bilquis Edhi Relief Foundation – New York Carry out rescue service in national disaster in any country of world
+Abdul Sattar Edhi International Foundation Dhaka- Bangladesh
+Abdul Sattar Edhi International Foundation Tokyo –Japan
+Abdul Sattar Edhi International Foundation Canberra- Australia
+Abdul Sattar Edhi International Foundation Katmandu- Nepal
+Abdul Sattar Edhi International Foundation Kabul – Afghanistan
+</Accordion>
+
+<Accordion client:load title="Bank of USA">
+
+Abdul Sattar Edhi International Foundation London U.K Running two charitable shops.
+Abdul Sattar Edhi Internation Foundation New York –U.S.A. Running two charitable shops
+Bilquis Edhi Relief Foundation – New York Carry out rescue service in national disaster in any country of world
+Abdul Sattar Edhi International Foundation Dhaka- Bangladesh
+Abdul Sattar Edhi International Foundation Tokyo –Japan
+Abdul Sattar Edhi International Foundation Canberra- Australia
+Abdul Sattar Edhi International Foundation Katmandu- Nepal
+Abdul Sattar Edhi International Foundation Kabul – Afghanistan
+</Accordion>
+
+---
+
+</section>
+</Base>

@@ -1,0 +1,320 @@
+---
+// import Cart from "@/components/DonationCart.jsx";
+
+import Base from "@/layouts/Base.astro";
+
+import { getEntry } from "astro:content";
+import Donationcard from "@/components/donationcard.astro";
+import { SEO } from "astro-seo";
+
+const about = await getEntry("about", "-index");
+const { Content } = await about.render();
+
+---
+
+<SEO
+  title="Learn About Edhi Foundation UK - Our Mission and Impact"
+  description="Discover the mission and impact of Edhi Foundation UK. Join us in our journey to support and uplift communities. Learn more today."
+  canonical={Astro.request.url}
+  openGraph={{
+    basic: {
+      title: "Learn About Edhi Foundation UK - Our Mission and Impact",
+      type: "A type.",
+      image: "https://edhiuk.org/images/logo.jpg",
+    },
+  }}
+  twitter={{
+    creator: "@jonasmerlins1",
+  }}
+  extend={{
+    // extending the default link tags
+    link: [{ rel: "icon", href: "/favicon.png" }],
+    // extending the default meta tags
+    meta: [
+      {
+        name: "twitter:image",
+        content: "https://edhiuk.org/images/logo.jpg",
+      },
+      {
+        name: "twitter:title",
+        content: "Learn About Edhi Foundation UK - Our Mission and Impact",
+      },
+      {
+        name: "twitter:description",
+        content:
+          "Discover the mission and impact of Edhi Foundation UK. Join us in our journey to support and uplift communities. Learn more today.",
+      },
+      { name: "keywords", content: "" },
+    ],
+  }}
+/>
+
+<Base>
+  <!-- heading started  -->
+
+  <section
+    class="bg-gray-100 dark:bg-gray-900 py-32 sm:py-36 lg:py-40 overflow-hidden h-[80dvh] min-h-max flex items-center relative"
+  >
+    <div
+      class="absolute top-0 left-0 -translate-x-[54%] -translate-y-[70%] w-2/5 rounded-full aspect-square bg-green-600/70
+        backdrop-filter blur-3xl opacity-50"
+    >
+    </div>
+    <div
+      class="absolute bottom-0 right-0 translate-x-[54%] translate-y-[70%] w-2/5 rounded-full aspect-square bg-green-600/70
+        backdrop-filter blur-3xl opacity-50"
+    >
+    </div>
+    <div
+      class="absolute min-w-[300px] w-[48%] md:w-2/5 aspect-square rounded-full bg-gradient-to-r from-emerald-400/5 right-0
+        -translate-y-[40%] translate-x-[40%] top-0"
+    >
+      <div class="inset-[10%] rounded-full bg-gradient-to-l from-green-400/20">
+        <div
+          class="absolute inset-[20%] rounded-full bg-gradient-to-l from-green-400/30"
+        >
+        </div>
+      </div>
+    </div>
+    <div
+      class="absolute min-w-[300px] w-[48%] md:w-2/5 aspect-square rounded-full bg-gradient-to-l from-green-400/5 left-0
+        translate-y-[40%] -translate-x-[40%] bottom-0"
+    >
+      <div class="inset-[10%] rounded-full bg-gradient-to-r from-green-400/40">
+        <div
+          class="absolute inset-[20%] rounded-full bg-gradient-to-r from-green-400/50"
+        >
+        </div>
+      </div>
+    </div>
+    <div class="mx-auto lg:max-w-7xl w-full px-5 sm:px-10 md:px-12 lg:px-5">
+      <div class="text-center flex flex-col items-center space-y-10">
+        <h1
+          class="text-4xl md:text-5xl lg:text-6xl/tight xl:text-7xl/tight text-gray-900 dark:text-white font-bold max-w-4xl capitalize"
+        >
+          About edhi foundation
+        </h1>
+        <p class="text-gray-700 dark:text-gray-300 text-center font-roboto">
+          The Edhi Foundation is a worldwide charity that helps people with
+          healthcare, education, <br /> and social welfare, following the example
+          of Abdul Sattar Edhi, aiming to ease the <br /> suffering of those in need.
+        </p>
+        <div class="flex justify-center">
+          <a
+            href="https://donate.edhiuk.org/"
+            class="px-8 h-12 rounded flex items-center gap-x-3 bg-green-700 text-white hover:bg-opacity-80"
+          >
+            Donate Now
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- heading ended -->
+  <!-- section 1 started -->
+  <section class="mx-auto max-w-6xl px-6 justify-center">
+    <div>
+      <div class="max-w-3xl"></div>
+
+      <div class="mt-8 grid grid-cols-1 gap-8 lg:grid-cols-2 lg:gap-16">
+        <article class="space-y-4 text-gray-600 pt-10 md:pb-20 pb-0">
+          <h2 class="text-3xl font-bold sm:text-4xl pb-2">
+            About <span class="text-green-600">Edhi Foundation</span>
+          </h2>
+
+          <p class="text-[17px] font-roboto">
+            Edhi Foundation is a top charitable organization in Pakistan and a
+            global leader in social welfare. Operating on a non-commercial,
+            non-political, and non-communal basis, it provides round-the-clock
+            service without discrimination based on color, class, or creed. Mr.
+            Abdul Sattar Edhi and Mrs. Bilquis Edhi have received numerous
+            awards and shields from governmental and non-governmental
+            organizations at national and international levels for their
+            outstanding humanitarian services across various fields.
+          </p>
+        </article>
+        <div class="relative h-64 overflow-hidden sm:h-80 lg:h-full">
+          <img
+            alt=""
+            src="/images/about-us/about-us-1.png"
+            class="absolute inset-0 h-full w-full object-fit rounded"
+          />
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="mx-auto max-w-6xl px-6 pt-10 justify-center">
+    <div>
+      <div class="max-w-3xl"></div>
+
+      <div class="mt-8 grid grid-cols-1 gap-8 lg:grid-cols-2 lg:gap-16">
+        <div class="relative h-64 overflow-hidden sm:h-80 lg:h-full">
+          <img
+            alt=""
+            src="/images/about-us/about-us-2.png"
+            class="absolute inset-0 h-full w-full object-fit rounded"
+          />
+        </div>
+
+        <article class="text-gray-600 pt-0 md:py-20 pb-10">
+          <h2 class="text-3xl font-bold sm:text-4xl pb-2">
+            Edhi's Life Saving <span class="text-green-600">Legacy</span>
+          </h2>
+
+          <p class="text-[17px] font-roboto">
+            Abdul Sattar Edhi's compassionate efforts left a lasting legacy in
+            healthcare and child welfare. He saved newborns by placing cradles
+            outside Edhi centers and provided care for abandoned babies. His
+            impact included supporting disabled individuals, women, and the
+            elderly, offering free medical help through mobile dispensaries,
+            hospitals, and a diabetic center. Edhi also facilitated swift
+            transportation for accident victims with ambulance services.
+          </p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- section 1 ended -->
+  <section class="text-center px-6 pb-10 pt-10 max-w-6xl mx-auto">
+    <h1 class="text-green-500 text-[26px] font-bold">
+      Edhi's Global Humanitarian Impact: From Disaster Relief and Beyond
+    </h1>
+    <br />
+    <div class="sm:grid-cols-1">
+      <div class="text-center mb-4">
+        <p class="text-lg font-bold">
+          Explore the significant influence of Edhi Foundation's steadfast
+          commitment to global service and compassion.
+        </p><br />
+        <div class="border-b-8 border-red-600 w-64 mx-auto my-2 rounded-md">
+        </div>
+      </div>
+      <div class="flex flex-col md:flex-row pt-8">
+        <div class="w-full md:w-1/2 border-r-4 border-green-500 pr-4">
+          <p class="text-gray-700 text-justify pb-2">
+            Abdul Sattar Edhi has provided national and international relief aid
+            to those affected by natural disasters, assistance to refugees in
+            different countries, and emergency services for drought, fire, and
+            flood victims.  <br /><br />His efforts also involved saving lives
+            of drowning victims and recovering bodies from seas and floods.
+            Additionally, he played a key role in free rehabilitation for drug
+            addicts, tracing missing individuals, arranging marriages for
+            helpless girls and boys, and providing free food, clothing, and
+            blankets to those in need. <br /><br />In addition to the mentioned
+            contributions, Abdul Sattar Edhi served humanity by providing free
+            technical education to empower people with essential skills,
+            offering religious education to children, and giving guidance on
+            family planning and maternity services. He also supplied free blood
+            and plasma to those in need and provided shelter, food, and care for
+            mentally retarded individuals, as well as orphaned and helpless
+            children.
+          </p>
+        </div>
+        <div class="w-full md:w-1/2 md:pl-4 pl-0">
+          <h5 class="text-green-700 font-bold text-justify pb-2">
+            “Allah, the Exalted, says, 'Spend, O son of Adam, and I shall spend
+            on you. '” – Prophet Muhammad, peace be upon him (Al-Bukhari and
+            Muslim).
+          </h5>
+          <p class="text-gray-700 text-justify">
+            The humanitarian efforts of Abdul Sattar Edhi and his spouse, Mrs.
+            Bilquis Edhi, go beyond these areas. They offered free legal aid to
+            secure the release of prisoners, extending financial and medical
+            support to them. Additionally, they provided crutches and support to
+            handicapped individuals and offered exclusive free bathing and
+            shrouding services for unclaimed dead bodies. <br /><br /> All these
+            remarkable services exemplify the Edhi Foundation's unprecedented dedication
+            to serving the nation of Pakistan and humanity worldwide.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <Donationcard programId={[1, 4, 13, 17]} />
+  <section class="mx-auto max-w-6xl px-6 sm:px-6 lg:px-8">
+    <div>
+      <div class="max-w-3xl"></div>
+
+      <div class="mt-8 grid grid-cols-1 gap-8 lg:grid-cols-2 lg:gap-16">
+        <article class="space-y-4 text-gray-600">
+          <h2 class="text-3xl font-bold sm:text-4xl pb-2">
+            Our <span class="text-green-600">Impact</span>
+          </h2>
+
+          <p class="text-[17px] font-roboto">
+            Edhi Foundation has made a big difference in Pakistan. We have
+            changed how we help each other by focusing on "Live and Help Live."
+            With a big team of caring people, the Edhi Foundation is known for
+            being there for others. We do lots of good things, like helping with
+            burials for those who don't have anyone else, giving a place to stay
+            for people who are disabled or homeless, and running free hospitals
+            in areas that need them. <br /><br />We also help people struggling
+            with drugs and quickly help out in emergencies. What's special is
+            that the Edhi Foundation doesn't rely on the government or big
+            organizations for money - We depend on regular people's donations.
+            We believe in helping ourselves and treating everyone fairly,
+            regardless of religion, background, or where they're from.
+          </p>
+        </article>
+        <div class="relative h-64 overflow-hidden sm:h-80 lg:h-full">
+          <img
+            alt=""
+            src="/images/about-us/about-us-3.png"
+            class="absolute inset-0 h-full w-full object-fit rounded"
+          />
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- section 2 started -->
+
+  <!-- section 2 ended -->
+  <!-- section 3 started -->
+
+  <section class="mx-auto max-w-6xl px-6 sm:px-6 py-20 lg:px-8">
+    <h1 class="text-green-500 text-[28px] font-bold text-center">Our Vision</h1>
+    <br />
+    <div class="text-center mb-4">
+      <p class="md:text-[36px] text-[16] font-bold">
+        Transforming Lives Through Compassionate Service and Support
+      </p><br />
+      <div class="text-left">
+        <p class="text-[16px] font-roboto w-full">
+          Our vision at the Edhi Foundation is simple yet powerful: we want to
+          make life better for everyone, no matter who they are or where they
+          come from. <br /><br />
+
+          We dream of a world where every child has a loving home and every sick
+          person can get the help they need. We believe in a society where
+          people are kind to each other and help their neighbors when they need
+          it.
+          <br /><br />
+          We hope to see a future where education is free for all children so they
+          can learn and grow. We dream of communities where people take care of each
+          other, where nobody goes hungry, and everyone has a place to live. We want
+          to make sure that people with disabilities are supported and included,
+          and that nobody is left behind because of their situation. <br /><br
+          />
+
+          We're dedicated to spreading this vision everywhere, in Pakistan and
+          beyond. We know it won't happen quickly, but with hard work, we
+          believe we can create a world where everyone can thrive. Together, we
+          can make this vision a reality, one small act of kindness at a time. <br
+          /><br />
+
+          Along with these goals, we also want to see a society where everyone
+          is treated with respect, no matter who they are or what they believe. <br
+          /><br />
+
+          We want to create a culture where people understand and accept each
+          other, where we celebrate our differences, and discrimination is a
+          thing of the past. By promoting understanding and unity, we think we
+          can make a better future for everyone.
+        </p>
+      </div>
+    </div>
+  </section>
+  <!-- section 3 ended -->
+</Base>

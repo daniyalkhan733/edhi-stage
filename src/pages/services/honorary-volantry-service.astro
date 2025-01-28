@@ -1,0 +1,469 @@
+---
+import Base from "@/layouts/Base.astro";
+import ServiceSlider from "@/components/ServiceSlider.astro";
+
+import { SEO } from "astro-seo";
+
+
+---
+
+<SEO
+  title="Edhi Foundation Honorary Voluntary Service - Get Involved"
+  description="Join Edhi Foundation's Honorary Voluntary Service. Contribute your time and skills to help those in need."
+  canonical={Astro.request.url}
+  openGraph={{
+    basic: {
+      title: "Edhi Foundation Honorary Voluntary Service - Get Involved",
+      type: "A type.",
+      image: "https://edhiuk.org/images/logo.jpg",
+  
+    }
+  }}
+  twitter={{
+    creator: "@jonasmerlins1"
+  }}
+  extend={{
+    // extending the default link tags
+    link: [{ rel: "icon", href: "/favicon.png" }],
+    // extending the default meta tags
+    meta: [
+      {
+        name: "twitter:image",
+        content: "https://edhiuk.org/images/logo.jpg",
+      },
+      { name: "twitter:title", content: "Edhi Foundation Honorary Voluntary Service - Get Involved" },
+      { name: "twitter:description", content: "Join Edhi Foundation's Honorary Voluntary Service. Contribute your time and skills to help those in need." },
+      { name: "keywords", content: "" },
+    ],
+  }}
+/>
+<Base>
+  <!-- <--heading started here -->
+  <section
+    class="relative bg-[url(/images/honorary/honorary-1.jpg)] bg-cover bg-center bg-no-repeat pb-12 h-[400px]"
+  >
+    <div
+      class="bg-gradient-to-r from-white to-transparent absolute inset-0 sm:bg-transparent ltr:sm:bg-gradient-to-r rtl:sm:bg-gradient-to-l"
+    >
+    </div>
+
+    <div
+      class="absolute inset-0 bg-gradient-to-r from-white to-transparent ltr:sm:bg-gradient-to-r rtl:sm:bg-gradient-to-l"
+    >
+    </div>
+
+    <div
+      class="relative mx-auto max-w-screen-xl px-4 sm:px-6 lg:flex lg:h-screen lg:items-baseline pt-12 lg:px-8"
+    >
+      <div class="max-w-xl text-center ltr:sm:text-left rtl:sm:text-right">
+        <h1 class="text-3xl font-extrabold sm:text-5xl text-left font-primary">
+          Honorary & Voluntary
+
+          <strong class="block font-extrabold text-green-600">Services</strong>
+        </h1>
+
+        <p class="text-lg mt-4 sm:text-xl/relaxed text-left font-roboto">
+          Edhi Foundation operates thanks to dedicated volunteers who serve
+          selflessly for the betterment of society.
+        </p>
+
+        <div class="flex md:text-center text-left pt-8">
+          <a
+            href="https://donate.edhiuk.org/"
+            class="px-8 h-12 rounded flex items-center gap-x-3 bg-green-700 md:text-[20px] text-[16px] text-white hover:bg-[#D92319] md:px-10 md:py-2"
+          >
+            Donate Now
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+  <div class="bg-green-600 border-black p-4">
+    <h1 class="text-center text-[20px] text-white pb-2 font-roboto">
+      Prophet(PBUH) Said-In the Quran, Allah (swt) says: “Help one another in
+      acts of piety and righteousness”
+    </h1>
+    <p class="text-center text-white">(Quran 5:2)</p>
+  </div>
+  <!-- <--heading ended here -->
+
+  <!-- <Donationcard programId={[2,3]} /> -->
+
+  <!-- section 1 started here -->
+  <section>
+    <div class="mx-auto max-w-6xl px-6">
+      <div class="max-w-3xl"></div>
+
+      <div class="mt-8 grid grid-cols-1 gap-8 lg:grid-cols-2 lg:gap-16">
+        <div class="h-64 overflow-hidden sm:h-80 lg:h-full">
+          <img
+            alt=""
+            src="/images/honorary/honorary-01.png"
+            class="h-full w-full object-fit rounded"
+          />
+        </div>
+
+        <div
+          class="space-y-4 text-gray-600 md:py-auto pt-0 align-middle flex flex-col justify-center"
+        >
+          <h2 class="text-3xl font-bold sm:text-4xl pb-2">
+            Dedicated Volunteers
+          </h2>
+
+          <p class="text-[17px] font-roboto">
+            At Edhi Foundation, volunteers are the heart and soul of our
+            operations. They generously give their time and energy to help
+            others, from managing zones to day-to-day office tasks and working
+            in our facilities. Their dedication and commitment are invaluable,
+            shaping the foundation's mission and making a significant impact on
+            society and humanity.
+          </p>
+          <p class="text-[17px]">
+            Whether they're organizing logistics or offering support to those in need, these volunteers truly embody the spirit of service, ensuring that our operations run smoothly and effectively. 
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- section 1 ended here -->
+  <!-- section 2 started here -->
+  <section>
+    <div class="mx-auto max-w-6xl px-6">
+      <div class="max-w-3xl"></div>
+
+      <div class="mt-8 grid grid-cols-1 gap-8 lg:grid-cols-2 lg:gap-16">
+        <div
+          class="space-y-4 text-gray-600 md:py-auto pt-0 align-middle flex flex-col justify-center"
+        >
+          <h2 class="text-3xl font-bold sm:text-4xl pb-2">
+            Passionate Service
+          </h2>
+
+          <p class="text-[17px] font-roboto">
+            At Edhi Foundation, volunteers work with passion and dedication, driven by their strong desire to help others and make society better. They serve with kindness and generosity, showing everyone the importance of giving back and making a difference.
+            <br /><br />
+            Their actions inspire kindness and hope, creating a ripple effect of positivity that touches communities far and wide. 
+          </p>
+        </div>
+        <div class="h-64 overflow-hidden sm:h-80 lg:h-full">
+          <img
+            alt=""
+            src="/images/honorary/honorary-02.png"
+            class="h-full w-full object-fit rounded"
+          />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- section 2 ended here -->
+  <!-- section 3 started here -->
+  <section>
+    <div class="mx-auto max-w-6xl px-6">
+      <div class="max-w-3xl"></div>
+
+      <div class="mt-8 grid grid-cols-1 gap-8 lg:grid-cols-2 lg:gap-16">
+        <div class="h-64 overflow-hidden sm:h-80 lg:h-full">
+          <img
+            alt=""
+            src="/images/refugee-assistance/refugee-assistance-03.png"
+            class="h-full w-full object-fit rounded"
+          />
+        </div>
+
+        <div
+          class="space-y-4 text-gray-600 md:py-auto pt-0 align-middle flex flex-col justify-center"
+        >
+          <h2 class="text-3xl font-bold sm:text-4xl pb-2">
+            Fostering a Culture of Giving Back 
+          </h2>
+
+          <p class="text-[17px] font-roboto">
+            By volunteering at Edhi Foundation, people show how important it is to help others and give back to the community. Their dedication doesn't just help the people they assist; it also encourages everyone to be more generous and caring. <br><br>This creates a culture where people look out for each other and are willing to lend a helping hand whenever it's needed, making our society a better place for everyone. 
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="md:py-20 py-10 max-screen-w-2xl mx-auto px-6">
+    <div>
+      <div
+        class="align-middle bg-gradient-to-br from-green-200 to-gray-50 dark:from-gray-900 dark:bg-gray-800 rounded-lg p-2 md:p-10 py-6 lg:p-14 flex flex-col md:flex-row items-center justify-center text-center md:text-left md:justify-start md:items-start gap-8"
+        style="align-items: center;"
+      >
+        <div class="md:w-2/5 align-middle">
+          <h5
+            class="text-center md:text-6xl text-3xl text-black dark:text-white font-display font-bold leading-tight"
+          >
+            Get Involved
+          </h5>
+        </div>
+        <div class="flex flex-col md:flex-1 space-y-8">
+          <p
+            class="text-gray-700 dark:text-gray-300 md:text-2xl text-[20px] font-roboto"
+          >
+            Take the next step to making a difference - support Edhi
+            Foundation's humanitarian efforts!
+          </p>
+          <div class="text-[20px] flex justify-center md:justify-start">
+            <a
+              href="https://donate.edhiuk.org/"
+              class="h-12 px-5 rounded-md flex items-center bg-green-700 text-white"
+            >
+              Donate Now
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- section 3 ended here -->
+
+  <!-- section 5 started here -->
+
+  <section class="mx-auto max-w-6xl px-6 sm:px-6 pb-10 md:pb-20 lg:px-8">
+    <!-- <h1 class="text-green-700 text-[28px] font-bold text-center">
+      Mobile Mortuary    </h1> -->
+    <br />
+    <div class="text-center mb-4">
+      <p class="md:text-[36px] text-[17px] font-bold">
+        Exemplifying Service Excellence
+      </p><br />
+      <div class="text-left">
+        <p class="text-[17px] font-roboto w-full">
+          Edhi Foundation shows how to provide excellent service by relying on volunteers who work without pay. These volunteers are dedicated and work hard to help people, showing kindness and honesty in everything they do. Because of their efforts, Edhi Foundation is known for its outstanding service, inspiring other organizations to do the same.
+          The volunteers at Edhi Foundation work tirelessly to make sure everyone gets the help they need. They are always ready to lend a hand, whether it's providing medical care, offering shelter, or simply offering a listening ear to those in need.  <br /><br />Their commitment to serving humanity sets a positive example for others to follow, showing that anyone can make a difference through acts of kindness and compassion.  <br /><br />
+          By relying on volunteers, Edhi Foundation is able to reach more people and make a bigger impact in the community. Their dedication and hard work ensure that no one is left behind, and everyone gets the support they need to live a better life. Their selfless service is truly inspiring and serves as a beacon of hope for those facing adversity.  <br /><br />
+          In a world where kindness and compassion are sometimes in short supply, Edhi Foundation stands out as a shining example of what it means to truly care for others. Through their exemplary service, they remind us all of the importance of helping those in need and making the world a better place for everyone. 
+        </p>
+      </div>
+    </div>
+  </section>
+  <!-- section 5 ended here -->
+  <!-- slider section started -->
+  <section class="md:pb-28 pb-[230px] pt-4">
+    <ServiceSlider
+      heading="Honorary & Voluntary Services"
+      description="Dedicated volunteers shaping a better world with Edhi Foundation, offering their time and skills to drive meaningful change in communities."
+      img1="/images/honorary/honorary-1.jpg"
+      img2="/images/honorary/honorary-2.jpg"
+      img3="/images/honorary/honorary-3.jpg"
+      img4="/images/honorary/honorary-4.jpg"
+      img5="/images/honorary/honorary-5.jpg"
+      img6="/images/honorary/honorary-1.jpg"
+    />
+  </section>
+  <!-- slider section ended -->
+  <!-- last section started -->
+
+  <style>
+    @media screen and (max-width: 480px) {
+      #vid {
+        border-radius: 20px;
+      }
+    }
+  </style>
+  <section
+    class="mx-auto w-full max-w-6xl flex flex-wrap justify-items-start md:py-20 py-10 px-4 rounded-xl"
+  >
+    <!-- First Div with iframe -->
+    <div
+      class=" w-full md:w-3/5 bg-white md:p-0 p-2 flex items-start justify-center md:h-96 h-48 rounded-xl"
+    >
+      <iframe
+        class="w-full md:h-[400px] h-[220px] rounded-2xl"
+        src="https://www.youtube.com/embed/n0nKpOYpw-o?si=kRJRJUn0y42yROyK"
+        frameborder="0"
+        allowfullscreen></iframe>
+    </div>
+
+    <!-- Second Div with Heading and Paragraph -->
+    <div
+      id="vid"
+      class="md:rounded-r-xl w-full md:w-2/5 bg-green-600 p-2 md:p-8 flex flex-col md:text-left text-center md:h-[320px] h-[320px] md:my-[40px] md:items-start items-center"
+    >
+      <h2
+        class="text-white text-[32px] font-bold mb-[8px] mt-[13px] md:pt-5 pt-10"
+      >
+      Creating Job Opportunities
+      </h2>
+      <p class="text-lg pb-[22px] text-white">
+        The voluntary work at Edhi Foundation not only serves the community but also creates job opportunities for individuals.
+      </p>
+      <a
+        href="https://donate.edhiuk.org/"
+        class="font-bold block w-88 rounded-sm bg-white px-8 py-2 text-[18px] text-green-600 shadow hover:bg-[#D92319] hover:text-white focus:outline-none focus:ring active:bg-green-600 sm:w-auto"
+      >
+        DONATE NOW
+      </a>
+    </div>
+  </section>
+
+  <!-- last section ended -->
+
+  <!-- faq section started -->
+  <section class="text-center md:pt-10 px-6">
+    <h2 class="text-[36px] font-bold mb-6 text-center">
+      Frequently Asked Questions
+    </h2>
+    <h6 class="font-roboto text-[17px]">
+      Explore our FAQs for clear insights on giving, eligibility, and the
+      positive impact <br /> your contribution can make in transforming lives.
+    </h6>
+  </section>
+
+  <!-- faq section started -->
+  <main class="p-5 bg-light-blue">
+    <div class="flex justify-center items-start my-2">
+      <div class="w-full sm:w-10/12 md:w-1/2 my-1">
+        <ul class="flex flex-col">
+          <li class="bg-white my-2 shadow-lg rounded-lg" x-data="accordion(1)">
+            <h5
+              @click="handleClick()"
+              class="flex flex-row justify-between items-center font-semibold p-3 cursor-pointer text-[16px] md:text-[20px]"
+            >
+              <span
+                >What is the Honorary Volunteer Service offered by Edhi Foundation?</span
+              >
+              <svg
+                :class="handleRotate()"
+                class="fill-current text-green-700 md:h-6 md:w-6 h-6 w-6 transform transition-transform duration-500"
+                viewBox="0 0 20 20"
+              >
+                <path
+                  d="M13.962,8.885l-3.736,3.739c-0.086,0.086-0.201,0.13-0.314,0.13S9.686,12.71,9.6,12.624l-3.562-3.56C5.863,8.892,5.863,8.611,6.036,8.438c0.175-0.173,0.454-0.173,0.626,0l3.25,3.247l3.426-3.424c0.173-0.172,0.451-0.172,0.624,0C14.137,8.434,14.137,8.712,13.962,8.885 M18.406,10c0,4.644-3.763,8.406-8.406,8.406S1.594,14.644,1.594,10S5.356,1.594,10,1.594S18.406,5.356,18.406,10 M17.521,10c0-4.148-3.373-7.521-7.521-7.521c-4.148,0-7.521,3.374-7.521,7.521c0,4.147,3.374,7.521,7.521,7.521C14.148,17.521,17.521,14.147,17.521,10"
+                ></path>
+              </svg>
+            </h5>
+            <div
+              x-ref="tab"
+              :style="handleToggle()"
+              class="border-l-4 border-green-700 overflow-hidden max-h-0 duration-500 transition-all"
+            >
+              <p class="p-3 text-gray-900 md:text-[17px] text-[14px]">
+                The Honorary Volunteer Service provided by Edhi Foundation is a program that allows individuals to dedicate their time and efforts to various humanitarian initiatives led by the organization. 
+              </p>
+            </div>
+          </li>
+          <li class="bg-white my-2 shadow-lg rounded-lg" x-data="accordion(2)">
+            <h5
+              @click="handleClick()"
+              class="flex flex-row justify-between items-center font-semibold p-3 cursor-pointer text-[16px] md:text-[20px]"
+            >
+              <span
+                >How does one become an honorary volunteer with Edhi Foundation?</span
+              >
+              <svg
+                :class="handleRotate()"
+                class="fill-current text-green-700 md:h-6 md:w-6 h-6 w-6 transform transition-transform duration-500"
+                viewBox="0 0 20 20"
+              >
+                <path
+                  d="M13.962,8.885l-3.736,3.739c-0.086,0.086-0.201,0.13-0.314,0.13S9.686,12.71,9.6,12.624l-3.562-3.56C5.863,8.892,5.863,8.611,6.036,8.438c0.175-0.173,0.454-0.173,0.626,0l3.25,3.247l3.426-3.424c0.173-0.172,0.451-0.172,0.624,0C14.137,8.434,14.137,8.712,13.962,8.885 M18.406,10c0,4.644-3.763,8.406-8.406,8.406S1.594,14.644,1.594,10S5.356,1.594,10,1.594S18.406,5.356,18.406,10 M17.521,10c0-4.148-3.373-7.521-7.521-7.521c-4.148,0-7.521,3.374-7.521,7.521c0,4.147,3.374,7.521,7.521,7.521C14.148,17.521,17.521,14.147,17.521,10"
+                ></path>
+              </svg>
+            </h5>
+            <div
+              x-ref="tab"
+              :style="handleToggle()"
+              class="border-l-4 border-green-700 overflow-hidden max-h-0 duration-500 transition-all"
+            >
+              <p class="p-3 text-gray-900 md:text-[17px] text-[14px]">
+                
+
+To become an honorary volunteer with Edhi Foundation, individuals can reach out to their local Edhi center or contact the main office to express their interest in volunteering. There is usually a simple application process and orientation session to familiarize volunteers with the organization's work and guidelines.
+
+              </p>
+            </div>
+          </li>
+
+          <li class="bg-white my-2 shadow-lg rounded-lg" x-data="accordion(3)">
+            <h5
+              @click="handleClick()"
+              class="flex flex-row justify-between items-center font-semibold p-3 cursor-pointer text-[16px] md:text-[20px]"
+            >
+              <span>What are the responsibilities of an honorary volunteer with Edhi Foundation?</span>
+              <svg
+                :class="handleRotate()"
+                class="fill-current text-green-700 md:h-6 md:w-6 h-6 w-6 transform transition-transform duration-500"
+                viewBox="0 0 20 20"
+              >
+                <path
+                  d="M13.962,8.885l-3.736,3.739c-0.086,0.086-0.201,0.13-0.314,0.13S9.686,12.71,9.6,12.624l-3.562-3.56C5.863,8.892,5.863,8.611,6.036,8.438c0.175-0.173,0.454-0.173,0.626,0l3.25,3.247l3.426-3.424c0.173-0.172,0.451-0.172,0.624,0C14.137,8.434,14.137,8.712,13.962,8.885 M18.406,10c0,4.644-3.763,8.406-8.406,8.406S1.594,14.644,1.594,10S5.356,1.594,10,1.594S18.406,5.356,18.406,10 M17.521,10c0-4.148-3.373-7.521-7.521-7.521c-4.148,0-7.521,3.374-7.521,7.521c0,4.147,3.374,7.521,7.521,7.521C14.148,17.521,17.521,14.147,17.521,10"
+                ></path>
+              </svg>
+            </h5>
+            <div
+              x-ref="tab"
+              :style="handleToggle()"
+              class="border-l-4 border-green-700 overflow-hidden max-h-0 duration-500 transition-all"
+            >
+              <p class="p-3 text-gray-900 md:text-[17px] text-[14px]">
+             
+
+Honorary volunteers with Edhi Foundation may be assigned various tasks depending on the needs of the organization and their own skills and preferences. These tasks can include assisting in ambulance services, helping at orphanages, providing support in disaster relief efforts, fundraising, and spreading awareness about Edhi Foundation's mission.
+
+              </p>
+            </div>
+          </li>
+          <li class="bg-white my-2 shadow-lg rounded-lg" x-data="accordion(4)">
+            <h5
+              @click="handleClick()"
+              class="flex flex-row justify-between items-center font-semibold p-3 cursor-pointer text-[16px] md:text-[20px]"
+            >
+              <span
+                >Can anyone volunteer with Edhi Foundation, regardless of their age or background?</span
+              >
+              <svg
+                :class="handleRotate()"
+                class="fill-current text-green-700 md:h-6 md:w-6 h-6 w-6 transform transition-transform duration-500"
+                viewBox="0 0 20 20"
+              >
+                <path
+                  d="M13.962,8.885l-3.736,3.739c-0.086,0.086-0.201,0.13-0.314,0.13S9.686,12.71,9.6,12.624l-3.562-3.56C5.863,8.892,5.863,8.611,6.036,8.438c0.175-0.173,0.454-0.173,0.626,0l3.25,3.247l3.426-3.424c0.173-0.172,0.451-0.172,0.624,0C14.137,8.434,14.137,8.712,13.962,8.885 M18.406,10c0,4.644-3.763,8.406-8.406,8.406S1.594,14.644,1.594,10S5.356,1.594,10,1.594S18.406,5.356,18.406,10 M17.521,10c0-4.148-3.373-7.521-7.521-7.521c-4.148,0-7.521,3.374-7.521,7.521c0,4.147,3.374,7.521,7.521,7.521C14.148,17.521,17.521,14.147,17.521,10"
+                ></path>
+              </svg>
+            </h5>
+            <div
+              x-ref="tab"
+              :style="handleToggle()"
+              class="border-l-4 border-green-700 overflow-hidden max-h-0 duration-500 transition-all"
+            >
+              <p class="p-3 text-gray-900 md:text-[17px] text-[14px]">
+                Yes, Edhi Foundation welcomes volunteers from all walks of life, regardless of age, background, or qualifications. Whether you're a student, a working professional, a retiree, or someone with a desire to help others, there are opportunities for you to get involved and contribute to Edhi Foundation's humanitarian efforts.
+              </p>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </main>
+
+  <script is:inline>
+    document.addEventListener("alpine:init", () => {
+      Alpine.store("accordion", {
+        tab: 0,
+      });
+
+      Alpine.data("accordion", (idx) => ({
+        init() {
+          this.idx = idx;
+        },
+        idx: -1,
+        handleClick() {
+          this.$store.accordion.tab =
+            this.$store.accordion.tab === this.idx ? 0 : this.idx;
+        },
+        handleRotate() {
+          return this.$store.accordion.tab === this.idx ? "rotate-180" : "";
+        },
+        handleToggle() {
+          return this.$store.accordion.tab === this.idx
+            ? `max-height: ${this.$refs.tab.scrollHeight}px`
+            : "";
+        },
+      }));
+    });
+  </script>
+</Base>

@@ -1,0 +1,106 @@
+---
+import Base from "@/layouts/Base.astro";
+import { markdownify } from "@/lib/utils/textConverter";
+import { getEntry } from "astro:content";
+import Image from "node_modules/astro/components/Image.astro";
+const majorfeaturesofedhifoundation = await getEntry(
+  "historical-perspective",
+  "-index",
+);
+const { Content } = await majorfeaturesofedhifoundation.render();
+const { title, description, meta_title } = majorfeaturesofedhifoundation.data;
+---
+
+<Base >
+  <section class="section-sm">
+    <div
+      class="px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20"
+    >
+      <p
+        class="mb-2 text-xs font-semibold tracking-wide text-gray-800 uppercase"
+      >
+        <!-- New History -->
+      </p>
+      <h2
+        class="mb-4 font-sans text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl sm:leading-none"
+        style="margin-top: -60px;margin-bottom:30px;text-align:left"
+      >
+        A person – yet similar to an institution
+      </h2>
+      <p class="text-base text-gray-700" style="text-align:left">
+        •<strong> Low educated in philanthropy</strong> – yet highly self
+        educated and highly qualified in the knowledge of Philanthropy, and
+        exclusively about the significance of practical service to the nation
+        and country of Pakistan as well as humanity relatively to others who are
+        having highly educated and highly qualified degrees in philanthropy yet
+        not playing any practical role and many other highly educated and highly
+        qualified people never pay a single penny or a single dime, and so on
+        for the cause of service to humanity
+        <br />
+        <br />
+         •<strong>Low certified in education</strong> – yet highly educated and
+        highly qualified, relatively to those who are having highly educated and
+        highly qualified degrees, yet mostly never take any step ahead to give
+        education to the needy and helpless people
+        <br />
+        <br />
+         •<strong>Low profile and self effacing man</strong> – yet enjoying a
+        King-like popularity, respect, and prestige across the globe
+        <br />
+
+        <br />
+         •<strong>Austerity and simplicity</strong> – despite passing enormous
+        and huge amounts through his hands, he never became arrogant and haughty
+        yet the simplicity and austerity is obviously seen from his personality,
+        relatively to those people – at the corridors of power not only in
+        Pakistan even across the world.
+        <br />
+        <br />
+         Edhi is being called as Abbu (in Urdu) Father or Nana (in Urdu)
+        Grandfather by the children being fostered at Edhi homes, whilst other
+        people call him as the “Rahmet kaa Firishtah” means Angel of Mercy, all
+        these realities indicated that, Edhi has been descended on earth by God
+        Almighty to save, foster, and take care of the neglected, deprived, and
+        abandoned children, disabled people, elderly helpless men and women,
+        injured, mentally retarded, drugs addicted, natural disasters’ affected
+        people, and so on
+        <br />
+        <br />
+         Even stories of grave crime can be seen in media by the powerful people
+        in the corridors of power. You might be seeing that how they suppress
+        and depress the poor, instead of helping and serving them, which means
+        the biggest criminals on the earth – who are suppressing the poor and
+        helpless people
+        <br />
+        <br />
+         Determination like a mountain to promote the noble cause of service to
+        humanity – despite neglecting by the socially, religiously, and
+        politically influential people exclusively neglecting from the western
+        champions of human rights, coupled with the threats from the extremist
+        circles of the society, Edhi serves the humanity without any fear and
+        without any pause – again a greatest source of strength, support, and
+        assistance for the poor and needy in the era of such critical crisis and
+        time of difficulties
+        <br />
+        <br />
+         Time exclusively reserved for the service to humanity – Edhi
+        categorically has refused to so many individuals and people, from
+        participating in the social gatherings thereby clearly telling them that
+        don’t invite me him participate in any social ceremony that wastes his
+        time waste, his time is totally reserved for the service to humanity – a
+        unique vision, can be seen in anyone among not in the millions but among
+        very few in the billions of people
+        <br />
+        <br />
+         Real defender and promoter of the rights of women – at such time when
+        people are not ready to give education to their daughters, Edhi gives
+        education to the girls by considering them as his daughters, gives
+        preference to hire ladies for the jobs offered by Edhi Foundation, given
+        the leading roles by selecting them to head many departments of his
+        widespread foundation.
+        <br />
+        <br />
+      </p>
+    </div>
+  </section>
+</Base>

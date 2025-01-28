@@ -1,0 +1,524 @@
+---
+import Base from "@/layouts/Base.astro";
+import { getEntry } from "astro:content"
+import Accordion from "@/shortcodes/Accordion";
+import Donationcard from "../../layouts/components/donationcard.astro";
+import Aboutedhi from "@/components/Aboutedhi.astro";
+const qurbani = await getEntry("qurbani", "-index");
+const { Content } = await qurbani.render();
+const { title, description, meta_title } = qurbani.data;
+
+
+---
+
+<Base >
+  <!-- heading started here -->
+  <section class="min-h-max bg-white dark:bg-gray-950">
+    <div class="absolute top-0 inset-x-0 h-64 flex items-start">
+      <div
+        class="h-24 w-2/3 bg-gradient-to-br from-green-500 opacity-20 blur-2xl dark:from-green-500 dark:invisible dark:opacity-40"
+      >
+      </div>
+   
+    </div>
+    <div
+      class="absolute top-1/2 left-1/2 -translate-y-1/2 -translate-x-1/2 w-2/5 aspect-[2/0.5] bg-gradient-to-br from-green-500 to-green-500 rounded-full opacity-50 blur-2xl"
+    >
+    </div>
+    <div
+      class="relative mx-auto pt-32 pb-24 lg:max-w-6xl w-full px-5 sm:px-10 md:px-12 lg:px-5 text-center space-y-10"
+    >
+      <h1
+        class="text-gray-900 dark:text-white mx-auto max-w-5xl font-bold text-4xl/tight sm:text-5xl/tight lg:text-6xl/tight xl:text-7xl/tight"
+      >
+      Qurbani 2024
+    </h1>
+      <p class="text-gray-700 dark:text-gray-300 mx-auto max-w-2xl">
+        Join us in sharing the joy of Eid by giving Qurbani to those in need this year.   </p>
+      <div class="flex justify-center items-center flex-wrap mx-auto gap-4">
+        <a
+          href="https://donate.edhiuk.org/"
+          class="flex items-center h-12 px-6 rounded bg-green-600 text-white border border-green-500"
+        >
+          Donate Now 
+        </a> 
+         
+      </div>
+    </div>
+  </section>
+  <div class="bg-green-600 border-black p-4 ">
+    <h1 class="text-center text-[20px] text-white pb-2 font-roboto">
+        Prophet Muhammad ﷺ [PBUH]said:"Whoever offers a sacrifice after the (Eid) prayer, has completed his rituals (of Qurbani) and has succeeded in following the way of the Muslims."
+       
+    </h1>
+    <p class="text-center text-white">[Bukhari]</p>
+  </div>
+  <!-- heading ended here -->
+
+  <!-- providings start here -->
+  <section>
+    <div
+      class="px-6 pt-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20"
+    >
+      <div class="grid gap-5 row-gap-8 lg:grid-cols-2">
+        <div class="flex flex-col justify-center">
+          <div class="max-w-xl mb-6">
+            <h2
+              class="max-w-lg  font-sans text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl sm:leading-none"
+            >
+            Qurbani<span class="text-green-600">&nbsp;2024</span>              <br class="hidden md:block" />
+              <span class="relative px-1">
+                <div
+                  class="absolute inset-x-0 bottom-0 h-3 transform -skew-x-12 bg-teal-accent-400"
+                >
+                </div>
+              </span>
+            </h2>
+            <p class="text-[17px] text-gray-700 md:text-lg font-roboto pt-6">
+                Qurbani represents a significant act of worship and charity during Eid  al-Adha, emphasizing the spirit of sacrifice. This tradition involves  the humane slaughtering of an animal, followed by the distribution of  its meat among those less fortunate. Participating in Qurbani allows you  to directly support families struggling with food insecurity, providing  them with the means to celebrate this auspicious occasion with a  wholesome, nutritious meal.
+            </p>
+          </div>
+          <div class="grid gap-5 row-gap-8 sm:grid-cols-2">
+            <div
+              class="bg-white border-l-4 border-green-500 shadow-sm border-deep-purple-accent-400"
+            >
+              <div class="h-full p-5 border border-l-0 rounded-r">
+                <p class="text-sm
+                 text-gray-900 font-roboto">
+                 Extend your generosity through your Qurbani donation, reaching out to those in desperate need.
+                </p>
+              </div>
+            </div>
+            <div
+              class="bg-white border-l-4 border-green-500 shadow-sm border-deep-purple-accent-400"
+            >
+              <div class="h-full p-5 border border-l-0 rounded-r">
+                <p class="text-sm font-roboto text-gray-900 ">
+                    Help ensure that underprivileged families can partake in the joyous celebrations of Eid al-Adha with a hearty meal.
+                </p>
+              </div>
+            </div>
+          </div>
+          <br />
+          <div class="text-center">
+            <a
+              href="https://donate.edhiuk.org/"
+              class="flex justify-center items-center h-12 px-6 rounded-md bg-green-600 text-white border border-green-500"
+            >
+              Donate Now
+            </a>
+          </div>
+        </div>
+        <div class="">
+          <img
+            class="object-cover w-full h-100 rounded shadow-lg sm:h-30rem mt-6"
+            src="/images/qurbani/qurbani-services-7.jpg"
+            alt=""
+          />
+        </div>
+      </div>
+    </div>
+  </section>
+  <br /><br />
+  <Donationcard programId={[24,26,27,5,6,29,30,31]} />
+
+  <!-- providings ended here -->
+  <!-- section-1 area started -->
+  <!-- <div class="flex flex-wrap">
+    <div class="w-full md:w-[45%] bg-gray-200 p-4">
+        First Column
+    </div>
+
+    <div class="w-full md:w-[10%] bg-gray-300 p-4">
+        Second Column
+    </div>
+
+    <div class="w-full md:w-[45%] bg-gray-400 p-4">
+        Third Column
+    </div>
+</div> -->
+  <section class="text-center px-6 md:pt-20 ">
+    <h1 class="text-green-700 md:text-4xl text-xl font-bold">
+        How Your Qurbani Donation Makes a Difference   </h1>
+    <br />
+    <div class="sm:grid-cols-1">
+      <div class="text-center mb-4">
+        <p class="text-[17px] font-roboto">
+            Your contribution extends beyond tradition, transforming lives.        </p><br />
+        <div class="border-b-8 border-red-600 w-64 mx-auto my-2 rounded-md">
+        </div>
+      </div>
+      <div class="flex flex-col md:flex-row pt-4">
+        <div class="w-full md:w-1/2 border-r-4 border-green-500 pr-4">
+          <p class="text-gray-700 text-justify text-[17px] font-roboto">
+            Every Qurbani donation you make plays a crucial role in providing food security and support to the most vulnerable communities. During Eid al-Adha, it is a time-honored practice to share one-third of the meat with the poor and needy, one-third with friends and family, and keep one-third for oneself. This distribution ensures that the joy and blessings of Eid are shared widely, especially with those who are less fortunate. <br><br>This act of giving is more than just about meat; it represents hope, compassion, and community. Your generosity during Qurbani helps combat hunger and brings people together in a profound expression of shared faith and solidarity. Families who otherwise struggle to secure even basic necessities are given a chance to celebrate Eid with a special meal, thanks to your kindness.
+          </p>
+        </div>
+        <div class="w-full md:w-1/2 md:pl-4 pl-0 ">
+          <h5 class="text-green-700 font-bold text-justify pb-2 pt-2">
+            "Whoever offers a sacrifice after the (Eid) prayer, has completed his rituals (of Qurbani) and has succeeded in following the way of the Muslims." [Bukhari]
+          </h5>
+          <p class="text-gray-700 text-justify text-[17px] font-roboto">
+            Your sacrifice symbolizes obedience to Allah and your efforts to help those in need. The tradition of Qurbani calls us to reflect on the story of Ibrahim and his willingness to sacrifice his son in obedience to Allah's command. It reminds us of the importance of sacrifice in our own lives and compels us to act to help those around us.<br><br>By participating in Qurbani, you are not only fulfilling a religious obligation but also actively contributing to the betterment of society. Your generosity provides direct relief to those in need and embodies the true spirit of community and giving in Islam.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- section-1 area ended -->
+
+  <!-- section-2 area started -->
+
+  <section class="md:pt-36 pt-10">
+    <h1 class="text-3xl font-bold flex flex-col text-center">
+      How We Deliver Your<span class="text-green-600">Qurbani</span>
+    </h1>
+
+    <div class="text-center pb-6 mb-4">
+      <p class="text-[17px] font-roboto">
+        We make sure your Qurbani is meaningful, follows all the Sunnah of Hazrat Ibrahim A.S, and reaches those who need it most.
+
+      </p>
+    </div>
+    <div class="border border-gray-300 p-4 pb-4 pt-6 ">
+      <div class="flex flex-wrap -mx-4">
+        
+        <div class="w-full md:w-1/2 lg:w-1/3 pl-4 pr-4 mb-4">
+          <div class="border border-gray-300 p-4 w-full h-60 shadow-lg transition hover:border-green-500 hover:shadow-green-400">
+            <h6>Details About Your 
+
+                <span class="text-green-600">&nbsp;Donation</span></h6><br />
+            <p class="font-roboto">When you donate your Qurbani through the Edhi Foundation, we make sure your contribution helps those most in need. Your donation also covers all the costs of the Qurbani process.
+
+
+            </p>
+            <a href="" class="transition hover:border-green-500 hover:shadow-green-400"></a>
+          </div>
+        </div>
+        
+        <div class="w-full md:w-1/2 lg:w-1/3 pl-4 pr-4 mb-4">
+          <div class="border border-gray-300 p-4 w-full h-60 shadow-lg transition hover:border-green-500 hover:shadow-green-400">
+            <h6>Placing Your 
+
+                <span class="text-green-600">&nbsp;Order</span></h6><br />
+            <p class="font-roboto">We've made the Qurbani donation process easy and quick to save you time.You simply have to pick the type of animal and follow the donation process in few clicks.
+
+            </p>
+          </div>
+        </div>
+        
+        <div class="w-full md:w-1/2 lg:w-1/3 pl-4 pr-4 mb-4">
+          <div class="border border-gray-300 p-4 w-full h-60 shadow-lg transition hover:border-green-500 hover:shadow-green-400">
+            <h6>
+              Sacrificing Your 
+
+                <span class="text-green-600">&nbsp;Animals</span></h6><br />
+            <p class="font-roboto">Your Qurbani is performed right after Eid prayers. We strictly follow Islamic guidelines according to Sunnah of Hazrat Ibrahim A.S.
+
+                .</p>
+          </div>
+        </div>
+        
+        <div class="w-full md:w-1/2 lg:w-1/3 pl-4 pr-4 mb-4">
+          <div class="border border-gray-300 p-4 w-full h-60 shadow-lg transition hover:border-green-500 hover:shadow-green-400">
+            <h6>Hygienic 
+
+                <span class="text-green-600">&nbsp;Process</span></h6><br />
+            <p class="font-roboto">We maintain the highest standards of cleanliness and hygiene from slaughter to distribution, ensuring that the meat from your Qurbani is safe and healthy.
+
+
+            </p>
+          </div>
+        </div>
+        
+        <div class="w-full md:w-1/2 lg:w-1/3 pl-4 pr-4 mb-4">
+          <div class="border border-gray-300 p-4 w-full h-60 shadow-lg transition hover:border-green-500 hover:shadow-green-400">
+            <h6>Shariah-
+
+                <span class="text-green-600">&nbsp;Compliant</span></h6><br />
+            <p class="font-roboto">Each step of our process aligns with Shariah law, from choosing the animals to their slaughter and distribution. This ensures that your contribution is completely Shariah-Compliant.
+
+            </p>
+          </div>
+        </div>
+        
+        <div class="w-full md:w-1/2 lg:w-1/3 pl-4 pr-4 mb-4">
+          <div class="border border-gray-300 p-4 w-full h-60 shadow-lg transition hover:border-green-500 hover:shadow-green-400">
+            <h6>Distribution to Most 
+ 
+                <span class="text-green-600">&nbsp;Deserving</span></h6><br />
+            <p class="font-roboto">We carefully distribute the meat to those who need it most. We prioritize impoverished families, orphans, and the elderly to make sure your generosity reaches the right hands.</p>
+
+          </div>
+        </div>
+      
+      </div>
+    </div>
+    
+
+    <!-- content area ended -->
+  </section><br /><br /><br />
+
+  <!-- section-2 area ended -->
+  <!-- section 2.1 started -->
+  <section>
+    <div
+      class="px-4 pb-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20"
+    >
+      <div class="grid gap-5 row-gap-8 lg:grid-cols-2">
+        <div class="flex flex-col justify-center">
+          <div class="max-w-xl mb-6">
+            <h2
+              class="max-w-lg  font-sans text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl sm:leading-none pb-6"
+            >
+            Why We Perform <span class="text-green-600">Qurbani Annually</span>              <br class="hidden md:block" />
+              
+            </h2>
+            <p class="text-[17px] text-gray-700 md:text-lg font-roboto">
+                Qurbani, or the act of animal sacrifice, is a profound Islamic tradition commemorating the willingness of Prophet Ibrahim (Abraham) to sacrifice his son as an act of obedience to God. Instead, God provided a ram to sacrifice.<br><br>This annual practice is not only a reminder of faith and submission but also a means to support those in need. Through Qurbani, we strengthen community bonds and extend charity, ensuring everyone partakes in the celebration of Eid al-Adha.
+            </p>
+          </div>
+          <div class="grid gap-5 row-gap-8 sm:grid-cols-2">
+            <div
+              class="bg-white border-l-4 border-green-500 shadow-sm border-deep-purple-accent-400"
+            >
+              
+            </div>
+            
+          </div>
+          <br />
+        
+        </div>
+        <div class="h-[400px]">
+          <img
+            class="object-cover w-full h-96 rounded shadow-lg sm:h-30rem mt-6"
+            src="/images/qurbani/qurbani-services-5.jpg"
+            alt=""
+          />
+        </div>
+      </div>
+    </div>
+  </section>
+
+    <!-- section 2.1 ended -->
+
+
+  <!-- section-3 area started -->
+ <!-- <section class="py-">
+    <div class="max-w-6xl mx-auto px-5 sm:px-10 md:px-12 lg:px-5 space-y-16">
+      <div class="text-center pt-12 ">
+        <h1 class="text-black text-4xl font-bold">
+          Our Features       </h1>
+        <br />
+  
+        <div class="sm:grid-cols-1 px-8">
+          <div class="text-center mb-4">
+            <p class="text-center text-[17px] font-roboto">
+              Highlighting our milestones and accomplishments, showcasing the positive impact of our efforts in <br> serving humanity and fostering hope.
+            </p><br />
+          </div>
+        </div>
+      </div>
+        <div class="grid sm:grid-cols-2 gap-6 md:gap-8 lg:gap-10 pb-12">
+            <div class="relative aspect-[5/3.8] rounded-lg overflow-hidden">
+                <img src="/images/awards-main.jpg" alt="project cover" width="1300" class="w-full h-full object-cover">
+                <div class="absolute inset-0 bg-gradient-to-t from-gray-800 dark:from-gray-900 flex flex-col justify-end p-5 space-y-5 text-gray-300">
+                    <h1 class="font-semibold text-white text-2xl">
+Zakat Calculator                    </h1>
+                    <p class="text-gray-300 line-clamp-2 ">
+                      Calculate your Zakat using the calculator                  </p>
+                    <div class="w-max">
+                        <a href="/appeals/zakat-calculator" class="group flex items-center gap-x-3 text-gray-100 font-medium border-b border-gray-800">
+
+Calculate Zakat                            <span class="duration-300 ease-linear group-hover:pl-2">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-5 h-5">
+                                    <path fill-rule="evenodd" d="M5.22 14.78a.75.75 0 001.06 0l7.22-7.22v5.69a.75.75 0 001.5 0v-7.5a.75.75 0 00-.75-.75h-7.5a.75.75 0 000 1.5h5.69l-7.22 7.22a.75.75 0 000 1.06z" clip-rule="evenodd" />
+                                  </svg>                                      
+                            </span>                                  
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="relative aspect-[5/3.8] rounded-lg overflow-hidden">
+                <img src="/images/awards-main.jpg" alt="project cover" width="1300" class="w-full h-full object-cover">
+                <div class="absolute inset-0 bg-gradient-to-t from-gray-800 dark:from-gray-900 flex flex-col justify-end p-5 space-y-5 text-gray-300">
+                    <h1 class="font-semibold text-white text-2xl">
+Learn More About Zakat                    </h1>
+                    <p class="text-gray-300 line-clamp-2">
+                      Discover the significance and impact of Zakat in Islam                   </p>
+                    <div class="w-max">
+                        <a href="/appeals/zakat" class="group flex items-center gap-x-3 text-gray-100 font-medium border-b border-gray-800">
+
+Explore More                           <span class="duration-300 ease-linear group-hover:pl-2">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-5 h-5">
+                                    <path fill-rule="evenodd" d="M5.22 14.78a.75.75 0 001.06 0l7.22-7.22v5.69a.75.75 0 001.5 0v-7.5a.75.75 0 00-.75-.75h-7.5a.75.75 0 000 1.5h5.69l-7.22 7.22a.75.75 0 000 1.06z" clip-rule="evenodd" />
+                                  </svg>                                      
+                            </span>                                  
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section> -->
+<div class="text-center pb-12">
+  <h1 class="text-black text-3xl font-bold">
+    How We Deliver Your 
+    &nbsp; <span class="text-green-700"> Qurbani</span>  </h1>
+  <br />
+
+  <div class="sm:grid-cols-1 px-8">
+    <div class="text-center mb-4">
+      <p class="text-center text-[17px] font-roboto">
+        We make sure your Qurbani is meaningful, follows all the Sunnah of Hazrat Ibrahim A.S, and reaches those who need it most.
+
+
+      </p><br />
+    </div>
+  </div>
+  <div class="videos flex justify-center">
+    <iframe
+      class="video rounded"
+      src="https://www.youtube.com/embed/gtkeoFPWnTo?si=Us608z5es5uSl3Nh"
+      title="YouTube video player"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+      allowfullscreen></iframe>
+  </div>
+  <style>
+    .video {
+      width: 80vw;
+      height: 90vh;
+    }
+    @media only screen and (max-width: 800px) {
+      .video {
+        width: 95vw;
+        height: 50vh;
+      }
+    }
+  </style>
+</div>
+ 
+<Aboutedhi/>
+
+  <!-- section-3 area ended -->
+<!-- faq started -->
+<section class="text-center pt-10 px-6">
+    <h1 class="text-3xl font-bold mb-6 text-center">
+      Frequently Asked Questions
+    </h1>
+    <h6>
+      Explore our FAQs for clear insights on giving, eligibility, and the
+      positive impact <br /> your contribution can make in transforming lives.
+    </h6>
+  </section>
+  <section class="section-sm container max-w-3xl">
+    <!-- ### Accordion -->
+  
+    <Accordion
+      className="text-justify"
+      client:load
+      title="How does the Edhi Foundation ensure the proper execution of Qurbani?"
+    >
+      <p class="font-roboto">
+        The Edhi Foundation adheres to Islamic guidelines and principles for Qurbani, ensuring that animals are sacrificed humanely and in accordance with religious requirements.  
+      </p>
+    </Accordion>
+    <Accordion
+      className="text-justify"
+      client:load
+      title="Who benefits from the Qurbani program of the Edhi Foundation?"
+    >
+      <p class="font-roboto">
+        The Qurbani program benefits disadvantaged individuals and families, including those living in poverty, refugees, and other vulnerable populations who may not have access to meat during Eid al-Adha.
+      </p>
+    </Accordion>
+    <Accordion
+      className="text-justify"
+      client:load
+      title="How can I participate in the Qurbani program of the Edhi Foundation?"
+    >
+      <p class="font-roboto">
+        You can participate in the Edhi Foundation's Qurbani program by donating funds to sponsor the sacrifice of an animal or by directly contributing towards the purchase of animals for distribution.
+      </p>
+    </Accordion>
+    <Accordion
+      className="text-justify"
+      client:load
+      title="Can I specify where I want my Qurbani donation to be distributed?"
+    >
+      <p class="font-roboto">
+        Yes, donors can often specify their preferences regarding the distribution of Qurbani meat, such as selecting a particular region or community served by the Edhi Foundation.
+      </p>
+    </Accordion>
+  </section>
+  
+  <!-- faq ended -->
+  <div class="h-[400px] w-full  bg-[#fff] p-4">
+    <swiper-container
+    class="mySwiper"
+    pagination="true"
+    pagination-clickable="true"
+    navigation="true"
+    space-between="30"
+    slides-per-view="3"
+    loop="true"
+    breakpoints='{"200": {"slidesPerView": 1, "spaceBetween": 20}, "768": {"slidesPerView": 3, "spaceBetween": 40}}'
+    
+   >
+      <swiper-slide>
+       <img src="/images/qurbani/qurbani-services-1.jpg" alt="">
+      </swiper-slide>
+      <swiper-slide>
+        <img src="/images/qurbani/qurbani-services-2.jpg" alt="">
+
+           </swiper-slide>
+      <swiper-slide>
+        <img src="/images/qurbani/qurbani-services-3.jpg" alt="">
+
+      </swiper-slide>
+      <swiper-slide>
+        <img src="/images/qurbani/qurbani-services-4.jpg" alt="">
+
+      </swiper-slide>
+      <swiper-slide>
+        <img src="/images/qurbani/qurbani-services-5.jpg" alt="">
+
+      </swiper-slide>
+      <swiper-slide>
+        <img src="/images/qurbani/qurbani-services-6.jpg" alt="">
+
+      </swiper-slide>
+    </swiper-container>
+  </div>
+  
+  <style>
+    
+  
+    swiper-container {
+      width: 100%;
+      height: 100%;
+    }
+  
+    swiper-slide {
+      text-align: center;
+      font-size: 18px;
+      background: #fff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  
+    swiper-slide img {
+      display: block;
+      width: 100%;
+      height: 300px;
+      object-fit: cover;
+    }
+    .slider {
+      width: full;
+      height: 350px;
+    }
+  </style>
+  <script is:inline src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-element-bundle.min.js"
+></script>
+</Base>
