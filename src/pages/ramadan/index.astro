@@ -4,6 +4,7 @@ import Accordion from "@/shortcodes/Accordion";
 import Donationcard from "../../layouts/components/donationcard.astro";
 import Aboutedhi from "@/components/Aboutedhi.astro";
 import { SEO } from "astro-seo";
+import SliderNew from "@/components/SliderNew.astro";
 const title = "Support Edhi Foundation this Ramadan and help those in need.";
 const description =
   "This Ramadan 2025, support Edhi Foundation and help those in need. Donate your Zakat to provide food, water, shelter, and hope for communities facing hardship.";
@@ -52,36 +53,37 @@ const keywords =
 />
 <Base>
   <!-- heading started here -->
-  <section class="min-h-max bg-white dark:bg-gray-950">
-    <div class="absolute top-0 inset-x-0 h-64 flex items-start">
-      <div
-        class="h-24 w-2/3 bg-gradient-to-br from-green-500 opacity-20 blur-2xl dark:from-green-500 dark:invisible dark:opacity-40"
-      >
-      </div>
-    </div>
-    <div
-      class="absolute top-1/2 left-1/2 -translate-y-1/2 -translate-x-1/2 w-2/5 aspect-[2/0.5] bg-gradient-to-br from-green-500 to-green-500 rounded-full opacity-50 blur-2xl"
-    >
-    </div>
-    <div
-      class="relative mx-auto pt-32 pb-24 lg:max-w-7xl w-full px-5 sm:px-10 md:px-12 lg:px-5 text-center space-y-10"
-    >
-      <h1
-        class="text-gray-900 dark:text-white mx-auto max-w-5xl font-bold text-4xl/tight sm:text-5xl/tight lg:text-6xl/tight xl:text-7xl/tight"
-      >
-        Ramadan 2025
-      </h1>
-      <p class="text-gray-700 dark:text-gray-300 mx-auto max-w-2xl">
-        Support the Edhi Foundation this Ramadan 2025 to share joy and
-        compassion with those in need.
-      </p>
-      <div class="flex justify-center items-center flex-wrap mx-auto gap-4">
-        <a
-          href="https://donate.edhiuk.org/"
-          class="flex items-center h-12 px-6 rounded bg-green-600 text-white border border-green-500"
-        >
-          Donate Now
-        </a>
+  <section class="relative h-[400px] bg-cover bg-center bg-no-repeat overflow-hidden group">
+    {/* Dark overlay with gradient */}
+    <div class="absolute inset-0 bg-black/40 group-hover:bg-black/30 transition-colors duration-300" />
+    
+    {/* Background image div with parallax effect */}
+    <div 
+      class="absolute inset-0 bg-[url(/images/ramadan-1.jpg)] bg-cover bg-center scale-105 group-hover:scale-100 transition-transform duration-700"
+    />
+
+    {/* Content container with vertical and horizontal centering */}
+    <div class="relative h-full flex items-center justify-center px-4 sm:px-6 lg:px-8">
+      <div class="max-w-xl w-full backdrop-blur-sm bg-white/90 p-8 rounded-2xl shadow-2xl transform transition-transform duration-300 hover:scale-105">
+        {/* Decorative elements */}
+        <div class="absolute -top-2 -left-2 w-16 h-16 border-t-4 border-l-4 border-green-600 rounded-tl-lg" />
+        <div class="absolute -bottom-2 -right-2 w-16 h-16 border-b-4 border-r-4 border-green-600 rounded-br-lg" />
+        
+        {/* Main content */}
+        <div class="space-y-6 text-center relative">
+          <h1 class="text-2xl sm:text-4xl font-extrabold font-primary tracking-tight">
+            Ramadan
+            <strong class=" text-green-600 mt-2">2025</strong>
+          </h1>
+          
+          <div class="w-32 h-1 bg-green-600 mx-auto rounded-full" />
+          
+          <p class="text-lg sm:text-xl font-roboto leading-relaxed text-gray-700">
+            Edhi's "Poor Patient Ambulance" began with a refurbished Hillman 
+            Pickup. Now, with 1800 vehicles, it's the world's largest ambulance 
+            fleet.
+          </p>
+        </div>
       </div>
     </div>
   </section>
@@ -95,325 +97,209 @@ const keywords =
   </div>
   <!-- heading ended here -->
 
-  <!-- providings start here -->
-  <section>
-    <div
-      class="px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20"
-    >
-      <div class="grid gap-5 row-gap-8 lg:grid-cols-2">
-        <div class="flex flex-col justify-center">
-          <div class="max-w-xl mb-6">
-            <h2
-              class="max-w-lg font-sans text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl sm:leading-none"
-            >
-              Ramadan<span class="text-green-600">&nbsp;2025</span>
-              <br class="hidden md:block" />
-              <span class="relative px-1">
-                <div
-                  class="absolute inset-x-0 bottom-0 h-3 transform -skew-x-12 bg-teal-accent-400"
-                >
-                </div>
-              </span>
-            </h2>
-            <p class="text-[17px] text-gray-700 md:text-lg font-roboto">
-              Ramadan 2025 is a holy month for Muslims around the world,
-              dedicated to fasting, prayer, and acts of charity. It is a time to
-              strengthen the connection with Allah, seek forgiveness, and find
-              guidance. From dawn to sunset, Muslims fast, focusing on spiritual
-              growth and self-discipline. Ramadan also fosters empathy for those
-              in need and brings communities together in unity and reflection.
-            </p>
-          </div>
-          <div class="grid gap-5 row-gap-8 sm:grid-cols-2">
-            <div
-              class="bg-white border-l-4 border-green-500 shadow-sm border-deep-purple-accent-400"
-            >
-              <div class="h-full p-5 border border-l-0 rounded-r">
-                <p class="text-sm
-                 text-gray-900 font-roboto">
-                  “Ramadan 2025 is a month of fasting and prayer for Muslims,
-                  dedicated to spiritual growth, reflection, and strengthening
-                  community unity.”
-                </p>
-              </div>
-            </div>
-            <div
-              class="bg-white border-l-4 border-green-500 shadow-sm border-deep-purple-accent-400"
-            >
-              <div class="h-full p-5 border border-l-0 rounded-r">
-                <p class="text-sm font-roboto text-gray-900">
-                  “During Ramadan 2025, Muslims fast from dawn to sunset, break
-                  their fast with iftar, and participate in acts of increased
-                  charity.”
-                </p>
-              </div>
-            </div>
-          </div>
-          <br />
+  
+  <Donationcard programId={[13, 41, 7]} />
+  <section class="py-12  relative overflow-hidden w-full bg-green-600">
+    <!-- Decorative Background Pattern -->
+   
+
+    <!-- Branch Structure -->
+    <div class="max-w-6xl mx-auto ">
+      <!-- Root Branch -->
+       <div class="pb-12 max-w-5xl  mx-auto">
+       <h3 class="flex justify-center text-red-600 bg-white p-2 md:rounded-md ">Key Facts</h3>
+      </div>
+
+      
+
+      <!-- Content Boxes -->
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8 px-4">
+        <!-- Box 1 -->
+        <div class="group relative bg-white rounded-md shadow-xl p-6 hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2">
+          <div class="absolute -top-3 left-1/2 transform -translate-x-1/2 w-6 h-6 bg-green-600 rounded-full border-4 border-white"></div>
           <div class="text-center">
-            <a
-              href="https://donate.edhiuk.org/"
-              class="flex justify-center items-center h-12 px-6 rounded-md bg-green-600 text-white border border-green-500"
-            >
-              Donate Now
-            </a>
+            <div class="w-16 h-16 mx-auto mb-4 bg-green-50 rounded-full flex items-center justify-center group-hover:bg-green-100 transition-colors duration-300">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-green-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+              </svg>
+            </div>
+            <h3 class="text-xl font-bold text-gray-800 mb-2">Fast Response</h3>
+            <p class="text-gray-600">24/7 emergency medical response teams ready to help those in need during Ramadan.</p>
           </div>
         </div>
-        <div class="pt-20">
-          <img
-            class="object-cover w-full h-100 rounded shadow-lg sm:h-30rem mt-6"
-            src="/images/ramadan-1.jpg"
-            alt=""
-          />
+
+        <!-- Box 2 -->
+        <div class="group relative bg-white rounded-md shadow-xl p-6 hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2">
+          <div class="absolute -top-3 left-1/2 transform -translate-x-1/2 w-6 h-6 bg-green-600 rounded-full border-4 border-white"></div>
+          <div class="text-center">
+            <div class="w-16 h-16 mx-auto mb-4 bg-green-50 rounded-full flex items-center justify-center group-hover:bg-green-100 transition-colors duration-300">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-green-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
+              </svg>
+            </div>
+            <h3 class="text-xl font-bold text-gray-800 mb-2">Caring Support</h3>
+            <p class="text-gray-600">Compassionate care and support for patients and families throughout their journey.</p>
+          </div>
+        </div>
+
+        <!-- Box 3 -->
+        <div class="group relative bg-white rounded-md shadow-xl p-6 hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2">
+          <div class="absolute -top-3 left-1/2 transform -translate-x-1/2 w-6 h-6 bg-green-600 rounded-full border-4 border-white"></div>
+          <div class="text-center">
+            <div class="w-16 h-16 mx-auto mb-4 bg-green-50 rounded-full flex items-center justify-center group-hover:bg-green-100 transition-colors duration-300">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-green-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+              </svg>
+            </div>
+            <h3 class="text-xl font-bold text-gray-800 mb-2">Quality Service</h3>
+            <p class="text-gray-600">Professional medical care with state-of-the-art equipment and trained staff.</p>
+          </div>
         </div>
       </div>
     </div>
   </section>
-  <br /><br />
-  <Donationcard programId={[13,41,7]} />
-
   <!-- providings ended here -->
   <!-- section-1 area started -->
-  <section class="text-center px-8">
-    <h3 class="text-green-700 text-4xl font-bold">
-      Offer a Helping Hand this Ramadan 2025
-    </h3>
-    <br />
-    <div class="sm:grid-cols-1">
-      <div class="text-center mb-4">
-        <p class="text-[17px] font-roboto">
-          Support Those in Need this Ramadan 2025 and Create a Lasting Impact.
-        </p><br />
-        <div class="border-b-8 border-red-600 w-64 mx-auto my-2 rounded-md">
+  <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 md:py-12 space-y-12">
+    {/* Header */}
+    <div class="text-center space-y-6">
+      <h3 class="text-4xl md:text-5xl font-bold text-green-700 font-primary">
+        Offer a Helping Hand this Ramadan 2025
+      </h3>
+      
+      <p class="text-xl text-gray-600 max-w-3xl mx-auto font-roboto">
+        Support Those in Need this Ramadan 2025 and Create a Lasting Impact.
+      </p>
+      
+      <div class="relative">
+        <div class="absolute inset-0 flex items-center">
+          <div class="w-full border-t "></div>
+        </div>
+        <div class="relative flex justify-center">
+          <div class="h-2 w-64 bg-gradient-to-r from-red-400 via-red-500 to-red-400 rounded-full"></div>
         </div>
       </div>
-      <div class="flex flex-col md:flex-row pt-4">
-        <div class="w-full md:w-1/2 border-r-4 border-green-500 pr-4">
-          <p class="text-gray-700 text-justify text-[17px] font-roboto">
-            Ramadan 2025 is a time eagerly awaited by Muslims around the world
-            each year. It is a period of devotion, mercy, and drawing closer to
-            Allah (SWT). This sacred time offers an opportunity to seek
-            forgiveness, reflect on our blessings, and assist those in need. It
-            reminds us of how fortunate we are and helps us understand the
-            struggles faced by those in impoverished communities, such as in
-            Syria, Pakistan, Palestine, Yemen, and The Gambia.
-            <br /><br />You can support our Ramadan Appeal by donating your
-            Zakat to those who need it most. While many of us fast during the
-            daylight hours, for millions worldwide, hunger is a daily reality.
-            Countless people lack food for iftar and continue to suffer from
-            hunger. The COVID-19 pandemic has worsened this crisis, leaving even
-            more without enough to eat. Every day, around 795 million people go
-            hungry, unsure of when they will eat next, many suffering from
-            malnutrition and lacking the essential nutrients needed for
-            survival.
-          </p>
+    </div>
+
+    {/* Content Grid with Divider */}
+    <div class="relative">
+      {/* Vertical Divider Line */}
+      <div class="absolute left-1/2 top-0 bottom-0 hidden md:block">
+        <div class="h-full w-1 bg-green-600 rounded-full transform -translate-x-1/2"></div>
+      </div>
+
+      <div class="grid md:grid-cols-2 gap-12">
+        {/* Left Column */}
+        <div class="relative">
+         
+          <div class="prose prose-lg max-w-none md:pl-6 md:pr-8">
+            <p class="text-gray-700 text-lg leading-relaxed font-roboto">
+              Ramadan 2025 is a time eagerly awaited by Muslims around the world each year. It is a period of devotion, mercy, and drawing closer to Allah (SWT). This sacred time offers an opportunity to seek forgiveness, reflect on our blessings, and assist those in need. It reminds us of how fortunate we are and helps us understand the struggles faced by those in impoverished communities, such as in Syria, Pakistan, Palestine, Yemen, and The Gambia.
+            </p>
+            <p class="text-gray-700 text-lg leading-relaxed font-roboto mt-6">
+              You can support our Ramadan Appeal by donating your Zakat to those who need it most. While many of us fast during the daylight hours, for millions worldwide, hunger is a daily reality. Countless people lack food for iftar and continue to suffer from hunger. The COVID-19 pandemic has worsened this crisis, leaving even more without enough to eat. Every day, around 795 million people go hungry, unsure of when they will eat next, many suffering from malnutrition and lacking the essential nutrients needed for survival.
+            </p>
+          </div>
         </div>
-        <div class="w-full md:w-1/2 pl-4">
-          <h5 class="text-green-700 font-bold text-justify pb-2">
-            The Prophet (saw) said that “Whoever observes fasts during the month
-            of Ramadan out of sincere faith, and hoping to attain Allah's
-            rewards, then all his past sins will be forgiven.” [Bukhari]
-          </h5>
-          <p class="text-gray-700 text-justify text-[17px] font-roboto">
-            This Ramadan 2025, consider donating your Zakat to our Ramadan
-            Appeal. Zakat is an obligation for every adult, sane Muslim who
-            possesses wealth above a certain threshold. It involves giving 2.5%
-            of your wealth to those in need. Your Zakat can save lives, provide
-            essentials like clean water, food, shelter, education, and
-            healthcare, and help families escape poverty.
-            <br /><br />During Ramadan, good deeds are greatly rewarded. Allah
-            (SWT) multiplies acts of kindness seventy fold. Your donations this
-            Ramadan can make a significant impact, helping entire communities
-            rise out of poverty and offering long-term solutions to hunger and
-            hardship.
-          </p>
+
+        {/* Right Column */}
+        <div class="space-y-6 md:pl-8">
+          <div class="bg-green-50 p-6 rounded-xl border-l-4 border-green-600 relative">
+            <!-- <Quote class="absolute -top-4 -left-4 h-8 w-8 text-green-600 bg-white rounded-full p-1" /> -->
+            <p class="text-green-800 font-bold text-lg italic">
+              The Prophet (saw) said that "Whoever observes fasts during the month of Ramadan out of sincere faith, and hoping to attain Allah's rewards, then all his past sins will be forgiven." [Bukhari]
+            </p>
+          </div>
+          
+          <div class="prose prose-lg max-w-none">
+            <p class="text-gray-700 text-lg leading-relaxed font-roboto">
+              This Ramadan 2025, consider donating your Zakat to our Ramadan Appeal. Zakat is an obligation for every adult, sane Muslim who possesses wealth above a certain threshold. It involves giving 2.5% of your wealth to those in need. Your Zakat can save lives, provide essentials like clean water, food, shelter, education, and healthcare, and help families escape poverty.
+            </p>
+            <p class="text-gray-700 text-lg leading-relaxed font-roboto mt-6">
+              During Ramadan, good deeds are greatly rewarded. Allah (SWT) multiplies acts of kindness seventy fold. Your donations this Ramadan can make a significant impact, helping entire communities rise out of poverty and offering long-term solutions to hunger and hardship.
+            </p>
+          </div>
         </div>
       </div>
     </div>
   </section>
   <!-- section-1 area ended -->
-
+  <SliderNew />
   <!-- section-2 area started -->
-
-  <section class="md:py-20 py-10 mx-auto max-w-6xl">
-    <h2 class="text-3xl font-bold flex justify-center px-6">
-      Experience the Blessings of &nbsp; <span class="text-green-600">
-        Ramadan 2025</span
-      >
-    </h2>
-    <br />
-
-    <div class="text-center pb-6 mb-4 px-6">
-      <p class="text-[17px] font-roboto">
-        Ramadan 2025 is a sacred month observed by Muslims around the world,
-        focused on fasting, prayer, reflection, and charity, promoting spiritual
-        growth and community unity. &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 md:py-12 space-y-12">
+    {/* Header */}
+    <div class="text-center space-y-6">
+      <h3 class="text-4xl md:text-5xl font-bold text-green-700 font-primary">
+        Offer a Helping Hand this Ramadan 2025
+      </h3>
+      
+      <p class="text-xl text-gray-600 max-w-3xl mx-auto font-roboto">
+        Support Those in Need this Ramadan 2025 and Create a Lasting Impact.
       </p>
+      
+      <div class="relative">
+        <div class="absolute inset-0 flex items-center">
+          <div class="w-full border-t border-gray-200"></div>
+        </div>
+        <div class="relative flex justify-center">
+          <div class="h-2 w-64 bg-gradient-to-r from-red-400 via-red-500 to-red-400 rounded-full"></div>
+        </div>
+      </div>
     </div>
-    <div class="border border-gray-300 p-4 pb-4 pt-6">
-      <div class="flex flex-wrap -mx-4">
-        <div class="w-full md:w-1/2 lg:w-1/3 pl-4 pr-4 mb-4">
-          <div
-            class="border border-gray-300 p-4 w-full h-60 shadow-lg transition hover:border-green-500 hover:scale-110"
-          >
-            <h6>
-              <span class="text-green-600">Spiritual</span>Renewal
-            </h6><br />
-            <p class="font-roboto">
-              Ramadan 2025 offers a time for Muslims to renew their faith,
-              focusing on deepening their relationship with Allah (SWT) through
-              worship and reflection.
-            </p>
-            <a href="" class="transition hover:border-green-500 hover:scale-110"
-            ></a>
-          </div>
-        </div>
 
-        <div class="w-full md:w-1/2 lg:w-1/3 pl-4 pr-4 mb-4">
-          <div
-            class="border border-gray-300 p-4 w-full h-60 shadow-lg transition hover:border-green-500 hover:scale-110"
-          >
-            <h6>
-              <span class="text-green-600">Self-Discipline</span>
-            </h6><br />
-            <p class="font-roboto">
-              Fasting during Ramadan 2025 teaches self-control, helping Muslims
-              overcome temptations and strengthen their resilience in both
-              spiritual and worldly matters.
+    {/* Content Grid with Divider */}
+    <div class="relative">
+      {/* Vertical Divider Line */}
+      <div class="absolute left-1/2 top-0 bottom-0 hidden md:block">
+        <div class="h-full w-1 bg-green-600 rounded-full transform -translate-x-1/2"></div>
+      </div>
+
+      <div class="grid md:grid-cols-2 gap-12">
+        {/* Left Column */}
+        <div class="relative">
+         
+          <div class="prose prose-lg max-w-none md:pl-6 md:pr-8">
+            <p class="text-gray-700 text-lg leading-relaxed font-roboto">
+              Ramadan 2025 is a time eagerly awaited by Muslims around the world each year. It is a period of devotion, mercy, and drawing closer to Allah (SWT). This sacred time offers an opportunity to seek forgiveness, reflect on our blessings, and assist those in need. It reminds us of how fortunate we are and helps us understand the struggles faced by those in impoverished communities, such as in Syria, Pakistan, Palestine, Yemen, and The Gambia.
+            </p>
+            <p class="text-gray-700 text-lg leading-relaxed font-roboto mt-6">
+              You can support our Ramadan Appeal by donating your Zakat to those who need it most. While many of us fast during the daylight hours, for millions worldwide, hunger is a daily reality. Countless people lack food for iftar and continue to suffer from hunger. The COVID-19 pandemic has worsened this crisis, leaving even more without enough to eat. Every day, around 795 million people go hungry, unsure of when they will eat next, many suffering from malnutrition and lacking the essential nutrients needed for survival.
             </p>
           </div>
         </div>
 
-        <div class="w-full md:w-1/2 lg:w-1/3 pl-4 pr-4 mb-4">
-          <div
-            class="border border-gray-300 p-4 w-full h-60 shadow-lg transition hover:border-green-500 hover:scale-110"
-          >
-            <h6>
-              <span class="text-green-600">Generosity</span>and Giving
-            </h6><br />
-            <p class="font-roboto">
-              Ramadan 2025 encourages Muslims to give freely to others, with an
-              emphasis on helping the less fortunate, ensuring that no one is
-              left behind in times of need.
+        {/* Right Column */}
+        <div class="space-y-6 md:pl-8">
+          <div class="bg-green-50 p-6 rounded-xl border-l-4 border-green-600 relative">
+            <!-- <Quote class="absolute -top-4 -left-4 h-8 w-8 text-green-600 bg-white rounded-full p-1" /> -->
+            <p class="text-green-800 font-bold text-lg italic">
+              The Prophet (saw) said that "Whoever observes fasts during the month of Ramadan out of sincere faith, and hoping to attain Allah's rewards, then all his past sins will be forgiven." [Bukhari]
             </p>
           </div>
-        </div>
-
-        <div class="w-full md:w-1/2 lg:w-1/3 pl-4 pr-4 mb-4">
-          <div
-            class="border border-gray-300 p-4 w-full h-60 shadow-lg transition hover:border-green-500 hover:scale-110"
-          >
-            <h6>
-              <span class="text-green-600">Empathy</span>for the Less Fortunate
-            </h6><br />
-            <p class="font-roboto">
-              Through fasting and charity, Ramadan 2025 fosters empathy, helping
-              Muslims understand the struggles of others and inspire positive
-              change in their communities.
+          
+          <div class="prose prose-lg max-w-none">
+            <p class="text-gray-700 text-lg leading-relaxed font-roboto">
+              This Ramadan 2025, consider donating your Zakat to our Ramadan Appeal. Zakat is an obligation for every adult, sane Muslim who possesses wealth above a certain threshold. It involves giving 2.5% of your wealth to those in need. Your Zakat can save lives, provide essentials like clean water, food, shelter, education, and healthcare, and help families escape poverty.
             </p>
-          </div>
-        </div>
-
-        <div class="w-full md:w-1/2 lg:w-1/3 pl-4 pr-4 mb-4">
-          <div
-            class="border border-gray-300 p-4 w-full h-60 shadow-lg transition hover:border-green-500 hover:scale-110"
-          >
-            <h6>
-              <span class="text-green-600">Strengthening</span>Community Bonds
-            </h6><br />
-            <p class="font-roboto">
-              Ramadan 2025 is a time for Muslims to connect with family,
-              friends, and neighbors, building stronger communities through
-              shared prayers, meals, and kindness.
-            </p>
-          </div>
-        </div>
-
-        <div class="w-full md:w-1/2 lg:w-1/3 pl-4 pr-4 mb-4">
-          <div
-            class="border border-gray-300 p-4 w-full h-60 shadow-lg transition hover:border-green-500 hover:scale-110"
-          >
-            <h6>
-              <span class="text-green-600">Seeking Mercy</span>and Forgiveness
-            </h6><br />
-            <p class="font-roboto">
-              Ramadan 2025 offers an opportunity to seek Allah’s mercy and
-              forgiveness, encouraging introspection and fostering a sense of
-              spiritual growth and inner peace.
+            <p class="text-gray-700 text-lg leading-relaxed font-roboto mt-6">
+              During Ramadan, good deeds are greatly rewarded. Allah (SWT) multiplies acts of kindness seventy fold. Your donations this Ramadan can make a significant impact, helping entire communities rise out of poverty and offering long-term solutions to hunger and hardship.
             </p>
           </div>
         </div>
       </div>
     </div>
+  </section>  
 
-    <!-- content area ended -->
-  </section>
   <!-- section-2 area ended -->
   <!-- section 2.1 started -->
-  <section>
-    <div
-      class="px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20"
-    >
-      <div class="grid gap-5 row-gap-8 lg:grid-cols-2">
-        <div class="flex flex-col justify-center">
-          <div class="max-w-xl mb-6">
-            <h3
-              class="max-w-lg font-sans text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl sm:leading-none"
-            >
-              Meeting Your Zakat Obligation During
-              <span class="text-green-600">&nbsp;Ramadan</span>
-              <br class="hidden md:block" />
-              <span class="relative px-1">
-                <div
-                  class="absolute inset-x-0 bottom-0 h-3 transform -skew-x-12 bg-teal-accent-400"
-                >
-                </div>
-              </span>
-            </h3>
-            <p class="text-[17px] text-gray-700 md:text-lg font-roboto">
-              Ramadan 2025 is a perfect time for Muslims to fulfill their Zakat
-              obligation. Zakat, a fundamental pillar of Islam, requires giving
-              a portion of one's wealth to those in need.
-              <br /><br />During Ramadan, the rewards for charity are
-              multiplied, making it an ideal time to support the less fortunate
-              and strengthen communities. By giving Zakat, Muslims not only
-              fulfill their religious duty but also contribute to the well-being
-              of society, spreading compassion and kindness.
-            </p>
-          </div>
-          <div class="grid gap-5 row-gap-8 sm:grid-cols-2">
-            <div
-              class="bg-white border-l-4 border-green-500 shadow-sm border-deep-purple-accent-400"
-            >
-            </div>
-          </div>
-          <br />
-          <div class="text-center">
-            <a
-              href="https://donate.edhiuk.org/"
-              class="flex justify-center items-center h-12 px-6 rounded-md bg-green-600 text-white border border-green-500"
-            >
-              Donate Now
-            </a>
-          </div>
-        </div>
-        <div class="h-[400px]">
-          <img
-            class="object-cover w-full h-100 rounded shadow-lg sm:h-30rem mt-6"
-            src="/images/ramadan-2.jpg"
-            alt=""
-          />
-        </div>
-      </div>
-    </div>
-  </section>
+ 
 
   <!-- section 2.1 ended -->
 
-  <Aboutedhi />
+  <!-- <Aboutedhi /> -->
 
   <!-- faq started -->
-  <section class="text-center pt-36">
+  <section class="text-center md:pt-26 pt-12">
     <p class="text-3xl font-bold mb-6 text-center">
       Frequently Asked Questions
     </p>
@@ -426,7 +312,7 @@ const keywords =
     <!-- ### Accordion -->
 
     <Accordion
-      className="text-justify"
+      class="text-justify"
       client:load
       title="When does Ramadan 2025 start and end?"
     >
@@ -437,7 +323,7 @@ const keywords =
       </p>
     </Accordion>
     <Accordion
-      className="text-justify"
+      class="text-justify"
       client:load
       title="When is Laylat al-Qadr in Ramadan 2025?"
     >
@@ -448,7 +334,7 @@ const keywords =
       </p>
     </Accordion>
     <Accordion
-      className="text-justify"
+      class="text-justify"
       client:load
       title="How can I use a Ramadan timetable effectively?"
     >
@@ -459,7 +345,7 @@ const keywords =
       </p>
     </Accordion>
     <Accordion
-      className="text-justify"
+      class="text-justify"
       client:load
       title="How do prayer times differ during Ramadan across cities?"
     >
