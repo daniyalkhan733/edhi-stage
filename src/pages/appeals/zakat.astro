@@ -1,32 +1,33 @@
 ---
 import Base from "@/layouts/Base.astro";
-import { markdownify } from "@/lib/utils/textConverter";
-import { getEntry } from "astro:content";
 import Accordion from "@/shortcodes/Accordion";
 import Donationcard from "../../layouts/components/donationcard.astro";
 import Aboutedhi from "@/components/Aboutedhi.astro";
-const zakat = await getEntry("zakat", "-index");
-const { Content } = await zakat.render();
-const { title, description, meta_title } = zakat.data;
+
+
 import { SEO } from "astro-seo";
-
-
+const title = "Zakat - Calculate & Donate your zakat now | Edhi Foundation";
+const description = "Donate your Zakat online to Edhi Foundation to support orphans, low-income families, and those in need. Your contribution can help save lives.";
+const pageImage = "";
+const keywords = "";
 ---
 
 <SEO
-  title="Zakat 2024 - Calculate & Donate your zakat now | Edhi Foundation"
-  description="Donate your Zakat Online to Edhi Foundation to help children who lost their parents, low-income families & those in need. Donate now to save poor people's lives"
-  canonical={Astro.request.url}
+  title={title}
+  description={description}
+  canonical=""
   openGraph={{
     basic: {
-      title: "Zakat 2024 - Calculate & Donate your zakat now | Edhi Foundation",
-      type: "A type.",
-      image: "https://edhiuk.org/images/logo.jpg",
-    
-    }
+      title: `${title}`,
+      type: "website",
+      image: `${pageImage ? pageImage : "/assets/images/logo-short.jpg"}`,
+    },
+    optional: {
+      description: `${description}`,
+    },
   }}
   twitter={{
-    creator: "@jonasmerlins1"
+    creator: "@jonasmerlins1",
   }}
   extend={{
     // extending the default link tags
@@ -35,11 +36,17 @@ import { SEO } from "astro-seo";
     meta: [
       {
         name: "twitter:image",
-        content: "https://edhiuk.org/images/logo.jpg",
+        content: `${pageImage ? pageImage : "/assets/img/logo.png"}`,
       },
-      { name: "twitter:title", content: "Zakat 2024 - Calculate & Donate your zakat now | Edhi Foundation" },
-      { name: "twitter:description", content: "Donate your Zakat Online to Edhi Foundation to help children who lost their parents, low-income families & those in need. Donate now to save poor people's lives" },
-      { name: "keywords", content: "" },
+      {
+        name: "twitter:title",
+        content: `${title}`,
+      },
+      {
+        name: "twitter:description",
+        content: `${description}`,
+      },
+      { name: "keywords", content: `${keywords}` },
     ],
   }}
 />

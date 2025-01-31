@@ -1,20 +1,53 @@
 ---
 import Base from "@/layouts/Base.astro";
-import { markdownify } from "@/lib/utils/textConverter";
-import { getEntry } from "astro:content";
+
 import Accordion from "@/shortcodes/Accordion";
 
-const donationthroughbank = await getEntry("donation-through-bank", "-index");
-const { Content } = await donationthroughbank.render();
-const { title, description, meta_title  } = donationthroughbank.data;
+import { SEO } from "astro-seo";
+const title = "Donate Through Banks | Edhi Foundation UK";
+const description = "Support EDHI UK by donating directly through banks. Explore secure and convenient bank transfer options to contribute to our mission of helping others.";
+const pageImage = "";
+const keywords = "";
 ---
-
-<Base
+<SEO
   title={title}
-  meta_title={meta_title}
   description={description}
-
->
+  canonical=""
+  openGraph={{
+    basic: {
+      title: `${title}`,
+      type: "website",
+      image: `${pageImage ? pageImage : "/assets/images/logo-short.jpg"}`,
+    },
+    optional: {
+      description: `${description}`,
+    },
+  }}
+  twitter={{
+    creator: "@jonasmerlins1",
+  }}
+  extend={{
+    // extending the default link tags
+    link: [{ rel: "icon", href: "/favicon.png" }],
+    // extending the default meta tags
+    meta: [
+      {
+        name: "twitter:image",
+        content: `${pageImage ? pageImage : "/assets/img/logo.png"}`,
+      },
+      {
+        name: "twitter:title",
+        content: `${title}`,
+      },
+      {
+        name: "twitter:description",
+        content: `${description}`,
+      },
+      { name: "keywords", content: `${keywords}` },
+    ],
+  }}
+/>
+<Base>
 <section class="section-sm container max-w-2xl">
 <!-- ### Accordion -->
 <h1>Donation bank</h1>

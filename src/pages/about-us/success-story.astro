@@ -1,12 +1,52 @@
 ---
 import Base from "@/layouts/Base.astro";
-import { getEntry } from "astro:content";
 
-const successstory = await getEntry("success-story", "-index");
-const { Content } = await successstory.render();
-const { title, description, meta_title } = successstory.data;
+
+
+import { SEO } from "astro-seo";
+const title = "Success Story | About Us | Edhi Foundation UK";
+const description = "Discover EDHI UK's inspiring success story. Learn how our dedication and support have positively impacted countless lives, making a difference every day.";
+const pageImage = "";
+const keywords = "";
 ---
-
+<SEO
+  title={title}
+  description={description}
+  canonical=""
+  openGraph={{
+    basic: {
+      title: `${title}`,
+      type: "website",
+      image: `${pageImage ? pageImage : "/assets/images/logo-short.jpg"}`,
+    },
+    optional: {
+      description: `${description}`,
+    },
+  }}
+  twitter={{
+    creator: "@jonasmerlins1",
+  }}
+  extend={{
+    // extending the default link tags
+    link: [{ rel: "icon", href: "/favicon.png" }],
+    // extending the default meta tags
+    meta: [
+      {
+        name: "twitter:image",
+        content: `${pageImage ? pageImage : "/assets/img/logo.png"}`,
+      },
+      {
+        name: "twitter:title",
+        content: `${title}`,
+      },
+      {
+        name: "twitter:description",
+        content: `${description}`,
+      },
+      { name: "keywords", content: `${keywords}` },
+    ],
+  }}
+/>
 <Base >
   <!-- heading started  -->
   <section class="relative pt-32 lg:pt-36 pb-20">

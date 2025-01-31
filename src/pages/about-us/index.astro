@@ -1,7 +1,7 @@
 ---
 // import Cart from "@/components/DonationCart.jsx";
 import DonationCardSlider from "@/components/DonationCardSlider.astro";
-import DonationCart from "@/components/DonationCart.jsx";
+
 
 import Donationslider from "@/components/donationslider.astro";
 import Base from "@/layouts/Base.astro";
@@ -12,17 +12,51 @@ import Aboutedhi from "@/components/Aboutedhi.astro";
 import Donationcard from "@/components/donationcard.astro";
 
 
-const about = await getEntry("about", "-index");
-const { Content } = await about.render();
-const { title, description, meta_title, image } = about.data;
+import { SEO } from "astro-seo";
+const title = "About Us | Edhi Foundation UK";
+const description = "Learn about EDHI UK's mission, values, and commitment to serving communities. Discover how we strive to make a positive impact worldwide.";
+const pageImage = "";
+const keywords = "";
 ---
-
-<Base
+<SEO
   title={title}
-  meta_title={meta_title}
   description={description}
-  image={image}
->
+  canonical=""
+  openGraph={{
+    basic: {
+      title: `${title}`,
+      type: "website",
+      image: `${pageImage ? pageImage : "/assets/images/logo-short.jpg"}`,
+    },
+    optional: {
+      description: `${description}`,
+    },
+  }}
+  twitter={{
+    creator: "@jonasmerlins1",
+  }}
+  extend={{
+    // extending the default link tags
+    link: [{ rel: "icon", href: "/favicon.png" }],
+    // extending the default meta tags
+    meta: [
+      {
+        name: "twitter:image",
+        content: `${pageImage ? pageImage : "/assets/img/logo.png"}`,
+      },
+      {
+        name: "twitter:title",
+        content: `${title}`,
+      },
+      {
+        name: "twitter:description",
+        content: `${description}`,
+      },
+      { name: "keywords", content: `${keywords}` },
+    ],
+  }}
+/>
+<Base>
   <!-- heading started  -->
 
   <section
