@@ -1,13 +1,18 @@
-<div x-data="{
+---
+const {img1, img2, img3, img4, img5} = Astro.props;
+
+---
+
+<div x-data=`{
     activeSlide: 0,
     slides: [
-      { id: 1, src: '/images/orphan/orphan-1.jpg', alt: 'Gallery Image 1' },
-      { id: 2, src: '/images/orphan/orphan-1.jpg', alt: 'Gallery Image 2' },
-      { id: 3, src: '/images/orphan/orphan-1.jpg', alt: 'Gallery Image 3' },
-      { id: 4, src: '/images/orphan/orphan-1.jpg', alt: 'Gallery Image 4' },
-      { id: 5, src: '/images/orphan/orphan-1.jpg', alt: 'Gallery Image 5' }
+      { id: 1, src: '${img1}', alt: 'Gallery Image 1' },
+      { id: 2, src: '${img2}', alt: 'Gallery Image 2' },
+      { id: 3, src: '${img3}', alt: 'Gallery Image 3' },
+      { id: 4, src: '${img4}', alt: 'Gallery Image 4' },
+      { id: 5, src: '${img5}', alt: 'Gallery Image 5' }
     ]
-  }" class="max-w-6xl mx-auto px-4 py-12">
+  }` class="max-w-6xl mx-auto px-4 py-12">
     
     <!-- Main Carousel -->
     <div class="relative rounded-md overflow-hidden bg-green-600 shadow-xl">
