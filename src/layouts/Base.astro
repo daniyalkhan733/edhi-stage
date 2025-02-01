@@ -7,9 +7,8 @@ import theme from "@/config/theme.json";
 import Footer from "@/partials/Footer.astro";
 import Header from "@/partials/Header.astro";
 import "@/styles/main.scss";
-import { ViewTransitions } from 'astro:transitions';
+import { ViewTransitions } from "astro:transitions";
 
-const url = Astro.request.url;
 // font families
 const pf = theme.fonts.font_family.primary;
 const sf = theme.fonts.font_family.secondary;
@@ -27,9 +26,10 @@ export interface Props {
 // distructure frontmatters
 // const { title, meta_title, description, image, noindex, canonical } = Astro.props;
 const pageUrl = Astro.request.url;
+const { title, description, pageImage } = Astro.props;
 ---
 
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <!-- favicon -->
@@ -37,16 +37,15 @@ const pageUrl = Astro.request.url;
     <!-- theme meta -->
     <meta name="theme-name" content="Edhi Foundation UK" />
     <meta name="msapplication-TileColor" content="#000000" />
-    <meta name="msvalidate.01" content="28C733BAD633C660CF86041723770451"/>
-    <meta name="yandex-verification" content="d3cd6ad54e5c7ef1"/>
-
+    <meta name="msvalidate.01" content="28C733BAD633C660CF86041723770451" />
+    <meta name="yandex-verification" content="d3cd6ad54e5c7ef1" />
 
     <meta
       name="theme-color"
       media="(prefers-color-scheme: light)"
       content="#fff"
     />
-    
+
     <meta
       name="theme-color"
       media="(prefers-color-scheme: dark)"
@@ -54,36 +53,48 @@ const pageUrl = Astro.request.url;
     />
     <meta name="generator" content={Astro.generator} />
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-    
-<meta property="og:locale" content="en" />
-<meta property="og:url" content={pageUrl} />
-<meta property="og:type" content="A type." />
-<meta property="og:title" content="Support Edhi Foundation UK - Charity Working to End Poverty" />
-<meta property="og:description" content="Edhi Foundation is a global charity providing healthcare, education, and social welfare, inspired by Abdul Sattar Edhi's mission to help the needy" />
-<meta property="og:image" content="/images/logo.jpg" />
-        
-<meta property="og:logo" content="/images/logo-short.jpg" />
-        
+
+    <meta property="og:locale" content="en" />
+    <meta property="og:url" content={pageUrl} />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta
+      property="og:image"
+      content={pageImage ? pageImage : "/images/logo-short.jpg"}
+    />
+
+    <meta property="og:logo" content="/images/logo-short.jpg" />
 
     <!-- google font css -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <script defer src="https://unpkg.com/alpinejs@3.2.3/dist/cdn.min.js"></script>
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-8MNN1GBBJG"></script>
-<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-  })(window,document,'script','dataLayer','GTM-N39439CF');</script>
+    <script defer src="https://unpkg.com/alpinejs@3.2.3/dist/cdn.min.js"
+    ></script>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-8MNN1GBBJG"
+    ></script>
+    <script>
+      (function (w, d, s, l, i) {
+        w[l] = w[l] || [];
+        w[l].push({ "gtm.start": new Date().getTime(), event: "gtm.js" });
+        var f = d.getElementsByTagName(s)[0],
+          j = d.createElement(s),
+          dl = l != "dataLayer" ? "&l=" + l : "";
+        j.async = true;
+        j.src = "https://www.googletagmanager.com/gtm.js?id=" + i + dl;
+        f.parentNode.insertBefore(j, f);
+      })(window, document, "script", "dataLayer", "GTM-N39439CF");
+    </script>
 
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
 
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-8MNN1GBBJG');
-</script>
+      gtag("config", "G-8MNN1GBBJG");
+    </script>
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href={`https://fonts.googleapis.com/css2?family=${pf}${
@@ -92,69 +103,92 @@ const pageUrl = Astro.request.url;
       rel="stylesheet"
     />
     <script type="text/javascript">
-      (function(c,l,a,r,i,t,y){
-          c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
-          t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
-          y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+      (function (c, l, a, r, i, t, y) {
+        c[a] =
+          c[a] ||
+          function () {
+            (c[a].q = c[a].q || []).push(arguments);
+          };
+        t = l.createElement(r);
+        t.async = 1;
+        t.src = "https://www.clarity.ms/tag/" + i;
+        y = l.getElementsByTagName(r)[0];
+        y.parentNode.insertBefore(t, y);
       })(window, document, "clarity", "script", "nfewaa1aac");
-  </script>
+    </script>
     <!-- responsive meta -->
     <meta
       name="viewport"
       content="width=device-width, initial-scale=1, maximum-scale=5"
     />
-    <meta name="google-site-verification" content="l4nGMgeWN2t_0apj0SuDkpkJ5D3HKOR1RKhbrXN7xX4" />
+    <meta
+      name="google-site-verification"
+      content="l4nGMgeWN2t_0apj0SuDkpkJ5D3HKOR1RKhbrXN7xX4"
 
- <!-- Hotjar Tracking Code for https://edhiuk.org/ -->
-<script>
-  (function(h,o,t,j,a,r){
-      h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
-      h._hjSettings={hjid:5105203,hjsv:6};
-      a=o.getElementsByTagName('head')[0];
-      r=o.createElement('script');r.async=1;
-      r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
-      a.appendChild(r);
-  })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
-</script>
+    />
+
+    <!-- Hotjar Tracking Code for https://edhiuk.org/ -->
+    <script>
+      (function (h, o, t, j, a, r) {
+        h.hj =
+          h.hj ||
+          function () {
+            (h.hj.q = h.hj.q || []).push(arguments);
+          };
+        h._hjSettings = { hjid: 5105203, hjsv: 6 };
+        a = o.getElementsByTagName("head")[0];
+        r = o.createElement("script");
+        r.async = 1;
+        r.src = t + h._hjSettings.hjid + j + h._hjSettings.hjsv;
+        a.appendChild(r);
+      })(window, document, "https://static.hotjar.com/c/hotjar-", ".js?sv=");
+    </script>
 
     <ViewTransitions />
-
   </head>
   <body>
     <!-- Google Tag Manager (noscript) -->
-<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-N39439CF"
-  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-  <!-- End Google Tag Manager (noscript) -->
+    <noscript
+      ><iframe
+        src="https://www.googletagmanager.com/ns.html?id=GTM-N39439CF"
+        height="0"
+        width="0"
+        style="display:none;visibility:hidden"></iframe></noscript
+    >
+    <!-- End Google Tag Manager (noscript) -->
     <TwSizeIndicator />
     <!-- <ScamAlert/> -->
-     <ScamAlert />
+    <ScamAlert />
     <Header />
     <main id="main-content bg-white">
       <slot />
     </main>
     <Footer />
-    <script is:inline>  
-      document.addEventListener('alpine:init', () => {
-        Alpine.store('accordion', {
-          tab: 0
+    <script is:inline>
+      document.addEventListener("alpine:init", () => {
+        Alpine.store("accordion", {
+          tab: 0,
         });
-        
-        Alpine.data('accordion', (idx) => ({
+
+        Alpine.data("accordion", (idx) => ({
           init() {
             this.idx = idx;
           },
           idx: -1,
           handleClick() {
-            this.$store.accordion.tab = this.$store.accordion.tab === this.idx ? 0 : this.idx;
+            this.$store.accordion.tab =
+              this.$store.accordion.tab === this.idx ? 0 : this.idx;
           },
           handleRotate() {
-            return this.$store.accordion.tab === this.idx ? 'rotate-180' : '';
+            return this.$store.accordion.tab === this.idx ? "rotate-180" : "";
           },
           handleToggle() {
-            return this.$store.accordion.tab === this.idx ? `max-height: ${this.$refs.tab.scrollHeight}px` : '';
-          }
+            return this.$store.accordion.tab === this.idx
+              ? `max-height: ${this.$refs.tab.scrollHeight}px`
+              : "";
+          },
         }));
-      })
+      });
     </script>
   </body>
 </html>

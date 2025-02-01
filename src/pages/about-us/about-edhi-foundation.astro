@@ -2,13 +2,8 @@
 // import Cart from "@/components/DonationCart.jsx";
 
 import Base from "@/layouts/Base.astro";
-
-import { getEntry } from "astro:content";
 import Donationcard from "@/components/donationcard.astro";
 import { SEO } from "astro-seo";
-
-const about = await getEntry("about", "-index");
-const { Content } = await about.render();
 
 ---
 
@@ -177,9 +172,9 @@ const { Content } = await about.render();
 
   <!-- section 1 ended -->
   <section class="text-center px-6 pb-10 pt-10 max-w-6xl mx-auto">
-    <h1 class="text-green-500 text-[26px] font-bold">
+    <h3 class="text-green-500 text-[26px] font-bold">
       Edhi's Global Humanitarian Impact: From Disaster Relief and Beyond
-    </h1>
+    </h3>
     <br />
     <div class="sm:grid-cols-1">
       <div class="text-center mb-4">
@@ -274,11 +269,11 @@ const { Content } = await about.render();
   <!-- section 3 started -->
 
   <section class="mx-auto max-w-6xl px-6 sm:px-6 py-20 lg:px-8">
-    <h1 class="text-green-500 text-[28px] font-bold text-center">Our Vision</h1>
+    <h3 class="text-green-500 text-[28px] font-bold text-center">Our Vision</h3>
     <br />
     <div class="text-center mb-4">
       <p class="md:text-[36px] text-[16] font-bold">
-        Transforming Lives Through Compassionate Service and Support
+        Transforming Lives Through Compassionate Service and Support
       </p><br />
       <div class="text-left">
         <p class="text-[16px] font-roboto w-full">
