@@ -7,9 +7,40 @@ import Aboutedhi from "@/components/Aboutedhi.astro";
 const qurbani = await getEntry("qurbani", "-index");
 const { Content } = await qurbani.render();
 const { title, description, meta_title } = qurbani.data;
+import { SEO } from "astro-seo";
+
 
 
 ---
+<SEO
+  title="Online Qurbani Service | Edhi Foundation UK"
+  description="Charity is the act of extending love and kindness to others unconditionally, which is a conscious act but the decision is made by the heart, without expecting anything in return."
+  canonical={Astro.request.url}
+  openGraph={{
+    basic: {
+      title: "Tinker Tailor Soldier Spy",
+      type: "A type.",
+      image: "https://user-images.githubusercontent.com/5182256/131216951-8f74f425-f775-463d-a11b-0e01ad9fce8d.png",
+    }
+  }}
+  twitter={{
+    creator: "@jonasmerlins1"
+  }}
+  extend={{
+    // extending the default link tags
+    link: [{ rel: "icon", href: "/favicon.png" }],
+    // extending the default meta tags
+    meta: [
+      {
+        name: "twitter:image",
+        content: "https://user-images.githubusercontent.com/5182256/131216951-8f74f425-f775-463d-a11b-0e01ad9fce8d.png",
+      },
+      { name: "twitter:title", content: "Tinker Tailor Soldier Spy" },
+      { name: "twitter:description", content: "Agent" },
+      { name: "meta-description", content: "this is meta description" },
+    ],
+  }}
+/>
 
 <Base >
   <!-- heading started here -->

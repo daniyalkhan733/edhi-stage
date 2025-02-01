@@ -1,12 +1,51 @@
 ---
 import Base from "@/layouts/Base.astro";
-import { markdownify } from "@/lib/utils/textConverter";
-import { getEntry } from "astro:content"
 import ZakatCalculator from "@/components/ZakatCalculator.astro"
-const zakatcalculator = await getEntry("zakat-calculator", "-index");
-const { Content } = await zakatcalculator.render();
-const { title, description, meta_title } = zakatcalculator.data;
+import { SEO } from "astro-seo";
+const title = "Zakat - Calculate & Donate your zakat now | Edhi Foundation";
+const description = "Donate your Zakat online to Edhi Foundation to support orphans, low-income families, and those in need. Your contribution can help save lives.";
+const pageImage = "";
+const keywords = "";
 ---
+
+<SEO
+  title={title}
+  description={description}
+  canonical=""
+  openGraph={{
+    basic: {
+      title: `${title}`,
+      type: "website",
+      image: `${pageImage ? pageImage : "/assets/images/logo-short.jpg"}`,
+    },
+    optional: {
+      description: `${description}`,
+    },
+  }}
+  twitter={{
+    creator: "@jonasmerlins1",
+  }}
+  extend={{
+    // extending the default link tags
+    link: [{ rel: "icon", href: "/favicon.png" }],
+    // extending the default meta tags
+    meta: [
+      {
+        name: "twitter:image",
+        content: `${pageImage ? pageImage : "/assets/img/logo.png"}`,
+      },
+      {
+        name: "twitter:title",
+        content: `${title}`,
+      },
+      {
+        name: "twitter:description",
+        content: `${description}`,
+      },
+      { name: "keywords", content: `${keywords}` },
+    ],
+  }}
+/>
 <Base >
  <!-- heading started  -->
 
