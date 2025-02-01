@@ -26,6 +26,7 @@ export interface Props {
 
 // distructure frontmatters
 // const { title, meta_title, description, image, noindex, canonical } = Astro.props;
+const pageUrl = Astro.request.url;
 ---
 
 <!DOCTYPE html>
@@ -54,6 +55,13 @@ export interface Props {
     <meta name="generator" content={Astro.generator} />
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     
+<meta property="og:locale" content="en" />
+<meta property="og:url" content={pageUrl} />
+<meta property="og:type" content="A type." />
+<meta property="og:title" content="Support Edhi Foundation UK - Charity Working to End Poverty" />
+<meta property="og:description" content="Edhi Foundation is a global charity providing healthcare, education, and social welfare, inspired by Abdul Sattar Edhi's mission to help the needy" />
+<meta property="og:image" content="/images/logo.jpg" />
+        
 <meta property="og:logo" content="/images/logo-short.jpg" />
         
 
