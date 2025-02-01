@@ -61,7 +61,7 @@ const { title, description, pageImage } = Astro.props;
     <meta property="og:description" content={description} />
     <meta
       property="og:image"
-      content={pageImage ? pageImage : "/images/logo-short.jpg"}
+      content= `${pageImage ? pageImage : '/images/logo-short.jpg'}`
     />
 
     <meta property="og:logo" content="/images/logo-short.jpg" />
