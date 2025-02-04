@@ -1,142 +1,157 @@
 <style>
-  /* General styling reset */
   html, body {
     position: relative;
     height: 100%;
     margin: 0;
     overflow-x: hidden;
   }
-
-  /* Swiper container styling */
+  
   swiper-container {
     width: 100%;
-    height: 100%; /* Full viewport height */
+    height: 100%;
   }
-
-
-  /* Swiper slide styling */
+  
   swiper-slide {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #000; /* Optional background color in case of gaps */
-    
+    background-color: #000;
   }
-
-  /* Image styling for responsive behavior */
+  
   swiper-slide img {
     width: 100%;
     height: 100%;
-    object-fit: cover; /* Ensure image covers the entire slide area */
+    object-fit: cover;
   }
 
-  swiper-button-next svg{
-
-    display: none !important;
-
-  }
-
-    /* Hide navigation buttons on small screens */
-    @media only screen and (max-width: 480px) {
-    .swiper-button-next,
-    .swiper-button-prev {
-      display: none; /* Hide navigation buttons on mobile */
-    }
-  }
-
-  /* Ensure next/prev buttons are positioned on larger screens */
-  @media only screen and (min-width: 481px) {
-    .swiper-button-next {
-      right: 10px; /* Adjust the position for desktop and larger screens */
-    }
-    .swiper-button-prev {
-      left: 10px; /* Adjust the position for desktop and larger screens */
-    }
-  }
-  /* Button styling */
-  button {
+  .custom-nav-button {
     position: absolute;
-    bottom: 8px;
-    right: 110px;
-    background-color: #009241;
-    border: none;
-    color: white;
-    padding: 15px 32px;
-    font-size: 16px;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 10;
     cursor: pointer;
+    background: rgba(255, 255, 255, 0.5);
+    border: none;
+    border-radius: 50%;
+    width: 44px;
+    height: 44px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.3s;
   }
 
-  /* Hide button on small screens */
-  @media screen and (max-width: 500px) {
-    button {
+  .custom-nav-button:hover {
+    background: rgba(255, 255, 255, 0.8);
+  }
+
+  .nav-prev {
+    left: 20px;
+  }
+
+  .nav-next {
+    right: 20px;
+  }
+
+  @media only screen and (max-width: 480px) {
+    .custom-nav-button {
       display: none;
     }
   }
-  
 
   @media only screen and (max-height: 450px) {
-  /* CSS rules for devices with a max height of 400px */
-
-  /* Example: Adjust the Swiper container height */
-  swiper-container {
-    height: auto; /* Adjust height to fit within smaller screens */
+    swiper-container {
+      height: auto;
+    }
+    
+    swiper-slide img {
+      object-fit: fill;
+    }
   }
-
-  /* Example: Adjust image styling */
-  swiper-slide img {
-    object-fit: fill; /* Ensure the image fits well without cropping */
-  }
-
-  /* Adjust button size and placement if needed */
-  button {
-    padding: 10px 20px;
-    font-size: 6px;
-    bottom: 5px;
-  }
-
-}
-
 </style>
 
 <body>
-  <swiper-container class="mySwiper" navigation="true">
+  <swiper-container 
+    class="mySwiper"
+    pagination="true"
+    autoplay="true"
+    autoplay-delay="5000"
+    loop="true">
+    <button class="custom-nav-button nav-prev" aria-label="Previous slide">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M15 18L9 12L15 6" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+    </button>
+    <button class="custom-nav-button nav-next" aria-label="Next slide">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M9 18L15 12L9 6" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+    </button>
+    
     <swiper-slide>
-      <picture>
-        <source srcset="/images/main-slider-mobile.png" media="(max-width: 480px)">
-        <img src="/images/main-slider.jpg" alt="Slide 1">
-      </picture>
+      <a href="https://donate.edhiuk.org/">
+        <picture>
+          <source srcset="/images/ramadan-appeal-slider-mobile.png" media="(max-width: 480px)">
+          <img src="/images/ramadan-appeal-slider-desktop.png" alt="Slide 1">
+        </picture>
+      </a>
     </swiper-slide>
     <swiper-slide>
-      <picture>
-        <source srcset="/images/ambulance-slider-1-mobile.png" media="(max-width: 480px)">
-        <img src="/images/ambulance-slider-1.png" alt="Slide 1">
-      </picture>
+      <a href="https://donate.edhiuk.org/">
+        <picture>
+          <source srcset="/images/give-fidya-slider-desktop.png" media="(max-width: 480px)">
+          <img src="/images/give-fidya-slider-desktop.png" alt="Slide 1">
+        </picture>
+      </a>
     </swiper-slide>
-   
-
     <swiper-slide>
-      <picture>
-        <source srcset="/images/orphan-slider-2-mobile.png" media="(max-width: 480px)">
-        <img src="/images/orphan-slider-2.png" alt="Slide 2">
-      </picture>
+      <a href="https://donate.edhiuk.org/">
+        <picture>
+          <source srcset="/images/orphan-slider-2-mobile.png" media="(max-width: 480px)">
+          <img src="/images/orphan-slider-2.png" alt="Slide 2">
+        </picture>
+      </a>
     </swiper-slide>
-
     <swiper-slide>
-      <picture>
-        <source srcset="/images/sadqa-slider-3-mobile.png" media="(max-width: 480px)">
-        <img src="/images/sadqa-slider-3.png" alt="Slide 3">
-      </picture>
+      <a href="https://donate.edhiuk.org/">
+        <picture>
+          <source srcset="/images/main-slider.jpg" media="(max-width: 480px)">
+          <img src="/images/main-slider.jpg" alt="Slide 3">
+        </picture>
+      </a>
     </swiper-slide>
   </swiper-container>
 
   <script is:inline src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-element-bundle.min.js"></script>
   <script is:inline>
-    var swiper = new Swiper('.swiper-container', {
-      autoHeight: true, // Adjust height based on image content
-      allowSlideNext: false,
-      allowSlidePrev: false,
+    const swiperEl = document.querySelector('swiper-container');
+    const prevButton = document.querySelector('.nav-prev');
+    const nextButton = document.querySelector('.nav-next');
 
-     
+    const params = {
+      autoplay: {
+        delay: 2000,
+        disableOnInteraction: false,
+      },
+      loop: true,
+      on: {
+        init() {
+          this.allowSlideNext = true;
+          this.allowSlidePrev = true;
+        },
+      },
+    };
+
+    Object.assign(swiperEl, params);
+    swiperEl.initialize();
+
+    // Custom navigation handlers
+    prevButton.addEventListener('click', () => {
+      swiperEl.swiper.slidePrev();
+    });
+
+    nextButton.addEventListener('click', () => {
+      swiperEl.swiper.slideNext();
     });
   </script>
 </body>
