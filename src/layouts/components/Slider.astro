@@ -16,6 +16,7 @@
     justify-content: center;
     align-items: center;
     background-color: #000;
+    position: relative;
   }
   
   swiper-slide img {
@@ -24,39 +25,69 @@
     object-fit: cover;
   }
 
+  .slide-wrapper {
+    position: relative;
+    width: 100%;
+    height: 100%;
+  }
+
   .custom-nav-button {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
     z-index: 10;
     cursor: pointer;
-    background: rgba(255, 255, 255, 0.5);
+    background: green;
     border: none;
     border-radius: 50%;
-    width: 44px;
-    height: 44px;
+    width: 50px;
+    height: 50px;
     display: flex;
     align-items: center;
     justify-content: center;
     transition: background-color 0.3s;
+    padding: 6px;
+  }
+
+  .custom-nav-button svg {
+    width: 30px;
+    height: 30px;
   }
 
   .custom-nav-button:hover {
-    background: rgba(255, 255, 255, 0.8);
+    background: rgb(56, 177, 56);
   }
 
   .nav-prev {
-    left: 20px;
+    left: 10px;
   }
 
   .nav-next {
-    right: 20px;
+    right: 10px;
   }
 
   @media only screen and (max-width: 480px) {
     .custom-nav-button {
-      display: none;
+      width: 28px; /* Slightly smaller on mobile */
+      height: 28px;
+      padding: 4px;
     }
+    
+    .custom-nav-button svg {
+      width: 14px; /* Slightly smaller SVG on mobile */
+      height: 14px;
+    }
+    
+    .nav-prev {
+      left: 5px; /* Closer to edge on mobile */
+    }
+    
+    .nav-next {
+      right: 5px; /* Closer to edge on mobile */
+    }
+    .custom-nav-button:hover {
+    background: rgb(56, 177, 56);
+  }
   }
 
   @media only screen and (max-height: 450px) {
@@ -70,6 +101,7 @@
   }
 </style>
 
+<!-- Rest of the HTML remains the same -->
 <body>
   <swiper-container 
     class="mySwiper"
@@ -77,81 +109,124 @@
     autoplay="true"
     autoplay-delay="5000"
     loop="true">
-    <button class="custom-nav-button nav-prev" aria-label="Previous slide">
-      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <path d="M15 18L9 12L15 6" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-      </svg>
-    </button>
-    <button class="custom-nav-button nav-next" aria-label="Next slide">
-      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <path d="M9 18L15 12L9 6" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-      </svg>
-    </button>
-    
     <swiper-slide>
-      <a href="https://donate.edhiuk.org/">
-        <picture>
-          <source srcset="/images/ramadan-appeal-slider-mobile.png" media="(max-width: 480px)">
-          <img src="/images/ramadan-appeal-slider-desktop.png" alt="Slide 1">
-        </picture>
-      </a>
+      <div class="slide-wrapper">
+        <a href="https://donate.edhiuk.org/">
+          <picture>
+            <source srcset="/images/ramadan-appeal-slider-mobile.png" media="(max-width: 480px)">
+            <img src="/images/ramadan-appeal-slider-desktop.png" alt="Slide 1">
+          </picture>
+        </a>
+        <button class="custom-nav-button nav-prev" aria-label="Previous slide">
+          <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M15 18L9 12L15 6" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </button>
+        <button class="custom-nav-button nav-next" aria-label="Next slide">
+          <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M9 18L15 12L9 6" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </button>
+      </div>
     </swiper-slide>
     <swiper-slide>
-      <a href="https://donate.edhiuk.org/">
-        <picture>
-          <source srcset="/images/give-fidya-slider-desktop.png" media="(max-width: 480px)">
-          <img src="/images/give-fidya-slider-desktop.png" alt="Slide 1">
-        </picture>
-      </a>
+      <div class="slide-wrapper">
+        <a href="https://donate.edhiuk.org/">
+          <picture>
+            <source srcset="/images/give-fidya-slider-desktop.png" media="(max-width: 480px)">
+            <img src="/images/give-fidya-slider-desktop.png" alt="Slide 2">
+          </picture>
+        </a>
+        <button class="custom-nav-button nav-prev" aria-label="Previous slide">
+          <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M15 18L9 12L15 6" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </button>
+        <button class="custom-nav-button nav-next" aria-label="Next slide">
+          <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M9 18L15 12L9 6" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </button>
+      </div>
     </swiper-slide>
     <swiper-slide>
-      <a href="https://donate.edhiuk.org/">
-        <picture>
-          <source srcset="/images/orphan-slider-2-mobile.png" media="(max-width: 480px)">
-          <img src="/images/orphan-slider-2.png" alt="Slide 2">
-        </picture>
-      </a>
+      <div class="slide-wrapper">
+        <a href="https://donate.edhiuk.org/">
+          <picture>
+            <source srcset="/images/orphan-slider-2-mobile.png" media="(max-width: 480px)">
+            <img src="/images/orphan-slider-2.png" alt="Slide 3">
+          </picture>
+        </a>
+        <button class="custom-nav-button nav-prev" aria-label="Previous slide">
+          <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M15 18L9 12L15 6" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </button>
+        <button class="custom-nav-button nav-next" aria-label="Next slide">
+          <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M9 18L15 12L9 6" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </button>
+      </div>
     </swiper-slide>
     <swiper-slide>
-      <a href="https://donate.edhiuk.org/">
-        <picture>
-          <source srcset="/images/main-slider.jpg" media="(max-width: 480px)">
-          <img src="/images/main-slider.jpg" alt="Slide 3">
-        </picture>
-      </a>
+      <div class="slide-wrapper">
+        <a href="https://donate.edhiuk.org/">
+          <picture>
+            <source srcset="/images/main-slider.jpg" media="(max-width: 480px)">
+            <img src="/images/main-slider.jpg" alt="Slide 4">
+          </picture>
+        </a>
+        <button class="custom-nav-button nav-prev" aria-label="Previous slide">
+          <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M15 18L9 12L15 6" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </button>
+        <button class="custom-nav-button nav-next" aria-label="Next slide">
+          <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M9 18L15 12L9 6" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </button>
+      </div>
     </swiper-slide>
   </swiper-container>
 
   <script is:inline src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-element-bundle.min.js"></script>
   <script is:inline>
-    const swiperEl = document.querySelector('swiper-container');
-    const prevButton = document.querySelector('.nav-prev');
-    const nextButton = document.querySelector('.nav-next');
+    document.addEventListener('DOMContentLoaded', function() {
+      const swiperEl = document.querySelector('swiper-container');
+      const prevButtons = document.querySelectorAll('.nav-prev');
+      const nextButtons = document.querySelectorAll('.nav-next');
 
-    const params = {
-      autoplay: {
-        delay: 2000,
-        disableOnInteraction: false,
-      },
-      loop: true,
-      on: {
-        init() {
-          this.allowSlideNext = true;
-          this.allowSlidePrev = true;
+      const params = {
+        autoplay: {
+          delay: 2000,
+          disableOnInteraction: false,
         },
-      },
-    };
+        loop: true,
+        on: {
+          init() {
+            this.allowSlideNext = true;
+            this.allowSlidePrev = true;
+          },
+        },
+      };
 
-    Object.assign(swiperEl, params);
-    swiperEl.initialize();
+      Object.assign(swiperEl, params);
+      swiperEl.initialize();
 
-    // Custom navigation handlers
-    prevButton.addEventListener('click', () => {
-      swiperEl.swiper.slidePrev();
-    });
+      // Add click handlers to all navigation buttons
+      prevButtons.forEach(button => {
+        button.addEventListener('click', () => {
+          swiperEl.swiper.slidePrev();
+        });
+      });
 
-    nextButton.addEventListener('click', () => {
-      swiperEl.swiper.slideNext();
+      nextButtons.forEach(button => {
+        button.addEventListener('click', () => {
+          swiperEl.swiper.slideNext();
+        });
+      });
     });
   </script>
 </body>
