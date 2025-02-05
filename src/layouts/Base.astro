@@ -65,6 +65,8 @@ const { title, description, pageImage } = Astro.props;
     />
 
     <meta property="og:logo" content="/images/logo-short.jpg" />
+    <link rel="stylesheet" href="/index.css">
+
 
     <!-- google font css -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -190,5 +192,24 @@ const { title, description, pageImage } = Astro.props;
         }));
       });
     </script>
+    <!-- Faq script -->
+    <script is:inline>
+      document.querySelectorAll('.faq-item button').forEach(button => {
+          button.addEventListener('click', () => {
+              const faqItem = button.parentElement;
+              const isActive = faqItem.classList.contains('active');
+              
+              // Close all FAQ items
+              document.querySelectorAll('.faq-item').forEach(item => {
+                  item.classList.remove('active');
+              });
+              
+              // If the clicked item wasn't active, open it
+              if (!isActive) {
+                  faqItem.classList.add('active');
+              }
+          });
+      });
+  </script>
   </body>
 </html>
