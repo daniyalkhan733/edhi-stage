@@ -112,7 +112,10 @@ const keywords =
     <p class="text-center text-white">[Tirmidhi]</p>
   </div>
 
-  <Donationcard programId={[15, 16, 64, 65, 34, 48, 47, 2, 3]} />
+  <Donationcard programId={[16,
+    47,
+    48
+    ]} />
 
   <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 space-y-12">
     {/* Header */}
@@ -287,41 +290,74 @@ Edhi Foundation UK is dedicated to supporting the most vulnerable members of soc
       positive impact <br /> your contribution can make in transforming lives.
     </h6>
   </section>
-  <section class="section-sm container max-w-2xl">
-    <Accordion class="text-justify" client:load title="What is Zakat al-Fitr (Fitrana)?">
-      <p>
-        Zakat al-Fitr, or Fitrana, is a charitable donation that Muslims are required to give before Eid al-Fitr. 
-        It ensures that those in need can also partake in the joy of Eid by providing food, clothing, and other necessities.
-      </p>
-    </Accordion>
+  <section class="px-6 md:py-20 py-10 mx-auto max-w-6xl">
+    <div class="space-y-4">
+      <!-- FAQ Item 1 -->
+      <div class="active faq-item border border-green-400 rounded-lg bg-white overflow-hidden hover:border-green-300 transition-colors">
+        <button class="faq-button w-full px-6 py-4 text-left hover:bg-gray-50 flex items-center justify-between text-gray-900">
+          <span class="text-lg font-medium">What is Zakat al-Fitr (Fitrana)?</span>
+          <span class="icon-plus text-gray-400 text-2xl font-thin">+</span>
+        </button>
+        <div class="faq-answer border-t border-gray-100">
+          <p class="text-gray-600">
+            Zakat al-Fitr, or Fitrana, is a charitable donation that Muslims are required to give before Eid al-Fitr. It ensures that those in need can also partake in the joy of Eid by providing food, clothing, and other necessities.
+          </p>
+        </div>
+      </div>
   
-    <Accordion class="text-justify" client:load title="When should I donate my Fitrana for Eid 2025?">
-      <p>
-        It is recommended to donate your Fitrana before Eid, ideally before the Eid prayer, as Prophet Muhammad (PBUH) instructed. 
-        This ensures those in need can benefit from it in time to celebrate Eid.
-      </p>
-    </Accordion>
+      <!-- FAQ Item 2 -->
+      <div class="faq-item border border-green-400 rounded-lg bg-white overflow-hidden hover:border-green-300 transition-colors">
+        <button class="faq-button w-full px-6 py-4 text-left hover:bg-gray-50 flex items-center justify-between text-gray-900">
+          <span class="text-lg font-medium">When should I donate my Fitrana for Eid 2025?</span>
+          <span class="icon-plus text-gray-400 text-2xl font-thin">+</span>
+        </button>
+        <div class="faq-answer border-t border-gray-100">
+          <p class="text-gray-600">
+            It is recommended to donate your Fitrana before Eid, ideally before the Eid prayer, as Prophet Muhammad (PBUH) instructed. This ensures those in need can benefit from it in time to celebrate Eid.
+          </p>
+        </div>
+      </div>
   
-    <Accordion class="text-justify" client:load title="Why is it important to donate Fitrana before Eid?">
-      <p>
-        Donating Fitrana before Eid allows the less fortunate to prepare for the celebrations with dignity. 
-        It enables them to purchase food and essentials, ensuring they can enjoy the blessings of Eid.
-      </p>
-    </Accordion>
+      <!-- FAQ Item 3 -->
+      <div class="faq-item border border-green-400 rounded-lg bg-white overflow-hidden hover:border-green-300 transition-colors">
+        <button class="faq-button w-full px-6 py-4 text-left hover:bg-gray-50 flex items-center justify-between text-gray-900">
+          <span class="text-lg font-medium">Why is it important to donate Fitrana before Eid?</span>
+          <span class="icon-plus text-gray-400 text-2xl font-thin">+</span>
+        </button>
+        <div class="faq-answer border-t border-gray-100">
+          <p class="text-gray-600">
+            Donating Fitrana before Eid allows the less fortunate to prepare for the celebrations with dignity. It enables them to purchase food and essentials, ensuring they can enjoy the blessings of Eid.
+          </p>
+        </div>
+      </div>
   
-    <Accordion class="text-justify" client:load title="How can I donate my Fitrana to Edhi Foundation UK?">
-      <p>
-        You can donate your Fitrana to Edhi Foundation UK online through their website or by contacting them directly. 
-        Your donation will be used to support vulnerable families in need.
-      </p>
-    </Accordion>
+      <!-- FAQ Item 4 -->
+      <div class="faq-item border border-green-400 rounded-lg bg-white overflow-hidden hover:border-green-300 transition-colors">
+        <button class="faq-button w-full px-6 py-4 text-left hover:bg-gray-50 flex items-center justify-between text-gray-900">
+          <span class="text-lg font-medium">How can I donate my Fitrana to Edhi Foundation UK?</span>
+          <span class="icon-plus text-gray-400 text-2xl font-thin">+</span>
+        </button>
+        <div class="faq-answer border-t border-gray-100">
+          <p class="text-gray-600">
+            You can donate your Fitrana to Edhi Foundation UK online through their website or by contacting them directly. Your donation will be used to support vulnerable families in need.
+          </p>
+        </div>
+      </div>
   
-    <Accordion class="text-justify" client:load title="How does my Fitrana donation help those in need?">
-      <p>
-        Fitrana donations offer critical relief, helping vulnerable families afford basic necessities. 
-        Your contribution provides an opportunity for them to celebrate Eid in a meaningful way.
-      </p>
-    </Accordion>
+      <!-- FAQ Item 5 -->
+      <div class="faq-item border border-green-400 rounded-lg bg-white overflow-hidden hover:border-green-300 transition-colors">
+        <button class="faq-button w-full px-6 py-4 text-left hover:bg-gray-50 flex items-center justify-between text-gray-900">
+          <span class="text-lg font-medium">How does my Fitrana donation help those in need?</span>
+          <span class="icon-plus text-gray-400 text-2xl font-thin">+</span>
+        </button>
+        <div class="faq-answer border-t border-gray-100">
+          <p class="text-gray-600">
+            Fitrana donations offer critical relief, helping vulnerable families afford basic necessities. Your contribution provides an opportunity for them to celebrate Eid in a meaningful way.
+          </p>
+        </div>
+      </div>
+    </div>
   </section>
+  
   
 </Base>

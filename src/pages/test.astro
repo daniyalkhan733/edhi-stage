@@ -1,12 +1,111 @@
+---
+
+---
 <script is:inline src="https://cdn.tailwindcss.com"></script>
- <style>
-     
-    </style>
-<div class="max-w-3xl mx-auto">
-    <h1 class="text-4xl font-bold text-center mb-12 text-gray-900">
-        Frequently Asked Questions
+
+
+
+<div class="container mx-auto py-12 px-4">
+    <h1 class="text-4xl font-extrabold text-center text-green-500 mb-8">
+      The Journey of Hope and Relief
     </h1>
+    <div class="flex flex-col lg:flex-row bg-gray-800 rounded-2xl shadow-2xl overflow-hidden">
+      <!-- Tabs Section -->
+      <div class="w-full lg:w-1/4 bg-white p-6">
+        <div class="flex lg:flex-col space-y-4">
+          <button
+            class="active tab-btn flex items-center space-x-4 w-full py-4 px-6 rounded-lg border-2 border-green-600 bg-white hover:bg-green-600 focus:outline-none focus:bg-green-600 transition-all"
+            data-tab="abdul-sattar-edhi"
+          >
+            <img src="/images/abdul-sattar-hd.jpg" alt="Abdul Sattar Edhi" class="w-12 h-12 rounded-md">
+            <span class="font-semibold text-lg">Abdul Sattar Edhi</span>
+          </button>
+          <button
+          class="tab-btn flex items-center space-x-4 w-full py-4 px-6 rounded-lg border-2 border-green-600 bg-white hover:bg-green-600 focus:outline-none focus:bg-green-600 transition-all"
+          data-tab="abdul-sattar-edhi"
+        >
+          <img src="/images/abdul-sattar-hd.jpg" alt="Abdul Sattar Edhi" class="w-12 h-12 rounded-md">
+          <span class="font-semibold text-lg">Bilques Bano</span>
+        </button>
+        <button
+        class="tab-btn flex items-center space-x-4 w-full py-4 px-6 rounded-lg border-2 border-green-600 bg-white hover:bg-green-600 focus:outline-none focus:bg-green-600 transition-all"
+        data-tab="abdul-sattar-edhi"
+      >
+        <img src="/images/abdul-sattar-hd.jpg" alt="Abdul Sattar Edhi" class="w-12 h-12 rounded-md">
+        <span class="font-semibold text-lg">Abdul Sattar Edhi</span>
+      </button>
+        </div>
+      </div>
 
-    
-</div>
+      <!-- Content Section -->
+      <div class="w-full lg:w-3/4 p-8">
+        <!-- Abdul Sattar Edhi Content -->
+        <div id="abdul-sattar-edhi" class="tab-content">
+          <img
+            src="/images/abdul-sattar-hd.jpg"
+            alt="Abdul Sattar Edhi"
+            class="rounded-xl mb-6 shadow-lg"
+          >
+          <h2 class="text-3xl font-bold mb-4">Abdul Sattar Edhi</h2>
+          <p class="text-lg leading-relaxed">
+            Born in 1928 in the small village of Bantva near Junagadh, Gujarat, Abdul Sattar Edhi’s journey of compassion
+            began with caring for his ailing mother. Over time, his vision grew into a humanitarian empire, helping the
+            poor, sick, and abandoned. His selflessness and dedication have inspired millions worldwide.
+          </p>
+        </div>
 
+        <!-- Bilquis Bano Edhi Content -->
+        <div id="bilquis-bano-edhi" class="tab-content hidden">
+          <img
+            src="https://via.placeholder.com/600x300"
+            alt="Bilquis Bano Edhi"
+            class="rounded-xl mb-6 shadow-lg"
+          >
+          <h2 class="text-3xl font-bold mb-4">Bilquis Bano Edhi</h2>
+          <p class="text-lg leading-relaxed">
+            Known as the “Mother of the Nation,” Bilquis Bano Edhi dedicated her life to uplifting women and children in
+            need. As a nurse, she established the Edhi Nursing Training Program and played a crucial role in women’s
+            empowerment through healthcare and education.
+          </p>
+        </div>
+
+        <!-- Faisal Edhi Content -->
+        <div id="faisal-edhi" class="tab-content hidden">
+          <img
+            src="https://via.placeholder.com/600x300"
+            alt="Faisal Edhi"
+            class="rounded-xl mb-6 shadow-lg"
+          >
+          <h2 class="text-3xl font-bold mb-4">Faisal Edhi</h2>
+          <p class="text-lg leading-relaxed">
+            Continuing his father’s legacy, Faisal Edhi leads the Edhi Foundation with the same passion and dedication.
+            Under his guidance, the organization has expanded its services, providing emergency relief, medical care, and
+            community support to millions in Pakistan and beyond.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script is:inline>
+    const tabs = document.querySelectorAll('.tab-btn');
+    const contents = document.querySelectorAll('.tab-content');
+
+    tabs.forEach((tab) => {
+      tab.addEventListener('click', () => {
+        const target = tab.getAttribute('data-tab');
+
+        // Hide all content
+        contents.forEach((content) => content.classList.add('hidden'));
+
+        // Show target content
+        document.getElementById(target).classList.remove('hidden');
+
+        // Remove active state from all tabs
+        tabs.forEach((btn) => btn.classList.remove('bg-green-600'));
+
+        // Add active state to clicked tab
+        tab.classList.add('bg-green-600');
+      });
+    });
+  </script>

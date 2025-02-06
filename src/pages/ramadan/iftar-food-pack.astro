@@ -8,7 +8,7 @@ import SliderNew from "@/components/SliderNew.astro";
 const title = "Donate Iftar Packs In Ramadan 2025 | Edhi UK";
 const description =
   "Donate to the Edhi Foundation's iftar Food Pack Appeal to provide essential meals in iftar to low income, poor families & make a positive impact on someone's life.";
-const pageImage = "/images/iftar-banner.png";
+const pageImage = "/images/international-2.jpeg";
 const keywords =
   "iftar packs, iftar packages, iftar donation appeal, iftar donation, feed the fasting";
 ---
@@ -65,7 +65,7 @@ const keywords =
     </div>
 
     <div
-      class="absolute inset-0 bg-[url(/images/iftar-banner.png)] bg-cover bg-center scale-105 group-hover:scale-100 transition-transform duration-700"
+      class="absolute inset-0 bg-[url(/images/ramadan/eid-gifts-1.jpeg)] bg-cover bg-center scale-105 group-hover:scale-100 transition-transform duration-700"
     >
     </div>
 
@@ -112,7 +112,10 @@ const keywords =
     <p class="text-center text-white">[Tirmidhi]</p>
   </div>
 
-  <Donationcard programId={[15, 16, 64, 65, 34, 48, 47, 2, 3]} />
+  <Donationcard programId={[34,
+    64,
+    41
+    ]} />
 
   <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 space-y-12">
     {/* Header */}
@@ -320,60 +323,73 @@ const keywords =
       positive impact <br /> your contribution can make in transforming lives.
     </h6>
   </section>
-  <section class="section-sm container max-w-2xl">
-    <Accordion
-      class="text-justify"
-      client:load
-      title="Who receives the Iftar Food Packs?"
-    >
-      <p>
-        Our Iftar Food Packs are distributed to families facing food insecurity,
-        including orphans, widows, and low-income households in the UK and
-        across the globe.
-      </p>
-    </Accordion>
-    <Accordion
-      class="text-justify"
-      client:load
-      title="What is included in an Iftar Food Pack?"
-    >
-      <p>
-        Each pack contains essential food items such as rice, lentils, flour,
-        dates, and other nutritious staples to ensure families can break their
-        fast with a healthy meal.
-      </p>
-    </Accordion>
-    <Accordion
-      class="text-justify"
-      client:load
-      title="How does my donation help?"
-    >
-      <p>
-        Your donation provides direct food support to those struggling during
-        Ramadan. It ensures they have access to proper nutrition, reducing
-        hunger and promoting well-being.
-      </p>
-    </Accordion>
-    <Accordion
-      class="text-justify"
-      client:load
-      title="Can I donate on behalf of someone else?"
-    >
-      <p>
-        Yes! You can donate in honor of a loved one, and your contribution will
-        help provide meals to those in need, making a meaningful impact this
-        Ramadan.
-      </p>
-    </Accordion>
-    <Accordion
-      class="text-justify"
-      client:load
-      title="How can I contribute to the Iftar Food Pack Appeal?"
-    >
-      <p>
-        You can donate online through our website, choose a specific amount to sponsor food packs, or support the campaign by spreading awareness within your community.
-
-      </p>
-    </Accordion>
+  <section class="px-6 md:py-20 py-10 mx-auto max-w-6xl">
+    <div class="space-y-4">
+      <!-- FAQ Item 1 -->
+      <div class="faq-item border border-green-400 rounded-lg bg-white overflow-hidden hover:border-green-300 transition-colors">
+        <button class="faq-button w-full px-6 py-4 text-left hover:bg-gray-50 flex items-center justify-between text-gray-900">
+          <span class="text-lg font-medium">Who receives the Iftar Food Packs?</span>
+          <span class="icon-plus text-gray-400 text-2xl font-thin">+</span>
+        </button>
+        <div class="faq-answer border-t border-gray-100">
+          <p class="text-gray-600">
+            Our Iftar Food Packs are distributed to families facing food insecurity, including orphans, widows, and low-income households in the UK and across the globe.
+          </p>
+        </div>
+      </div>
+  
+      <!-- FAQ Item 2 -->
+      <div class="faq-item border border-green-400 rounded-lg bg-white overflow-hidden hover:border-green-300 transition-colors">
+        <button class="faq-button w-full px-6 py-4 text-left hover:bg-gray-50 flex items-center justify-between text-gray-900">
+          <span class="text-lg font-medium">What is included in an Iftar Food Pack?</span>
+          <span class="icon-plus text-gray-400 text-2xl font-thin">+</span>
+        </button>
+        <div class="faq-answer border-t border-gray-100">
+          <p class="text-gray-600">
+            Each pack contains essential food items such as rice, lentils, flour, dates, and other nutritious staples to ensure families can break their fast with a healthy meal.
+          </p>
+        </div>
+      </div>
+  
+      <!-- FAQ Item 3 -->
+      <div class="faq-item border border-green-400 rounded-lg bg-white overflow-hidden hover:border-green-300 transition-colors">
+        <button class="faq-button w-full px-6 py-4 text-left hover:bg-gray-50 flex items-center justify-between text-gray-900">
+          <span class="text-lg font-medium">How does my donation help?</span>
+          <span class="icon-plus text-gray-400 text-2xl font-thin">+</span>
+        </button>
+        <div class="faq-answer border-t border-gray-100">
+          <p class="text-gray-600">
+            Your donation provides direct food support to those struggling during Ramadan. It ensures they have access to proper nutrition, reducing hunger and promoting well-being.
+          </p>
+        </div>
+      </div>
+  
+      <!-- FAQ Item 4 -->
+      <div class="faq-item border border-green-400 rounded-lg bg-white overflow-hidden hover:border-green-300 transition-colors">
+        <button class="faq-button w-full px-6 py-4 text-left hover:bg-gray-50 flex items-center justify-between text-gray-900">
+          <span class="text-lg font-medium">Can I donate on behalf of someone else?</span>
+          <span class="icon-plus text-gray-400 text-2xl font-thin">+</span>
+        </button>
+        <div class="faq-answer border-t border-gray-100">
+          <p class="text-gray-600">
+            Yes! You can donate in honor of a loved one, and your contribution will help provide meals to those in need, making a meaningful impact this Ramadan.
+          </p>
+        </div>
+      </div>
+  
+      <!-- FAQ Item 5 -->
+      <div class="faq-item border border-green-400 rounded-lg bg-white overflow-hidden hover:border-green-300 transition-colors">
+        <button class="faq-button w-full px-6 py-4 text-left hover:bg-gray-50 flex items-center justify-between text-gray-900">
+          <span class="text-lg font-medium">How can I contribute to the Iftar Food Pack Appeal?</span>
+          <span class="icon-plus text-gray-400 text-2xl font-thin">+</span>
+        </button>
+        <div class="faq-answer border-t border-gray-100">
+          <p class="text-gray-600">
+            You can donate online through our website, choose a specific amount to sponsor food packs, or support the campaign by spreading awareness within your community.
+          </p>
+        </div>
+      </div>
+    </div>
   </section>
+  
 </Base>
