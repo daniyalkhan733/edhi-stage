@@ -10,6 +10,7 @@ import Donationcard from "@/components/donationcard.astro";
 import VideoSection from "@/components/VideoSection.astro";
 import Introduction from "@/components/Introduction.astro";
 import CardsServices from "@/components/CardsServices.astro";
+import ZakatCalculatorHome from "@/components/ZakatCalculatorHome.astro";
 interface Homepage {
   banner: {
     title: string;
@@ -62,6 +63,7 @@ const { banner, features }: Homepage = homepage.data;
 <VideoSection />
   
 <HeroServices />
+<ZakatCalculatorHome/>
 <CardsServices />
 <Introduction/>
 <!-- <Aboutedhi /> -->
