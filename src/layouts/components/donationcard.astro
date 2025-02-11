@@ -1,8 +1,5 @@
 ---
-// Import the fetchPrograms function
 import { fetchPrograms } from "./api.js";
-
-
 
 type Program = {
   program_id: number;
@@ -23,59 +20,49 @@ type Program = {
   programId: number;
 };
 
-
-
-// Use fetchPrograms to get data
 const data = await fetchPrograms();
-const responseData: Program[] = data; // Assuming the response is an array of programs
-// var programId: any = [];
-var { programId } = Astro.props
+const responseData: Program[] = data;
+var { programId ,programLimit }: { programId: number[] } = Astro.props;
 
+const programMap = new Map(responseData.map(program => [program.program_id, program]));
+
+const orderedPrograms = programId
+  .map((id: number) => programMap.get(id))
+  .filter((program: Program | undefined): program is Program => program !== undefined)
+  .slice(0, programLimit? programLimit : 8);
 ---
 
-<!-- <Debug {data} /> -->
-<div class="container flex justify-center max-w-screen-2xl  mx-auto">
-  <div
-    class="flex flex-row flex-wrap justify-center gap-4 my-8 mx-auto"
-  >
-    {
-      responseData
-        .filter(
-          (program) =>
-            programId.length === 0 || programId.includes(program.program_id),
-        )
-        .slice(0, 8)
-        .map((program) => (
-          <div
-            key={program.program_id}
-            class="max-w-xs bg-gray-50 text-gray-800 shadow-lg border-2"
-                   >
-            <img
-              src={program.image}
-              alt=""
-              class="object-cover object-center w-full bg-gray-500"
-            />
-            <div class="flex flex-col justify-between p-4 sm:p-6 space-y-4">
-              <div class="space-y-2">
-                <p class="font-semibold tracking-tight text-lg">
-                  {program.program_name}
-                </p>
-                <p class="text-gray-800 text-2xl font-semibold">
-                  {" "}
-                  {program.program_rate
-                    ? "£" + program.program_rate
-                    : "Any amount"}
-                </p>
-              </div>
-              <a
-                href={program.donation_url}
-                class="flex items-center justify-center w-full p-2 sm:p-3 font-semibold tracking-tight bg-green-600 text-gray-50"
-              >
-                Donate Now
-              </a>
-            </div>
+<div class="container flex justify-center max-w-screen-2xl mx-auto">
+  <div class="flex flex-row flex-wrap justify-center gap-4 my-8 mx-auto">
+    {orderedPrograms.map((program) => (
+      <div
+        key={program.program_id}
+        class="max-w-xs bg-gray-50 text-gray-800 shadow-lg border-2"
+      >
+        <img
+          src={program.image}
+          alt=""
+          class="object-cover object-center w-full bg-gray-500"
+        />
+        <div class="flex flex-col justify-between p-4 sm:p-6 space-y-4">
+          <div class="space-y-2">
+            <p class="font-semibold tracking-tight text-lg">
+              {program.program_name}
+            </p>
+            <p class="text-gray-800 text-2xl font-semibold">
+              {program.program_rate
+                ? "£" + program.program_rate
+                : "Any amount"}
+            </p>
           </div>
-        ))
-    }
+          <a
+            href={program.donation_url}
+            class="flex items-center justify-center w-full p-2 sm:p-3 font-semibold tracking-tight bg-green-600 text-gray-50"
+          >
+            Donate Now
+          </a>
+        </div>
+      </div>
+    ))}
   </div>
-</div>;
+</div>

@@ -1,0 +1,348 @@
+<div class="container md:py-8 md:px-4 px-0 pt-8">
+  <div
+    class="flex flex-col bg-gray-800 md:rounded-md shadow-2xl overflow-hidden"
+  >
+    <!-- Tabs Section - Mobile First -->
+    <div
+      class="lg:hidden w-full bg-[#009241] p-4 overflow-x-auto flex flex-wrap"
+    >
+      <div class="flex space-x-4 min-w-max">
+        <button
+          class="tab-btn flex flex-col items-center py-2 px-2 rounded-lg border-2 border-green-600 bg-white hover:bg-green-600 hover:border-white hover:text-white transition-all"
+          data-tab="abdul-sattar-edhi"
+        >
+          <img
+            src="/images/abdul-sattar-hd.jpg"
+            alt="Abdul Sattar Edhi"
+            class="w-16 h-16 rounded-full border-2 object-cover"
+          />
+          <span class="font-semibold text-sm">Abdul Sattar</span>
+        </button>
+        <button
+          class="tab-btn flex flex-col items-center space-y-2 py-2 px-4 rounded-lg border-2 border-green-600 bg-white hover:bg-green-600 hover:border-white hover:text-white transition-all"
+          data-tab="bilquis-bano-edhi"
+        >
+          <img
+            src="/images/Bilquis_bano-hd2.jpg"
+            alt="Bilquis Bano Edhi"
+            class="w-16 h-16 rounded-full border-2 object-cover"
+          />
+          <span class="font-semibold text-sm">Bilquis Bano</span>
+        </button>
+        <button
+          class="tab-btn flex flex-col items-center space-y-2 py-2 px-4 rounded-lg border-2 border-green-600 bg-white hover:bg-green-600 hover:border-white hover:text-white transition-all"
+          data-tab="faisal-edhi"
+        >
+          <img
+            src="/images/faisal-edhi.png"
+            alt="Faisal Edhi"
+            class="w-16 h-16 rounded-full border-2 object-cover"
+          />
+          <span class="font-semibold text-sm">Faisal Edhi</span>
+        </button>
+      </div>
+    </div>
+
+    <!-- Combined Content Section -->
+    <div class="content-wrapper">
+      <!-- Desktop Tabs - Hidden on Mobile -->
+      <div class="hidden lg:flex flex-row">
+        <div class="w-1/4 bg-green-600 border-r-2 border-green-700 p-6">
+          <div class="flex flex-col space-y-4">
+            <button
+              class="tab-btn flex items-center space-x-2 w-full py-3 px-3 rounded-lg border-2 border-green-600 bg-white hover:bg-green-600 hover:border-white focus:outline-none focus:bg-green-600 focus:border-white transition-all hover:text-white"
+              data-tab="abdul-sattar-edhi"
+            >
+              <img
+                src="/images/abdul-sattar-hd.jpg"
+                alt="Abdul Sattar Edhi"
+                class="w-16 h-16 rounded-md border-2 object-cover"
+              />
+              <span class="font-semibold text-lg">Abdul Sattar Edhi</span>
+            </button>
+            <button
+              class="tab-btn flex items-center space-x-2 w-full py-3 px-3 rounded-lg border-2 border-green-600 bg-white hover:bg-green-600 hover:border-white focus:outline-none focus:bg-green-600 focus:border-white transition-all hover:text-white"
+              data-tab="bilquis-bano-edhi"
+            >
+              <img
+                src="/images/Bilquis_bano-hd2.jpg"
+                alt="Bilquis Bano Edhi"
+                class="w-16 h-16 rounded-md border-2 object-cover"
+              />
+              <span class="font-semibold text-lg">Bilquis Bano Edhi</span>
+            </button>
+            <button
+              class="tab-btn flex items-center space-x-2 w-full py-3 px-3 rounded-lg border-2 border-green-600 bg-white hover:bg-green-600 hover:border-white focus:outline-none focus:bg-green-600 focus:border-white transition-all hover:text-white"
+              data-tab="faisal-edhi"
+            >
+              <img
+                src="/images/faisal-edhi.png"
+                alt="Faisal Edhi"
+                class="w-16 h-16 rounded-md border-2 object-cover"
+              />
+              <span class="font-semibold text-lg">Faisal Edhi</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- Desktop Content Area -->
+        <div class="w-3/4 p-8 bg-[#009241]">
+          <div
+            data-content="abdul-sattar-edhi"
+            class="tab-content text-white flex flex-col lg:flex-row gap-4"
+          >
+            <div class="w-full lg:w-1/3 rounded-md">
+              <img
+                src="/images/abdul-sattar-hd.jpg"
+                alt="Abdul Sattar Edhi"
+                class="rounded-md shadow-lg object-cover w-full h-auto lg:h-full"
+              />
+            </div>
+            <div class="w-full lg:w-2/3 rounded-md p-4 bg-green-600">
+              <h3
+                class="text-2xl lg:text-3xl font-bold text-white text-center mb-4 pb-2 border-b-2 border-red"
+              >
+                Abdul Sattar Edhi
+                <span
+                  class="block text-base lg:text-xl text-white mt-2 opacity-75"
+                  >Humanitarian Legend</span
+                >
+              </h3>
+              <p class="text-base lg:text-lg leading-relaxed pt-2">
+                Abdul Sattar Edhi was a renowned Pakistani philanthropist and
+                humanitarian who dedicated his entire life to serving humanity.
+                Founder of the Edhi Foundation, the world's largest volunteer
+                ambulance network, he became a symbol of compassion and selfless
+                service.
+                <br /><br />
+                Born in 1928 in Gujarat, India, Edhi migrated to Pakistan after partition.
+                His early experiences of witnessing human suffering drove him to
+                establish a foundation that would provide free emergency services,
+                orphanage care, and support to the most vulnerable populations across
+                Pakistan and beyond.
+              </p>
+            </div>
+          </div>
+
+          <div
+            data-content="bilquis-bano-edhi"
+            class="tab-content hidden text-white flex flex-col lg:flex-row gap-4"
+          >
+            <div class="w-full lg:w-1/3 rounded-md">
+              <img
+                src="/images/Bilquis_bano-hd2.jpg"
+                alt="Bilquis Bano Edhi"
+                class="rounded-md shadow-lg object-cover w-full h-auto lg:h-full"
+              />
+            </div>
+            <div class="w-full lg:w-2/3 rounded-md p-4 bg-green-600">
+              <h3
+                class="text-2xl lg:text-3xl font-bold text-white text-center mb-4 pb-2 border-b-2 border-red"
+              >
+                Bilquis Bano Edhi
+                <span
+                  class="block text-base lg:text-xl text-white mt-2 opacity-75"
+                  >Mother of Compassion</span
+                >
+              </h3>
+              <p class="text-base lg:text-lg leading-relaxed pt-2">
+                Bilquis Bano Edhi was a remarkable woman who played a pivotal
+                role in the Edhi Foundation alongside her husband, Abdul Sattar
+                Edhi. Known as the "Mother of the Nation," she was instrumental
+                in establishing and managing critical humanitarian services.
+                <br /><br />
+                A trained nurse, Bilquis dedicated her life to protecting and nurturing
+                abandoned children, managing orphanages, and providing healthcare
+                services. Her unwavering commitment to social welfare made her a
+                beacon of hope for thousands of marginalized individuals.
+              </p>
+            </div>
+          </div>
+
+          <div
+            data-content="faisal-edhi"
+            class="tab-content hidden text-white flex flex-col lg:flex-row gap-4"
+          >
+            <div class="w-full lg:w-1/3 rounded-md">
+              <img
+                src="/images/faisal-edhi.png"
+                alt="Faisal Edhi"
+                class="rounded-md shadow-lg object-cover w-full h-auto lg:h-full"
+              />
+            </div>
+            <div class="w-full lg:w-2/3 rounded-md p-4 bg-green-600">
+              <h3
+                class="text-2xl lg:text-3xl font-bold text-white text-center mb-4 pb-2 border-b-2 border-red"
+              >
+                Faisal Edhi
+                <span
+                  class="block text-base lg:text-xl text-white mt-2 opacity-75"
+                  >Continuing the Legacy</span
+                >
+              </h3>
+              <p class="text-base lg:text-lg leading-relaxed pt-2">
+                Faisal Edhi, son of Abdul Sattar and Bilquis Bano Edhi, is the
+                current chairman of the Edhi Foundation. Following in his
+                parents' footsteps, he has become a prominent humanitarian
+                leader, ensuring the continuation of his family's extraordinary
+                mission of service.
+                <br /><br />
+                Under his leadership, the Edhi Foundation has expanded its reach,
+                providing critical services including emergency medical response,
+                ambulance services, orphanage care, and disaster relief across Pakistan
+                and internationally. Faisal remains committed to the core principles
+                of compassion, humanity, and selfless service.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Mobile Content Area -->
+      <div class="lg:hidden w-full p-4 bg-[#009241]">
+        <div
+          data-content="abdul-sattar-edhi"
+          class="tab-content text-white flex flex-col gap-4"
+        >
+          <div class="w-full rounded-md">
+            <img
+              src="/images/abdul-sattar-hd.jpg"
+              alt="Abdul Sattar Edhi"
+              class="rounded-md shadow-lg object-cover w-full h-auto"
+            />
+          </div>
+          <div class="w-full rounded-md p-4 bg-green-600">
+            <h3
+              class="text-2xl font-bold text-white text-center mb-4 pb-2 border-b-2 border-red"
+            >
+              Abdul Sattar Edhi
+              <span class="block text-base text-white mt-2 opacity-75"
+                >Humanitarian Legend</span
+              >
+            </h3>
+            <p class="text-base leading-relaxed pt-2">
+              Abdul Sattar Edhi was a renowned Pakistani philanthropist and
+              humanitarian who dedicated his entire life to serving humanity.
+              Founder of the Edhi Foundation, the world's largest volunteer
+              ambulance network, he became a symbol of compassion and selfless
+              service.
+              <br /><br />
+              Born in 1928 in Gujarat, India, Edhi migrated to Pakistan after partition.
+              His early experiences of witnessing human suffering drove him to establish
+              a foundation that would provide free emergency services, orphanage
+              care, and support to the most vulnerable populations across Pakistan
+              and beyond.
+            </p>
+          </div>
+        </div>
+
+        <div
+          data-content="bilquis-bano-edhi"
+          class="tab-content hidden text-white flex flex-col gap-4"
+        >
+          <div class="w-full rounded-md">
+            <img
+              src="/images/Bilquis_bano-hd2.jpg"
+              alt="Bilquis Bano Edhi"
+              class="rounded-md shadow-lg object-cover w-full h-auto"
+            />
+          </div>
+          <div class="w-full rounded-md p-4 bg-green-600">
+            <h3
+              class="text-2xl font-bold text-white text-center mb-4 pb-2 border-b-2 border-red"
+            >
+              Bilquis Bano Edhi
+              <span class="block text-base text-white mt-2 opacity-75"
+                >Mother of Compassion</span
+              >
+            </h3>
+            <p class="text-base leading-relaxed pt-2">
+              Bilquis Bano Edhi was a remarkable woman who played a pivotal role
+              in the Edhi Foundation alongside her husband, Abdul Sattar Edhi.
+              Known as the "Mother of the Nation," she was instrumental in
+              establishing and managing critical humanitarian services.
+              <br /><br />
+              A trained nurse, Bilquis dedicated her life to protecting and nurturing
+              abandoned children, managing orphanages, and providing healthcare services.
+              Her unwavering commitment to social welfare made her a beacon of hope
+              for thousands of marginalized individuals.
+            </p>
+          </div>
+        </div>
+
+        <div
+          data-content="faisal-edhi"
+          class="tab-content hidden text-white flex flex-col gap-4"
+        >
+          <div class="w-full rounded-md">
+            <img
+              src="/images/faisal-edhi.png"
+              alt="Faisal Edhi"
+              class="rounded-md shadow-lg object-cover w-full h-auto"
+            />
+          </div>
+          <div class="w-full rounded-md p-4 bg-green-600">
+            <h3
+              class="text-2xl font-bold text-white text-center mb-4 pb-2 border-b-2 border-red"
+            >
+              Faisal Edhi
+              <span class="block text-base text-white mt-2 opacity-75"
+                >Continuing the Legacy</span
+              >
+            </h3>
+            <p class="text-base leading-relaxed pt-2">
+              Faisal Edhi, son of Abdul Sattar and Bilquis Bano Edhi, is the
+              current chairman of the Edhi Foundation. Following in his parents'
+              footsteps, he has become a prominent humanitarian leader, ensuring
+              the continuation of his family's extraordinary mission of service.
+              <br /><br />
+              Under his leadership, the Edhi Foundation has expanded its reach, providing
+              critical services including emergency medical response, ambulance services,
+              orphanage care, and disaster relief across Pakistan and internationally.
+              Faisal remains committed to the core principles of compassion, humanity,
+              and selfless service.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<script is:inline>
+  const tabs = document.querySelectorAll(".tab-btn");
+  const contents = document.querySelectorAll("[data-content]");
+
+  // Initialize first tab as active
+  window.onload = () => {
+    tabs.forEach((tab) => {
+      if (tab.getAttribute("data-tab") === "abdul-sattar-edhi") {
+        tab.classList.add("bg-green-600", "border-white", "text-black");
+      }
+    });
+  };
+
+  tabs.forEach((tab) => {
+    tab.addEventListener("click", () => {
+      const target = tab.getAttribute("data-tab");
+
+      // Hide all content
+      contents.forEach((content) => {
+        if (content.getAttribute("data-content") === target) {
+          content.classList.remove("hidden");
+        } else {
+          content.classList.add("hidden");
+        }
+      });
+
+      // Remove active state from all tabs
+      tabs.forEach((btn) => {
+        btn.classList.remove("bg-green-600", "border-white", "text-white");
+        btn.classList.add("bg-white");
+      });
+
+      // Add active state to clicked tab
+      tab.classList.remove("bg-white");
+      tab.classList.add("bg-green-600", "border-white", "text-white");
+    });
+  });
+</script>

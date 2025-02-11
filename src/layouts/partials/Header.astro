@@ -81,11 +81,57 @@ id="navbar"
   </div>
 </div>
 
-<nav class="navbar z-[999] pl-2 justify-center mx-auto border-solid border-y ">
+<nav class="navbar z-[999] justify-evenly mx-auto border-solid border-y ">
  
   <Navbar />
+ 
+
   <!-- logo -->
 </nav>
+<div class="flex flex-col items-center space-y-2 py-2 px-5 md:hidden">
+  <!-- Ramadan 2025 Button with Dropdown Toggle -->
+  <div class="relative w-full">
+    <button
+      onclick="toggleDropdown()"
+      class="w-full bg-[#16A34A] text-white px-4 py-2 rounded-md text-sm flex justify-center items-center">
+      Ramadan 2025
+      <svg id="toggle-icon" class="w-4 h-4 transition-transform duration-300" xmlns="http://www.w3.org/2000/svg" fill="none"
+        viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+      </svg>
+    </button>
+    <!-- Dropdown Menu -->
+    <div id="dropdown-menu"
+    class="absolute left-0 top-full mt-2 w-full hidden bg-white rounded-md shadow-lg border border-gray-200 transition-opacity duration-300 z-[999]">
+    <a href="/ramadan" class="block px-4 py-2 text-sm text-gray-800 hover:bg-green-200">Ramadan Appeal 2025</a>
+    <a href="/ramadan/iftar-food-pack" class="block px-4 py-2 text-sm text-gray-800 hover:bg-green-200">Sehr-o-Iftar & Food Pack</a>
+    <a href="/ramadan/fidya-and-kaffara" class="block px-4 py-2 text-sm text-gray-800 hover:bg-green-200">Fidya And Kaffara</a>
+    <a href="/ramadan/fitrana-and-eid-gifts" class="block px-4 py-2 text-sm text-gray-800 hover:bg-green-200">Fitrana And Eid Gifts</a>
+    <a href="/appeals/zakat" class="block px-4 py-2 text-sm text-gray-800 hover:bg-green-200">Zakat Appeal</a>
+    <a href="/appeals/zakat-calculator" class="block px-4 py-2 text-sm text-gray-800 hover:bg-green-200">Zakat Calculator</a>
+  </div>
+  </div> 
+</div>
+
+<script is:inline>
+  const toggleDropdown = () => {
+    const dropdown = document.getElementById('dropdown-menu');
+    const icon = document.getElementById('toggle-icon');
+
+    // Toggle dropdown visibility
+    if (dropdown.classList.contains('hidden')) {
+      dropdown.classList.remove('hidden', 'opacity-0');
+      dropdown.classList.add('block', 'opacity-100');
+      icon.classList.add('rotate-180'); // Rotate arrow icon
+    } else {
+      dropdown.classList.remove('block', 'opacity-100');
+      dropdown.classList.add('hidden', 'opacity-0');
+      icon.classList.remove('rotate-180'); // Reset arrow icon rotation
+    }
+  };
+</script>
+
+
 
 <style>
   .header-text {

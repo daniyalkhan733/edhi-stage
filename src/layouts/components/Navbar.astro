@@ -23,7 +23,7 @@ const { pathname } = Astro.url;
 <input id="nav-toggle" type="checkbox" class="hidden" />
 <label
   for="nav-toggle"
-  class="order-3 cursor-pointer flex items-center lg:hidden text-dark dark:text-white lg:order-1"
+  class="order-3 cursor-pointer flex items-center lg:hidden text-dark lg:order-1"
 >
   <svg id="show-button" class="h-6 fill-current block" viewBox="0 0 20 20">
     <title>Menu Open</title>
@@ -40,19 +40,18 @@ const { pathname } = Astro.url;
 <!-- /navbar toggler -->
 <ul
   id="nav-menu"
-  class="navbar-nav order-3 hidden w-full pb-6 lg:order-1 lg:flex lg:w-auto lg:space-x-2 lg:pb-0 xl:space-x-8 "
+  class="navbar-nav order-3 hidden w-full pb-6 lg:order-1 lg:flex lg:w-auto lg:space-x-2 lg:pb-0 xl:space-x-8"
 >
   {
     main.map((menu) => (
       <>
-        {menu.hasChildren ? (
+        {menu.hasChildren && menu.name === "RAMADAN 2025" ? (
           <li class="nav-item nav-dropdown group relative">
-            <a href={menu.urlnew}              
-            class={`nav-link inline-flex items-center ${
+            <a
+              href={menu.urlnew}
+              class={`nav-link inline-flex items-center text-red-600 ${
                 menu.children?.map(({ url }) => url).includes(pathname) ||
-                menu.children
-                  ?.map(({ url }) => `${url}/`)
-                  .includes(pathname)
+                menu.children?.map(({ url }) => `${url}/`).includes(pathname)
                   ? "active"
                   : ""
               }`}
@@ -66,7 +65,7 @@ const { pathname } = Astro.url;
               {menu.children?.map((child) => (
                 <li class="nav-dropdown-item">
                   <a
-                  href={ menu.url + child.url}
+                    href={menu.url + child.url}
                     class={`nav-dropdown-link block ${
                       (pathname === `${child.url}/` ||
                         pathname === child.url) &&
@@ -98,18 +97,25 @@ const { pathname } = Astro.url;
   {
     navigation_button.enable && (
       <li class="mt-4 inline-block lg:hidden">
-        <a
-          class="btn btn-outline-primary btn-sm"
-          href={navigation_button.link}
-        >
+        <a class="btn btn-outline-primary btn-sm" href={navigation_button.link}>
           {navigation_button.label}
         </a>
       </li>
     )
   }
 </ul>
-<div class="flex justify-end items-center py-2 pr-44 md:hidden">
+<div class="flex justify-between items-center gap-x-4 py-2 md:hidden">
   <a href="https://donate.edhiuk.org/">
-  <button class="bg-[#DC2626] text-white px-4 py-2 rounded-md">Donate Now</button></a>
+    <button class="bg-[#DC2626] text-white px-4 py-2 rounded-md text-sm"
+      >Donate Now</button
+    ></a
+  >
+  <a
+    href="/appeals/zakat-calculator"
+    class=" hover:scale-110 hover:bg-green-500 transition"
+  >
+    <button class=" bg-[#16A34A] text-white px-2 justify-center py-2 rounded-md text-sm">
+      Zakat Calculator
+    </button>
+  </a>
 </div>
-</nav>
