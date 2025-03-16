@@ -82,10 +82,6 @@
           "url": "/sadqa"
         },
         {
-          "name": "Zakat",
-          "url": "/zakat"
-        },
-        {
           "name": "Aqeeqa",
           "url": "/aqeeqa"
         },
@@ -129,7 +125,7 @@
           "url": "/children-services"
         },
         {
-          "name": "Edhi Homes orphanage",
+          "name": "Edhi Homes Orphanage",
           "url": "/homes-orphanage"
         },
         {
@@ -157,7 +153,7 @@
           "url": "/marriage-bureau-service"
         },
         {
-          "name": "Covid 19 Assistance",
+          "name": "COVID 19 Assistance",
           "url": "/covid-19-assistance"
         }
       ]
@@ -175,7 +171,7 @@
           "url": "/destitute-homes"
         },
         {
-          "name": "High Ways Project",
+          "name": "Highways Project",
           "url": "/highways-project"
         },
         {
@@ -183,7 +179,7 @@
           "url": "/international-community-centers"
         },
         {
-          "name": "Collaboration with other Organizations",
+          "name": "Collaboration with Other Organizations",
           "url": "/collaboration-with-other-organizations"
         },
         {
@@ -225,7 +221,7 @@
           "url": "/united-kingdom"
         },
         {
-          "name": "Networks",
+          "name": "Partner Networks",
           "url": "/networks"
         },
         {
