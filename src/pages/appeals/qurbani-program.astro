@@ -3,7 +3,7 @@ import Base from "@/layouts/Base.astro";
 import { getEntry } from "astro:content"
 import Accordion from "@/shortcodes/Accordion";
 import Donationcard from "../../layouts/components/donationcard.astro";
-import Aboutedhi from "@/components/Aboutedhi.astro";
+import Introduction from "@/components/Introduction.astro";
 const qurbani = await getEntry("qurbani", "-index");
 const { Content } = await qurbani.render();
 const { title, description, meta_title } = qurbani.data;
@@ -219,7 +219,7 @@ import { SEO } from "astro-seo";
             <h6>Details About Your 
 
                 <span class="text-green-600">&nbsp;Donation</span></h6><br />
-            <p class="font-roboto">When you donate your Qurbani through the Edhi Foundation, we make sure your contribution helps those most in need. Your donation also covers all the costs of the Qurbani process.
+            <p class="font-roboto">When you donate your Qurbani through Edhi Foundation, we make sure your contribution helps those most in need. Your donation also covers all the costs of the Qurbani process.
 
 
             </p>
@@ -429,7 +429,7 @@ Explore More                           <span class="duration-300 ease-linear gro
   </style>
 </div>
  
-<Aboutedhi/>
+<Introduction/>
 
   <!-- section-3 area ended -->
   <!-- faq section started -->
@@ -453,7 +453,7 @@ Explore More                           <span class="duration-300 ease-linear gro
                 @click="handleClick()"
                 class="flex flex-row justify-between items-center font-semibold p-3 cursor-pointer text-[16px] md:text-[20px]"
               >
-                <span>Does the Edhi Foundation charge any fees for facilitating Qurbani services?</span>
+                <span>Does Edhi Foundation charge any fees for facilitating Qurbani services?</span>
                 <svg
                   :class="handleRotate()"
                   class="fill-current text-green-700 md:h-6 md:w-6 h-6 w-6 transform transition-transform duration-500"
@@ -468,7 +468,7 @@ Explore More                           <span class="duration-300 ease-linear gro
                 class="border-l-4 border-green-700 overflow-hidden max-h-0 duration-500 transition-all"
               >
                 <p class="p-3 text-gray-900  md:text-[17px] text-[14px] ">
-The Edhi Foundation may have administrative or operational costs associated with facilitating Qurbani services, but they typically ensure that the majority of the donation goes towards the intended purpose of providing meat to those in need. However, it's advisable to inquire about any applicable fees or charges before participating.
+Edhi Foundation may have administrative or operational costs associated with facilitating Qurbani services, but they typically ensure that the majority of the donation goes towards the intended purpose of providing meat to those in need. However, it's advisable to inquire about any applicable fees or charges before participating.
 
 
 
@@ -495,7 +495,7 @@ The Edhi Foundation may have administrative or operational costs associated with
                 class="border-l-4 border-green-700 overflow-hidden max-h-0 duration-500 transition-all"
               >
                 <p class="p-3 text-gray-900  md:text-[17px] text-[14px] ">
-They can contact the Edhi Foundation directly through their official channels, such as their website or local branches, to inquire about participating in the Qurbani service. They can either donate money or purchase animals for sacrifice through the foundation.
+They can contact Edhi Foundation directly through their official channels, such as their website or local branches, to inquire about participating in the Qurbani service. They can either donate money or purchase animals for sacrifice through the foundation.
 
 
 
@@ -530,7 +530,7 @@ They can contact the Edhi Foundation directly through their official channels, s
                 class="border-l-4 border-green-700 overflow-hidden max-h-0 duration-500 transition-all"
               >
                 <p class="p-3 text-gray-900  md:text-[17px] text-[14px] ">
-The Edhi Foundation has a well-established network of volunteers and distribution centers across the country. They carefully vet and identify needy families and communities to ensure that the meat from Qurbani is distributed to those who are most deserving and in need.
+Edhi Foundation has a well-established network of volunteers and distribution centers across the country. They carefully vet and identify needy families and communities to ensure that the meat from Qurbani is distributed to those who are most deserving and in need.
 
 
 
@@ -542,7 +542,7 @@ The Edhi Foundation has a well-established network of volunteers and distributio
                 @click="handleClick()"
                 class="flex flex-row justify-between items-center font-semibold p-3 cursor-pointer text-[16px] md:text-[20px]"
               >
-                <span>What are the benefits of participating in the Edhi Foundation's Qurbani service?</span>
+                <span>What are the benefits of participating in Edhi Foundation's Qurbani service?</span>
                 <svg
                   :class="handleRotate()"
                   class="fill-current text-green-700  md:h-6 md:w-6 h-6 w-6  transform transition-transform duration-500"

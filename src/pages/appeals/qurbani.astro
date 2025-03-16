@@ -3,7 +3,7 @@ import Base from "@/layouts/Base.astro";
 import { getEntry } from "astro:content"
 import Accordion from "@/shortcodes/Accordion";
 import Donationcard from "../../layouts/components/donationcard.astro";
-import Aboutedhi from "@/components/Aboutedhi.astro";
+import Introduction from "@/components/Introduction.astro";
 const qurbani = await getEntry("qurbani", "-index");
 const { Content } = await qurbani.render();
 const { title, description, meta_title } = qurbani.data;
@@ -219,7 +219,7 @@ import { SEO } from "astro-seo";
             <h6>Details About Your 
 
                 <span class="text-green-600">&nbsp;Donation</span></h6><br />
-            <p class="font-roboto">When you donate your Qurbani through the Edhi Foundation, we make sure your contribution helps those most in need. Your donation also covers all the costs of the Qurbani process.
+            <p class="font-roboto">When you donate your Qurbani through Edhi Foundation, we make sure your contribution helps those most in need. Your donation also covers all the costs of the Qurbani process.
 
 
             </p>
@@ -429,7 +429,7 @@ Explore More                           <span class="duration-300 ease-linear gro
   </style>
 </div>
  
-<Aboutedhi/>
+<Introduction/>
 
   <!-- section-3 area ended -->
 <!-- faq started -->
@@ -448,16 +448,16 @@ Explore More                           <span class="duration-300 ease-linear gro
     <Accordion
       className="text-justify"
       client:load
-      title="How does the Edhi Foundation ensure the proper execution of Qurbani?"
+      title="How does Edhi Foundation ensure the proper execution of Qurbani?"
     >
       <p class="font-roboto">
-        The Edhi Foundation adheres to Islamic guidelines and principles for Qurbani, ensuring that animals are sacrificed humanely and in accordance with religious requirements.  
+        Edhi Foundation adheres to Islamic guidelines and principles for Qurbani, ensuring that animals are sacrificed humanely and in accordance with religious requirements.  
       </p>
     </Accordion>
     <Accordion
       className="text-justify"
       client:load
-      title="Who benefits from the Qurbani program of the Edhi Foundation?"
+      title="Who benefits from the Qurbani program of Edhi Foundation?"
     >
       <p class="font-roboto">
         The Qurbani program benefits disadvantaged individuals and families, including those living in poverty, refugees, and other vulnerable populations who may not have access to meat during Eid al-Adha.
@@ -466,10 +466,10 @@ Explore More                           <span class="duration-300 ease-linear gro
     <Accordion
       className="text-justify"
       client:load
-      title="How can I participate in the Qurbani program of the Edhi Foundation?"
+      title="How can I participate in the Qurbani program of Edhi Foundation?"
     >
       <p class="font-roboto">
-        You can participate in the Edhi Foundation's Qurbani program by donating funds to sponsor the sacrifice of an animal or by directly contributing towards the purchase of animals for distribution.
+        You can participate in Edhi Foundation's Qurbani program by donating funds to sponsor the sacrifice of an animal or by directly contributing towards the purchase of animals for distribution.
       </p>
     </Accordion>
     <Accordion
@@ -478,7 +478,7 @@ Explore More                           <span class="duration-300 ease-linear gro
       title="Can I specify where I want my Qurbani donation to be distributed?"
     >
       <p class="font-roboto">
-        Yes, donors can often specify their preferences regarding the distribution of Qurbani meat, such as selecting a particular region or community served by the Edhi Foundation.
+        Yes, donors can often specify their preferences regarding the distribution of Qurbani meat, such as selecting a particular region or community served by Edhi Foundation.
       </p>
     </Accordion>
   </section>

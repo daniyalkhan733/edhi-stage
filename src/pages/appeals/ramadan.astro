@@ -4,7 +4,7 @@ import { markdownify } from "@/lib/utils/textConverter";
 import { getEntry } from "astro:content"
 import Accordion from "@/shortcodes/Accordion";
 import Donationcard from "../../layouts/components/donationcard.astro";
-import Aboutedhi from "@/components/Aboutedhi.astro";
+import Introduction from "@/components/Introduction.astro";
 const ramadan = await getEntry("ramadan", "-index");
 const { Content } = await ramadan.render();
 const { title, description, meta_title } = ramadan.data;
@@ -341,7 +341,7 @@ Explore More                           <span class="duration-300 ease-linear gro
         </div>
     </div>
 </section>
-  <Aboutedhi/>
+  <Introduction/>
 
   <!-- section-3 area ended -->
   <!-- faq started -->

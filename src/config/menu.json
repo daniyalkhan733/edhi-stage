@@ -34,6 +34,10 @@
       ]
     },
     {
+      "name": "ZAKAT CALCULATOR",
+      "url": "/appeals/zakat-calculator"
+    },
+    {
       "name": "RAMADAN 2025",
       "url": "",
 
@@ -80,10 +84,6 @@
         {
           "name": "Zakat",
           "url": "/zakat"
-        },
-        {
-          "name": "Fidya",
-          "url": "/fidya-and-fitrana"
         },
         {
           "name": "Aqeeqa",
@@ -149,8 +149,8 @@
           "url": "/refugees-assistance"
         },
         {
-          "name": "Honorary & Voulantry",
-          "url": "/honorary-volantry-service"
+          "name": "Honorary & Voluntary",
+          "url": "/honorary-voluntary-service"
         },
         {
           "name": "Marriage Bureau",
@@ -171,15 +171,15 @@
       "hasChildren": true,
       "children": [
         {
-          "name": "Destitue Homes",
-          "url": "/destitue-homes"
+          "name": "Destitute Homes",
+          "url": "/destitute-homes"
         },
         {
           "name": "High Ways Project",
-          "url": "/high-ways-project"
+          "url": "/highways-project"
         },
         {
-          "name": "International Communtiy Centers",
+          "name": "International Community Centers",
           "url": "/international-community-centers"
         },
         {

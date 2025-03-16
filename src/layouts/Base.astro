@@ -1,6 +1,6 @@
 ---
 import TwSizeIndicator from "@/components/TwSizeIndicator.astro";
-import ScamAlert from "@/components/ScamAlert.astro";
+// import ScamAlert from "@/components/ScamAlert.astro";
 import config from "@/config/config.json";
 import theme from "@/config/theme.json";
 // import { plainify } from "@/lib/utils/textConverter";
@@ -145,7 +145,23 @@ const { title, description, pageImage } = Astro.props;
         a.appendChild(r);
       })(window, document, "https://static.hotjar.com/c/hotjar-", ".js?sv=");
     </script>
-
+<!-- Meta Pixel Code -->
+<script>
+  !function(f,b,e,v,n,t,s)
+  {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+  n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+  if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+  n.queue=[];t=b.createElement(e);t.async=!0;
+  t.src=v;s=b.getElementsByTagName(e)[0];
+  s.parentNode.insertBefore(t,s)}(window, document,'script',
+  'https://connect.facebook.net/en_US/fbevents.js');
+  fbq('init', '977470124320887');
+  fbq('track', 'PageView');
+  </script>
+  <noscript><img height="1" width="1" style="display:none"
+  src="https://www.facebook.com/tr?id=977470124320887&ev=PageView&noscript=1"
+  /></noscript>
+  <!-- End Meta Pixel Code -->
     <ViewTransitions />
   </head>
   <body>
@@ -160,12 +176,18 @@ const { title, description, pageImage } = Astro.props;
     <!-- End Google Tag Manager (noscript) -->
     <TwSizeIndicator />
     <!-- <ScamAlert/> -->
-    <ScamAlert />
+    <!-- <ScamAlert /> -->
     <Header />
     <main id="main-content bg-white">
       <slot />
     </main>
     <Footer />
+    <script is:inline>
+      // console.log = () => {}; // Disable console.log
+      console.warn = () => {}; // Optionally disable console.warn
+      console.error = () => {}; // Optionally disable console.error
+    </script>
+    
     <script is:inline>
       document.addEventListener("alpine:init", () => {
         Alpine.store("accordion", {

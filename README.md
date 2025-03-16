@@ -1,1 +1,1 @@
-# edhi-stage
+# Edhi-Astro

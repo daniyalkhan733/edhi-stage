@@ -1,16 +1,16 @@
----
+--- 
 import config from "@/config/config.json";
-import menu from "@/config/menu.json";
+import menu from "@/config/menu.json"; 
 
-export interface ChildNavigationLink {
-  name: string;
+export interface ChildNavigationLink { 
+  name: string; 
   url: string;
 }
 
-export interface NavigationLink {
-  name: string;
-  url: string;
-  hasChildren?: boolean;
+export interface NavigationLink { 
+  name: string; 
+  url: string; 
+  hasChildren?: boolean; 
   children?: ChildNavigationLink[];
 }
 
@@ -33,7 +33,8 @@ const { pathname } = Astro.url;
     <title>Menu Close</title>
     <polygon
       points="11 9 22 9 22 11 11 11 11 22 9 22 9 11 -2 11 -2 9 9 9 9 -2 11 -2"
-      transform="rotate(45 10 10)"></polygon>
+      transform="rotate(45 10 10)"
+    ></polygon>
   </svg>
 </label>
 
@@ -85,6 +86,8 @@ const { pathname } = Astro.url;
             href={menu.url}
             class={`nav-link block ${
               (pathname === `${menu.url}/` || pathname === menu.url) && "active"
+            } ${
+              menu.name === "RAMADAN 2025" || menu.name === "ZAKAT CALCULATOR" ? "text-red-600" : ""
             }`}
           >
             {menu.name}
@@ -112,9 +115,9 @@ const { pathname } = Astro.url;
   >
   <a
     href="/appeals/zakat-calculator"
-    class=" hover:scale-110 hover:bg-green-500 transition"
+    class=" hover:scale-110 hover:bg-red-500 transition"
   >
-    <button class=" bg-[#16A34A] text-white px-2 justify-center py-2 rounded-md text-sm">
+    <button class="bg-[#DC2626] text-white px-2 justify-center py-2 rounded-md text-sm">
       Zakat Calculator
     </button>
   </a>
