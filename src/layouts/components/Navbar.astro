@@ -1,124 +1,475 @@
---- 
-import config from "@/config/config.json";
-import menu from "@/config/menu.json"; 
-
-export interface ChildNavigationLink { 
-  name: string; 
-  url: string;
-}
-
-export interface NavigationLink { 
-  name: string; 
-  url: string; 
-  hasChildren?: boolean; 
-  children?: ChildNavigationLink[];
-}
-
-const { main }: { main: NavigationLink[] } = menu;
-const { navigation_button, settings } = config;
-const { pathname } = Astro.url;
----
-
-<!-- navbar toggler -->
-<input id="nav-toggle" type="checkbox" class="hidden" />
-<label
-  for="nav-toggle"
-  class="order-3 cursor-pointer flex items-center lg:hidden text-dark lg:order-1"
+<nav
+  class="navbar z-[999] justify-evenly md:justify-center md:mx-auto border-solid border-y fixed top-[20%] right-5 rounded-md left-5 bg-white pb-1.5"
 >
-  <svg id="show-button" class="h-6 fill-current block" viewBox="0 0 20 20">
-    <title>Menu Open</title>
-    <path d="M0 3h20v2H0V3z m0 6h20v2H0V9z m0 6h20v2H0V0z"></path>
-  </svg>
-  <svg id="hide-button" class="h-6 fill-current hidden" viewBox="0 0 20 20">
-    <title>Menu Close</title>
-    <polygon
-      points="11 9 22 9 22 11 11 11 11 22 9 22 9 11 -2 11 -2 9 9 9 9 -2 11 -2"
-      transform="rotate(45 10 10)"
-    ></polygon>
-  </svg>
-</label>
+  <header class="bg-white shadow-sm">
+    <div class="container mx-auto px-4">
+      <nav class="relative">
+        <!-- Mobile menu toggle -->
+        <div class="flex items-center justify-between py-4 lg:hidden">
+          <div class="flex items-center gap-x-4">
+            <a href="https://donate.edhiuk.org/">
+              <button
+                class="bg-[#ED4836] text-white px-4 py-2 rounded-md text-sm"
+                >Donate Now</button
+              >
+            </a>
+            <a
+              href="/appeals/zakat-calculator"
+              class="hover:scale-110 hover:bg-red-500 transition"
+            >
+              <button
+                class="bg-[#ED4836] text-white px-2 py-2 rounded-md text-sm"
+                >Zakat Calculator</button
+              >
+            </a>
+          </div>
 
-<!-- /navbar toggler -->
-<ul
-  id="nav-menu"
-  class="navbar-nav order-3 hidden w-full pb-6 lg:order-1 lg:flex lg:w-auto lg:space-x-2 lg:pb-0 xl:space-x-8"
->
-{
-  main.map((menu) => (
-    <>
-      {menu.hasChildren ? (
-        <li class="nav-item nav-dropdown group relative">
-          <a
-            href={menu.urlnew}
-            class={`nav-link inline-flex items-center ${
-              menu.name === "RAMADAN 2025" ? "text-red-600" : ""
-            } ${
-              menu.children?.map(({ url }) => url).includes(pathname) ||
-              menu.children?.map(({ url }) => `${url}/`).includes(pathname)
-                ? "active"
-                : ""
-            }`}
+          <label
+            for="nav-toggle"
+            class="cursor-pointer flex items-center text-gray-800"
           >
-            {menu.name}
-            <svg class="h-4 w-4 fill-current" viewBox="0 0 20 20">
-              <path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z" />
+            <svg
+              id="show-button"
+              class="h-6 w-6 fill-current block"
+              viewBox="0 0 20 20"
+            >
+              <title>Menu Open</title>
+              <path d="M0 3h20v2H0V3z m0 6h20v2H0V9z m0 6h20v2H0V0z"></path>
             </svg>
-          </a>
-          <ul class="nav-dropdown-list hidden group-hover:block lg:invisible lg:absolute lg:block lg:opacity-0 lg:group-hover:visible lg:group-hover:opacity-100">
-            {menu.children?.map((child) => (
-              <li class="nav-dropdown-item" key={child.name}>
+            <svg
+              id="hide-button"
+              class="h-6 w-6 fill-current hidden"
+              viewBox="0 0 20 20"
+            >
+              <title>Menu Close</title>
+              <polygon
+                points="11 9 22 9 22 11 11 11 11 22 9 22 9 11 -2 11 -2 9 9 9 9 -2 11 -2"
+                transform="rotate(45 10 10)"></polygon>
+            </svg>
+          </label>
+          <input id="nav-toggle" type="checkbox" class="hidden" />
+        </div>
+
+        <!-- Desktop and Mobile Navigation -->
+        <ul
+          id="nav-menu"
+          class="hidden w-full pb-6 lg:flex lg:pb-0 lg:w-auto lg:space-x-8"
+        >
+          <!-- HOME -->
+          <li class="py-2 lg:py-0">
+            <a
+              href="/"
+              class="block px-4 py-2 text-gray-800 hover:text-[#14A762] lg:px-0"
+              >HOME</a
+            >
+          </li>
+
+          <!-- ABOUT US -->
+          <li class="group relative py-2 lg:py-0">
+            <a
+              href="/about-us"
+              class="flex items-center justify-between px-4 py-2 text-gray-800 hover:text-[#14A762] lg:inline-flex lg:px-0"
+            >
+              <span>ABOUT US</span>
+              <svg class="h-4 w-4 fill-current ml-1" viewBox="0 0 20 20">
+                <path
+                  d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z"
+                ></path>
+              </svg>
+            </a>
+            <ul
+              class="pl-6 mt-1 hidden group-hover:block lg:absolute lg:left-0 lg:mt-0 lg:pl-0 lg:w-48 lg:bg-white lg:shadow-md lg:rounded-md"
+            >
+              <li>
                 <a
-                  href={menu.url + child.url}
-                  class={`nav-dropdown-link block ${
-                    (pathname === `${child.url}/` || pathname === child.url) &&
-                    "active"
-                  }`}
-                >
-                  {child.name}
-                </a>
+                  href="/about-edhi-foundation"
+                  class="block px-4 py-2 text-gray-800 hover:text-[#14A762] hover:bg-gray-100"
+                  >About Edhi Foundation</a>
               </li>
-            ))}
-          </ul>
-        </li>
-      ) : (
-        <li class="nav-item">
-          <a
-            href={menu.url}
-            class={`nav-link block ${
-              (pathname === `${menu.url}/` || pathname === menu.url) && "active"
-            } ${
-              menu.name === "RAMADAN 2025" || menu.name === "ZAKAT CALCULATOR" ? "text-red-600" : ""
-            }`}
-          >
-            {menu.name}
+              <li>
+                <a
+                  href="/bilquis-bano"
+                  class="block px-4 py-2 text-gray-800 hover:text-[#14A762] hover:bg-gray-100"
+                  >Bilquis Bano Edhi</a>
+              </li>
+              <li>
+                <a
+                  href="/faisal-edhi"
+                  class="block px-4 py-2 text-gray-800 hover:text-[#14A762] hover:bg-gray-100"
+                  >Faisal Edhi</a>
+              </li>
+              <li>
+                <a
+                  href="/our-history"
+                  class="block px-4 py-2 text-gray-800 hover:text-[#14A762] hover:bg-gray-100"
+                  >Our History</a>
+              </li>
+              <li>
+                <a
+                  href="/founder-profile"
+                  class="block px-4 py-2 text-gray-800 hover:text-[#14A762] hover:bg-gray-100"
+                  >Founder Profile - Abdul Sattar Edhi</a>
+              </li>
+            </ul>
+          </li>
+
+          <!-- ZAKAT CALCULATOR -->
+          <li class="py-2 lg:py-0">
+            <a
+              href="/appeals/zakat-calculator"
+              class="block px-4 py-2 text-[#ED4836] hover:text-red-700 lg:px-0"
+              >ZAKAT CALCULATOR</a
+            >
+          </li>
+
+          <!-- RAMADAN 2025 -->
+          <li class="group relative py-2 lg:py-0">
+            <a
+              href="#"
+              class="flex items-center justify-between px-4 py-2 text-[#ED4836] hover:text-red-700 lg:inline-flex lg:px-0"
+            >
+              <span>RAMADAN 2025</span>
+              <svg class="h-4 w-4 fill-current ml-1" viewBox="0 0 20 20">
+                <path
+                  d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z"
+                ></path>
+              </svg>
+            </a>
+            <ul
+              class="pl-6 mt-1 hidden group-hover:block lg:absolute lg:left-0 lg:mt-0 lg:pl-0 lg:w-48 lg:bg-white lg:shadow-md lg:rounded-md"
+            >
+              <li>
+                <a
+                  href="/ramadan"
+                  class="block px-4 py-2 text-gray-800 hover:text-[#14A762] hover:bg-gray-100"
+                  >Ramadan Appeal 2025</a>
+              </li>
+              <li>
+                <a
+                  href="/ramadan/iftar-food-pack"
+                  class="block px-4 py-2 text-gray-800 hover:text-[#14A762] hover:bg-gray-100"
+                  >Sehr-o-Iftar & Food Pack</a>
+              </li>
+              <li>
+                <a
+                  href="/ramadan/fidya-and-kaffara"
+                  class="block px-4 py-2 text-gray-800 hover:text-[#14A762] hover:bg-gray-100"
+                  >Fidya And Kaffara</a>
+              </li>
+              <li>
+                <a
+                  href="/ramadan/fitrana-and-eid-gifts"
+                  class="block px-4 py-2 text-gray-800 hover:text-[#14A762] hover:bg-gray-100"
+                  >Fitrana And Eid Gifts</a>
+              </li>
+              <li>
+                <a
+                  href="/appeals/zakat"
+                  class="block px-4 py-2 text-gray-800 hover:text-[#14A762] hover:bg-gray-100"
+                  >Zakat Appeal</a>
+              </li>
+              <li>
+                <a
+                  href="/appeals/zakat-calculator"
+                  class="block px-4 py-2 text-gray-800 hover:text-[#14A762] hover:bg-gray-100"
+                  >Zakat Calculator</a>
+              </li>
+            </ul>
+          </li>
+
+          <!-- APPEALS -->
+          <li class="group relative py-2 lg:py-0">
+            <a
+              href="/appeals"
+              class="flex items-center justify-between px-4 py-2 text-gray-800 hover:text-[#14A762] lg:inline-flex lg:px-0"
+            >
+              <span>APPEALS</span>
+              <svg class="h-4 w-4 fill-current ml-1" viewBox="0 0 20 20">
+                <path
+                  d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z"
+                ></path>
+              </svg>
+            </a>
+            <ul
+              class="pl-6 mt-1 hidden group-hover:block lg:absolute lg:left-0 lg:mt-0 lg:pl-0 lg:w-48 lg:bg-white lg:shadow-md lg:rounded-md"
+            >
+              <li>
+                <a
+                  href="/sadqa"
+                  class="block px-4 py-2 text-gray-800 hover:text-[#14A762] hover:bg-gray-100"
+                  >Sadqa</a>
+              </li>
+              <li>
+                <a
+                  href="/aqeeqa"
+                  class="block px-4 py-2 text-gray-800 hover:text-[#14A762] hover:bg-gray-100"
+                  >Aqeeqa</a>
+              </li>
+              <li>
+                <a
+                  href="/food-bank"
+                  class="block px-4 py-2 text-gray-800 hover:text-[#14A762] hover:bg-gray-100"
+                  >Food Bank</a>
+              </li>
+              <li>
+                <a
+                  href="/lillah-program"
+                  class="block px-4 py-2 text-gray-800 hover:text-[#14A762] hover:bg-gray-100"
+                  >Lillah (In The Name of Allah)</a>
+              </li>
+              <li>
+                <a
+                  href="/emergency-services-program"
+                  class="block px-4 py-2 text-gray-800 hover:text-[#14A762] hover:bg-gray-100"
+                  >Emergency Services</a>
+              </li>
+            </ul>
+          </li>
+
+          <!-- SERVICES -->
+          <li class="group relative py-2 lg:py-0">
+            <a
+              href="/services"
+              class="flex items-center justify-between px-4 py-2 text-gray-800 hover:text-[#14A762] lg:inline-flex lg:px-0"
+            >
+              <span>SERVICES</span>
+              <svg class="h-4 w-4 fill-current ml-1" viewBox="0 0 20 20">
+                <path
+                  d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z"
+                ></path>
+              </svg>
+            </a>
+            <ul
+              class="pl-6 mt-1 hidden group-hover:block lg:absolute lg:left-0 lg:mt-0 lg:pl-0 lg:w-48 lg:bg-white lg:shadow-md lg:rounded-md"
+            >
+              <li>
+                <a
+                  href="/ambulance-service"
+                  class="block px-4 py-2 text-gray-800 hover:text-[#14A762] hover:bg-gray-100"
+                  >Ambulance</a>
+              </li>
+              <li>
+                <a
+                  href="/hospital"
+                  class="block px-4 py-2 text-gray-800 hover:text-[#14A762] hover:bg-gray-100"
+                  >Hospital</a>
+              </li>
+              <li>
+                <a
+                  href="/children-services"
+                  class="block px-4 py-2 text-gray-800 hover:text-[#14A762] hover:bg-gray-100"
+                  >Children</a>
+              </li>
+              <li>
+                <a
+                  href="/homes-orphanage"
+                  class="block px-4 py-2 text-gray-800 hover:text-[#14A762] hover:bg-gray-100"
+                  >Edhi Homes Orphanage</a>
+              </li>
+              <li>
+                <a
+                  href="/educational-services"
+                  class="block px-4 py-2 text-gray-800 hover:text-[#14A762] hover:bg-gray-100"
+                  >Educational</a>
+              </li>
+              <li>
+                <a
+                  href="/graveyard"
+                  class="block px-4 py-2 text-gray-800 hover:text-[#14A762] hover:bg-gray-100"
+                  >Graveyard</a>
+              </li>
+              <li>
+                <a
+                  href="/missing-person-services"
+                  class="block px-4 py-2 text-gray-800 hover:text-[#14A762] hover:bg-gray-100"
+                  >Missing Person</a>
+              </li>
+              <li>
+                <a
+                  href="/refugees-assistance"
+                  class="block px-4 py-2 text-gray-800 hover:text-[#14A762] hover:bg-gray-100"
+                  >Refugees Assistance</a>
+              </li>
+              <li>
+                <a
+                  href="/honorary-voluntary-service"
+                  class="block px-4 py-2 text-gray-800 hover:text-[#14A762] hover:bg-gray-100"
+                  >Honorary & Voluntary</a>
+              </li>
+              <li>
+                <a
+                  href="/marriage-bureau-service"
+                  class="block px-4 py-2 text-gray-800 hover:text-[#14A762] hover:bg-gray-100"
+                  >Marriage Bureau</a>
+              </li>
+              <li>
+                <a
+                  href="/covid-19-assistance"
+                  class="block px-4 py-2 text-gray-800 hover:text-[#14A762] hover:bg-gray-100"
+                  >COVID 19 Assistance</a>
+              </li>
+            </ul>
+          </li>
+
+          <!-- ACTIVITIES -->
+          <li class="group relative py-2 lg:py-0">
+            <a
+              href="/activities"
+              class="flex items-center justify-between px-4 py-2 text-gray-800 hover:text-[#14A762] lg:inline-flex lg:px-0"
+            >
+              <span>ACTIVITIES</span>
+              <svg class="h-4 w-4 fill-current ml-1" viewBox="0 0 20 20">
+                <path
+                  d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z"
+                ></path>
+              </svg>
+            </a>
+            <ul
+              class="pl-6 mt-1 hidden group-hover:block lg:absolute lg:left-0 lg:mt-0 lg:pl-0 lg:w-60 lg:bg-white lg:shadow-md lg:rounded-md"
+            >
+              <li>
+                <a
+                  href="/destitute-homes"
+                  class="block px-4 py-2 text-gray-800 hover:text-[#14A762] hover:bg-gray-100"
+                  >Destitute Homes</a>
+              </li>
+              <li>
+                <a
+                  href="/highways-project"
+                  class="block px-4 py-2 text-gray-800 hover:text-[#14A762] hover:bg-gray-100"
+                  >Highways Project</a>
+              </li>
+              <li>
+                <a
+                  href="/international-community-centers"
+                  class="block px-4 py-2 text-gray-800 hover:text-[#14A762] hover:bg-gray-100"
+                  >International Community Centers</a>
+              </li>
+              <li>
+                <a
+                  href="/collaboration-with-other-organizations"
+                  class="block px-4 py-2 text-gray-800 hover:text-[#14A762] hover:bg-gray-100"
+                  >Collaboration with Other Organizations</a>
+              </li>
+              <li>
+                <a
+                  href="/international-activities"
+                  class="block px-4 py-2 text-gray-800 hover:text-[#14A762] hover:bg-gray-100"
+                  >International Activities</a>
+              </li>
+            </ul>
+          </li>
+
+          <!-- MEDIA -->
+          <li class="group relative py-2 lg:py-0">
+            <a
+              href="/media"
+              class="flex items-center justify-between px-4 py-2 text-gray-800 hover:text-[#14A762] lg:inline-flex lg:px-0"
+            >
+              <span>MEDIA</span>
+              <svg class="h-4 w-4 fill-current ml-1" viewBox="0 0 20 20">
+                <path
+                  d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z"
+                ></path>
+              </svg>
+            </a>
+            <ul
+              class="pl-6 mt-1 hidden group-hover:block lg:absolute lg:left-0 lg:mt-0 lg:pl-0 lg:w-48 lg:bg-white lg:shadow-md lg:rounded-md"
+            >
+              <li>
+                <a
+                  href="/image-galleries"
+                  class="block px-4 py-2 text-gray-800 hover:text-[#14A762] hover:bg-gray-100"
+                  >Image Galleries</a>
+              </li>
+              <li>
+                <a
+                  href="/videos"
+                  class="block px-4 py-2 text-gray-800 hover:text-[#14A762] hover:bg-gray-100"
+                  >Videos</a>
+              </li>
+              <li>
+                <a
+                  href="/downloads"
+                  class="block px-4 py-2 text-gray-800 hover:text-[#14A762] hover:bg-gray-100"
+                  >Downloads</a>
+              </li>
+            </ul>
+          </li>
+
+          <!-- CONTACT US -->
+          <li class="group relative py-2 lg:py-0">
+            <a
+              href="/contact-us"
+              class="flex items-center justify-between px-4 py-2 text-gray-800 hover:text-[#14A762] lg:inline-flex lg:px-0"
+            >
+              <span>CONTACT US</span>
+              <svg class="h-4 w-4 fill-current ml-1" viewBox="0 0 20 20">
+                <path
+                  d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z"
+                ></path>
+              </svg>
+            </a>
+            <ul
+              class="pl-6 mt-1 hidden group-hover:block lg:absolute lg:left-0 lg:mt-0 lg:pl-0 lg:w-48 lg:bg-white lg:shadow-md lg:rounded-md"
+            >
+              <li>
+                <a
+                  href="/united-kingdom"
+                  class="block px-4 py-2 text-gray-800 hover:text-[#14A762] hover:bg-gray-100"
+                  >United Kingdom</a>
+              </li>
+              <li>
+                <a
+                  href="/networks"
+                  class="block px-4 py-2 text-gray-800 hover:text-[#14A762] hover:bg-gray-100"
+                  >Partner Networks</a>
+              </li>
+              <li>
+                <a
+                  href="/all-pakistani-edhi-centers"
+                  class="block px-4 py-2 text-gray-800 hover:text-[#14A762] hover:bg-gray-100"
+                  >All Pakistani Edhi Centers</a>
+              </li>
+              <li>
+                <a
+                  href="/international-offices"
+                  class="block px-4 py-2 text-gray-800 hover:text-[#14A762] hover:bg-gray-100"
+                  >International Offices</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+
+        <!-- Desktop donate button -->
+        <div class="hidden lg:flex lg:items-center">
+          <a href="https://donate.edhiuk.org/">
+            <button
+              class="bg-[#ED4836] text-white px-6 py-2 rounded-md text-sm hover:bg-red-700 transition md:hidden"
+              >Donate Now</button
+            >
           </a>
-        </li>
-      )}
-    </>
-  ))
-}
-  {
-    navigation_button.enable && (
-      <li class="mt-4 inline-block lg:hidden">
-        <a class="btn btn-outline-primary btn-sm" href={navigation_button.link}>
-          {navigation_button.label}
-        </a>
-      </li>
-    )
-  }
-</ul>
-<div class="flex justify-between items-center gap-x-4 py-2 md:hidden">
-  <a href="https://donate.edhiuk.org/">
-    <button class="bg-[#DC2626] text-white px-4 py-2 rounded-md text-sm"
-      >Donate Now</button
-    ></a
-  >
-  <a
-    href="/appeals/zakat-calculator"
-    class=" hover:scale-110 hover:bg-red-500 transition"
-  >
-    <button class="bg-[#DC2626] text-white px-2 justify-center py-2 rounded-md text-sm">
-      Zakat Calculator
-    </button>
-  </a>
-</div>
+        </div>
+      </nav>
+    </div>
+  </header>
+</nav>
+<!-- Simple script to toggle mobile menu -->
+<script is:inline>
+  const navToggle = document.getElementById("nav-toggle");
+  const navMenu = document.getElementById("nav-menu");
+  const showButton = document.getElementById("show-button");
+  const hideButton = document.getElementById("hide-button");
+
+  navToggle.addEventListener("change", function () {
+    if (this.checked) {
+      navMenu.classList.remove("hidden");
+      showButton.classList.add("hidden");
+      hideButton.classList.remove("hidden");
+    } else {
+      navMenu.classList.add("hidden");
+      showButton.classList.remove("hidden");
+      hideButton.classList.add("hidden");
+    }
+  });
+</script>

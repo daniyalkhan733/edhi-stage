@@ -1,38 +1,36 @@
 /* Faq Section animation */
 .faq-answer {
-    max-height: 0;
-    opacity: 0;
-    overflow: hidden;
-    transition: all 0.35s ease-out;
+  max-height: 0;
+  opacity: 0;
+  overflow: hidden;
+  transition: all 0.35s ease-out;
 }
 
 .faq-item.active .faq-button {
-    background-color: #14A762;
-    color: white;
+  background-color: #14A762;
+  color: white;
 }
 
 .faq-item.active .faq-answer {
-    max-height: 1000px;
-    opacity: 1;
-    padding: 1.5rem;
-    background-color: #ffffff;
+  max-height: 1000px;
+  opacity: 1;
+  padding: 1.5rem;
+  background-color: #ffffff;
 }
 
 .faq-item.active .icon-plus {
-    transform: rotate(135deg);
-    color: white;
-
+  transform: rotate(135deg);
+  color: white;
 }
 
 .icon-plus {
-    transition: transform 0.3s ease;
-    color: #14A762;
+  transition: transform 0.3s ease;
+  color: #14A762;
 }
 
 .faq-button {
-    transition: all 0.3s ease;
+  transition: all 0.3s ease;
 }
-
 /* Hover Card Animation */
 .card {
   transition:

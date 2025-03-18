@@ -1,144 +1,847 @@
 ---
 import config from "@/config/config.json";
 import Logo from "@/components/Logo.astro";
-import ScamAlert from "@/components/ScamAlert.astro";
-// import ThemeSwitcher from "@/components/ThemeSwitcher.astro";
-
-import { IoSearch } from "react-icons/io5/index.js";
-import Navbar from "@/components/Navbar.astro";
-
 const { navigation_button, settings } = config;
-const { pathname } = Astro.url;
+
+// Import navigation data
+const navigationData = {
+  main: [
+    {
+      name: "Home",
+      url: "/",
+    },
+    {
+      name: "About Us",
+      url: "/about-us",
+      hasChildren: true,
+      children: [
+        {
+          name: "About Edhi Foundation",
+          url: "/about-us/about-edhi-foundation",
+        },
+
+        {
+          name: "Bilquis Bano Edhi",
+          url: "/about-us/bilquis-bano",
+        },
+        {
+          name: "Faisal Edhi",
+          url: "/about-us/faisal-edhi",
+        },
+        {
+          name: "Our History",
+          url: "/about-us/our-history",
+        },
+        {
+          name: "Founder Profile - Abdul Sattar Edhi",
+          url: "/about-us/founder-profile",
+        },
+      ],
+    },
+    {
+      name: "Zakat Calculator",
+      url: "/appeals/zakat-calculator",
+    },
+    {
+      name: "Ramadan 2025",
+      url: "",
+      hasChildren: true,
+      children: [
+        {
+          name: "Ramadan Appeal 2025",
+          url: "/ramadan",
+        },
+        {
+          name: "Sehr-o-Iftar & Food Pack",
+          url: "/ramadan/iftar-food-pack",
+        },
+        {
+          name: "Fidya And Kaffara",
+          url: "/ramadan/fidya-and-kaffara",
+        },
+        {
+          name: "Fitrana And Eid Gifts",
+          url: "/ramadan/fitrana-and-eid-gifts",
+        },
+        {
+          name: "Zakat Appeal",
+          url: "/appeals/zakat",
+        },
+        {
+          name: "Zakat Calculator",
+          url: "/appeals/zakat-calculator",
+        },
+      ],
+    },
+    {
+      name: "Appeals",
+      url: "/appeals",
+      hasChildren: true,
+      children: [
+        {
+          name: "Sadqa",
+          url: "/appeals/sadqa",
+        },
+        {
+          name: "Aqeeqa",
+          url: "/appeals/aqeeqa",
+        },
+        {
+          name: "Food Bank",
+          url: "/appeals/food-bank",
+        },
+        {
+          name: "Lillah (In The Name of Allah)",
+          url: "/appeals/lillah-program",
+        },
+        {
+          name: "Emergency Services",
+          url: "/appeals/emergency-services-program",
+        },
+      ],
+    },
+    {
+      name: "Services",
+      url: "/services",
+      hasChildren: true,
+      children: [
+        {
+          name: "Ambulance",
+          url: "/services/ambulance-service",
+        },
+        {
+          name: "Hospital",
+          url: "/services/hospital",
+        },
+        {
+          name: "Children",
+          url: "/services/children-services",
+        },
+        {
+          name: "Edhi Homes Orphanage",
+          url: "/services/homes-orphanage",
+        },
+        {
+          name: "Educational",
+          url: "/services/educational-services",
+        },
+        {
+          name: "Graveyard",
+          url: "/services/graveyard",
+        },
+        {
+          name: "Missing Person",
+          url: "/services/missing-person-services",
+        },
+        {
+          name: "Refugees Assistance",
+          url: "/services/refugees-assistance",
+        },
+        {
+          name: "Honorary & Voluntary",
+          url: "/services/honorary-voluntary-service",
+        },
+        {
+          name: "Marriage Bureau",
+          url: "/services/marriage-bureau-service",
+        },
+        {
+          name: "COVID 19 Assistance",
+          url: "/services/covid-19-assistance",
+        },
+      ],
+    },
+    {
+      name: "Activities",
+      url: "/activities",
+      hasChildren: true,
+      children: [
+        {
+          name: "Destitute Homes",
+          url: "/activities/destitute-homes",
+        },
+        {
+          name: "Highways Project",
+          url: "/activities/highways-project",
+        },
+        {
+          name: "International Community Centers",
+          url: "/activities/international-community-centers",
+        },
+        {
+          name: "Collaboration with Other Organizations",
+          url: "/activities/collaboration-with-other-organizations",
+        },
+        {
+          name: "International Activities",
+          url: "/activities/international-activities",
+        },
+      ],
+    },
+    {
+      name: "Media",
+      url: "/media",
+      hasChildren: true,
+      children: [
+        {
+          name: "Image Galleries",
+          url: "/media/image-galleries",
+        },
+        {
+          name: "Videos",
+          url: "/media/videos",
+        },
+        {
+          name: "Downloads",
+          url: "/media/downloads",
+        },
+      ],
+    },
+    {
+      name: "Contact Us",
+      url: "/contact-us",
+      hasChildren: true,
+      children: [
+        {
+          name: "United Kingdom",
+          url: "/contact-us/united-kingdom",
+        },
+        {
+          name: "Partner Networks",
+          url: "/contact-us/networks",
+        },
+        {
+          name: "All Pakistani Edhi Centers",
+          url: "/contact-us/all-pakistani-edhi-centers",
+        },
+        {
+          name: "International Offices",
+          url: "/contact-us/international-offices",
+        },
+      ],
+    },
+  ],
+};
 ---
 
-
-
-<div
-id="navbar"
-  class="navbar z-[995] sm:px-44 border-solid border-y bg-[#009241] py-1.5  hidden sm:flex"
->
-  <span class="header-text">
-    <span>
-      Head Office: 803 Romford Road, London, E12 5AN, United Kingdom | Donation Hotline: 0207 723 2050 | Daily Timings: 9am - 6pm GBP
-    </span>
-  </span>
-  <a
-    href="https://donate.edhiuk.org/?target=login-form"
-    class="btn-sm btn-second rounded-sm mr-2"
+<div id="header-wrapper" class="sticky top-0 z-40 bg-white w-full shadow-sm">
+  <div
+    id="top-navbar"
+    class="z-[995] border-solid border-y bg-[#009241] py-1.5 hidden lg:block"
   >
-    <span>Login / Register</span>
+    <div class="container mx-auto px-4 flex justify-between items-center">
+      <span class="text-white text-xs md:text-sm font-medium">
+        Head Office: 803 Romford Road, London, E12 5AN, United Kingdom |
+        Donation Hotline: 0207 723 2050 | Daily Timings: 9am - 6pm GBP
+      </span>
+      <a
+        href="https://donate.edhiuk.org/?target=login-form"
+        class="bg-white text-[#009241] hover:bg-gray-100 px-3 py-1 text-xs md:text-sm rounded-sm transition-colors duration-200"
+      >
+        Login / Register
+      </a>
+    </div>
+  </div>
+
+  <header id="main-header" class="bg-white w-full border-b border-gray-100">
+    <div class="container mx-auto px-4 py-2 md:py-3">
+      <div class="flex items-center justify-between">
+        <div class="flex-shrink-0">
+          <Logo />
+        </div>
+
+        <div class="hidden lg:flex items-center space-x-3">
+          {
+            navigation_button.enable && (
+              <>
+                <a
+                  class="border border-[#16A34A] text-[#16A34A] hover:bg-[#16A34A] hover:text-white px-3 py-1.5 text-sm rounded-sm transition-colors duration-200"
+                  href="/contact-us/united-kingdom#bank-details"
+                >
+                  Bank Deposit
+                </a>
+                <a
+                  class="border border-[#16A34A] text-[#16A34A] hover:bg-[#16A34A] hover:text-white px-3 py-1.5 text-sm rounded-sm transition-colors duration-200"
+                  href="https://register-of-charities.charitycommission.gov.uk/en/charity-search/-/charity-details/1015408"
+                  target="_blank"
+                >
+                  Charity Number: 1015408
+                </a>
+                <a
+                  class="bg-[#ED4836] text-white hover:bg-red-600 px-4 py-1.5 text-sm rounded-sm transition-colors duration-200"
+                  href={navigation_button.link}
+                >
+                  {navigation_button.label}
+                </a>
+              </>
+            )
+          }
+        </div>
+
+        <div class="flex items-center lg:hidden">
+          <button
+            id="mobile-menu-toggle"
+            class="text-gray-700 focus:outline-none"
+            aria-label="Toggle mobile menu"
+          >
+            <svg
+              id="menu-open-icon"
+              class="h-6 w-6 block"
+              viewBox="0 0 24 24"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M4 6H20M4 12H20M4 18H20"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"></path>
+            </svg>
+            <svg
+              id="menu-close-icon"
+              class="h-6 w-6 hidden"
+              viewBox="0 0 24 24"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M6 18L18 6M6 6L18 18"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"></path>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Navigation menu - Now part of the sticky header wrapper -->
+  <nav
+    id="main-nav"
+    class="w-full bg-white border-b border-gray-200 transition-all duration-300"
+  >
+    <div class="container mx-auto px-4">
+      <ul class="hidden lg:flex items-center justify-center space-x-6 py-2">
+        {
+          navigationData.main.map((item) => (
+            <li class="group relative">
+              {!item.hasChildren ? (
+                <a
+                  href={item.url}
+                  class={`block py-2 font-semibold ${
+                    item.name === "Zakat Calculator" ||
+                    item.name === "Ramadan 2025"
+                      ? "text-[#ED4836] hover:text-red-700"
+                      : "text-gray-800 hover:text-[#14A762]"
+                  } transition-colors duration-200`}
+                >
+                  {item.name}
+                </a>
+              ) : (
+                <>
+                  <div
+                    class={`flex items-center py-2 cursor-pointer font-semibold ${
+                      item.name === "Ramadan 2025"
+                        ? "text-[#ED4836] hover:text-red-700"
+                        : "text-gray-800 hover:text-[#14A762]"
+                    } transition-colors duration-200`}
+                  >
+                    <span>{item.name}</span>
+                    <svg class="h-4 w-4 fill-current ml-1" viewBox="0 0 20 20">
+                      <path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z" />
+                    </svg>
+                  </div>
+                  <ul class="hidden group-hover:block absolute left-0 top-full mt-0 w-60 shadow-lg rounded-md border border-gray-200 z-20 bg-white ">
+                    {item.children.map((child) => (
+                      <li class="">
+                        <a
+                          href={child.url}
+                          class="block px-4 py-2 text-gray-800  hover:bg-[#14A762] hover:text-white transition-colors duration-200 "
+                        >
+                          {child.name}
+                        </a>
+                      </li>
+                    ))}
+                  </ul>
+                </>
+              )}
+            </li>
+          ))
+        }
+      </ul>
+    </div>
+
+    <!-- Mobile menu with dynamic navigation items -->
+    <div id="mobile-menu" class="lg:hidden hidden bg-white">
+      <div class="px-4 py-2 space-y-2 border-t border-gray-200">
+        <nav class="space-y-1">
+          {
+            navigationData.main.map((item) => (
+              <>
+                {!item.hasChildren ? (
+                  <a
+                    href={item.url}
+                    class={`block px-4 py-2 text-base font-medium ${
+                      item.name === "ZAKAT CALCULATOR" ||
+                      item.name === "Ramadan 2025"
+                        ? "text-[#ED4836] hover:text-red-700"
+                        : "text-gray-800 hover:text-[#14A762]"
+                    } hover:bg-gray-50 rounded-md`}
+                  >
+                    {item.name}
+                  </a>
+                ) : (
+                  <div class="mobile-dropdown">
+                    <button
+                      class="mobile-dropdown-toggle w-full text-left px-4 py-2 text-base font-medium text-gray-800 hover:bg-gray-50 hover:text-[#14A762] rounded-md flex justify-between items-center"
+                      aria-expanded="false"
+                    >
+                      <span>{item.name}</span>
+                      <svg
+                        class="w-4 h-4 transform transition-transform duration-200"
+                        xmlns="http://www.w3.org/2000/svg"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                        stroke="currentColor"
+                      >
+                        <path
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                          d="M19 9l-7 7-7-7"
+                        />
+                      </svg>
+                    </button>
+                    <div class="mobile-dropdown-content hidden pl-4 mt-1 space-y-1">
+                      {item.children.map((child) => (
+                        <a
+                          href={child.url}
+                          class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 hover:text-[#14A762] rounded-md"
+                        >
+                          {child.name}
+                        </a>
+                      ))}
+                    </div>
+                  </div>
+                )}
+              </>
+            ))
+          }
+        </nav>
+
+        <a
+          href="https://dona.edhi.org.uk/zakat-calculator"
+          class="block w-full bg-[#ED4836] text-white text-center py-2 rounded-md text-sm hover:bg-red-600 transition-colors duration-200 mb-4"
+        >
+          Donate Now
+        </a>
+      </div>
+    </div>
+  </nav>
+</div>
+
+<div class="flex justify-between p-2 md:hidden bg-white shadow-sm z-20">
+  <a href="/appeals/zakat-calculator" class="mr-3">
+    <button
+      class="bg-[#ED4836] text-white px-4 py-1.5 rounded-sm text-sm hover:bg-red-600 transition-colors duration-200"
+    >
+      Calculate Zakat Now
+    </button>
+  </a>
+  <a href="https://donate.edhiuk.org/" class="mr-3">
+    <button
+      class="bg-[#ED4836] text-white px-4 py-1.5 rounded-sm text-sm hover:bg-red-600 transition-colors duration-200"
+    >
+      Donate Now
+    </button>
   </a>
 </div>
-<header class= {`header z-30 ${settings.sticky_header && "sticky top-0"}`}>
-</header>
-<div class="navbar z-[999] sm:px-44 md:py-1.5 pb-1.5  md:pt-0 mx-auto flex">
-  <div class="order-0">
-    <Logo />
-  </div>
-  <div class="order-1 ml-auto flex items-center md:order-2 lg:ml-0">
-    {
-      settings.search && (
-        <> </>
-        // <a
-        //   class="mr-5 inline-block border-r border-border pr-5 text-xl text-dark hover:text-primary dark:border-darkmode-border dark:text-white"
-        //   href="/search"
-        //   aria-label="search"
-        // >
-        //   <IoSearch />
 
-        // </a>
-      )
-    }
-    <!-- <ThemeSwitcher className="mr-5" /> -->
+<div class="mobile-dropdown mb-4 ml-[20px] md:hidden">
+  <button
+    class="mobile-dropdown-toggle w-full bg-[#16A34A] text-white px-4 py-2 rounded-md text-sm flex justify-between items-center mx-[-10px]"
+    aria-expanded="false"
+  >
+    <span>Ramadan 2025</span>
+    <svg
+      class="w-4 h-4 transform transition-transform duration-200"
+      xmlns="http://www.w3.org/2000/svg"
+      fill="none"
+      viewBox="0 0 24 24"
+      stroke="currentColor"
+    >
+      <path
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        stroke-width="2"
+        d="M19 9l-7 7-7-7"></path>
+    </svg>
+  </button>
+  <div
+    class="mobile-dropdown-content hidden mt-1 rounded-md shadow-lg border border-gray-200 bg-white overflow-hidden"
+  >
     {
-      navigation_button.enable && (
-        //       <button type="button" class="btn-sm btn-second rounded-sm gap-10 ">
-        //   <span>Charity Number: 1015408</span>
-
-        // </button>
-        <>
+      navigationData.main
+        .find((item) => item.name === "Ramadan 2025")
+        .children.map((child) => (
           <a
-            class="btn btn-second btn-sm hidden lg:inline-block rounded-sm md:mr-4"
-            href="/contact-us/united-kingdom#bank-details"
+            href={child.url}
+            class="block px-4 py-2 text-sm text-gray-800 hover:bg-green-50 border-b border-gray-100"
           >
-            Bank Deposit
+            {child.name}
           </a>
-          <a
-            class="btn btn-second btn-sm hidden lg:inline-block rounded-sm md:mr-4"
-            href="https://register-of-charities.charitycommission.gov.uk/en/charity-search/-/charity-details/1015408"
-            target="_blank"
-          >
-            Charity Number: 1015408
-          </a>
-          <a
-            class="btn btn-outline-primary btn-sm hidden lg:inline-block rounded-sm "
-            href={navigation_button.link}
-          >
-            {navigation_button.label}
-          </a>
-        </>
-      )
+        ))
     }
   </div>
-</div>
-
-<nav class="navbar z-[999] justify-evenly mx-auto border-solid border-y ">
- 
-  <Navbar />
- 
-
-  <!-- logo -->
-</nav>
-<div class="flex flex-col items-center space-y-2 py-2 px-5 md:hidden">
-  <!-- Ramadan 2025 Button with Dropdown Toggle -->
-  <div class="relative w-full">
-    <button
-      onclick="toggleDropdown()"
-      class="w-full bg-[#16A34A] text-white px-4 py-2 rounded-md text-sm flex justify-center items-center">
-      Ramadan 2025
-      <svg id="toggle-icon" class="w-4 h-4 transition-transform duration-300" xmlns="http://www.w3.org/2000/svg" fill="none"
-        viewBox="0 0 24 24" stroke="currentColor">
-        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
-      </svg>
-    </button>
-    <!-- Dropdown Menu -->
-    <div id="dropdown-menu"
-    class="absolute left-0 top-full mt-2 w-full hidden bg-white rounded-md shadow-lg border border-gray-200 transition-opacity duration-300 z-[999]">
-    <a href="/ramadan" class="block px-4 py-2 text-sm text-gray-800 hover:bg-green-200">Ramadan Appeal 2025</a>
-    <a href="/ramadan/iftar-food-pack" class="block px-4 py-2 text-sm text-gray-800 hover:bg-green-200">Sehr-o-Iftar & Food Pack</a>
-    <a href="/ramadan/fidya-and-kaffara" class="block px-4 py-2 text-sm text-gray-800 hover:bg-green-200">Fidya And Kaffara</a>
-    <a href="/ramadan/fitrana-and-eid-gifts" class="block px-4 py-2 text-sm text-gray-800 hover:bg-green-200">Fitrana And Eid Gifts</a>
-    <a href="/appeals/zakat" class="block px-4 py-2 text-sm text-gray-800 hover:bg-green-200">Zakat Appeal</a>
-    <a href="/appeals/zakat-calculator" class="block px-4 py-2 text-sm text-gray-800 hover:bg-green-200">Zakat Calculator</a>
-  </div>
-  </div> 
 </div>
 
 <script is:inline>
-  const toggleDropdown = () => {
-    const dropdown = document.getElementById('dropdown-menu');
-    const icon = document.getElementById('toggle-icon');
+  // Create a function to initialize all interactive elements
+  function initializeHeaderInteractions() {
+    // Reference to the navigation elements
+    const headerWrapper = document.getElementById("header-wrapper");
 
-    // Toggle dropdown visibility
-    if (dropdown.classList.contains('hidden')) {
-      dropdown.classList.remove('hidden', 'opacity-0');
-      dropdown.classList.add('block', 'opacity-100');
-      icon.classList.add('rotate-180'); // Rotate arrow icon
-    } else {
-      dropdown.classList.remove('block', 'opacity-100');
-      dropdown.classList.add('hidden', 'opacity-0');
-      icon.classList.remove('rotate-180'); // Reset arrow icon rotation
+    // Function to handle scroll behavior for sticky header
+    function handleScroll() {
+      if (window.scrollY > 10) {
+        // When scrolled down, add compact styling
+        headerWrapper.classList.add("header-scrolled");
+      } else {
+        // Reset when at top
+        headerWrapper.classList.remove("header-scrolled");
+      }
     }
-  };
+
+    // Add scroll event listener
+    window.addEventListener("scroll", handleScroll);
+
+    // Mobile menu toggle
+    const mobileMenuToggle = document.getElementById("mobile-menu-toggle");
+    const mobileMenu = document.getElementById("mobile-menu");
+    const menuOpenIcon = document.getElementById("menu-open-icon");
+    const menuCloseIcon = document.getElementById("menu-close-icon");
+
+    if (mobileMenuToggle && mobileMenu) {
+      // Remove existing event listeners by cloning and replacing
+      const newMobileMenuToggle = mobileMenuToggle.cloneNode(true);
+      mobileMenuToggle.parentNode.replaceChild(
+        newMobileMenuToggle,
+        mobileMenuToggle
+      );
+
+      // Set mobile menu to fixed position with proper z-index
+      mobileMenu.style.position = "fixed";
+      mobileMenu.style.left = "0";
+      mobileMenu.style.right = "0";
+      mobileMenu.style.zIndex = "990";
+      mobileMenu.style.overflowY = "auto";
+
+      // Function to calculate the mobile menu position
+      function updateMobileMenuPosition() {
+        if (mobileMenu && newMobileMenuToggle) {
+          const headerHeight =
+            document.getElementById("header-wrapper").offsetHeight;
+          mobileMenu.style.top = `${headerHeight}px`;
+          mobileMenu.style.maxHeight = `calc(100vh - ${headerHeight}px)`;
+        }
+      }
+
+      // Attach click event to the new toggle
+      newMobileMenuToggle.addEventListener("click", function (e) {
+        e.preventDefault();
+        e.stopPropagation();
+
+        // Toggle mobile menu visibility
+        if (mobileMenu.classList.contains("hidden")) {
+          // Update position before showing
+          updateMobileMenuPosition();
+
+          // Show menu
+          mobileMenu.classList.remove("hidden");
+          menuOpenIcon.classList.add("hidden");
+          menuCloseIcon.classList.remove("hidden");
+
+          // Add slide-in animation class
+          setTimeout(() => {
+            mobileMenu.classList.add("menu-visible");
+          }, 10);
+        } else {
+          // Hide menu with animation
+          mobileMenu.classList.remove("menu-visible");
+          setTimeout(() => {
+            mobileMenu.classList.add("hidden");
+            menuOpenIcon.classList.remove("hidden");
+            menuCloseIcon.classList.add("hidden");
+          }, 300);
+        }
+      });
+
+      // Update menu position on scroll when menu is visible
+      window.addEventListener("scroll", function () {
+        if (mobileMenu && !mobileMenu.classList.contains("hidden")) {
+          updateMobileMenuPosition();
+        }
+      });
+    }
+
+    // Mobile dropdown toggles - Enhanced for better UX
+    const mobileDropdownToggles = document.querySelectorAll(
+      ".mobile-dropdown-toggle"
+    );
+
+    mobileDropdownToggles.forEach((toggle) => {
+      // Remove existing event listeners by cloning and replacing
+      const newToggle = toggle.cloneNode(true);
+      toggle.parentNode.replaceChild(newToggle, toggle);
+
+      newToggle.addEventListener("click", function (e) {
+        e.preventDefault();
+        e.stopPropagation();
+
+        const dropdown = this.nextElementSibling;
+        const arrow = this.querySelector("svg");
+        const isExpanded = this.getAttribute("aria-expanded") === "true";
+
+        // Toggle with smooth animation
+        if (isExpanded) {
+          // Close this dropdown
+          this.setAttribute("aria-expanded", "false");
+          if (arrow) arrow.classList.remove("rotate-180");
+          dropdown.style.maxHeight = "0px";
+          setTimeout(() => {
+            dropdown.classList.add("hidden");
+          }, 300);
+        } else {
+          // Close all other dropdowns first
+          document
+            .querySelectorAll(".mobile-dropdown-content")
+            .forEach((content) => {
+              if (content !== dropdown) {
+                content.style.maxHeight = "0px";
+                setTimeout(() => {
+                  content.classList.add("hidden");
+                }, 300);
+
+                const toggleButton = content.previousElementSibling;
+                if (toggleButton) {
+                  toggleButton.setAttribute("aria-expanded", "false");
+                  const toggleArrow = toggleButton.querySelector("svg");
+                  if (toggleArrow) toggleArrow.classList.remove("rotate-180");
+                }
+              }
+            });
+
+          // Open this dropdown with animation
+          dropdown.classList.remove("hidden");
+          this.setAttribute("aria-expanded", "true");
+          if (arrow) arrow.classList.add("rotate-180");
+
+          // Set the height for animation
+          dropdown.style.maxHeight = dropdown.scrollHeight + "px";
+        }
+      });
+    });
+
+    // Desktop dropdown hover functionality with keyboard support
+    const desktopDropdowns = document.querySelectorAll(".group");
+
+    desktopDropdowns.forEach((dropdown) => {
+      const link = dropdown.querySelector("a, div");
+      const submenu = dropdown.querySelector("ul");
+
+      if (link && submenu) {
+        // For touch devices - better handling
+        if ("ontouchstart" in window) {
+          link.addEventListener("click", function (e) {
+            // Only prevent default if it's a dropdown trigger (has submenu)
+            if (submenu && !link.getAttribute("href")) {
+              e.preventDefault();
+            }
+
+            // Toggle this submenu
+            const isVisible = !submenu.classList.contains("hidden");
+
+            // Hide all other submenus
+            desktopDropdowns.forEach((item) => {
+              if (item !== dropdown) {
+                const otherSubmenu = item.querySelector("ul");
+                if (otherSubmenu) otherSubmenu.classList.add("hidden");
+              }
+            });
+
+            // Toggle current submenu
+            if (isVisible) {
+              submenu.classList.add("hidden");
+            } else {
+              submenu.classList.remove("hidden");
+            }
+          });
+        }
+
+        // Focus handling for keyboard navigation
+        link.addEventListener("focus", () => {
+          desktopDropdowns.forEach((item) => {
+            if (item !== dropdown) {
+              const otherSubmenu = item.querySelector("ul");
+              if (otherSubmenu) otherSubmenu.classList.add("hidden");
+            }
+          });
+
+          if (submenu) submenu.classList.remove("hidden");
+        });
+
+        // Keyboard support for escape key
+        link.addEventListener("keydown", (e) => {
+          if (e.key === "Escape" && submenu) {
+            submenu.classList.add("hidden");
+            link.blur();
+          }
+        });
+      }
+    });
+
+    // Close dropdowns when clicking elsewhere
+    document.addEventListener("click", (e) => {
+      if (!e.target.closest(".group")) {
+        document.querySelectorAll(".group ul").forEach((submenu) => {
+          submenu.classList.add("hidden");
+        });
+      }
+    });
+
+    // Initialize dropdown visibility on page load
+    document.querySelectorAll(".mobile-dropdown-content").forEach((content) => {
+      content.style.maxHeight = "0px";
+    });
+
+    // Initial scroll position check
+    handleScroll();
+  }
+
+  // Initialize on page load
+  document.addEventListener("DOMContentLoaded", initializeHeaderInteractions);
+
+  // For Astro.js View Transitions or other client-side navigation
+  document.addEventListener("astro:page-load", initializeHeaderInteractions);
+
+  // Fallback for other navigation methods
+  document.addEventListener("astro:after-swap", initializeHeaderInteractions);
 </script>
 
-
-
 <style>
-  .header-text {
-    color: #ffffff;
-    font-size: 13px;
-    font-style: normal;
-    font-weight: 500;
+  /* Sticky header wrapper styling */
+  #header-wrapper {
+    transition: all 0.3s ease;
+  }
+
+  #header-wrapper.header-scrolled {
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  }
+
+  #header-wrapper.header-scrolled #main-header {
+    padding-top: 4px;
+    padding-bottom: 4px;
+  }
+
+  #header-wrapper.header-scrolled #main-nav {
+    padding-top: 2px;
+    padding-bottom: 2px;
+  }
+
+  /* Navigation menu transitions */
+
+  /* Mobile menu animations */
+  #mobile-menu.hidden {
+    display: none;
+  }
+
+  #mobile-menu.menu-visible {
+    transform: translateY(0);
+    opacity: 1;
+    pointer-events: auto;
+  }
+
+  #mobile-menu {
+    position: fixed;
+    left: 0;
+    right: 0;
+    z-index: 990;
+    transform: translateY(-20px);
+    opacity: 0;
+    transition:
+      transform 0.3s ease,
+      opacity 0.3s ease;
+    pointer-events: none;
+    width: 100%;
+  }
+
+  /* Dropdown toggle rotation */
+  .rotate-180 {
+    transform: rotate(180deg);
+  }
+
+  /* Mobile dropdown transition */
+  .mobile-dropdown-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-out;
+  }
+
+  /* Enhanced hover effects */
+  .hover\:bg-gray-50:hover {
+    background-color: rgba(249, 250, 251, 1);
+  }
+
+  .hover\:text-\[\#14A762\]:hover {
+    color: #14a762;
+  }
+
+  /* Animation for dropdowns */
+  .mobile-dropdown-content {
+    transition: all 0.3s ease-in-out;
+    overflow: hidden;
+  }
+
+  /* Active state styling */
+  .active-link {
+    color: #14a762 !important;
+  }
+
+  /* Enhanced focus styles for accessibility */
+  a:focus,
+  button:focus {
+    outline: 2px solid #14a762;
+    outline-offset: 1px;
+  }
+
+  /* Smooth transitions for hover effects */
+  a,
+  button {
+    transition: all 0.2s ease-in-out;
+  }
+
+  /* Fix for iOS hover issues with dropdowns */
+  @media (hover: hover) {
+    .group:hover .group-hover\:block {
+      display: block;
+    }
+  }
+
+  /* Improved dropdown animation */
+  .group ul {
+    opacity: 0;
+    transform: translateY(-10px);
+    transition:
+      opacity 0.2s ease,
+      transform 0.2s ease;
+    display: none;
+  }
+
+  .group:hover ul,
+  .group ul:not(.hidden) {
+    opacity: 1;
+    transform: translateY(0);
+    display: block;
   }
 </style>

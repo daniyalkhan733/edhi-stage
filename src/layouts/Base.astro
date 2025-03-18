@@ -61,12 +61,11 @@ const { title, description, pageImage } = Astro.props;
     <meta property="og:description" content={description} />
     <meta
       property="og:image"
-      content= `${pageImage ? pageImage : '/images/logo-short.jpg'}`
+      content=`${pageImage ? pageImage : '/images/logo-short.jpg'}`
     />
 
     <meta property="og:logo" content="/images/logo-short.jpg" />
-    <link rel="stylesheet" href="/index.css">
-
+    <link rel="stylesheet" href="/index.css" />
 
     <!-- google font css -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -126,7 +125,6 @@ const { title, description, pageImage } = Astro.props;
     <meta
       name="google-site-verification"
       content="l4nGMgeWN2t_0apj0SuDkpkJ5D3HKOR1RKhbrXN7xX4"
-
     />
 
     <!-- Hotjar Tracking Code for https://edhiuk.org/ -->
@@ -145,23 +143,43 @@ const { title, description, pageImage } = Astro.props;
         a.appendChild(r);
       })(window, document, "https://static.hotjar.com/c/hotjar-", ".js?sv=");
     </script>
-<!-- Meta Pixel Code -->
-<script>
-  !function(f,b,e,v,n,t,s)
-  {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-  n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-  if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-  n.queue=[];t=b.createElement(e);t.async=!0;
-  t.src=v;s=b.getElementsByTagName(e)[0];
-  s.parentNode.insertBefore(t,s)}(window, document,'script',
-  'https://connect.facebook.net/en_US/fbevents.js');
-  fbq('init', '977470124320887');
-  fbq('track', 'PageView');
-  </script>
-  <noscript><img height="1" width="1" style="display:none"
-  src="https://www.facebook.com/tr?id=977470124320887&ev=PageView&noscript=1"
-  /></noscript>
-  <!-- End Meta Pixel Code -->
+    <!-- Meta Pixel Code -->
+    <script>
+      !(function (f, b, e, v, n, t, s) {
+        if (f.fbq) return;
+        n = f.fbq = function () {
+          n.callMethod
+            ? n.callMethod.apply(n, arguments)
+            : n.queue.push(arguments);
+        };
+        if (!f._fbq) f._fbq = n;
+        n.push = n;
+        n.loaded = !0;
+        n.version = "2.0";
+        n.queue = [];
+        t = b.createElement(e);
+        t.async = !0;
+        t.src = v;
+        s = b.getElementsByTagName(e)[0];
+        s.parentNode.insertBefore(t, s);
+      })(
+        window,
+        document,
+        "script",
+        "https://connect.facebook.net/en_US/fbevents.js"
+      );
+      fbq("init", "977470124320887");
+      fbq("track", "PageView");
+    </script>
+    <noscript
+      ><img
+        height="1"
+        width="1"
+        style="display:none"
+        src="https://www.facebook.com/tr?id=977470124320887&ev=PageView&noscript=1"
+      /></noscript
+    >
+    <!-- End Meta Pixel Code -->
     <ViewTransitions />
   </head>
   <body>
@@ -187,7 +205,7 @@ const { title, description, pageImage } = Astro.props;
       console.warn = () => {}; // Optionally disable console.warn
       console.error = () => {}; // Optionally disable console.error
     </script>
-    
+
     <script is:inline>
       document.addEventListener("alpine:init", () => {
         Alpine.store("accordion", {
@@ -214,24 +232,43 @@ const { title, description, pageImage } = Astro.props;
         }));
       });
     </script>
+
     <!-- Faq script -->
     <script is:inline>
-      document.querySelectorAll('.faq-item button').forEach(button => {
-          button.addEventListener('click', () => {
-              const faqItem = button.parentElement;
-              const isActive = faqItem.classList.contains('active');
-              
-              // Close all FAQ items
-              document.querySelectorAll('.faq-item').forEach(item => {
-                  item.classList.remove('active');
-              });
-              
-              // If the clicked item wasn't active, open it
-              if (!isActive) {
-                  faqItem.classList.add('active');
-              }
+      // Function to initialize accordion functionality
+      function initAccordions() {
+          document.querySelectorAll('.faq-item button').forEach(button => {
+              // Remove existing event listeners to prevent duplicates
+              button.removeEventListener('click', toggleAccordion);
+              // Add new event listener
+              button.addEventListener('click', toggleAccordion);
           });
-      });
+      }
+  
+      // Function to toggle accordion state
+      function toggleAccordion() {
+          const faqItem = this.parentElement;
+          const isActive = faqItem.classList.contains('active');
+          
+          // Close all FAQ items
+          document.querySelectorAll('.faq-item').forEach(item => {
+              item.classList.remove('active');
+          });
+          
+          // If the clicked item wasn't active, open it
+          if (!isActive) {
+              faqItem.classList.add('active');
+          }
+      }
+  
+      // Initialize on page load
+      document.addEventListener('DOMContentLoaded', initAccordions);
+  
+      // For pages that use client-side routing or dynamic content loading
+      // Call initAccordions() after page transitions or content updates
+      // For example, if you're using a SPA framework or custom navigation
+      document.addEventListener('astro:page-load', initAccordions);
+      document.addEventListener('astro:after-swap', initAccordions);
   </script>
   </body>
 </html>
