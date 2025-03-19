@@ -10,6 +10,7 @@ const navigationData = {
       name: "Home",
       url: "/",
     },
+
     {
       name: "About Us",
       url: "/about-us",
@@ -232,7 +233,7 @@ const navigationData = {
     <div class="container mx-auto px-4 flex justify-between items-center">
       <span class="text-white text-xs md:text-sm font-medium">
         Head Office: 803 Romford Road, London, E12 5AN, United Kingdom |
-        Donation Hotline: 0207 723 2050 | Daily Timings: 9am - 6pm GBP
+        Donation Hotline: 0207 723 2050 | Daily Timings: 9am - 6pm
       </span>
       <a
         href="https://donate.edhiuk.org/?target=login-form"
@@ -281,7 +282,7 @@ const navigationData = {
         <div class="flex items-center lg:hidden">
           <button
             id="mobile-menu-toggle"
-            class="text-gray-700 focus:outline-none"
+            class="text-gray-700"
             aria-label="Toggle mobile menu"
           >
             <svg
@@ -352,12 +353,12 @@ const navigationData = {
                       <path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z" />
                     </svg>
                   </div>
-                  <ul class="hidden group-hover:block absolute left-0 top-full mt-0 w-60 shadow-lg rounded-md border border-gray-200 z-20 bg-white ">
+                  <ul class="hidden group-hover:block absolute left-0 top-full mt-0 w-60 shadow-lg rounded-md border border-gray-200 z-20 bg-white">
                     {item.children.map((child) => (
-                      <li class="">
+                      <li>
                         <a
                           href={child.url}
-                          class="block px-4 py-2 text-gray-800  hover:bg-[#14A762] hover:text-white transition-colors duration-200 "
+                          class="block px-4 py-2 text-gray-800 hover:bg-[#14A762] hover:text-white transition-colors duration-200 hover:rounded-md"
                         >
                           {child.name}
                         </a>
@@ -383,18 +384,22 @@ const navigationData = {
                   <a
                     href={item.url}
                     class={`block px-4 py-2 text-base font-medium ${
-                      item.name === "ZAKAT CALCULATOR" ||
+                      item.name === "Zakat Calculator" ||
                       item.name === "Ramadan 2025"
-                        ? "text-[#ED4836] hover:text-red-700"
-                        : "text-gray-800 hover:text-[#14A762]"
-                    } hover:bg-gray-50 rounded-md`}
+                        ? "text-[#ED4836] hover:bg-red-700 hover:text-white"
+                        : "text-gray-800 hover:bg-[#14A762] hover:text-white"
+                    } rounded-md`}
                   >
                     {item.name}
                   </a>
                 ) : (
                   <div class="mobile-dropdown">
                     <button
-                      class="mobile-dropdown-toggle w-full text-left px-4 py-2 text-base font-medium text-gray-800 hover:bg-gray-50 hover:text-[#14A762] rounded-md flex justify-between items-center"
+                      class={`mobile-dropdown-toggle w-full text-left px-4 py-2 text-base font-medium ${
+                        item.name === "Ramadan 2025"
+                          ? "text-[#ED4836] hover:bg-red-700 hover:text-white"
+                          : "text-gray-800 hover:bg-[#14A762] hover:text-white"
+                      } rounded-md flex justify-between items-center`}
                       aria-expanded="false"
                     >
                       <span>{item.name}</span>
@@ -413,11 +418,11 @@ const navigationData = {
                         />
                       </svg>
                     </button>
-                    <div class="mobile-dropdown-content hidden pl-4 mt-1 space-y-1">
+                    <div class="mobile-dropdown-content hidden mt-1 space-y-1">
                       {item.children.map((child) => (
                         <a
                           href={child.url}
-                          class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 hover:text-[#14A762] rounded-md"
+                          class="block px-4 py-2 text-sm text-gray-700 hover:bg-[#14A762] hover:text-white rounded-md mx-1 mt-1"
                         >
                           {child.name}
                         </a>
@@ -431,7 +436,7 @@ const navigationData = {
         </nav>
 
         <a
-          href="https://dona.edhi.org.uk/zakat-calculator"
+          href="https://donate.edhiuk.org/"
           class="block w-full bg-[#ED4836] text-white text-center py-2 rounded-md text-sm hover:bg-red-600 transition-colors duration-200 mb-4"
         >
           Donate Now
@@ -441,7 +446,7 @@ const navigationData = {
   </nav>
 </div>
 
-<div class="flex justify-between p-2 md:hidden bg-white shadow-sm z-20">
+<div class="flex justify-between p-2 md:hidden bg-white shadow-sm z-20 max-w-sm mx-auto">
   <a href="/appeals/zakat-calculator" class="mr-3">
     <button
       class="bg-[#ED4836] text-white px-4 py-1.5 rounded-sm text-sm hover:bg-red-600 transition-colors duration-200"
@@ -449,7 +454,7 @@ const navigationData = {
       Calculate Zakat Now
     </button>
   </a>
-  <a href="https://donate.edhiuk.org/" class="mr-3">
+  <a href="https://donate.edhiuk.org/">
     <button
       class="bg-[#ED4836] text-white px-4 py-1.5 rounded-sm text-sm hover:bg-red-600 transition-colors duration-200"
     >
@@ -458,9 +463,9 @@ const navigationData = {
   </a>
 </div>
 
-<div class="mobile-dropdown mb-4 ml-[20px] md:hidden">
+<div class="mobile-dropdown mb-4 mx-auto justify-center md:hidden px-2 max-w-sm">
   <button
-    class="mobile-dropdown-toggle w-full bg-[#16A34A] text-white px-4 py-2 rounded-md text-sm flex justify-between items-center mx-[-10px]"
+    class="mobile-dropdown-toggle w-full bg-[#16A34A] text-white px-4 py-2 rounded-md text-sm flex justify-between items-center"
     aria-expanded="false"
   >
     <span>Ramadan 2025</span>
@@ -487,7 +492,7 @@ const navigationData = {
         .children.map((child) => (
           <a
             href={child.url}
-            class="block px-4 py-2 text-sm text-gray-800 hover:bg-green-50 border-b border-gray-100"
+            class="block px-4 py-2 text-sm text-gray-800 hover:bg-[#14A762] hover:text-white rounded-md mx-1 mt-1"
           >
             {child.name}
           </a>
@@ -794,7 +799,7 @@ const navigationData = {
   }
 
   .hover\:text-\[\#14A762\]:hover {
-    color: #14a762;
+    color: #14A762;
   }
 
   /* Animation for dropdowns */
@@ -803,16 +808,12 @@ const navigationData = {
     overflow: hidden;
   }
 
-  /* Active state styling */
-  .active-link {
-    color: #14a762 !important;
-  }
-
   /* Enhanced focus styles for accessibility */
   a:focus,
   button:focus {
-    outline: 2px solid #14a762;
+    outline: 2px solid #14A762;
     outline-offset: 1px;
+    border-radius: 4px;
   }
 
   /* Smooth transitions for hover effects */
